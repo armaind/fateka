@@ -188,15 +188,14 @@
             <div class="col-xl-5 col-lg-6 col-md-9">
                 <div class="about-us-content">
                     <div class="common-heading tagline-boxed m-b-30">
-                        <span class="tagline">🤷🏻‍♀️ • Apa itu Collegetivity?</span>
-                        <h2 class="title">Menjadi Solusi Bagi Mahasiswa di Masa Pandemi <span
+                        <span class="tagline">🤷🏻‍♀️ • Apa itu Fatkest?</span>
+                        <h2 class="title">Forum Alumni Teknik Komputer, Universitas Telkom <span
                                 class="font-weight-normal small">⚡</span></h2>
                     </div>
                     <p>
-                        Collegetivity dibuat untuk membantu para mahasiswa agar tetap terorganisir, terjadwal dan
-                        produktif pada masa pandemi yang membuat kita harus melakukan segalanya secara online
+                        Fatkest dibuat sebagai platform yang berfungsi untuk menyediakan informasi dan media interaksi alumni.
                     </p>
-                    <a href="{{url('/register')}}" class="template-btn bordered-btn m-t-40">Bergabung Sekarang <i
+                    <a href="{{url('/login')}}" class="template-btn bordered-btn m-t-40">Login Sekarang <i
                             class="far fa-arrow-right"></i></a>
                 </div>
             </div>

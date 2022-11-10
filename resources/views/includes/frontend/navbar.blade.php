@@ -21,10 +21,10 @@
                             <a href="{{url('fitur')}}">Fitur Aplikasi</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">Kami apalah</a>
+                            <a href="{{url('tentang')}}">About</a>
                         </li>
                         <li>
-                            <a href="{{url('kontak')}}">Kontak Kami</a>
+                            <a href="{{url('kontak')}}">Contact us</a>
                         </li>
                     </ul>
                 </nav>
