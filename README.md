@@ -4,7 +4,7 @@
 
 <p></p>
 
-<h4 align="center">Website yang menyediakan workspace bagi para mahasiswa  yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
+<h4 align="center">Website yang menyediakan informasi dan media intraksi alumni yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
 </h4>
 
 <p></p>
@@ -22,16 +22,14 @@
   <a href="#tentang">Tentang Project</a> •
   <a href="#fitur">Fitur</a> •
   <a href="#download">Download & Install</a> •
-  <a href="#dukungan">Dukungan</a> •
   <a href="#lisensi">Lisensi</a>
 </p>
 
 <p></p>
 
-<h2 id="tentang">🎓 Tentang Collegetivity</h2>
+<h2 id="tentang">🎓 Tentang Fatkest</h2>
 
-Website ini berperan sebagai workspace yang ditujukan bagi para mahasiswa untuk menjadi lebih produktif dan terorganisir. Mempunyai banak fitur seperti mengorganisir jadwal, tugas, to-do list dan banyak lagi.
-
+Website ini berperan sebagai platform yang berfungsi untuk menyediakan informasi dan media interaksi alumni.
 <p></p>
 
 <h2 id="fitur">✨ Fitur Tersedia</h2>
