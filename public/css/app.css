@@ -776,6 +776,16 @@ select {
   width: 100%;
 }
 
+.row-start-2{
+  grid-row-start: 2;
+}
+
+.col-start-1{
+  grid-column: 1;
+}
+
+
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
