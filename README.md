@@ -1,4 +1,4 @@
-<h1 align="center">Selamat datang di repository Collegetivity! 👋🏻</h1>
+<h1 align="center">Selamat datang di repository Fatkest! 👋🏻</h1>
 
 ![collegetivity-preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png)
 
@@ -114,17 +114,17 @@ Kalian bisa mendukung saya di platform trakteer! Dukungan kalian akan sangat mem
 
 <h2 id="kontribusi">🤝 Kontribusi</h2>
 
-Contributions, issues and feature requests sangat saya apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
+Contributions, issues and feature requests sangat di apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
 
-Berhubung Project ini saya selesaikan sendiri, namun banyak fitur dan banyak hal yang bisa diperbaiki maka bantuan kalian sangat saya apresiasi.
+Berhubung Project ini team fatkest selesaikan, namun banyak fitur dan banyak hal yang bisa diperbaiki maka bantuan kalian sangat saya apresiasi.
 
 <p></p>
 
 <h2 id="lisensi">📝 Lisensi</h2>
 
-- Copyright © 2022 SYAUQIZAIDAN KHAIRAN KHALAF
-- Collegetivity adalah aplikasi web open-source yang berlisensi dibawah lisensi MIT
+- Copyright © 2022 FATKEST
+- Fatkest adalah aplikasi web open-source yang berlisensi dibawah lisensi MIT
 
 ---
 
-**<p align="center">Made with ❤️ by SYAUQIZAIDAN KHAIRAN KHALAF</p>**
+**<p align="center">Made with ❤️ by FATKEST TEAM</p>**
