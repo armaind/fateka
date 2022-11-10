@@ -21,7 +21,7 @@
                             <a href="{{url('fitur')}}">Fitur Aplikasi</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">Kami</a>
+                            <a href="{{url('tentang')}}">Kami apalah</a>
                         </li>
                         <li>
                             <a href="{{url('kontak')}}">Kontak Kami</a>
