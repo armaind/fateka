@@ -5,9 +5,10 @@
                 <!-- Single Footer Widget -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget text-block-widget">
-                        <h5 class="widget-title">Tentang Fatkest</h5>
+                        <h5 class="widget-title">Tentang Collegetivity</h5>
                         <p>
-                            Fatkest adalah sebuah platform yang berfungsi sebagai penyedia informasi dan media interaksi alumni
+                            Collegetivity adalah aplikasi yang membantu dunia perkuliahan mahasiswa mulai dari
+                            mengorganisasi pelajaran, tugas dan jadwal serta resources yang membantu para mahasiswa.
                         </p>
                     </div>
                 </div>
@@ -52,7 +53,7 @@
     <div class="footer-copyright border-top-secondary">
         <div class="container">
             <p class="copyright-text text-center">
-                © 2022 <a href="#">Fatkest</a> by Fatkest Team. All Rights Reserved
+                © 2021 <a href="#">Collegetivity</a> by Dosyafaw Team. All Rights Reserved
             </p>
         </div>
     </div>

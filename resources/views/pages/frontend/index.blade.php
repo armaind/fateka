@@ -1,71 +1,30 @@
 @extends('layouts.frontend.master')
 
-@section('title', 'Collegetivity — Aplikasi yang Membantu Dunia Perkuliahanmu!')
+@section('title', 'Fatkest — Forum Alumni Teknik Komputer, Universitas Telkom!')
 @section('content')
 
 <div class="page-wrapper">
     <!--====== Start Hero Area ======-->
     <section class="hero-area-v7">
         <div class="relative flex-none w-full grid">
-            <h1 class="sr-only"> Platform jual beli aset kripto terbesar, terpercaya, dan teregulasi </h1>
-            <div class="col-start-1 row-start-2 robots-noindex">
-                <div aria-hidden="true" class="
-						reveal
-						box-decoration-slice
-						flex flex-col
-						justify-center
-						sm:justify-start
-						gap-1
-						capitalize
-						text-gray-900 text-4xl
-						font-extrabold
-						tracking-tight
-						sm:text-5xl sm:text-left sm:tracking-tight
-						lg:text-6xl
-					"><div class="">
-						Platform Jual Beli
-					</div> <div class="flex flex-wrap sm:flex-nowrap"><div class="whitespace-nowrap pr-1">
-							Aset Kripto
-						</div> <div class="
-								grow
-								relative
-								overflow-y-hidden
-								bg-clip-padding
-								h-[47px]
-								py-0.5
-								sm:h-[3.75rem]
-								lg:h-[74px]
-							"><div class="flex flex-col items-baseline flip3"><div class="h-[45px] mb-[45px]">
-									terbesar
-								</div> <div class="h-[45px] mb-[45px] text-idx-500">
-									tepercaya
-								</div> <div class="h-[45px] mb-[45px] text-green-500">
-									teregulasi
-								</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             <div class="hero-content">
                 <span class="title-tag wow fadeInUp mb-3" data-wow-delay="0.2s"
                     style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                     <span class="badge rounded-pill bg-primary py-2 px-3 text-white">
-                        <span class="font-weight-normal">📢</span>• Collegetivity hadir dalam versi beta!
+                        <span class="font-weight-normal">📢</span>• Fatkest
                     </span>
                 </span>
-                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Website yang membantu PAK FAISAL!
+                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik Komputer, Univeritas Telkom.
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
-                    🎓 • Collegetivity hadir untuk membantu kalian para mahasiswa agar lebih produktif, terorganisir dan
-                    pekerjaanmu lebih mudah!
+                    🎓 • Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
                 </p>
                 <a href="{{url('/register')}}" class="template-btn primary-bg-5 wow fadeInUp" data-wow-delay="0.4s">
                     Daftar Sekarang <i class="fas fa-arrow-right"></i>
                 </a>
 
                 <span class="notice wow fadeInUp" data-wow-delay="0.5s">
-                    <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image"> Collegetivity bisa kalian
-                    akses dan gunakan secara gratis lho!
+                    <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image"> Stay connected, discover a wider network
                 </span>
             </div>
             <div class="hero-img d-none d-lg-block wow fadeInUp" data-wow-delay="0.2s">
@@ -81,9 +40,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="common-heading text-center heading-white m-b-30">
-                        <h2 class="title">Pandemi membuat kita harus melakukan semuanya secara online, dengan
-                            kami kamu
-                            bisa lebih produktif</h2>
+                        <h2 class="title">Mengapa harus menggunakan Fatkest?</h2>
                     </div>
                 </div>
             </div>
@@ -94,10 +51,9 @@
                         <div class="icon">
                             <i class="far fa-calendar"></i>
                         </div>
-                        <h4 class="title"><a href="#">Buat Tugas & Jadwalmu Terorganisir</a></h4>
+                        <h4 class="title"><a href="#">Temukan karir dan jaringan alumni</a></h4>
                         <p>
-                            Collegetivity adalah tempat kamu mengatur semua data akademikmu, dilengkapi fitur jadwal
-                            pelajaran, catatan pelajaran dan lain lain yang membuatmu terorganisir
+                            Fatkest adalah tempat anda untuk menemukan karir impian dan ketersambungan dengan jaringan alumni 
                         </p>
                         <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
@@ -107,10 +63,9 @@
                         <div class="icon">
                             <i class="fas fa-folder-open"></i>
                         </div>
-                        <h4 class="title"><a href="#">Simpan File Tugas & Akademikmu</a></h4>
+                        <h4 class="title"><a href="#">Cari data alumni tanpa ribet</a></h4>
                         <p>
-                            Jangan takut kalau file tugas atau file yang berkaitan dengan kuliahmu hilang, dengan
-                            collegetivity kamu bisa dengan aman menyimpan file file tersebut
+                            Kini anda tidak perlu kesusahan untuk mencari data mengenai alumni, cukup ketikkan di kolom pencarian
                         </p>
                         <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
@@ -120,10 +75,9 @@
                         <div class="icon">
                             <i class="far fa-bookmark"></i>
                         </div>
-                        <h4 class="title"><a href="{{url('/fitur')}}">Banyak Resources yang Membantu</a></h4>
+                        <h4 class="title"><a href="{{url('/fitur')}}">Event dan Alumni Sharing</a></h4>
                         <p>
-                            Disini juga kami menyediakan banyak resources mulai dari website atau thread yang bakal
-                            membantu kamu menjadi lebih produktif dari sebelumnya
+                            Disini juga kami menyediakan banyak event dan alumni sharing untuk membantu anda untuk mengetahui pengalaman kerja dan yang lainnya
                         </p>
                         <a href="#" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
@@ -145,13 +99,11 @@
                 <div class="col-lg-5">
                     <div class="software-text-block p-l-50 p-l-lg-30 p-l-md-0">
                         <div class="common-heading m-b-40">
-                            <span class="tagline color-primary-5">✨ • Tujuan & Manfaat</span>
+                            <span class="tagline color-primary-5">✨ • Apa kata alumni Teknik Komputer</span>
                             <h2 class="title">Atur semua dunia dan data perkuliahanmu</h2>
                         </div>
                         <p>
-                            Kamu ga usah ribet buat ganti tab dari berbagai aplikasi cuma buat jadwal, bikin catatan
-                            atau nyimpen file dan foto berharga karena kami udah nyediain semua fiturnya di satu
-                            website!
+                            ...
                         </p>
                     </div>
                 </div>
@@ -167,8 +119,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="common-heading text-center m-b-65">
-                            <span class="tagline color-primary-5">🤔 • Ada apa aja sih di Collegetivity?</span>
-                            <h2 class="title">Solusi Kece & Ampuh Bagi Para Mahasiswa Waktu Kuliah <span
+                            <span class="tagline color-primary-5">🤔 • Ada apa aja sih di Fatkest?</span>
+                            <h2 class="title">Konektivitas tanpa batas<span
                                     class="font-weight-normal small">🔥</span></h2>
                         </div>
                     </div>
@@ -179,42 +131,17 @@
                     <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" data-toggle="tab" href="#tabItem1" role="tab">
-                                <i class="far fa-browser"></i> Dashboard
+                                <i class="far fa-browser"></i> Data Alumni
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
-                                <i class="far fa-books"></i> Jadwal Pelajaran
+                                <i class="far fa-books"></i> Lowongan Karir
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                                <i class="far fa-edit"></i> Catatan Pelajaran
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem4" role="tab">
-                                <i class="far fa-video"></i> Virtual Meeting
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem5" role="tab">
-                                <i class="far fa-folder"></i> File Manager
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem6" role="tab">
-                                <i class="far fa-check-square"></i> Todolist
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem7" role="tab">
-                                <i class="far fa-chalkboard-teacher"></i> LifeAt
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem8" role="tab">
-                                <i class="far fa-bookmark"></i> Resources
+                                <i class="far fa-edit"></i> Event dan Alumni sharing
                             </a>
                         </li>
                     </ul>
@@ -237,36 +164,6 @@
                     <div class="tab-pane fade" id="tabItem3" role="tabpanel">
                         <div class="service-tab-ime text-center">
                             <img src="{{url('landio/assets/img/catatan.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem4" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/virtual.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem5" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/file.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem6" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/todo.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem7" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/lifeat.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem8" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/resources.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                         </div>
                     </div>

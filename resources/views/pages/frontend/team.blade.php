@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Team — Collegetivity')
+@section('title', 'Team — fatkest')
 @section('content')
 
 <!--====== Start Header ======-->
@@ -129,7 +129,7 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="assets/img/logo-1.png" alt="Canvas Logo">
+                <img src="\landio\assets\img\LOGO TK.png" alt="Canvas Logo" width="60px" height="55px">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">About Us</h5>

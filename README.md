@@ -1,10 +1,10 @@
-<h1 align="center">Selamat datang di repository Collegetivity! 👋🏻</h1>
+<h1 align="center">Selamat datang di repository Fatkest! 👋🏻</h1>
 
 ![collegetivity-preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png)
 
 <p></p>
 
-<h4 align="center">Website yang menyediakan workspace bagi para mahasiswa  yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
+<h4 align="center">Website yang menyediakan informasi dan media intraksi alumni yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
 </h4>
 
 <p></p>
@@ -22,16 +22,14 @@
   <a href="#tentang">Tentang Project</a> •
   <a href="#fitur">Fitur</a> •
   <a href="#download">Download & Install</a> •
-  <a href="#dukungan">Dukungan</a> •
   <a href="#lisensi">Lisensi</a>
 </p>
 
 <p></p>
 
-<h2 id="tentang">🎓 Tentang Collegetivity</h2>
+<h2 id="tentang">🎓 Tentang Fatkest</h2>
 
-Website ini berperan sebagai workspace yang ditujukan bagi para mahasiswa untuk menjadi lebih produktif dan terorganisir. Mempunyai banak fitur seperti mengorganisir jadwal, tugas, to-do list dan banyak lagi.
-
+Website ini berperan sebagai platform yang berfungsi untuk menyediakan informasi dan media interaksi alumni.
 <p></p>
 
 <h2 id="fitur">✨ Fitur Tersedia</h2>
@@ -102,29 +100,21 @@ $ php artisan serve
 ```
 <p></p>
 
-<h2 id="dukungan">💌 Dukungan</h2>
-
-Kalian bisa mendukung saya di platform trakteer! Dukungan kalian akan sangat membantu untuk saya, namun dengan anda star project ini juga sudah sangat membantu lho!
-
-<p></p>
-
-<a href="https://trakteer.id/syaufy" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-5.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
-
 <p></p>
 
 <h2 id="kontribusi">🤝 Kontribusi</h2>
 
-Contributions, issues and feature requests sangat saya apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
+Contributions, issues and feature requests sangat di apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
 
-Berhubung Project ini saya selesaikan sendiri, namun banyak fitur dan banyak hal yang bisa diperbaiki maka bantuan kalian sangat saya apresiasi.
+Berhubung Project ini team fatkest selesaikan, namun banyak fitur dan banyak hal yang bisa diperbaiki maka bantuan kalian sangat saya apresiasi.
 
 <p></p>
 
 <h2 id="lisensi">📝 Lisensi</h2>
 
-- Copyright © 2022 SYAUQIZAIDAN KHAIRAN KHALAF
-- Collegetivity adalah aplikasi web open-source yang berlisensi dibawah lisensi MIT
+- Copyright © 2022 FATKEST
+- Fatkest adalah aplikasi web open-source yang berlisensi dibawah lisensi MIT
 
 ---
 
-**<p align="center">Made with ❤️ by SYAUQIZAIDAN KHAIRAN KHALAF</p>**
+**<p align="center">Made with ❤️ by FATKEST TEAM</p>**
