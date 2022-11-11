@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Selamat datang di Collegetivity ' . Auth::user()->name . '!')
+@section('title', 'Selamat datang di Fatkest ' . Auth::user()->name . '!')
 @section('content')
 
 @push('datatable-styles')
