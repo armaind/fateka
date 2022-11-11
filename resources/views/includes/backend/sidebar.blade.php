@@ -12,7 +12,14 @@
                     </div>
                 </li>
 
-                <li class="sidebar-main-title pt-0">
+                <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/')}}">
+                        <i data-feather="cloud"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-main-title">
                     <div>
                         <h6>Halaman Utama</h6>
                         <p>Dashboard & Overview</p>

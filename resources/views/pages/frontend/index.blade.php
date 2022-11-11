@@ -51,7 +51,7 @@
                         <div class="icon">
                             <i class="far fa-calendar"></i>
                         </div>
-                        <h4 class="title"><a href="#">Temukan karir dan jaringan alumni</a></h4>
+                        <h4 class="title"><a href="#">Simple</a></h4>
                         <p>
                             Fatkest adalah tempat anda untuk menemukan karir impian dan ketersambungan dengan jaringan alumni 
                         </p>
@@ -63,7 +63,7 @@
                         <div class="icon">
                             <i class="fas fa-folder-open"></i>
                         </div>
-                        <h4 class="title"><a href="#">Cari data alumni tanpa ribet</a></h4>
+                        <h4 class="title"><a href="#">All in-one</a></h4>
                         <p>
                             Kini anda tidak perlu kesusahan untuk mencari data mengenai alumni, cukup ketikkan di kolom pencarian
                         </p>
@@ -75,7 +75,7 @@
                         <div class="icon">
                             <i class="far fa-bookmark"></i>
                         </div>
-                        <h4 class="title"><a href="{{url('/fitur')}}">Event dan Alumni Sharing</a></h4>
+                        <h4 class="title"><a href="{{url('/fitur')}}">Informatif</a></h4>
                         <p>
                             Disini juga kami menyediakan banyak event dan alumni sharing untuk membantu anda untuk mengetahui pengalaman kerja dan yang lainnya
                         </p>
