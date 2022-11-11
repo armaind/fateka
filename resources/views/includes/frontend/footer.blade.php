@@ -5,10 +5,9 @@
                 <!-- Single Footer Widget -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget text-block-widget">
-                        <h5 class="widget-title">Tentang Collegetivity</h5>
+                        <h5 class="widget-title">Tentang Fatkest</h5>
                         <p>
-                            Collegetivity adalah aplikasi yang membantu dunia perkuliahan mahasiswa mulai dari
-                            mengorganisasi pelajaran, tugas dan jadwal serta resources yang membantu para mahasiswa.
+                            Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.
                         </p>
                     </div>
                 </div>
@@ -57,7 +56,7 @@
     <div class="footer-copyright border-top-secondary">
         <div class="container">
             <p class="copyright-text text-center">
-                © 2021 <a href="#">Collegetivity</a> by Dosyafaw Team. All Rights Reserved
+                © 2022 <a href="#">Fatkest</a> by Fatkest Team. All Rights Reserved
             </p>
         </div>
     </div>

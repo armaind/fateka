@@ -3,11 +3,13 @@
     <div class="container-fluid fluid-gap-70">
         <div class="header-inner">
             <div class="header-left">
-                <div class="brand-logo">
-                    <a href="{{url('/')}}">
-                        <h1 class="font-weight-normal">🎓</h1>
-                    </a>
-                </div>
+                <nav class="navbar">
+                    <div class="container">
+                      <a class="navbar-brand" href="/">
+                        <img src="\landio\assets\img\LOGO TK.png" alt="logo" width="60px" height="55px">
+                      </a>
+                    </div>
+                </nav>
                 <nav class="nav-menu d-none d-xl-block">
                     <ul>
                         <li>
@@ -21,10 +23,10 @@
                             <a href="{{url('fitur')}}">Fitur Aplikasi</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">About</a>
+                            <a href="{{url('tentang')}}">Tentang Kami</a>
                         </li>
                         <li>
-                            <a href="{{url('kontak')}}">Contact us</a>
+                            <a href="{{url('kontak')}}">Kontak Kami</a>
                         </li>
                     </ul>
                 </nav>
@@ -98,13 +100,12 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <h1 class="font-weight-normal">🎓</h1>
+                <img src="\landio\assets\img\LOGO TK.png" alt="Canvas Logo" width="60px" height="55px">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang Kami</h5>
                 <p>
-                    Collegetivity adalah aplikasi yang membantu dunia perkuliahan mahasiswa mulai dari mengorganisasi
-                    pelajaran, tugas dan jadwal serta resources yang membantu para mahasiswa.
+                    Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
             </div>
             <div class="contact-us">
@@ -112,17 +113,17 @@
                 <ul>
                     <li>
                         <i class="far fa-map-marker-alt"></i>
-                        Universitas Siliwangi, Tasikmalaya
+                        Teknik Komputer, Universitas Telkom
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>
-                        <a href="mailto:apps.collegetivity@gmail.com">apps.collegetivity@gmail.com</a>
-                        <a href="#" target="_blank">collegetivity.herokuapp.com</a>
+                        <a href="mailto:fastkest@gmail.com">fastkest@gmail.com</a>
+                        <a href="#" target="_blank">fastkest.herokuapp.com</a>
                     </li>
                     <li>
                         <i class="far fa-phone"></i>
-                        <span><a href="tel:+6285156162840">+62 851-5616-2840</a></span>
-                        <span><a href="tel:+6282127350768">+62 821-2735-0768</a></span>
+                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
+                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
                     </li>
                 </ul>
             </div>

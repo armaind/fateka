@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title', 'Collegetivity — Aplikasi yang Membantu Dunia Perkuliahanmu!')
+@section('title', 'Fatkest — Forum Alumni Teknik Komputer, Universitas Telkom!')
 @section('content')
 
 <div class="page-wrapper">
@@ -14,7 +14,7 @@
                         <span class="font-weight-normal">📢</span>• Fatkest
                     </span>
                 </span>
-                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik Komputer Tel-U
+                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik Komputer, Univeritas Telkom.
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
                     🎓 • Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
