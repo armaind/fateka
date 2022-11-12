@@ -33,22 +33,31 @@
             </div>
 
             @auth
-            <div class="nav-menu d-none d-xl-block">
+            <div class="profile-nav onhover-dropdown p-0 ml-2 mr-0">
                 <div class="media profile-media">
                     <div class="media-body">
-                        <ul class="profile-dropdown onhover-show-div">
-                            <a class="dropdown-toggle" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
-                                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </div>
-                        </ul>
+                        <span>{{Auth::user()->name}}</span>
                     </div>
                 </div>
-
+                <ul class="profile-dropdown onhover-show-div">
+                    <li>
+                        <a href="{{url('dashboard')}}">
+                            <i data-feather="home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="{{route('logout')}}" onclick=" event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            <i data-feather="log-out"></i>
+                            <span>Log out</span>
+                        </a>
+                    </li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </ul>
             </div>
             @else
             <div class="header-right">
@@ -71,13 +80,13 @@
                             <span></span>
                         </a>
                     </li>
-                    <li class="d-xl-none">
+                    <div class="d-xl-none">
                         <a href="#" class="navbar-toggler">
                             <span></span>
                             <span></span>
                             <span></span>
                         </a>
-                    </li>
+                    </div>
                 </ul>
             </div>
         </div>
