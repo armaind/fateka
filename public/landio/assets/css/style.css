@@ -1200,6 +1200,10 @@ textarea {
 }
 
 /*=======  Header  =======*/
+.onhover-dropdown {
+	cursor: pointer;
+	position: relative; }
+
 .template-header {
 	position: relative;
 	z-index: 999;
@@ -2076,7 +2080,7 @@ textarea {
 /*======= Preloader =======*/
 #preloader {
 	position: fixed;
-	background-color: #A9FFA6;
+	background-color: #07BD02;
 	background-position: center center;
 	background-repeat: no-repeat;
 	top: 0;
@@ -2977,7 +2981,7 @@ textarea {
 	top: 0;
 	width: 40%;
 	height: 100%;
-	background-color: var(--color-soft-grey);
+	background-color: #EBF0EB;
 	z-index: -1;
 }
 
