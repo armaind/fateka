@@ -122,7 +122,7 @@
     <!--====== End Design & Layout Section ======-->
     
     <!--====== Section alumni Start ======-->
-    <section class="service-section p-t-130 p-b-130 bg-secondary-color-4">
+    <section class="service-section p-t-130 p-b-130 bg-secondary-color-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -135,7 +135,7 @@
         <div class="container text-center m-t-100">
             <div class="row">
               <div class="col order-first">
-                <h1 class="title"> 3460</h1>
+                <h1> 3460</h1>
                 <p>Alumni</p>
               </div>
               <div class="col">
@@ -147,7 +147,7 @@
                 <p> Kota</p>
               </div>
             </div>
-          </div>
+        </div>
     </section>
     <!--====== Section alumni End ======-->
 

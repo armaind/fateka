@@ -20,9 +20,6 @@
                                 Beranda</a>
                         </li>
                         <li>
-                            <a href="{{url('fitur')}}">Fitur Aplikasi</a>
-                        </li>
-                        <li>
                             <a href="{{url('tentang')}}">Tentang Kami</a>
                         </li>
                         <li>
