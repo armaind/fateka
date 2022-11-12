@@ -2980,7 +2980,7 @@ textarea {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 40%;
+	width: 35%;
 	height: 100%;
 	background-color: #EBF0EB;
 	z-index: -1;
@@ -2988,8 +2988,9 @@ textarea {
 
 .hero-area-v7 .hero-img {
 	position: absolute;
-	left: 65%;
-	bottom: 150px;
+	left: 60%;
+	right: 5%;
+	bottom: 170px;
 	max-width: 50%;
 	max-height: 90%;
 }
@@ -3030,7 +3031,7 @@ textarea {
 }
 
 .hero-area-v7 .hero-content .notice img {
-	margin-right: 15px;
+	margin-right: 50px;
 }
 
 /*======= Hero Area v8 =======*/

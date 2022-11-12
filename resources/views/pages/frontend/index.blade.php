@@ -8,7 +8,6 @@
     <section class="hero-area-v7">
         <div class="relative flex-none w-full grid">
             <div class="hero-content">
-                
                 <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
@@ -93,18 +92,62 @@
                 <div class="col-lg-5">
                     <div class="software-text-block p-l-50 p-l-lg-30 p-l-md-0">
                         <div class="common-heading m-b-40">
-                            <span class="tagline color-primary-5">✨ • Apa kata alumni Teknik Komputer</span>
+                            <span class="tagline color-primary-5">Apa kata alumni Teknik Komputer</span>
                             <h2 class="title">Faisal Candrasyah Hasibuan S.T M.T</h2>
                         </div>
                         <p>
-                        "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja."
+                        "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja".
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!--====== End Design & Layout Section ======-->
+
+    <!--====== Section alumni Start ======-->
+    <section class="service-section p-t-130 p-b-130 bg-secondary-color-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="common-heading text-center heading-white m-b-30">
+                        <h2 class="title">Menyimak kesuksesan dari para alumni yang telah berkiprah di berbagai bidang.</h2>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="row no-gutters justify-content-lg-between justify-content-md-start justify-content-center icon-boxes-v3">
+                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="iconic-box box-version-white color-v1 m-t-50">
+                        <div class="icon">
+                            <i class="far fa-thumbs-up"></i>
+                        </div>
+                        <h4 class="title"><a href="#">1000</a></h4>
+                        <p>Alumni</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="iconic-box box-version-white color-v2 m-t-50">
+                        <div class="icon">
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h4 class="title"><a href="#">500</a></h4>
+                        <p>Perusahaan & Bisnis</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="iconic-box box-version-white color-v3 m-t-50">
+                        <div class="icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h4 class="title"><a href="{{url('/fitur')}}">50</a></h4>
+                        <p>Kota</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--====== End Design & Layout Section ======-->
+    <!--====== Section alumni End ======-->
 
     <!--====== Service Details Start ======-->
     <section class="service-details-area p-b-130">
@@ -113,9 +156,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
                         <div class="common-heading text-center m-b-65">
-                            <span class="tagline color-primary-5">🤔 • Ada apa aja sih di Fatkest?</span>
-                            <h2 class="title">Konektivitas tanpa batas<span
-                                    class="font-weight-normal small">🔥</span></h2>
+                            <span class="tagline color-primary-5">Ada apa aja sih di Fatkest?</span>
+                            <h2 class="title">Berikut fitur yang dapat anda manfaatkan</h2>
                         </div>
                     </div>
                 </div>
@@ -125,17 +167,22 @@
                     <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <a class="nav-link active" data-toggle="tab" href="#tabItem1" role="tab">
-                                <i class="far fa-browser"></i> Data Alumni
+                                <i class="fa fa-folder"></i> Data Alumni
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
-                                <i class="far fa-books"></i> Lowongan Karir
+                                <i class="	fa fa-briefcase"></i> Lowongan Karir
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                                <i class="far fa-edit"></i> Event dan Alumni sharing
+                                <i class="far fa-chalkboard-teacher"></i> Event & News
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
+                                <i class="far fa-video"></i> Virtual Room
                             </a>
                         </li>
                     </ul>
