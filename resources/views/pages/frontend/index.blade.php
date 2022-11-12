@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
         <div class="container text-center m-t-100">
             <div class="row">
               <div class="col order-first">
