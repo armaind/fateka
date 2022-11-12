@@ -6,7 +6,7 @@
                 <nav class="navbar">
                     <div class="container">
                       <a class="navbar-brand" href="/">
-                        <img src="\landio\assets\img\logotk.png" alt="logo" width="80">
+                        <img src="\landio\assets\img\logotk.png" alt="logo" width="100">
                       </a>
                     </div>
                 </nav>
@@ -33,31 +33,21 @@
             </div>
 
             @auth
-            <div class="profile-nav onhover-dropdown p-0 ml-2 mr-0">
+            <div class="nav-menu d-none d-xl-block">
                 <div class="media profile-media">
                     <div class="media-body">
-                        <span>{{Auth::user()->name}}</span>
+                        <ul class="profile-dropdown onhover-show-div">
+                            <a class="dropdown-toggle" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
+                            <div class="dropdown-menu" aria-labelledby="username">
+                                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </div>
+                        </ul>
                     </div>
                 </div>
-                <ul class="profile-dropdown onhover-show-div">
-                    <li>
-                        <a href="{{url('dashboard')}}">
-                            <i data-feather="home"></i>
-                            <span>Dashboard</span>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <a href="{{route('logout')}}" onclick=" event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                            <i data-feather="log-out"></i>
-                            <span>Log out</span>
-                        </a>
-                    </li>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
-                </ul>
             </div>
             @else
             <div class="header-right">
@@ -130,7 +120,7 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="250">
+                <img src="\landio\assets\img\logotk.png" alt="logo" width="100">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang Kami</h5>
