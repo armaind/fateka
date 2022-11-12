@@ -40,7 +40,7 @@
                     <div class="media-body">
                         <ul class="profile-dropdown onhover-show-div">
                             <a class="dropdown-toggle" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                            <div class="dropdown-menu" aria-labelledby="username">
                                 <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -50,7 +50,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
             @else
             <div class="header-right">
@@ -66,19 +65,20 @@
                         </a>
                     </li>
                     @endauth
+                    <li class="d-none d-xl-block">
                         <a href="#" class="off-canvas-btn">
                             <span></span>
                             <span></span>
                             <span></span>
                         </a>
                     </li>
-                    <li class="d-xl-none">
+                    <div class="d-xl-none">
                         <a href="#" class="navbar-toggler">
                             <span></span>
                             <span></span>
                             <span></span>
                         </a>
-                    </li>
+                    </div>
                 </ul>
             </div>
         </div>
