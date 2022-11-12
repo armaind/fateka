@@ -122,7 +122,7 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\logotk.png" alt="logo" width="100">
+                <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang Kami</h5>
