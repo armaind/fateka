@@ -104,6 +104,13 @@
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
                         <li>
+                            <a href="{{url('/')}}">
+                                <i data-feather="home"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        
+                        <li>
                             <a href="{{route('logout')}}" onclick=" event.preventDefault();
                                             document.getElementById('logout-form').submit();">
                                 <i data-feather="log-out"></i>

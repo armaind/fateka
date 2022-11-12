@@ -31,6 +31,26 @@
                     </ul>
                 </nav>
             </div>
+
+            @auth
+            <div class="nav-menu d-none d-xl-block">
+                <div class="media profile-media">
+                    <div class="media-body">
+                        <ul class="profile-dropdown onhover-show-div">
+                            <a class="dropdown-toggle" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userName">
+                                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            @else
             <div class="header-right">
                 <ul class="header-extra">
                     <li class="d-none d-sm-block">
@@ -43,6 +63,7 @@
                             Daftar Sekarang <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
+                    @endauth
                     <li class="d-none d-xl-block">
                         <a href="#" class="off-canvas-btn">
                             <span></span>
