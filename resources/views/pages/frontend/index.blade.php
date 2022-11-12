@@ -120,7 +120,7 @@
         </div> 
     </section>
     <!--====== End Design & Layout Section ======-->
-
+    
     <!--====== Section alumni Start ======-->
     <section class="service-section p-t-130 p-b-130 bg-secondary-color-4">
         <div class="container">
@@ -157,16 +157,16 @@
                             <i class="fas fa-bullhorn"></i>
                         </div>
                         <h4 class="title"><a href="{{url('/fitur')}}">50</a></h4>
-                        <p>Negara</p>
+                        <p>Kota</p>
                     </div>
                 </div>
             </div>
-        </div>
+          </div>
     </section>
     <!--====== Section alumni End ======-->
 
     <!--====== Service Details Start ======-->
-    <section class="service-details-area p-b-130">
+    <section class="service-details-area p-t-130">
         <div class="service-tab">
             <div class="container">
                 <div class="row justify-content-center">
