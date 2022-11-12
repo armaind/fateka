@@ -6,7 +6,7 @@
                 <nav class="navbar">
                     <div class="container">
                       <a class="navbar-brand" href="/">
-                        <img src="\landio\assets\img\LOGO TK.png" alt="logo" width="60px" height="55px">
+                        <img src="\landio\assets\img\logotk.png" alt="logo" width="100">
                       </a>
                     </div>
                 </nav>
@@ -121,7 +121,7 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\LOGO TK.png" alt="Canvas Logo" width="60px" height="55px">
+                <img src="\landio\assets\img\logotk.png" alt="logo" width="100">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang Kami</h5>
