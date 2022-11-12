@@ -2076,7 +2076,7 @@ textarea {
 /*======= Preloader =======*/
 #preloader {
 	position: fixed;
-	background-color: #00aeef;
+	background-color: #07BD02;
 	background-position: center center;
 	background-repeat: no-repeat;
 	top: 0;
@@ -2101,8 +2101,8 @@ textarea {
 	animation-fill-mode: both;
 	-webkit-animation-name: flipInY;
 	animation-name: flipInY;
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 	background-blend-mode: multiply;
@@ -2975,22 +2975,23 @@ textarea {
 	position: absolute;
 	right: 0;
 	top: 0;
-	width: 50%;
+	width: 40%;
 	height: 100%;
-	background-color: var(--color-soft-grey);
+	background-color: #E2F5E2;
 	z-index: -1;
 }
 
 .hero-area-v7 .hero-img {
 	position: absolute;
 	left: 50%;
-	bottom: 0;
+	bottom: 100px;
 	max-width: 50%;
 	max-height: 90%;
 }
 
 .hero-area-v7 .hero-content {
 	max-width: 35%;
+	z-index: 9999;
 }
 
 .hero-area-v7 .hero-content .hero-title {

@@ -2960,7 +2960,7 @@ textarea {
 .hero-area-v7 .hero-img {
 	position: absolute;
 	left: 50%;
-	bottom: 0;
+	bottom: 150px;
 	max-width: 50%;
 	max-height: 90%;
 }

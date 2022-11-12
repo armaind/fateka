@@ -8,19 +8,14 @@
     <section class="hero-area-v7">
         <div class="relative flex-none w-full grid">
             <div class="hero-content">
-                <span class="title-tag wow fadeInUp mb-3" data-wow-delay="0.2s"
-                    style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-                    <span class="badge rounded-pill bg-primary py-2 px-3 text-white">
-                        <span class="font-weight-normal">📢</span>• Fatkest
-                    </span>
-                </span>
-                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik Komputer, Univeritas Telkom.
+                
+                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Selamat Datang di Fatkest
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
-                    🎓 • Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
+                Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
                 </p>
-                <a href="{{url('/register')}}" class="template-btn primary-bg-5 wow fadeInUp" data-wow-delay="0.4s">
-                    Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                <a href="{{url('/login')}}" class="template-btn primary-bg-5 wow fadeInUp" data-wow-delay="0.4s">
+                    Masuk Sekarang <i class="fas fa-arrow-right"></i>
                 </a>
 
                 <span class="notice wow fadeInUp" data-wow-delay="0.5s">
@@ -53,7 +48,7 @@
                         </div>
                         <h4 class="title"><a href="#">Simple</a></h4>
                         <p>
-                            Fatkest adalah tempat anda untuk menemukan karir impian dan ketersambungan dengan jaringan alumni 
+                            Mudah digunakan cukup login menggunakan SSO, dibantu dengan tampilan yang responsive
                         </p>
                         <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
@@ -65,7 +60,7 @@
                         </div>
                         <h4 class="title"><a href="#">All in-one</a></h4>
                         <p>
-                            Kini anda tidak perlu kesusahan untuk mencari data mengenai alumni, cukup ketikkan di kolom pencarian
+                            Satu web untuk mengakses berbagai fitur yang dapat anda manfaatkan
                         </p>
                         <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
@@ -75,10 +70,9 @@
                         <div class="icon">
                             <i class="far fa-bookmark"></i>
                         </div>
-                        <h4 class="title"><a href="{{url('/fitur')}}">Informatif</a></h4>
+                        <h4 class="title"><a href="{{url('/fitur')}}">Informative</a></h4>
                         <p>
-                            Disini juga kami menyediakan banyak event dan alumni sharing untuk membantu anda untuk mengetahui pengalaman kerja dan yang lainnya
-                        </p>
+                            Disini juga kami menyediakan banyak informasi meliputi event, sharing alumni dan lain sebagainya
                         <a href="#" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
                 </div>

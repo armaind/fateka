@@ -693,7 +693,7 @@
     }
 
     .hero-area-v7::after {
-        display: none;
+        display: flex;
     }
 
     .service-tab .service-tab-nav .nav-tabs .nav-item {
