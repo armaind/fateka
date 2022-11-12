@@ -104,7 +104,7 @@
         </div> 
     </section>
     <!--====== End Design & Layout Section ======-->
-
+    
     <!--====== Section alumni Start ======-->
     <section class="service-section p-t-130 p-b-130 bg-secondary-color-4">
         <div class="container">
@@ -115,42 +115,28 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="row no-gutters justify-content-lg-between justify-content-md-start justify-content-center icon-boxes-v3">
-                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="iconic-box box-version-white color-v1 m-t-50">
-                        <div class="icon">
-                            <i class="far fa-thumbs-up"></i>
-                        </div>
-                        <h4 class="title"><a href="#">1000</a></h4>
-                        <p>Alumni</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="iconic-box box-version-white color-v2 m-t-50">
-                        <div class="icon">
-                            <i class="fas fa-door-open"></i>
-                        </div>
-                        <h4 class="title"><a href="#">500</a></h4>
-                        <p>Perusahaan & Bisnis</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="iconic-box box-version-white color-v3 m-t-50">
-                        <div class="icon">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <h4 class="title"><a href="{{url('/fitur')}}">50</a></h4>
-                        <p>Kota</p>
-                    </div>
-                </div>
-            </div>
         </div>
+        <div class="container text-center m-t-100">
+            <div class="row">
+              <div class="col order-first">
+                <h1 class="title"> 3460</h1>
+                <p>Alumni</p>
+              </div>
+              <div class="col">
+                <h1 class="title"> 87</h1>
+                <p>Perusahaan & Bisnis</p>
+              </div>
+              <div class="col order-last">
+                <h1 class="title">34</h1>
+                <p> Kota</p>
+              </div>
+            </div>
+          </div>
     </section>
     <!--====== Section alumni End ======-->
 
     <!--====== Service Details Start ======-->
-    <section class="service-details-area p-b-130">
+    <section class="service-details-area p-t-130">
         <div class="service-tab">
             <div class="container">
                 <div class="row justify-content-center">
