@@ -2076,9 +2076,10 @@ textarea {
 /*======= Preloader =======*/
 #preloader {
 	position: fixed;
-	background-color: #A9FFA6;
+	background-color: #07BD02;
 	background-position: center center;
 	background-repeat: no-repeat;
+	opacity: 80%;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -2101,8 +2102,8 @@ textarea {
 	animation-fill-mode: both;
 	-webkit-animation-name: flipInY;
 	animation-name: flipInY;
-	-webkit-animation-duration: 5s;
-	animation-duration: 5s;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 	background-blend-mode: multiply;
@@ -2984,7 +2985,7 @@ textarea {
 .hero-area-v7 .hero-img {
 	position: absolute;
 	left: 50%;
-	bottom: 100px;
+	bottom: 200px;
 	max-width: 50%;
 	max-height: 90%;
 }

@@ -9,7 +9,7 @@
         <div class="relative flex-none w-full grid">
             <div class="hero-content">
                 
-                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Selamat Datang di Fatkest
+                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
                 Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
@@ -44,36 +44,34 @@
                 <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="iconic-box box-version-white color-v1 m-t-50">
                         <div class="icon">
-                            <i class="far fa-calendar"></i>
+                            <i class="far fa-thumbs-up"></i>
                         </div>
                         <h4 class="title"><a href="#">Simple</a></h4>
                         <p>
                             Mudah digunakan cukup login menggunakan SSO, dibantu dengan tampilan yang responsive
                         </p>
-                        <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
+                       
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="iconic-box box-version-white color-v2 m-t-50">
                         <div class="icon">
-                            <i class="fas fa-folder-open"></i>
+                            <i class="fas fa-door-open"></i>
                         </div>
                         <h4 class="title"><a href="#">All in-one</a></h4>
                         <p>
                             Satu web untuk mengakses berbagai fitur yang dapat anda manfaatkan
                         </p>
-                        <a href="{{url('/fitur')}}" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="iconic-box box-version-white color-v3 m-t-50">
                         <div class="icon">
-                            <i class="far fa-bookmark"></i>
+                            <i class="fas fa-bullhorn"></i>
                         </div>
                         <h4 class="title"><a href="{{url('/fitur')}}">Informative</a></h4>
                         <p>
                             Disini juga kami menyediakan banyak informasi meliputi event, sharing alumni dan lain sebagainya
-                        <a href="#" class="box-btn">Selengkapnya <i class="far fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
