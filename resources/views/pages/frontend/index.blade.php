@@ -92,10 +92,10 @@
                     <div class="software-text-block p-l-50 p-l-lg-30 p-l-md-0">
                         <div class="common-heading m-b-40">
                             <span class="tagline color-primary-5">✨ • Apa kata alumni Teknik Komputer</span>
-                            <h2 class="title">Atur semua dunia dan data perkuliahanmu</h2>
+                            <h2 class="title">Faisal Candrasyah Hasibuan S.T M.T</h2>
                         </div>
                         <p>
-                            ...
+                        "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja."
                         </p>
                     </div>
                 </div>
