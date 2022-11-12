@@ -25,7 +25,7 @@
                 </span>
             </div>
             <div class="hero-img d-none d-lg-block wow fadeInUp" data-wow-delay="0.2s">
-                <img src="{{url('landio/assets/img/hero/home-software-2.png')}}" alt="Image">
+                <img src="{{url('landio/assets/img/hero/home-software-3.png')}}" alt="Image">
             </div>
         </div>
     </section>
