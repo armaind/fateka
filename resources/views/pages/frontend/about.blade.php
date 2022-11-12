@@ -206,12 +206,11 @@
             <div class="col-xl-5 col-lg-6 col-md-9">
                 <div class="about-us-content">
                     <div class="common-heading tagline-boxed m-b-30">
-                        <span class="tagline">🤷🏻‍♀️ • Apa itu Fatkest?</span>
-                        <h2 class="title">Forum Alumni Teknik Komputer, Universitas Telkom <span
-                                class="font-weight-normal small">⚡</span></h2>
+                        <span class="tagline">Apa itu Fatkest?</span>
+                        <h2 class="title">Forum Alumni Teknik Komputer, Universitas Telkom </h2>
                     </div>
                     <p>
-                        Fatkest dibuat sebagai platform yang berfungsi untuk menyediakan informasi dan media interaksi alumni.
+                        Fatkest dibuat sebagai platform yang berfungsi untuk menyediakan informasi meliputi data alumni, kegiatan, sharing session alumni sekaligus menyediakan fitur untuk interaksi antara alumni dengan civitas akademika Teknik Komputer Universitas Telkom melalui ruang virtual.
                     </p>
                     <a href="{{url('/login')}}" class="template-btn bordered-btn m-t-40">Login Sekarang <i
                             class="far fa-arrow-right"></i></a>
@@ -228,8 +227,8 @@
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9">
                 <div class="common-heading tagline-boxed text-center m-b-30">
-                    <span class="tagline">🌟 • Fitur Populer</span>
-                    <h2 class="title">Buat Dunia dan Masa Kuliahmu Menjadi Menyenangkan</h2>
+                    <span class="tagline">Mengapa Fatkset Hadir?</span>
+                    <h2 class="title">Hal yang melatarbelakangi aplikasi Fatkest ini dibuat</h2>
                 </div>
             </div>
         </div>
@@ -240,9 +239,9 @@
                     <div class="icon icon-gradient-3">
                         <i class="far fa-calendar-alt"></i>
                     </div>
-                    <h4 class="title">Atur Jadwalmu</h4>
+                    <h4 class="title">Data Alumni</h4>
                     <p>
-                        Atur jadwal kuliahmu dengan mudah di Collegetivity
+                    Belum ada platform khusus untuk pencarian data alumni
                     </p>
                 </div>
             </div>
@@ -251,9 +250,9 @@
                     <div class="icon icon-gradient-4">
                         <i class="far fa-database"></i>
                     </div>
-                    <h4 class="title">Kelola Datamu</h4>
+                    <h4 class="title">Lowongan karir</h4>
                     <p>
-                        Kelola semua data akademikmu agar terorganisir di Collegetivity
+                    Pendistribusian lowongan karir yang masih konvensional
                     </p>
                 </div>
             </div>
@@ -262,20 +261,9 @@
                     <div class="icon icon-gradient-5">
                         <i class="far fa-file-word"></i>
                     </div>
-                    <h4 class="title">Simpan Tugasmu</h4>
+                    <h4 class="title">Media interaksi</h4>
                     <p>
-                        Simpan semua tugasmu tanpa perlu takut hilang di Collegetivity
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-10">
-                <div class="iconic-box m-t-30">
-                    <div class="icon icon-gradient-6">
-                        <i class="far fa-bookmark"></i>
-                    </div>
-                    <h4 class="title">Resources Terbaik</h4>
-                    <p>
-                        Nikmati banyak website dan tools penunjang perkuliahanmu
+                    Belum ada media interaksi alumni dengan civitas akademika
                     </p>
                 </div>
             </div>
@@ -290,7 +278,7 @@
         <div class="row justify-content-center">
             <div class="col-xl-5 col-lg-6">
                 <div class="common-heading tagline-boxed text-center m-b-60">
-                    <span class="tagline">👨🏻‍💻 • Orang Dibalik Fatkest</span>
+                    <span class="tagline">Orang Dibalik Fatkest</span>
                     <h2 class="title">Mengenal Lebih Dekat Pembuat Fatkest</h2>
                 </div>
             </div>
@@ -344,10 +332,10 @@
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
                         <span class="tagline">Tunggu Apa Lagi?</span>
-                        <h2 class="title">Segera Daftar dan Bergabung Bersama Fatkest</h2>
+                        <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
                     </div>
 
-                    <a href="{{url('/register')}}" class="template-btn white-bg bordered-btn">Daftar Sekarang <i
+                    <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
                             class="far fa-arrow-right"></i></a>
                 </div>
             </div>

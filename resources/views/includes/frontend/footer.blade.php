@@ -26,17 +26,6 @@
                 </div>
                 <!-- Single Footer Widget -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="d-lg-flex justify-content-center">
-                        <div class="widget nav-widget">
-                            <h5 class="widget-title">Masuk</h5>
-                            <ul>
-                                <li><a href="{{('/login')}}">Masuk Aplikasi</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Footer Widget -->
-                <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget social-widget pl-xl-5">
                         <h5 class="widget-title">Ikuti Kami</h5>
                         <ul class="social-links">
@@ -46,13 +35,21 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget text-block-widget">
+                        <h5 class="widget-title">Alamat</h5>
+                        <p>
+                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia Phone: +62 22 7566456 info@telkomuniversity.ac.id
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer-copyright border-top-secondary">
         <div class="container">
             <p class="copyright-text text-center">
-                © 2021 <a href="#">Fatkest</a> by Fatkest Team. All Rights Reserved
+                © 2022 <a href="#">Fatkest</a> | All Rights Reserved
             </p>
         </div>
     </div>

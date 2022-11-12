@@ -8,7 +8,7 @@
     <section class="hero-area-v7">
         <div class="relative flex-none w-full grid">
             <div class="hero-content">
-                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom
+                <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom 
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
                 Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
@@ -223,7 +223,7 @@
                             <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
                         </div>
 
-                        <a href="{{url('/register')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
+                        <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
                                 class="far fa-arrow-right"></i></a>
                     </div>
                 </div>
