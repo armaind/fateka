@@ -12,19 +12,9 @@ Route::get('/', function () {
     return view('pages.frontend.index');
 });
 
-/* ----------------------------- Features Page ------------------------------ */
-Route::get('/fitur', function () {
-    return view('pages.frontend.feature');
-});
-
 /* ------------------------------- About Page ------------------------------- */
 Route::get('/tentang', function () {
     return view('pages.frontend.about');
-});
-
-/* ------------------------------- Team Page -------------------------------- */
-Route::get('/team', function () {
-    return view('pages.frontend.team');
 });
 
 /* ------------------------------ Contact Page ------------------------------ */
