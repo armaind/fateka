@@ -85,18 +85,34 @@
         <div class="container">
             <div class="row align-items-center justify-content-center no-gutters">
                 <div class="col-lg-7">
-                    <div class="software-preview m-b-md-80 animate-float-bob-y">
+                    <div class="software-preview m-t-50 animate-float-bob-y">
                         <img src="{{url('landio/assets/img/preview-gallery/design-layout.png')}}" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="software-text-block p-l-50 p-l-lg-30 p-l-md-0">
-                        <div class="common-heading m-b-40">
+                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
+                        <div class="common-heading m-t-40">
                             <span class="tagline color-primary-5">Apa kata alumni Teknik Komputer</span>
-                            <h2 class="title">Faisal Candrasyah Hasibuan S.T M.T</h2>
+                            <h3 class="title">Faisal Candrasyah Hasibuan S.T M.T</h3>
                         </div>
                         <p>
                         "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja".
+                        </p>
+                    </div>
+                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
+                        <div class="common-heading m-t-40">
+                            <h3 class="title">Shinta Raudlatul Hanafia S.T</h3>
+                        </div>
+                        <p>
+                        "Teruslah Berkibar Menjadi Alumni Yang Terbaik, Memberikan Kontribusi Untuk Bangsa dan Negara".
+                        </p>
+                    </div>
+                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
+                        <div class="common-heading m-t-40">
+                            <h2 class="title">Agus Setiawan Popalia S.T</h2>
+                        </div>
+                        <p>
+                        "Manfaatkan format Universitas ini yang bisa membawa kita berpikir lebih universal artinya kita bisa mengembangkan keilmuan kita untuk saling terbuka sinergi, sehingga kita bisa mengembangkan makna dan manfaat keilmuan kita untuk masyarakat".
                         </p>
                     </div>
                 </div>
@@ -115,7 +131,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <div class="container text-center m-t-100">
             <div class="row">
               <div class="col order-first">
