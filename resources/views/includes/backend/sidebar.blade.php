@@ -12,7 +12,7 @@
                     </div>
                 </li>
 
-                <li class="sidebar-main-title">
+                <li class="sidebar-main-title pt-0">
                     <div>
                         <h6>Halaman Utama</h6>
                         <p>Dashboard & Overview</p>
