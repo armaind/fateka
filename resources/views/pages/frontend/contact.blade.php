@@ -23,9 +23,6 @@
                             <a href="{{url('/')}}">Beranda</a>
                         </li>
                         <li>
-                            <a href="{{url('fitur')}}">Fitur Aplikasi</a>
-                        </li>
-                        <li>
                             <a href="{{url('tentang')}}">Tentang Kami</a>
                         </li>
                         <li class="active">
@@ -94,20 +91,21 @@
                         <a href="{{('/')}}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{('/fitur')}}">Fitur Aplikasi</a>
-                    </li>
-                    <li>
                         <a href="{{('/tentang')}}">Tentang Kami</a>
                     </li>
                     <li>
                         <a href="{{('/kontak')}}">Kontak Kami</a>
                     </li>
+                    @auth
+                        <a class="btn" href="{{ '/dashboard' }}" role="button">{{ auth()->user()->name }}</a>
+                    @else
                     <li>
                         <a href="{{('/login')}}">Masuk Aplikasi</a>
                     </li>
                     <li>
                         <a href="{{('/register')}}">Daftar Akun</a>
                     </li>
+                    @endauth
                 </ul>
             </nav>
             <a href="#" class="panel-close">
