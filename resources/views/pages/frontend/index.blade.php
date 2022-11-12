@@ -20,7 +20,7 @@
                 </a>
                 @endauth
                 <span class="notice wow fadeInUp" data-wow-delay="0.5s">
-                    <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image"> Stay connected, discover a wider network
+                    <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image">Stay connected, discover a wider network
                 </span>
             </div>
             <div class="hero-img d-none d-lg-block wow fadeInUp" data-wow-delay="0.2s">
@@ -31,7 +31,7 @@
     <!--====== End Hero Area ======-->
 
     <!--====== Section Service Start ======-->
-    <section class="service-section p-t-130 p-b-130 bg-secondary-color-5">
+    <section class="service-section p-t-100 p-b-100 bg-secondary-color-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
@@ -81,7 +81,7 @@
     <!--====== Section Service End ======-->
 
     <!--====== Start Design & Layout Section ======-->
-    <section class="sof-design-layout p-t-130 p-b-130">
+    <section class="sof-design-layout p-t-80 p-b-80">
         <div class="container">
             <div class="row align-items-center justify-content-center no-gutters">
                 <div class="col-lg-7">
@@ -90,7 +90,7 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
+                    <div class="software-text-block p-l-lg-30 p-l-md-0">
                         <div class="common-heading m-t-40">
                             <span class="tagline color-primary-5">Apa kata alumni Teknik Komputer</span>
                             <h3 class="title">Faisal Candrasyah Hasibuan S.T M.T</h3>
@@ -99,20 +99,12 @@
                         "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja".
                         </p>
                     </div>
-                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
+                    <div class="software-text-block p-t-10 p-l-lg-30 p-l-md-0">
                         <div class="common-heading m-t-40">
                             <h3 class="title">Shinta Raudlatul Hanafia S.T</h3>
                         </div>
                         <p>
                         "Teruslah Berkibar Menjadi Alumni Yang Terbaik, Memberikan Kontribusi Untuk Bangsa dan Negara".
-                        </p>
-                    </div>
-                    <div class="software-text-block p-t-50 p-l-lg-30 p-l-md-0">
-                        <div class="common-heading m-t-40">
-                            <h2 class="title">Agus Setiawan Popalia S.T</h2>
-                        </div>
-                        <p>
-                        "Manfaatkan format Universitas ini yang bisa membawa kita berpikir lebih universal artinya kita bisa mengembangkan keilmuan kita untuk saling terbuka sinergi, sehingga kita bisa mengembangkan makna dan manfaat keilmuan kita untuk masyarakat".
                         </p>
                     </div>
                 </div>
@@ -228,10 +220,10 @@
                     <div class="cta-content text-center">
                         <div class="common-heading heading-white m-b-65">
                             <span class="tagline">Tunggu Apa Lagi?</span>
-                            <h2 class="title">Segera Daftar dan Bergabung Bersama Collegetivity</h2>
+                            <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
                         </div>
 
-                        <a href="{{url('/register')}}" class="template-btn white-bg bordered-btn">Daftar Sekarang <i
+                        <a href="{{url('/register')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
                                 class="far fa-arrow-right"></i></a>
                     </div>
                 </div>

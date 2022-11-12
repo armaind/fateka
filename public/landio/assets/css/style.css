@@ -585,11 +585,11 @@ span {
 	background-color: var(--color-secondary);
 }
 
-.bg-secondary-color-3 {
+.bg-secondary-color-2 {
 	background-color: var(--color-secondary-2);
 }
 
-.bg-secondary-color-2 {
+.bg-secondary-color-3 {
 	background-color: var(--color-secondary-3);
 }
 
@@ -2988,9 +2988,9 @@ textarea {
 
 .hero-area-v7 .hero-img {
 	position: absolute;
-	left: 60%;
+	left: 50%;
 	right: 5%;
-	bottom: 170px;
+	bottom: 130px;
 	max-width: 50%;
 	max-height: 90%;
 }
@@ -3031,7 +3031,7 @@ textarea {
 }
 
 .hero-area-v7 .hero-content .notice img {
-	margin-right: 50px;
+	margin-right: 20px;
 }
 
 /*======= Hero Area v8 =======*/

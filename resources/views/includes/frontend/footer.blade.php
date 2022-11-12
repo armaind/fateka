@@ -15,12 +15,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="d-lg-flex justify-content-center">
                         <div class="widget nav-widget">
-                            <h5 class="widget-title">Link Cepat</h5>
+                            <h5 class="widget-title">Link Terkait</h5>
                             <ul>
-                                <li><a href="{{url('/')}}">Beranda</a></li>
-                                <li><a href="{{url('/fitur')}}">Fitur Aplikasi</a></li>
-                                <li><a href="{{url('/tentang')}}">Tentang Kami</a></li>
-                                <li><a href="{{url('/kontak')}}">Kontak Kami</a></li>
+                                <li><a href="{{url('https://telkomuniversity.ac.id/')}}">Telkom University</a></li>
+                                <li><a href="{{url('https://bsk.telkomuniversity.ac.id/')}}">Teknik Komputer Tel-U</a></li>
+                                <li><a href="{{url('https://www.fast.or.id/')}}">FAST</a></li>
                             </ul>
                         </div>
                     </div>
@@ -29,7 +28,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="d-lg-flex justify-content-center">
                         <div class="widget nav-widget">
-                            <h5 class="widget-title">Bergabung</h5>
+                            <h5 class="widget-title">Masuk</h5>
                             <ul>
                                 <li><a href="{{('/login')}}">Masuk Aplikasi</a></li>
                             </ul>
@@ -41,8 +40,9 @@
                     <div class="widget social-widget pl-xl-5">
                         <h5 class="widget-title">Ikuti Kami</h5>
                         <ul class="social-links">
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li> 
-                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/HMSKTELU"><i class="fab fa-youtube"></i></a></li> 
+                            <li><a href="https://www.instagram.com/hmtk_telu/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://line.me/R/ti/p/%40qsg4413q"><i class="fab fa-line"></i></a></li>
                         </ul>
                     </div>
                 </div>
