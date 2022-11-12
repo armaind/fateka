@@ -14,10 +14,12 @@
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
                 Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
                 </p>
+                @auth
+                @else
                 <a href="{{url('/login')}}" class="template-btn primary-bg-5 wow fadeInUp" data-wow-delay="0.4s">
                     Masuk Sekarang <i class="fas fa-arrow-right"></i>
                 </a>
-
+                @endauth
                 <span class="notice wow fadeInUp" data-wow-delay="0.5s">
                     <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image"> Stay connected, discover a wider network
                 </span>
