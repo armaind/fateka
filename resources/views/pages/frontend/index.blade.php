@@ -195,190 +195,146 @@
     <!-- ===== Service Section End ===== -->
 
     <!--====== Start News Update ======-->
-    <section class="team-member-area section-half-dots-pattern-fixed p-t-130 p-b-100">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="common-heading tagline-boxed text-center m-b-60">
-                        <span class="tagline">Informasi Terkini</span>
-                        <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fatkest</h2>
+    <section class="p-t-50 p-b-100" >
+        <div class="blog" id="blog">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="common-heading tagline-boxed text-center m-b-50">
+                            <span class="tagline">Informasi Terkini</span>
+                            <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fatkest</h2>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row team-members">
-                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="member-box m-b-30">
-                        <div class="member-photo">
-                            <img src="{{url('landio/assets/img/team/syai.jpg')}}" alt="Member Photo">
-                        </div>
-                        <div class="member-info">
-                            <h5 class="name"><a href="#">Syauqizaidan Khairan Khalaf</a></h5>
-                            <p class="title">Developer, Founder & Ketua</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="member-box m-b-30">
-                        <div class="member-photo">
-                            <img src="{{url('landio/assets/img/team/dodi.jpeg')}}" alt="Member Photo">
+                <div class="member-box">
+                    <ul class="blog-list">
+
+                        <li>
+                        <div class="blog-card">
+        
+                            <figure class="blog-banner">
+                            <img src="landio/assets/img/blog-banner-1.jpg" alt="Best Traveling Place">
+                            </figure>
+        
+                            <div class="blog-meta">
+        
+                            <span>
+                                <ion-icon name="calendar-outline"></ion-icon>
+        
+                                <time datetime="2021-04-10">april 10 2021</time>
+                            </span>
+        
+                            <span>
+                                <ion-icon name="person-outline"></ion-icon>
+        
+                                <p>admin</p>
+                            </span>
+        
+                            </div>
+        
+                            <h3 class="blog-title">Best Traveling Place</h3>
+        
+                            <p class="blog-text">
+                            Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                            ullamcorper ipsum rutrum
+                            punc.
+                            </p>
+        
+                            <a href="#" class="blog-link-btn">
+                            <span>Learn More</span>
+        
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </a>
+        
                         </div>
-                        <div class="member-info">
-                            <h5 class="name"><a href="#">Dodi Wahyono</a></h5>
-                            <p class="title">Hustler & Anggota</p>
+                        </li>
+        
+                        <li>
+                        <div class="blog-card">
+        
+                            <figure class="blog-banner">
+                            <img src="landio/assets/img/blog-banner-2.jpg" alt="Private Meeting Room">
+                            </figure>
+        
+                            <div class="blog-meta">
+        
+                            <span>
+                                <ion-icon name="calendar-outline"></ion-icon>
+        
+                                <time datetime="2021-04-10">april 10 2021</time>
+                            </span>
+        
+                            <span>
+                                <ion-icon name="person-outline"></ion-icon>
+        
+                                <p>admin</p>
+                            </span>
+        
+                            </div>
+        
+                            <h3 class="blog-title">Private Meeting Room</h3>
+        
+                            <p class="blog-text">
+                            Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                            ullamcorper ipsum rutrum
+                            punc.
+                            </p>
+        
+                            <a href="#" class="blog-link-btn">
+                            <span>Learn More</span>
+        
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </a>
+        
                         </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="member-box m-b-30">
-                        <div class="member-photo">
-                            <img src="{{url('landio/assets/img/team/naufal.jpeg')}}" alt="Member Photo">
+                        </li>
+        
+                        <li>
+                        <div class="blog-card">
+        
+                            <figure class="blog-banner">
+                            <img src="landio/assets/img/blog-banner-3.jpg" alt="The Best Business Ideas">
+                            </figure>
+        
+                            <div class="blog-meta">
+        
+                            <span>
+                                <ion-icon name="calendar-outline"></ion-icon>
+        
+                                <time datetime="2021-04-10">april 10 2021</time>
+                            </span>
+        
+                            <span>
+                                <ion-icon name="person-outline"></ion-icon>
+        
+                                <p>admin</p>
+                            </span>
+        
+                            </div>
+        
+                            <h3 class="blog-title">The Best Business Ideas</h3>
+        
+                            <p class="blog-text">
+                            Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                            ullamcorper ipsum rutrum
+                            punc.
+                            </p>
+        
+                            <a href="#" class="blog-link-btn">
+                            <span>Learn More</span>
+        
+                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </a>
+        
                         </div>
-                        <div class="member-info">
-                            <h5 class="name"><a href="#">Naufal Fawwaz</a></h5>
-                            <p class="title">Hipster & Anggota</p>
-                        </div>
-                    </div>
+                        </li>
+        
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
     <!--====== End News Update ======-->
-    <section class="blog" id="blog">
-        <div class="container">
-
-          <h2 class="h2 section-title">Latest News</h2>
-
-          <p class="section-text">
-            Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
-            cumque.
-          </p>
-
-          <ul class="blog-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="blog-banner">
-                  <img src="./assets/images/blog-banner-1.jpg" alt="Best Traveling Place">
-                </figure>
-
-                <div class="blog-meta">
-
-                  <span>
-                    <ion-icon name="calendar-outline"></ion-icon>
-
-                    <time datetime="2021-04-10">april 10 2021</time>
-                  </span>
-
-                  <span>
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <p>admin</p>
-                  </span>
-
-                </div>
-
-                <h3 class="blog-title">Best Traveling Place</h3>
-
-                <p class="blog-text">
-                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
-                  ullamcorper ipsum rutrum
-                  punc.
-                </p>
-
-                <a href="#" class="blog-link-btn">
-                  <span>Learn More</span>
-
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="blog-banner">
-                  <img src="./assets/images/blog-banner-2.jpg" alt="Private Meeting Room">
-                </figure>
-
-                <div class="blog-meta">
-
-                  <span>
-                    <ion-icon name="calendar-outline"></ion-icon>
-
-                    <time datetime="2021-04-10">april 10 2021</time>
-                  </span>
-
-                  <span>
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <p>admin</p>
-                  </span>
-
-                </div>
-
-                <h3 class="blog-title">Private Meeting Room</h3>
-
-                <p class="blog-text">
-                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
-                  ullamcorper ipsum rutrum
-                  punc.
-                </p>
-
-                <a href="#" class="blog-link-btn">
-                  <span>Learn More</span>
-
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="blog-banner">
-                  <img src="./assets/images/blog-banner-3.jpg" alt="The Best Business Ideas">
-                </figure>
-
-                <div class="blog-meta">
-
-                  <span>
-                    <ion-icon name="calendar-outline"></ion-icon>
-
-                    <time datetime="2021-04-10">april 10 2021</time>
-                  </span>
-
-                  <span>
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <p>admin</p>
-                  </span>
-
-                </div>
-
-                <h3 class="blog-title">The Best Business Ideas</h3>
-
-                <p class="blog-text">
-                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
-                  ullamcorper ipsum rutrum
-                  punc.
-                </p>
-
-                <a href="#" class="blog-link-btn">
-                  <span>Learn More</span>
-
-                  <ion-icon name="chevron-forward-outline"></ion-icon>
-                </a>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
 </div>
 @endsection
