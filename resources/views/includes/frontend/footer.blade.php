@@ -1,5 +1,5 @@
 <footer class="template-footer">
-    <div class="container">
+    <div class="container border-top-secondary">
         <div class="footer-widgets p-t-80 p-b-30">
             <div class="row">
                 <!-- Single Footer Widget -->
