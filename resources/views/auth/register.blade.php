@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Collegetivity adalah aplikasi yang membantu dunia perkuliahan mahasiswa mulai dari mengorganisasi pelajaran, tugas dan jadwal.">
-    <meta name="keywords" content="Collegetivity, Universitas Siliwangi, Aplikasi Perkuliahan">
-    <meta name="author" content="SYAUQIZAIDAN KHAIRAN KHALAF">
-    <link rel="icon" href="{{url('cuba/assets/images/favicon.ico')}}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{url('cuba/assets/images/icon-192.png')}}" type="image/x-icon">
-    <title>Daftar Akun Baru - Collegetivity</title>
+        content="Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.">
+    <meta name="keywords" content="Fatkest, Teknik Komputer, Universitas Telkom">
+    <meta name="author" content="FATKEST TEAM">
+    <link rel="icon" href="{{url('landio/assets/img/logo-title.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url('landio/assets/img/logo-title.ico')}}" type="image/x-icon">
+    <title>Daftar Akun Baru - Fatkest</title>
     @include('includes.backend.style')
 </head>
 
@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-7">
-                <img class="bg-img-cover bg-center" src="{{url('cuba/assets/images/login/register.jpg')}}"
+                <img class="bg-img-cover bg-center" src="{{url('landio/assets/img/IMG_0716.PNG')}}"
                     alt="looginpage">
             </div>
             <div class="col-xl-5 p-0">
@@ -27,7 +27,8 @@
                     <div class="login-main col-10 col-md-10">
                         <form method="POST" action={{route('register')}} class="theme-form">
                             @csrf
-                            <h1>🎓</h1>
+                            <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="200">
+                            <p>
                             <h4>Daftarkan akun kamu sekarang</h4>
                             <p class="mb-2">Masukan data yang diperlukan untuk membuat akun</p>
 
