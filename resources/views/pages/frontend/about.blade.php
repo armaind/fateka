@@ -182,7 +182,7 @@
 <!--====== Page title area End ======-->
 
 <!-- ===== About Area Start ===== -->
-<section class="about-us-area p-t-130 p-b-130 border-bottom-primary">
+<section class="about-us-area p-t-100 p-b-100 border-bottom-primary">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-6 col-md-10">
@@ -222,7 +222,7 @@
 <!-- ===== About Area End ===== -->
 
 <!-- ===== Service Section Start ===== -->
-<section class="service-area p-t-130 p-b-130">
+<section class="service-area p-t-100 p-b-100">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-7 col-lg-9">
@@ -271,57 +271,6 @@
     </div>
 </section>
 <!-- ===== Service Section End ===== -->
-
-<!--====== Start Team Loop ======-->
-<section class="team-member-area section-half-dots-pattern-fixed p-t-130 p-b-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6">
-                <div class="common-heading tagline-boxed text-center m-b-60">
-                    <span class="tagline">Orang Dibalik Fatkest</span>
-                    <h2 class="title">Mengenal Lebih Dekat Pembuat Fatkest</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row team-members">
-            <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="member-box m-b-30">
-                    <div class="member-photo">
-                        <img src="{{url('landio/assets/img/team/syai.jpg')}}" alt="Member Photo">
-                    </div>
-                    <div class="member-info">
-                        <h5 class="name"><a href="#">Syauqizaidan Khairan Khalaf</a></h5>
-                        <p class="title">Developer, Founder & Ketua</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="member-box m-b-30">
-                    <div class="member-photo">
-                        <img src="{{url('landio/assets/img/team/dodi.jpeg')}}" alt="Member Photo">
-                    </div>
-                    <div class="member-info">
-                        <h5 class="name"><a href="#">Dodi Wahyono</a></h5>
-                        <p class="title">Hustler & Anggota</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="member-box m-b-30">
-                    <div class="member-photo">
-                        <img src="{{url('landio/assets/img/team/naufal.jpeg')}}" alt="Member Photo">
-                    </div>
-                    <div class="member-info">
-                        <h5 class="name"><a href="#">Naufal Fawwaz</a></h5>
-                        <p class="title">Hipster & Anggota</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--====== End Team Loop ======-->
 
 <!--====== Start Call To Action ======-->
 <section class="cta-section bg-cover-center p-t-90 p-b-90"
