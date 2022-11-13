@@ -49,7 +49,7 @@
     <div class="footer-copyright border-top-secondary">
         <div class="container">
             <p class="copyright-text text-center">
-                © 2022 <a href="#">Fatkest</a> | All Rights Reserved
+                Copyright © 2022 <a href="#">Fatkest</a> | All Rights Reserved
             </p>
         </div>
     </div>

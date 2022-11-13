@@ -24,7 +24,7 @@
                 </span>
             </div>
             <div class="hero-img d-none d-lg-block wow fadeInUp" data-wow-delay="0.2s">
-                <img src="{{url('landio/assets/img/hero/home-software-3.png')}}" alt="Image">
+                <img src="{{url('landio/assets/img/hero/home-software-4.png')}}" alt="Image">
             </div>
         </div>
     </section>
@@ -211,30 +211,55 @@
     <br>
     <br>
 
-    <!--====== Start Call To Action ======-->
-    <section class="cta-section bg-cover-center p-t-90 p-b-90 mt-5"
-        style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
+    <!--====== Start News Update ======-->
+    <section class="team-member-area section-half-dots-pattern-fixed p-t-130 p-b-100">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-md-10">
-                    <div class="cta-content text-center">
-                        <div class="common-heading heading-white m-b-65">
-                            <span class="tagline">Tunggu Apa Lagi?</span>
-                            <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
-                        </div>
+                <div class="col-xl-5 col-lg-6">
+                    <div class="common-heading tagline-boxed text-center m-b-60">
+                        <span class="tagline">Informasi Terkini</span>
+                        <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fatkest</h2>
+                    </div>
+                </div>
+            </div>
 
-                        <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
-                                class="far fa-arrow-right"></i></a>
+            <div class="row team-members">
+                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="member-box m-b-30">
+                        <div class="member-photo">
+                            <img src="{{url('landio/assets/img/team/syai.jpg')}}" alt="Member Photo">
+                        </div>
+                        <div class="member-info">
+                            <h5 class="name"><a href="#">Syauqizaidan Khairan Khalaf</a></h5>
+                            <p class="title">Developer, Founder & Ketua</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="member-box m-b-30">
+                        <div class="member-photo">
+                            <img src="{{url('landio/assets/img/team/dodi.jpeg')}}" alt="Member Photo">
+                        </div>
+                        <div class="member-info">
+                            <h5 class="name"><a href="#">Dodi Wahyono</a></h5>
+                            <p class="title">Hustler & Anggota</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="member-box m-b-30">
+                        <div class="member-photo">
+                            <img src="{{url('landio/assets/img/team/naufal.jpeg')}}" alt="Member Photo">
+                        </div>
+                        <div class="member-info">
+                            <h5 class="name"><a href="#">Naufal Fawwaz</a></h5>
+                            <p class="title">Hipster & Anggota</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-            <img src="{{url('landio/assets/img/cta/cta-absolute-img.png')}}" alt="">
-        </div>
     </section>
-
-
-    <!--====== End Call To Action ======-->
+    <!--====== End News Update ======-->
 </div>
 @endsection

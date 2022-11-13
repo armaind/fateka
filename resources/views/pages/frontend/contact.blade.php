@@ -193,7 +193,7 @@
                         </div>
                         <div class="info-body">
                             <h5 class="title">Lokasi Kami</h5>
-                            <p>Teknik Komputer <br> Univeritas Telkom</p>
+                            <p>Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia</p>
                         </div>
                     </div>
                     <div class="contact-info-box m-b-30 wow fadeInUp" data-wow-delay="0.4s">
@@ -202,8 +202,8 @@
                         </div>
                         <div class="info-body">
                             <h5 class="title">Alamat Email</h5>
-                            <p><a href="mailto:apps.fatkest@gmail.com">apps.fastkest@gmail.com</a></p>
-                            <p><a href="fatkest.herokuapp.com" target="_blank">fatkest.herokuapp.com</a></p>
+                            <p><a href="mailto:info@telkomuniversity.ac.id">info@telkomuniversity.ac.id</a></p>
+                            <p><a href="gmail.com" target="_blank">gmail.com</a></p>
                         </div>
                     </div>
                     <div class="contact-info-box wow fadeInUp" data-wow-delay="0.5s">
@@ -212,8 +212,7 @@
                         </div>
                         <div class="info-body">
                             <h5 class="title">Nomor Telepon</h5>
-                            <p><a href="tel:+6288888888888">+62 888-8888-8888</a></p>
-                            <p><a href="tel:+6288888888888">+62 888-8888-8888</a></p>
+                            <p><a href="tel:+62227566456">+62227566456</a></p>
                         </div>
                     </div>
                 </div>
@@ -221,10 +220,9 @@
             <div class="col-lg-6 offset-xl-1 col-md-10">
                 <div class="contact-form-area m-t-md-100">
                     <div class="common-heading tagline-boxed m-b-40">
-                        <span class="tagline">💬 • Kirim kami sebuah pesan</span>
-                        <h2 class="title">Ada pertanyaan atau pesan? <br> Kirim pesan dibawah ini <span
-                                class="font-weight-normal">👋🏻</span>
-                        </h2>
+                        <span class="tagline">Kirim kami sebuah pesan</span>
+                        <h3 class="title">Ada pertanyaan atau pesan? <br> Kirim pesan dibawah ini 
+                        </h3>
                     </div>
                     <div class="contact-form-v2">
                         <form>
@@ -271,18 +269,18 @@
             <div class="col-xl-6 col-lg-7 col-md-10">
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
-                        <span class="tagline">Tunggu Apa Lagi?</span>
-                        <h2 class="title">Segera Daftar dan Bergabung Bersama Fatkest</h2>
+                        <span class="tagline">Frequently Asked Questions</span>
+                        <h2 class="title"> Daftar kumpulan pertanyaan dan jawaban seputar Aplikasi Fatkest</h2>
                     </div>
 
-                    <a href="{{url('/register')}}" class="template-btn white-bg bordered-btn">Daftar Sekarang <i
+                    <a href="{{url('/')}}" class="template-btn white-bg bordered-btn">Fatkest FAQ <i
                             class="far fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img.png')}}" alt="">
+        <img src="{{url('landio/assets/img/cta/cta-absolute-img2.png')}}" alt="">
     </div>
 </section>
 
