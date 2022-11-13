@@ -280,7 +280,7 @@
             <div class="col-xl-6 col-lg-7 col-md-10">
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
-                        <span class="tagline">Tunggu Apa Lagi?</span>
+                        <span class="tagline">Ingin mengakses semua fitur?</span>
                         <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
                     </div>
 
@@ -291,7 +291,7 @@
         </div>
     </div>
     <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img.png')}}" alt="">
+        <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="">
     </div>
 </section>
 
