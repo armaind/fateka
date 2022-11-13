@@ -19,7 +19,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-7">
-                <img class="bg-img-cover bg-center" src="{{url('cuba/assets/images/login/login.jpg')}}"
+                <img class="bg-img-cover bg-center" src="{{url('landio/assets/img/IMG_0661.PNG')}}"
                     alt="looginpage">
             </div>
             <div class="col-xl-5 p-0">
