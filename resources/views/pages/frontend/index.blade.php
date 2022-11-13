@@ -127,16 +127,16 @@
         <div class="container text-center m-t-100">
             <div class="row">
               <div class="col order-first">
-                <h1> 3460</h1>
-                <p>Alumni</p>
+                <h1 class="text-white"> 3460</h1>
+                <p class="text-white"> Alumni</p>
               </div>
               <div class="col">
-                <h1 class="title"> 87</h1>
-                <p>Perusahaan & Bisnis</p>
+                <h1 class="text-white"> 87</h1>
+                <p class="text-white"> Perusahaan & Bisnis</p>
               </div>
               <div class="col order-last">
-                <h1 class="title">34</h1>
-                <p> Kota</p>
+                <h1 class="text-white">34</h1>
+                <p class="text-white"> Kota</p>
               </div>
             </div>
         </div>
