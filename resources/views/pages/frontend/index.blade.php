@@ -261,5 +261,141 @@
         </div>
     </section>
     <!--====== End News Update ======-->
+    <section class="blog" id="blog">
+        <div class="container">
+
+          <h2 class="h2 section-title">Latest News</h2>
+
+          <p class="section-text">
+            Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis eligendi
+            cumque.
+          </p>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <img src="./assets/images/blog-banner-1.jpg" alt="Best Traveling Place">
+                </figure>
+
+                <div class="blog-meta">
+
+                  <span>
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time datetime="2021-04-10">april 10 2021</time>
+                  </span>
+
+                  <span>
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <p>admin</p>
+                  </span>
+
+                </div>
+
+                <h3 class="blog-title">Best Traveling Place</h3>
+
+                <p class="blog-text">
+                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                  ullamcorper ipsum rutrum
+                  punc.
+                </p>
+
+                <a href="#" class="blog-link-btn">
+                  <span>Learn More</span>
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <img src="./assets/images/blog-banner-2.jpg" alt="Private Meeting Room">
+                </figure>
+
+                <div class="blog-meta">
+
+                  <span>
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time datetime="2021-04-10">april 10 2021</time>
+                  </span>
+
+                  <span>
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <p>admin</p>
+                  </span>
+
+                </div>
+
+                <h3 class="blog-title">Private Meeting Room</h3>
+
+                <p class="blog-text">
+                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                  ullamcorper ipsum rutrum
+                  punc.
+                </p>
+
+                <a href="#" class="blog-link-btn">
+                  <span>Learn More</span>
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="blog-banner">
+                  <img src="./assets/images/blog-banner-3.jpg" alt="The Best Business Ideas">
+                </figure>
+
+                <div class="blog-meta">
+
+                  <span>
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time datetime="2021-04-10">april 10 2021</time>
+                  </span>
+
+                  <span>
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <p>admin</p>
+                  </span>
+
+                </div>
+
+                <h3 class="blog-title">The Best Business Ideas</h3>
+
+                <p class="blog-text">
+                  Integer ante arcu accumsan a consectetuer eget posuere mauris praesent adipiscing phasellus
+                  ullamcorper ipsum rutrum
+                  punc.
+                </p>
+
+                <a href="#" class="blog-link-btn">
+                  <span>Learn More</span>
+
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
 </div>
 @endsection
