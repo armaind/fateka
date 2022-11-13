@@ -221,56 +221,73 @@
 </section>
 <!-- ===== About Area End ===== -->
 
-<!-- ===== Service Section Start ===== -->
-<section class="service-area p-t-100 p-b-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-9">
-                <div class="common-heading tagline-boxed text-center m-b-30">
-                    <span class="tagline">Mengapa Fatkset Hadir?</span>
-                    <h2 class="title">Hal yang melatarbelakangi aplikasi Fatkest ini dibuat</h2>
+<!--====== Service Details Start ======-->
+<section class="service-details-area p-t-100">
+        <div class="service-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="common-heading text-center m-b-65">
+                            <span class="tagline color-primary-5">Ada apa aja sih di Fatkest?</span>
+                            <h2 class="title">Berikut fitur yang dapat anda manfaatkan</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="service-tab-nav">
+                    <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" data-toggle="tab" href="#tabItem1" role="tab">
+                                <i class="fa fa-folder"></i> Data Alumni
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
+                                <i class="	fa fa-briefcase"></i> Lowongan Karir
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
+                                <i class="far fa-chalkboard-teacher"></i> Event & News
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
+                                <i class="far fa-video"></i> Virtual Room
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-tab-content container-fluid">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabItem1" role="tabpanel">
+                        <div class="service-tab-ime text-center">
+                            <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                            filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabItem2" role="tabpanel">
+                        <div class="service-tab-ime text-center">
+                            <img src="{{url('landio/assets/img/jadwal.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabItem3" role="tabpanel">
+                        <div class="service-tab-ime text-center">
+                            <img src="{{url('landio/assets/img/catatan.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row justify-content-center iconic-boxes-v1">
-            <div class="col-xl-3 col-md-6 col-sm-10">
-                <div class="iconic-box m-t-30">
-                    <div class="icon icon-gradient-3">
-                        <i class="far fa-calendar-alt"></i>
-                    </div>
-                    <h4 class="title">Data Alumni</h4>
-                    <p>
-                    Belum ada platform khusus untuk pencarian data alumni
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-10">
-                <div class="iconic-box m-t-30">
-                    <div class="icon icon-gradient-4">
-                        <i class="far fa-database"></i>
-                    </div>
-                    <h4 class="title">Lowongan karir</h4>
-                    <p>
-                    Pendistribusian lowongan karir yang masih konvensional
-                    </p>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-6 col-sm-10">
-                <div class="iconic-box m-t-30">
-                    <div class="icon icon-gradient-5">
-                        <i class="far fa-file-word"></i>
-                    </div>
-                    <h4 class="title">Media interaksi</h4>
-                    <p>
-                    Belum ada media interaksi alumni dengan civitas akademika
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ===== Service Section End ===== -->
+    </section>
+    <!--====== Service Details End ======-->
+<br>
+<br>
+<br>
 
 <!--====== Start Call To Action ======-->
 <section class="cta-section bg-cover-center p-t-90 p-b-90"
