@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Tentang Kami — Fatkest')
+@section('title', 'Tentang — Fatkest')
 @section('content')
 
 <header class="template-header navbar-left absolute-header nav-primary-5 submenu-primary-5 sticky-header">
@@ -23,7 +23,7 @@
                             <a href="{{url('/')}}">Beranda</a>
                         </li>
                         <li class="active">
-                            <a href="{{url('tentang')}}">Tentang Kami</a>
+                            <a href="{{url('tentang')}}">Tentang</a>
                         </li>
                         <li>
                             <a href="{{url('kontak')}}">Kontak Kami</a>
@@ -91,7 +91,7 @@
                         <a href="{{('/')}}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{('/tentang')}}">Tentang Kami</a>
+                        <a href="{{('/tentang')}}">Tentang</a>
                     </li>
                     <li>
                         <a href="{{('/kontak')}}">Kontak Kami</a>
@@ -123,7 +123,7 @@
                 <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
             </div>
             <div class="about-us">
-                <h5 class="canvas-widget-title">Tentang Kami</h5>
+                <h5 class="canvas-widget-title">Tentang</h5>
                 <p>
                     Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
@@ -133,17 +133,15 @@
                 <ul>
                     <li>
                         <i class="far fa-map-marker-alt"></i>
-                        Teknik Komputer, Universitas Telkom
+                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>
-                        <a href="mailto:fastkest@gmail.com">fastkest@gmail.com</a>
-                        <a href="#" target="_blank">fastkest.herokuapp.com</a>
+                        <a href="mailto:info@telkomuniversity.ac.id">info@telkomuniversity.ac.id</a>
                     </li>
                     <li>
                         <i class="far fa-phone"></i>
-                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
-                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
+                        <span><a href="tel:+62227566456">+62227566456</a></span>
                     </li>
                 </ul>
             </div>
@@ -159,10 +157,10 @@
 <section class="page-title-area">
     <div class="container">
         <div class="page-title-content text-center mt-5">
-            <h1 class="page-title">Tentang Kami</h1>
+            <h1 class="page-title">Tentang</h1>
             <ul class="breadcrumb-nav">
                 <li><a href="{{url('/')}}">Beranda</a></li>
-                <li class="active">Tentang Kami</li>
+                <li class="active">Tentang</li>
             </ul>
         </div>
     </div>
@@ -220,6 +218,58 @@
     </div>
 </section>
 <!-- ===== About Area End ===== -->
+
+<!-- ===== Service Section Start ===== -->
+<section class="service-area p-t-100 p-b-100 bg-secondary-color-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-9">
+                    <div class="common-heading tagline-boxed text-center m-b-30">
+                        <span class="tagline">Mengapa Fatkset Hadir?</span>
+                        <h2 class="title">Hal yang melatarbelakangi aplikasi Fatkest ini dibuat</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center iconic-boxes-v1">
+                <div class="col-xl-3 col-md-6 col-sm-10">
+                    <div class="iconic-box m-t-30">
+                        <div class="icon icon-gradient-3">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                        <h4 class="title">Data Alumni</h4>
+                        <p>
+                        Belum ada platform khusus untuk pencarian data alumni
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-10">
+                    <div class="iconic-box m-t-30">
+                        <div class="icon icon-gradient-4">
+                            <i class="far fa-database"></i>
+                        </div>
+                        <h4 class="title">Lowongan karir</h4>
+                        <p>
+                        Pendistribusian lowongan karir yang masih konvensional
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-10">
+                    <div class="iconic-box m-t-30">
+                        <div class="icon icon-gradient-5">
+                            <i class="far fa-file-word"></i>
+                        </div>
+                        <h4 class="title">Media interaksi</h4>
+                        <p>
+                        Belum ada media interaksi alumni dengan civitas akademika
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== Service Section End ===== -->
+
 
 <!--====== Service Details Start ======-->
 <section class="service-details-area p-t-100">

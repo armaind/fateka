@@ -11,7 +11,7 @@
                 <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom 
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
-                Fatkest hadir untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer Universitas Telkom
+                Fatkest hadir untuk menjembatani civitas akademika <br>dengan seluruh alumni Teknik Komputer Universitas Telkom
                 </p>
                 @auth
                 @else
@@ -23,7 +23,7 @@
                     <img src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image">Stay connected, discover a wider network
                 </span>
             </div>
-            <div class="hero-img d-none d-lg-block wow fadeInUp" data-wow-delay="0.2s">
+            <div class="hero-img d-none d-lg-block wow fadeInUp animate-float-bob-y" data-wow-delay="0.2s">
                 <img src="{{url('landio/assets/img/hero/home-software-4.png')}}" alt="Image">
             </div>
         </div>
@@ -114,56 +114,26 @@
     <!--====== End Design & Layout Section ======-->
     
     <!--====== Section alumni Start ======-->
-    <section class="service-section p-t-130 p-b-130 bg-secondary-color-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="common-heading text-center heading-white m-b-30">
-                        <h2 class="title">Menyimak kesuksesan dari para alumni yang telah berkiprah di berbagai bidang.</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container text-center m-t-100">
-            <div class="row">
-              <div class="col order-first">
-                <h1 class="text-white"> 3460</h1>
-                <p class="text-white"> Alumni</p>
-              </div>
-              <div class="col">
-                <h1 class="text-white"> 87</h1>
-                <p class="text-white"> Perusahaan & Bisnis</p>
-              </div>
-              <div class="col order-last">
-                <h1 class="text-white">34</h1>
-                <p class="text-white"> Kota</p>
-              </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Section alumni End ======-->
-
-    <!-- ===== Service Section Start ===== -->
-    <section class="service-area p-t-100 p-b-100">
+    <section class="service-area p-t-100 p-b-100 bg-secondary-color-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9">
                     <div class="common-heading tagline-boxed text-center m-b-30">
-                        <span class="tagline">Mengapa Fatkset Hadir?</span>
-                        <h2 class="title">Hal yang melatarbelakangi aplikasi Fatkest ini dibuat</h2>
+                        <span class="tagline">Alumni Story</span>
+                        <h2 class="title">Menyimak kesuksesan dari para alumni yang telah berkiprah di berbagai bidang</h2>
                     </div>
                 </div>
             </div>
 
             <div class="row justify-content-center iconic-boxes-v1">
-                <div class="col-xl-3 col-md-6 col-sm-10">
+                <div class="col-xl-3 col-md-6 col-sm-10 ">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-3">
                             <i class="far fa-calendar-alt"></i>
                         </div>
-                        <h4 class="title">Data Alumni</h4>
+                        <h4 class="title">3980</h4>
                         <p>
-                        Belum ada platform khusus untuk pencarian data alumni
+                        Alumni
                         </p>
                     </div>
                 </div>
@@ -172,9 +142,9 @@
                         <div class="icon icon-gradient-4">
                             <i class="far fa-database"></i>
                         </div>
-                        <h4 class="title">Lowongan karir</h4>
+                        <h4 class="title">200</h4>
                         <p>
-                        Pendistribusian lowongan karir yang masih konvensional
+                        Perusahaan & Bisnis
                         </p>
                     </div>
                 </div>
@@ -183,16 +153,16 @@
                         <div class="icon icon-gradient-5">
                             <i class="far fa-file-word"></i>
                         </div>
-                        <h4 class="title">Media interaksi</h4>
+                        <h4 class="title">50</h4>
                         <p>
-                        Belum ada media interaksi alumni dengan civitas akademika
+                        Kota
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ===== Service Section End ===== -->
+    <!--====== Section alumni End ======-->
 
     <!--====== Start News Update ======-->
     <section class="team-member-area section-half-dots-pattern-fixed p-t-130 p-b-100">

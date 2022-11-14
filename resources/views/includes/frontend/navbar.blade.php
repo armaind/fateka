@@ -19,7 +19,7 @@
                             <a href="{{url('/')}}"> Beranda</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">Tentang Kami</a>
+                            <a href="{{url('tentang')}}">Tentang</a>
                         </li>
                         <li>
                             <a href="{{url('kontak')}}">Kontak Kami</a>
@@ -88,7 +88,7 @@
                         <a href="{{('/')}}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{('/tentang')}}">Tentang Kami</a>
+                        <a href="{{('/tentang')}}">Tentang</a>
                     </li>
                     <li>
                         <a href="{{('/kontak')}}">Kontak Kami</a>
@@ -120,7 +120,7 @@
                 <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
             </div>
             <div class="about-us">
-                <h5 class="canvas-widget-title">Tentang Kami</h5>
+                <h5 class="canvas-widget-title">Tentang</h5>
                 <p>
                     Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
@@ -130,17 +130,15 @@
                 <ul>
                     <li>
                         <i class="far fa-map-marker-alt"></i>
-                        Teknik Komputer, Universitas Telkom
+                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>
-                        <a href="mailto:fastkest@gmail.com">fastkest@gmail.com</a>
-                        <a href="#" target="_blank">fastkest.herokuapp.com</a>
+                        <a href="mailto:info@telkomuniversity.ac.id">info@telkomuniversity.ac.id</a>
                     </li>
                     <li>
                         <i class="far fa-phone"></i>
-                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
-                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
+                        <span><a href="tel:+62227566456">+62227566456</a></span>
                     </li>
                 </ul>
             </div>
