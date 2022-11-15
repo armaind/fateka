@@ -51,7 +51,6 @@
                         <p>
                             Mudah digunakan cukup login menggunakan SSO, dibantu dengan tampilan yang responsive
                         </p>
-                       
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
@@ -81,33 +80,37 @@
     <!--====== Section Service End ======-->
 
     <!--====== Start Design & Layout Section ======-->
-    <section class="sof-design-layout p-t-80 p-b-80">
+    <section class="sof-design-layout p-t-100 p-b-100">
         <div class="container">
             <div class="row align-items-center justify-content-center no-gutters">
                 <div class="col-lg-7">
-                    <div class="software-preview m-t-50 animate-float-bob-y">
+                    <div class="software-preview m-t-50 animate-float-bob-x">
                         <img src="{{url('landio/assets/img/preview-gallery/design-layout.png')}}" alt="Image">
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="software-text-block p-l-lg-30 p-l-md-0">
-                        <div class="common-heading m-t-40">
-                            <span class="tagline color-primary-5">Apa kata alumni Teknik Komputer</span>
-                            <h3 class="title">Faisal Candrasyah Hasibuan S.T M.T</h3>
-                        </div>
-                        <p>
-                        "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja".
-                        </p>
+                    <div class="common-heading tagline-boxed">
+                        <span class="tagline m-b-60">Alumni Story</span>
+                        <h2 class="title m-b-30">Apa kata alumni Teknik Komputer</h2>
                     </div>
-                    <div class="software-text-block p-t-10 p-l-lg-30 p-l-md-0">
-                        <div class="common-heading m-t-40">
-                            <h3 class="title">Shinta Raudlatul Hanafia S.T</h3>
+                    <div class="justify-content iconic-boxes-v1">
+                        <div class="col-xl col-md-6 col-sm-10 ">
+                            <div class="iconic-box m-t-30">
+                                <h4 class="title">Faisal Candrasyah Hasibuan S.T M.T</h4>
+                                <p>
+                                "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja"
+                                </p>
+                            </div>
                         </div>
-                        <p>
-                        "Teruslah Berkibar Menjadi Alumni Yang Terbaik, Memberikan Kontribusi Untuk Bangsa dan Negara".
-                        </p>
-                    </div>
-                </div>
+                        <div class="col-xl col-md-6 col-sm-10">
+                            <div class="iconic-box m-t-30">
+                                <h1 class="title">Agus Setiawan Popalia S.T</h1>
+                                <p>
+                                Manfaatkan format Universitas ini yang bisa membawa kita berpikir lebih universal artinya kita bisa mengembangkan keilmuan kita untuk saling terbuka sinergi, dengan saling keterbukaan akan membawa kita ke esensi keilmuannya terutama tentang kreatifitas sehingga kita bisa mengembangkan makna dan manfaat keilmuan kita untuk masyarakat</p>
+                            </div>
+                        </div>
+                    </div>                
+                </div>  
             </div>
         </div> 
     </section>
@@ -118,8 +121,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9">
-                    <div class="common-heading tagline-boxed text-center m-b-30">
-                        <span class="tagline">Alumni Story</span>
+                    <div class="common-heading heading-white text-center m-b-30">
                         <h2 class="title">Menyimak kesuksesan dari para alumni yang telah berkiprah di berbagai bidang</h2>
                     </div>
                 </div>
@@ -127,7 +129,7 @@
 
             <div class="row justify-content-center iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10 ">
-                    <div class="iconic-box m-t-30">
+                    <div class="iconic-box m-t-30 box-version-white color-v1">
                         <div class="icon icon-gradient-3">
                             <i class="far fa-calendar-alt"></i>
                         </div>
@@ -165,7 +167,7 @@
     <!--====== Section alumni End ======-->
 
     <!--====== Start News Update ======-->
-    <section class="p-t-50 p-b-100" >
+    <section class="p-t-100 p-b-100" >
         <div class="blog" id="blog">
             <div class="container">
                 <div class="row justify-content-center">

@@ -4090,6 +4090,7 @@ textarea {
 
 /*======= Iconic Boxes v3  =======*/
 .icon-boxes-v3 .iconic-box .icon {
+
 	position: relative;
 	z-index: 1;
 }
@@ -4330,7 +4331,7 @@ textarea {
 }
 
 .fancy-icon-boxes-v1.boxes-white-version .fancy-icon-box:hover {
-	background-color: transparent;
+	background-color: black;
 }
 
 /*======= Fancy Icon Boxes v2  =======*/
