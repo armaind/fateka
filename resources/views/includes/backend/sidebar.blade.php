@@ -12,201 +12,119 @@
                     </div>
                 </li>
 
-                <li class="sidebar-main-title pt-0">
-                    <div>
-                        <h6>Halaman Utama</h6>
-                        <p>Dashboard & Overview</p>
-                    </div>
+                <li class="sidebar-list">
+                      <a class="sidebar-link sidebar-title link-nav" href="{{url('/')}}">
+                        <img src="\landio\assets\img\logotk.png" alt="logo" width="60">
+                      </a>
                 </li>
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav" href="{{url('dashboard')}}">
-                        <i data-feather="home"></i>
+                        <i data-feather="grid"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Kelola Data Akademik</h6>
-                        <p>Jadwal, Catatan, Galeri & File</p>
+                        <h6>Informasi Alumni</h6>
                     </div>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="book"></i>
-                        <span>Jadwal Pelajaran</span>
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
+                        <i data-feather="users"></i>
+                        <span>Data Alumni</span>
                     </a>
-                    <ul class="sidebar-submenu">
-                        <li class="active">
-                            <a href="{{url('/dashboard/jadwal-pelajaran')}}">
-                                Data Jadwal Pelajaran
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('/dashboard/jadwal-pelajaran/atur-jadwal')}}">
-                                Atur & Tambah Jadwal Pelajaran
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="edit"></i>
-                        <span>Catatan & Tulisan</span>
-                    </a>
-                    <ul class="sidebar-submenu">
-                        <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran')}}">
-                                Semua Catatan Pelajaran
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran/tambah-catatan')}}">
-                                Tulis & Tambah Catatan Baru
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/file-tugas')}}">
-                        <i data-feather="paperclip"></i>
-                        <span>File Manager</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="image"></i>
-                        <span>Galeri Foto</span>
-                    </a>
-                    <ul class="sidebar-submenu">
-                        <li>
-                            <a href="{{url('/dashboard/galeri-foto')}}">
-                                Semua Galeri & Foto
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('/dashboard/galeri-foto/tambah-foto')}}">
-                                Upload Foto Baru
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Kelola Todolist & Bookmark</h6>
-                        <p>Todolist, Kalender & Bookmark</p>
+                        <h6>Publikasi</h6>
                     </div>
                 </li>
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/todolist')}}">
-                        <i data-feather="check-square"></i>
-                        <span>Todolist</span>
+                        <i data-feather="file-text"></i>
+                        <span>Berita</span>
                     </a>
                 </li>
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
-                        <i data-feather="calendar"></i>
-                        <span>Kalender</span>
+                        <i data-feather="feather"></i>
+                        <span>Artikel</span>
                     </a>
                 </li>
-
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="bookmark"></i>
-                        <span>Bookmark</span>
-                    </a>
-                    <ul class="sidebar-submenu">
-                        <li>
-                            <a href="{{url('/dashboard/bookmarks')}}">
-                                Semua Bookmarks
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('/dashboard/bookmarks/tambah-bookmarks')}}">
-                                Tambah Bookmarks Baru
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
 
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Produktifitas</h6>
-                        <p>Whiteboard, Audio & Pomodoro</p>
+                        <h6>Karir</h6>
                     </div>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/whiteboard')}}">
-                        <i data-feather="clipboard"></i>
-                        <span>Whiteboard</span>
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                        <i data-feather="briefcase"></i>
+                        <span>Lowongan Kerja</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-main-title">
+                    <div>
+                        <h6>Kegiatan</h6>
+                    </div>
+                </li>
+
+                <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                        <i data-feather="mic"></i>
+                        <span>Alumni Sharing Session</span>
                     </a>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="music"></i>
-                        <span>Audio Relaxation</span>
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                        <i data-feather="gift"></i>
+                        <span>Charity</span>
                     </a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="{{url('/dashboard/audio/moodly')}}">Moodly</a></li>
-                        <li><a href="{{url('/dashboard/audio/shhhnoise')}}">Shhhnoise</a></li>
-                        <li><a href="{{url('/dashboard/audio/poolsuite')}}">Poolsuite</a></li>
-                    </ul>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="clock"></i>
-                        <span>Pomodoro Timer</span>
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                        <i data-feather="share-2"></i>
+                        <span>Pengabdian</span>
                     </a>
-                    <ul class="sidebar-submenu">
-                        <li><a href="{{url('/dashboard/pomodoro/pomofocus')}}">Pomofocus</a></li>
-                        <li><a href="{{url('/dashboard/pomodoro/lifeat')}}">Lifeat.io</a></li>
-                    </ul>
                 </li>
+
+                <li class="sidebar-main-title">
+                    <div>
+                        <h6>Pertemuan</h6>
+                    </div>
+                </li>
+
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="airplay"></i>
+                        <i data-feather="video"></i>
                         <span>Virtual Meeting</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li><a href="{{url('/dashboard/virtual-meeting/skyoffice')}}">Skyoffice</a></li>
                     </ul>
                 </li>
+
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Resources</h6>
-                        <p>Semua website yang membantumu</p>
+                        <h6>Survei</h6>
                     </div>
                 </li>
-
+                
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/journal')}}">
-                        <i data-feather="book-open"></i>
-                        <span>Journal</span>
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
+                        <i data-feather="edit"></i>
+                        <span>Kuisioner</span>
                     </a>
                 </li>
 
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/e-book')}}">
-                        <i data-feather="book"></i>
-                        <span>E-Book</span>
-                    </a>
-                </li>
 
-                <li class="sidebar-list invisible">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/e-book')}}">
-                        <i data-feather="book"></i>
-                        <span>E-Book</span>
-                    </a>
-                </li>
 
             </ul>
         </div>

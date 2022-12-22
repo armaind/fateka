@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Selamat datang di Fatkest ' . Auth::user()->name . '!')
+@section('title', 'Selamat datang di Fateka ' . Auth::user()->name . '')
 @section('content')
 
 @push('datatable-styles')
@@ -49,19 +49,18 @@
                     </div>
                     <div class="greeting-user text-center">
                         <div class="profile-vector">
-                            <img class="img-fluid" src="{{url("cuba/assets/images/dashboard/welcome.png")}}" alt="">
+                            <img class="img-fluid" src="{{url("/")}}" alt="">
                         </div>
                         <h4 class="f-w-600">
                             <span id="greeting">Halo!</span>
                         </h4>
                         <p>
                             <span>
-                                Selamat datang di Collegetivity, kamu dapat mengelola semua
-                                data akademik dan menjelajahi semua resources disini
+                                Disini kamu dapat mencari data alumni, mengakses berita seputar jurusan maupun kampus, mengikuti kegiatan, memposting dan mencari lowongan kerja, dan juga kamu dapat melakukan pertemuan secara daring, dan ada fitur survei yang dibuat untuk melakukan kuisioner terhadap para alumni.
                             </span>
                         </p>
                         <div class="whatsnew-btn">
-                            <a href="{{url('dashboard/jadwal-pelajaran')}}" class="btn btn-primary px-4 py-2">Mulai
+                            <a href="{{url('dashboard/data-alumni')}}" class="btn btn-primary px-4 py-2">Cari Data Alumni
                                 Sekarang ⇾
                             </a>
                         </div>
@@ -102,92 +101,14 @@
             </div>
         </div>
 
-        <div class="col-xl-4 xl-50 news box-col-6">
-            <div class="card">
-                <div class="card-header">
-                    <div class="header-top">
-                        <h5 class="m-0">✅ • To-Do List</h5>
-                    </div>
-                </div>
-                <div class="card-body p-0">
-                    @forelse ($todolist as $item)
-                    <div class="news-update">
-                        <h6>{{$item->nama_tugas}}</h6>
-                        <a href="{{route('todolist.done', $item->id) }}">
-                            Tandai sebagai selesai ✔
-                        </a>
-                    </div>
-                    @empty
-                    <div class="news-update">
-                        <img src="{{url('images/illustrations/todo-list.png')}}" class="img-fluid">
-                    </div>
-                    @endforelse
-                </div>
-                <div class="card-footer">
-                    <div class="bottom-btn">
-                        <a href="{{url('/dashboard/todolist')}}">Lihat semua todolist ...</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="col-xl-4 xl-50 appointment-sec box-col-6">
             <div class="row">
-                <div class="col-xl-12 appointment">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="header-top">
-                                <h5 class="m-0">📝 • Catatanmu</h5>
-                            </div>
-                        </div>
-                        <div class="card-body py-3">
-                            <div class="appointment-table table-responsive">
-                                <table class="table">
-                                    <tbody>
-                                        @forelse ($catatan as $item)
-                                        <tr>
-                                            <td class="font-weight-bold">
-                                                <div class="d-flex py-1 align-items-center">
-                                                    <div class="flex-fill">
-                                                        <div class="font-weight-bold">{{$item->judul}}</div>
-                                                        <div class="text-muted"><a href="#"
-                                                                class="text-reset">{{$item->matkul}}</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </td>
 
-                                            <td class="text-right">
-                                                <a href="{{route('notes.show', $item->id)}}">
-                                                    <div class="button btn btn-primary">Lihat</div>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        @empty
-                                        <tr>
-                                            <td>
-                                                <h6>Kamu belum buat catatan, <a href="#">buat sekarang ⇾</a></h6>
-                                            </td>
-                                        </tr>
-                                        @endforelse
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <th class="ml-0 pl-0 py-2 text-left" style="border-top:none;">
-                                                <a href="{{url('/dashboard/catatan-pelajaran')}}"> Lihat semua ... </a>
-                                            </th>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-xl-12 alert-sec">
                     <div class="card bg-img">
                         <div class="card-header">
                             <div class="header-top">
-                                <h5 class="m-0">Butuh Bantuanmu</h5>
+                                <h5 class="m-0">Bagikan Aplikasi Ini</h5>
                                 <div class="dot-right-icon">
                                     <i class="fa fa-share"></i>
                                 </div>
@@ -197,74 +118,11 @@
                             <div class="body-bottom">
                                 <h6>Jangan lupa untuk share dan ajak temanmu!</h6>
                                 <span class="font-roboto">
-                                    Ajak temanmu menggunakan collegetivity dan share ke sosial media biar bisa bantu
-                                    teman teman mahasiswa yang lain juga, ya!
+                                    Ajak teman menggunakan Fateka dan share ke sosial mediamu biar 
+                                    koneksi tetap terjaga
                                 </span>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5>📚 • Jadwal Pelajaranmu</span>
-                </div>
-                <div class="card-body">
-                    <div class="dt-ext table-responsive">
-                        <table class="display" id="auto-fill">
-                            <thead>
-                                <tr>
-                                    <th>Nama Mata Kuliah</th>
-                                    <th>Hari</th>
-                                    <th>Waktu</th>
-                                    <th>Kelas</th>
-                                    <th>SKS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($jadwal as $item)
-                                <tr>
-                                    <td>
-                                        <div class="d-flex py-1 align-items-center">
-                                            <div class="avatars mr-2">
-                                                <div class="avatar ratio">
-                                                    <img style="object-fit: cover;
-                                                        width: 40px;
-                                                        height: 40px;" class="b-r-8"
-                                                        src="https://ui-avatars.com/api/?background=4466f2&color=fff&name={{$item->nama_dosen}}">
-                                                </div>
-                                            </div>
-                                            <div class="flex-fill">
-                                                <div class="font-weight-bold">{{$item->nama_matkul}}</div>
-                                                <div class="text-muted">
-                                                    <a href="#" class="text-reset">{{$item->nama_dosen}}</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>{{$item->hari}}</td>
-                                    <td>({{$item->waktu_mulai}} — {{$item->waktu_selesai}})</td>
-                                    <td>{{$item->kelas}}</td>
-                                    <td>{{$item->sks}}</td>
-                                </tr>
-                                @empty
-                                @endforelse
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Nama Mata Kuliah</th>
-                                    <th>Hari</th>
-                                    <th>Waktu</th>
-                                    <th>Kelas</th>
-                                    <th>SKS</th>
-                                </tr>
-                            </tfoot>
-                        </table>
                     </div>
                 </div>
             </div>

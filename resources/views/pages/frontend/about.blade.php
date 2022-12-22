@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Tentang — Fatkest')
+@section('title', 'Tentang — Fateka')
 @section('content')
 
 <header class="template-header navbar-left absolute-header nav-primary-5 submenu-primary-5 sticky-header">
@@ -120,12 +120,12 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
+                <img src="\landio\assets\img\logotk.png" alt="logo" width="110">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang</h5>
                 <p>
-                    Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
+                    Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
             </div>
             <div class="contact-us">
@@ -204,11 +204,11 @@
             <div class="col-xl-5 col-lg-6 col-md-9">
                 <div class="about-us-content">
                     <div class="common-heading tagline-boxed m-b-30">
-                        <span class="tagline">Apa itu Fatkest?</span>
+                        <span class="tagline">Apa itu Fateka?</span>
                         <h2 class="title">Forum Alumni Teknik Komputer, Universitas Telkom </h2>
                     </div>
                     <p>
-                        Fatkest dibuat sebagai platform yang berfungsi untuk menyediakan informasi meliputi data alumni, kegiatan, sharing session alumni sekaligus menyediakan fitur untuk interaksi antara alumni dengan civitas akademika Teknik Komputer Universitas Telkom melalui ruang virtual.
+                        Fateka dibuat sebagai platform yang berfungsi untuk menyediakan informasi meliputi data alumni, kegiatan, sharing session alumni sekaligus menyediakan fitur untuk interaksi antara alumni dengan civitas akademika Teknik Komputer Universitas Telkom melalui ruang virtual.
                     </p>
                     <a href="{{url('/login')}}" class="template-btn bordered-btn m-t-40">Login Sekarang <i
                             class="far fa-arrow-right"></i></a>
@@ -225,8 +225,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9">
                     <div class="common-heading tagline-boxed text-center m-b-30">
-                        <span class="tagline">Mengapa Fatkset Hadir?</span>
-                        <h2 class="title">Hal yang melatarbelakangi aplikasi Fatkest ini dibuat</h2>
+                        <span class="tagline">Mengapa Fateka Hadir?</span>
+                        <h2 class="title">Hal yang melatarbelakangi aplikasi Fateka ini dibuat</h2>
                     </div>
                 </div>
             </div>
@@ -271,70 +271,7 @@
     <!-- ===== Service Section End ===== -->
 
 
-<!--====== Service Details Start ======-->
-<section class="service-details-area p-t-100">
-        <div class="service-tab">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="common-heading text-center m-b-65">
-                            <span class="tagline color-primary-5">Ada apa aja sih di Fatkest?</span>
-                            <h2 class="title">Berikut fitur yang dapat anda manfaatkan</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="service-tab-nav">
-                    <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" data-toggle="tab" href="#tabItem1" role="tab">
-                                <i class="fa fa-folder"></i> Data Alumni
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
-                                <i class="	fa fa-briefcase"></i> Lowongan Karir
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                                <i class="far fa-chalkboard-teacher"></i> Event & News
-                            </a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                                <i class="far fa-video"></i> Virtual Room
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="service-tab-content container-fluid">
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="tabItem1" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                            filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem2" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/jadwal.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="tabItem3" role="tabpanel">
-                        <div class="service-tab-ime text-center">
-                            <img src="{{url('landio/assets/img/catatan.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
-                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Service Details End ======-->
+
 <br>
 <br>
 <br>
@@ -348,7 +285,7 @@
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
                         <span class="tagline">Ingin mengakses semua fitur?</span>
-                        <h2 class="title">Ayo segera masuk ke Aplikasi Fatkest</h2>
+                        <h2 class="title">Ayo segera masuk ke Aplikasi Fateka</h2>
                     </div>
 
                     <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.">
-    <meta name="keywords" content="Fatkest, Teknik Komputer, Universitas Telkom">
-    <meta name="author" content="FATKEST TEAM">
+        content="Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.">
+    <meta name="keywords" content="Fateka, Teknik Komputer, Universitas Telkom">
+    <meta name="author" content="Fateka TEAM">
     <link rel="icon" href="{{url('landio/assets/img/logo-title.ico')}}" type="image/x-icon">
     <link rel="shortcut icon" href="{{url('landio/assets/img/logo-title.ico')}}" type="image/x-icon">
-    <title>Masuk Aplikasi - Fatkest</title>
+    <title>Masuk Aplikasi - Fateka</title>
     @include('includes.backend.style')
 </head>
 

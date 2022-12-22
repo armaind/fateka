@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Kontak Kami — Fatkest')
+@section('title', 'Kontak Kami — Fateka')
 @section('content')
 
 <header class="template-header navbar-left absolute-header nav-primary-5 submenu-primary-5 sticky-header">
@@ -120,12 +120,12 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
+                <img src="\landio\assets\img\logotk.png" alt="logo" width="110">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang Kami</h5>
                 <p>
-                    Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
+                    Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
             </div>
             <div class="contact-us">
@@ -137,8 +137,8 @@
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>
-                        <a href="mailto:fatkest@gmail.com">fatkest@gmail.com</a>
-                        <a href="#" target="_blank">fatkest.herokuapp.com</a>
+                        <a href="mailto:Fateka@gmail.com">fateka@gmail.com</a>
+                        <a href="#" target="_blank">fateka.herokuapp.com</a>
                     </li>
                     <li>
                         <i class="far fa-phone"></i>
@@ -270,10 +270,10 @@
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
                         <span class="tagline">Frequently Asked Questions</span>
-                        <h2 class="title"> Daftar kumpulan pertanyaan dan jawaban seputar Aplikasi Fatkest</h2>
+                        <h2 class="title"> Daftar kumpulan pertanyaan dan jawaban seputar Aplikasi Fateka</h2>
                     </div>
 
-                    <a href="{{url('/')}}" class="template-btn white-bg bordered-btn">Fatkest FAQ <i
+                    <a href="{{url('/')}}" class="template-btn white-bg bordered-btn">Fateka FAQ <i
                             class="far fa-arrow-right"></i></a>
                 </div>
             </div>

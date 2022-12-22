@@ -1,6 +1,6 @@
 @extends('layouts.frontend.master')
 
-@section('title', 'Fatkest — Forum Alumni Teknik Komputer, Universitas Telkom!')
+@section('title', 'Fateka — Forum Alumni Teknik Komputer, Universitas Telkom!')
 @section('content')
 
 <div class="page-wrapper">
@@ -11,7 +11,7 @@
                 <h3 class="hero-title wow fadeInLeft" data-wow-delay="0.2s">Forum Alumni Teknik<br>Komputer,<br> Universitas<br> Telkom 
                 </h3>
                 <p class="wow fadeInUp" data-wow-delay="0.3s">
-                Fatkest hadir untuk menjembatani civitas akademika <br>dengan seluruh alumni Teknik Komputer Universitas Telkom
+                Fateka hadir untuk menjembatani civitas akademika <br>dengan seluruh alumni Teknik Komputer Universitas Telkom
                 </p>
                 @auth
                 @else
@@ -36,7 +36,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="common-heading text-center heading-white m-b-30">
-                        <h2 class="title">Mengapa harus menggunakan Fatkest?</h2>
+                        <h2 class="title">Mengapa harus menggunakan Fateka?</h2>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                         </div>
                         <h4 class="title"><a href="#">Simple</a></h4>
                         <p>
-                            Mudah digunakan cukup login menggunakan SSO, dibantu dengan tampilan yang responsive
+                            Mudah digunakan cukup login menggunakan nomor, anda akan menikmati semua fiturnya
                         </p>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     <div class="col-xl-5 col-lg-6">
                         <div class="common-heading tagline-boxed text-center m-b-50">
                             <span class="tagline">Informasi Terkini</span>
-                            <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fatkest</h2>
+                            <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fateka</h2>
                         </div>
                     </div>
 
@@ -194,7 +194,7 @@
                             <span>
                                 <ion-icon name="calendar-outline"></ion-icon>
         
-                                <time datetime="2021-04-10">april 10 2021</time>
+                                <time datetime="2021-04-10">April 10 2021</time>
                             </span>
         
                             <span>
@@ -234,7 +234,7 @@
                             <span>
                                 <ion-icon name="calendar-outline"></ion-icon>
         
-                                <time datetime="2021-04-10">april 10 2021</time>
+                                <time datetime="2021-04-10">April 10 2021</time>
                             </span>
         
                             <span>
@@ -274,7 +274,7 @@
                             <span>
                                 <ion-icon name="calendar-outline"></ion-icon>
         
-                                <time datetime="2021-04-10">april 10 2021</time>
+                                <time datetime="2021-04-10">April 10 2021</time>
                             </span>
         
                             <span>

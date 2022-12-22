@@ -5,9 +5,9 @@
                 <!-- Single Footer Widget -->
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="widget text-block-widget">
-                        <h5 class="widget-title">Tentang Fatkest</h5>
+                        <h5 class="widget-title">Tentang Fateka</h5>
                         <p>
-                            Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.
+                            Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
     <div class="footer-copyright border-top-secondary">
         <div class="container">
             <p class="copyright-text text-center">
-                Copyright © 2022 <a href="#">Fatkest</a> | All Rights Reserved
+                Copyright © 2022 <a href="#">Fateka</a> | All Rights Reserved
             </p>
         </div>
     </div>

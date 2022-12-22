@@ -2610,7 +2610,7 @@ textarea {
 	position: relative;
 	z-index: 1;
 	background-color: var(--color-heading-3);
-	background-image: url(../img/hero/hero-leaf-bg.jpg);
+	background-image: url(../img/hero/hero-leaf-bg.png);
 	background-size: cover;
 	background-position: right center;
 	background-repeat: no-repeat;

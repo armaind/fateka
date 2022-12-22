@@ -42,7 +42,7 @@ $badge-light-color in (primary, $primary-color),
 }
 
 .profile-greeting {
-  background-image: url(../images/dashboard/bg.jpg);
+  background-image: url(../images/dashboard/bg.png);
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center center;
@@ -566,7 +566,7 @@ $badge-light-color in (primary, $primary-color),
   .alert-sec {
     .card {
       &.bg-img {
-        background-image: url(../images/dashboard/bg.jpg);
+        background-image: url(../images/dashboard/bg.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;

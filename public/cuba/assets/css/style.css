@@ -11267,7 +11267,7 @@ p.data-attributes svg {
      27. Coming Soon CSS Start
 ==========================**/
 .comingsoon-bgimg {
-  background: url(../images/other-images/coming-soon-bg.jpg);
+  background: url(../images/other-images/coming-soon-bg.png);
   background-position: bottom;
   background-size: cover; }
 
@@ -12236,7 +12236,7 @@ p.data-attributes svg {
   border-bottom: 2px solid #ecf3fa; }
 
 .profile-greeting {
-  background-image: url(../images/dashboard/bg.jpg);
+  background-image: url(../images/dashboard/bg.png);
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position: center center;
@@ -12645,7 +12645,7 @@ p.data-attributes svg {
 .third-news-update .alert-sec .card.bg-img,
 .news .alert-sec .card.bg-img,
 .appointment-sec .alert-sec .card.bg-img {
-  background-image: url(../images/dashboard/bg.jpg);
+  background-image: url(../images/dashboard/bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
@@ -14799,7 +14799,7 @@ footer.blockquote-footer {
   min-height: 100vh;
   text-align: center; }
   .error-wrapper.maintenance-bg {
-    background-image: url(../images/other-images/maintenance-bg.jpg);
+    background-image: url(../images/other-images/maintenance-bg.png);
     background-color: rgba(255, 255, 255, 0.6);
     background-blend-mode: overlay; }
   .error-wrapper .maintenance-icons li i {
@@ -16572,7 +16572,7 @@ footer {
   margin-left: 0; }
 
 .email_bg {
-  background-image: url(../../assets/images/landing/email-bg.jpg) !important; }
+  background-image: url(../../assets/images/landing/email-bg.png) !important; }
 
 .app_bg {
   background-color: #f7f7fe; }
@@ -16593,7 +16593,7 @@ footer {
   -webkit-text-fill-color: #fff !important; }
 
 .layout {
-  background-image: url(../../assets/images/landing/email-bg.jpg); }
+  background-image: url(../../assets/images/landing/email-bg.png); }
 
 .layout {
   margin-bottom: -30px; }
@@ -17393,7 +17393,7 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  background: url("../images/login/login_bg.jpg");
+  background: url("../images/login/login_bg.png");
   background-position: center;
   padding: 30px 0; }
   .login-card .logo {
@@ -27497,7 +27497,7 @@ body[class*='dark-'] .for-light {
     63. Box-layout CSS start
 ==========================**/
 .box-layout {
-  background-image: url(../images/other-images/boxbg.jpg);
+  background-image: url(../images/other-images/boxbg.png);
   background-blend-mode: overlay;
   background-color: rgba(255, 255, 255, 0.5); }
   .box-layout .left-header .mega-menu-container {

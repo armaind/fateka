@@ -458,7 +458,7 @@ var kanban3 = new jKanban({
       'item': [{
           'title': `
                                <a class="kanban-box" href="#"><span class="date">24/7/20</span><span class="badge badge-danger f-right">Argent</span>
-                                <img class="mt-2 img-fluid" src="../assets/images/other-images/maintenance-bg.jpg" alt="" data-original-title="" title="">
+                                <img class="mt-2 img-fluid" src="../assets/images/other-images/maintenance-bg.png" alt="" data-original-title="" title="">
                                 <h6>Test Sidebar</h6>
                                 <div class="media"><img class="img-20 mr-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title="">
                                   <div class="media-body">
@@ -549,7 +549,7 @@ var kanban3 = new jKanban({
         {
           'title': `
                                <a class="kanban-box" href="#"><span class="date">24/7/20</span><span class="badge badge-danger f-right">Argent</span>
-                                <img class="mt-2 img-fluid" src="../assets/images/other-images/sidebar-bg.jpg" alt="" data-original-title="" title="">
+                                <img class="mt-2 img-fluid" src="../assets/images/other-images/sidebar-bg.png" alt="" data-original-title="" title="">
                                 <h6>Test Sidebar</h6>
                                 <div class="media"><img class="img-20 mr-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title="">
                                   <div class="media-body">
@@ -586,7 +586,7 @@ toDoButton.addEventListener('click', function () {
     '_todo', {
       'title': `
                                <a class="kanban-box" href="#"><span class="date">24/7/20</span><span class="badge badge-danger f-right">Argent</span>
-                                <img class="mt-2 img-fluid" src="../assets/images/other-images/sidebar-bg.jpg" alt="" data-original-title="" title="">
+                                <img class="mt-2 img-fluid" src="../assets/images/other-images/sidebar-bg.png" alt="" data-original-title="" title="">
                                 <h6>Test Sidebar</h6>
                                 <div class="media"><img class="img-20 mr-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title="">
                                   <div class="media-body">
@@ -653,7 +653,7 @@ addBoardDefault.addEventListener('click', function () {
         {
           'title': `
                                <a class="kanban-box" href="#"><span class="date">24/7/20</span><span class="badge badge-danger f-right">Argent</span>
-                                <img class="mt-2 img-fluid" src="../assets/images/other-images/maintenance-bg.jpg" alt="" data-original-title="" title="">
+                                <img class="mt-2 img-fluid" src="../assets/images/other-images/maintenance-bg.png" alt="" data-original-title="" title="">
                                 <h6>Test Sidebar</h6>
                                 <div class="media"><img class="img-20 mr-1 rounded-circle" src="../assets/images/user/3.jpg" alt="" data-original-title="" title="">
                                   <div class="media-body">

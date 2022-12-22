@@ -117,12 +117,12 @@
         <div class="canvas-overlay"></div>
         <div class="canvas-inner">
             <div class="canvas-logo">
-                <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="210">
+                <img src="\landio\assets\img\logotk.png" alt="logo" width="110">
             </div>
             <div class="about-us">
                 <h5 class="canvas-widget-title">Tentang</h5>
                 <p>
-                    Fatkest adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
+                    Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
             </div>
             <div class="contact-us">

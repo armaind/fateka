@@ -18,7 +18,7 @@
 <script src="https://cdn.blobity.dev/by.js"></script>
 <script>
     const blobity = new Blobity({
-        licenseKey: 'syauqi',
+        licenseKey: 'andirmain',
         focusableElements: false,
         zIndex: '1',
         dotColor: '#007bff',

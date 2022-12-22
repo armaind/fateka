@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Skyoffice — Collegetivity')
+@section('title', 'Skyoffice — Fateka')
 @section('content')
 
 <div class="container-fluid">

@@ -21,33 +21,11 @@
                         </span>
                     </a>
                 </li>
-                <li class="level-menu outside">
-                    <a class="nav-link" href="{{('/dashboard/catatan-pelajaran/tambah-catatan')}}">
-                        <i data-feather="plus-square"></i>
-                        <span class="d-none d-sm-none d-md-inline-block">
-                            Catatan Pelajaran
-                        </span>
-                        <span class="d-none d-sm-inline-block d-md-none">
-                            <small>Catatan</small>
-                        </span>
-                    </a>
-                </li>
             </ul>
         </div>
         <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
-                <li class="text-decoration-none">
-                    <a href="{{url('dashboard/pomodoro/pomofocus')}}" data-toggle="tooltip" data-placement="bottom"
-                        title="Pomodoro">
-                        <i class="text-dark text-decoration-none" data-feather="clock"></i>
-                    </a>
-                </li>
-                <li class="text-decoration-none">
-                    <a href="{{url('dashboard/todolist')}}" data-toggle="tooltip" data-placement="bottom"
-                        title="To-do List">
-                        <i class="text-dark text-decoration-none" data-feather="check-square"></i>
-                    </a>
-                </li>
+        
                 <li class="onhover-dropdown">
                     <div>
                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Notifikasi"></a>
@@ -59,24 +37,11 @@
                             <h6 class="f-18 mb-0">Notifikasi</h6>
                         </li>
                         <li class="text-left">
-                            <p class="text-left">Segera lengkapi data jadwal pelajaran
-                                dan data kuliahmu disini ya ✨</p>
-                            <small>
-                                <a class="text-left" href="">
-                                    Atur jadwal pelajaranmu ⇾
-                                </a>
-                            </small>
+                            <p class="text-left">Dapatkan informasi seputar alumni terbaru dari kami</p>
                         </li>
                     </ul>
                 </li>
-                <li class="text-decoration-none">
-                    <a href="bookmark">
-                        <a href="{{url('dashboard/bookmarks')}}" data-toggle="tooltip" data-placement="bottom"
-                            title="Bookmark">
-                            <i class="text-dark text-decoration-none" data-feather="star"></i>
-                        </a>
-                    </a>
-                </li>
+    
                 <li>
                     <div class="mode">
                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dark Mode">
@@ -96,7 +61,7 @@
                             src="https://source.boringavatars.com/beam/120/{{Auth::user()->name}}?square&colors=FAD089,FF9C5B,F5634A,ED303C,3B8183"
                             width="40px">
                         <div class="media-body">
-                            <span>{{Auth::user()->name}}</span>
+                            <span>Hai {{Auth::user()->name}}</span>
                             <p class="mb-0 font-roboto">👨🏻‍🎓 Mahasiswa
                                 <i class="middle fa fa-angle-down"></i>
                             </p>
@@ -107,6 +72,13 @@
                             <a href="{{url('/')}}">
                                 <i data-feather="home"></i>
                                 <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('/')}}">
+                                <i data-feather="settings"></i>
+                                <span>Edit Profile</span>
                             </a>
                         </li>
                         
