@@ -117,8 +117,14 @@
                             </div>
 
                             <div class="form-group">
-                                <button class="btn btn-primary btn-block mt-4" type="submit">Buat Akun ⇾ </button>
+                                <button class="btn btn-primary btn-block mt-4" type="submit">Buat Akun</button>
                             </div>
+                            <div class="form-group mb-0">
+                                <div class="checkbox mt-2">
+                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Login with google</a>
+                                </div>
+                            </div>
+
                             <p class="mt-4 mb-0">Udah punya akun?<a class="ml-2" href="{{('/login')}}">Yuk masuk
                                     sekarang </a></p>
                         </form>

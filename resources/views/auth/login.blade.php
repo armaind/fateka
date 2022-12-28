@@ -84,8 +84,14 @@
                                     <input id="checkbox1" type="checkbox" name="remember">
                                     <label class="text-muted" for="checkbox1">Ingat Password</label>
                                 </div>
-                                <button class="btn btn-primary btn-block" type="submit">Masuk Sekarang ⇾ </button>
+                                <button class="btn btn-primary btn-block" type="submit">Masuk Sekarang</button>
                             </div>
+                            <div class="form-group mb-0">
+                                <div class="checkbox mt-2">
+                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Login with google</a>
+                                </div>
+                            </div>
+
                             <p class="mt-4 mb-0">Ga punya akun?<a class="ml-2" href="{{url('/register')}}">Buat akun
                                     dulu yuk!</a></p>
                         </form>
