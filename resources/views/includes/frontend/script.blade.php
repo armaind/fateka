@@ -21,7 +21,7 @@
         licenseKey: 'andirmain',
         focusableElements: false,
         zIndex: '1',
-        dotColor: '#007bff',
+        dotColor: '#07BD02',
         magnetic: false,
     });
 </script>

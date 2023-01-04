@@ -171,7 +171,7 @@
             }
         },
         fill: {
-            colors:['#7366ff'],
+            colors:['#07BD02'],
             type: 'gradient',
             gradient: {
                 shade: 'light',
@@ -184,7 +184,7 @@
             },
 
         },
-        colors:['#7366ff'],
+        colors:['#07BD02'],
 
         series: [
             {
@@ -624,7 +624,7 @@ var chartuserchart = new ApexCharts(
         },
         fill: {
             opacity: 0.9,
-            colors:['#7366ff'],},
+            colors:['#07BD02'],},
 
         series: [{
             data: [{
@@ -1285,7 +1285,7 @@ yaxis: {
                 }
             },
         },
-        colors: ['#7366ff'],
+        colors: ['#07BD02'],
         stroke: {
             width: 0,
         },
@@ -1318,11 +1318,11 @@ yaxis: {
             max: 100
         },
         fill: {
-            colors:['#7366ff'],
+            colors:['#07BD02'],
             type: 'gradient',
             gradient: {
                 inverseColors: false,
-                gradientToColors: ['#7366ff']
+                gradientToColors: ['#07BD02']
             }
         },
     }

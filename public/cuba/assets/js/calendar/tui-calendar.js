@@ -7254,10 +7254,10 @@
                  * @returns {array} contain dates.
                  */
                 Base.prototype._getContainDatesInSchedule = function (schedule) {
-                    var scheduleStart = schedule.getStarts();
+                    var schedulestart = schedule.getStarts();
                     var scheduleEnd = schedule.getEnds();
-                    var start = datetime.start(scheduleStart);
-                    var equalStartEnd = datetime.compare(scheduleStart, scheduleEnd) === 0;
+                    var start = datetime.start(schedulestart);
+                    var equalStartEnd = datetime.compare(schedulestart, scheduleEnd) === 0;
                     var endDate = equalStartEnd ? scheduleEnd : datetime.convertStartDayToLastDay(scheduleEnd);
                     var end = datetime.end(endDate);
                     var range = datetime.range(
@@ -7315,7 +7315,7 @@
                  * @param {boolean} [silent=false] - set true then don't fire events.
                  * @returns {Schedule[]} The instance list of Schedule that created.
                  */
-                Base.prototype.createSchedules = function (dataList, silent) {
+                Base.prototype.createschedules = function (dataList, silent) {
                     var self = this;
 
                     return util.map(dataList, function (data) {
@@ -7531,7 +7531,7 @@
                         datetime.end(end),
                         datetime.MILLISECONDS_PER_DAY
                     ),
-                        ownSchedules = this.schedules.items,
+                        ownschedules = this.schedules.items,
                         ownMatrix = this.dateMatrix,
                         dformat = datetime.format,
                         result = {},
@@ -7546,7 +7546,7 @@
 
                         if (matrix && matrix.length) {
                             viewModels.add.apply(viewModels, util.map(matrix, function (id) {
-                                return ScheduleViewModel.create(ownSchedules[id]);
+                                return ScheduleViewModel.create(ownschedules[id]);
                             }));
                         }
                     });
@@ -7554,15 +7554,15 @@
                     return result;
                 };
 
-                Base.prototype.clearSchedules = function () {
+                Base.prototype.clearschedules = function () {
                     this.dateMatrix = {};
                     this.schedules.clear();
                     /**
                      * for inner view when clear schedules
-                     * @event Base#clearSchedules
+                     * @event Base#clearschedules
                      * @type {Schedule}
                      */
-                    this.fire('clearSchedules');
+                    this.fire('clearschedules');
                 };
 
                 /**
@@ -7959,10 +7959,10 @@
                         var ctrlMonth = this.Month;
                         var getAlldayMaxTopIndexAtYMD = ctrlMonth._getAlldayMaxTopIndexAtYMD;
                         var vAlldayColl = vColl.find(ctrlMonth._onlyAlldayFilter);
-                        var sortedTimeSchedules = vColl.find(ctrlMonth._onlyTimeFilter).sort(array.compare.schedule.asc);
+                        var sortedTimeschedules = vColl.find(ctrlMonth._onlyTimeFilter).sort(array.compare.schedule.asc);
                         var maxIndexInYMD = {};
 
-                        sortedTimeSchedules.forEach(function (timeViewModel) {
+                        sortedTimeschedules.forEach(function (timeViewModel) {
                             var scheduleYMD = datetime.format(timeViewModel.getStarts(), 'YYYYMMDD');
                             var alldayMaxTopInYMD = maxIndexInYMD[scheduleYMD];
 
@@ -7983,11 +7983,11 @@
                     _stackTimeFromTop: function (vColl) {
                         var ctrlMonth = this.Month;
                         var vAlldayColl = vColl.find(ctrlMonth._onlyAlldayFilter);
-                        var sortedTimeSchedules = vColl.find(ctrlMonth._onlyTimeFilter).sort(array.compare.schedule.asc);
+                        var sortedTimeschedules = vColl.find(ctrlMonth._onlyTimeFilter).sort(array.compare.schedule.asc);
                         var indiceInYMD = {};
                         var dateMatrix = this.dateMatrix;
 
-                        sortedTimeSchedules.forEach(function (timeViewModel) {
+                        sortedTimeschedules.forEach(function (timeViewModel) {
                             var scheduleYMD = datetime.format(timeViewModel.getStarts(), 'YYYYMMDD');
                             var topArrayInYMD = indiceInYMD[scheduleYMD];
                             var maxTopInYMD;
@@ -8460,7 +8460,7 @@
                      * @param {number} visibleScheduleCount - maximum visible count on panel
                      * @returns {array} - The matrices for schedule placing except overflowed schedules.
                      */
-                    excludeExceedSchedules: function (matrices, visibleScheduleCount) {
+                    excludeExceedschedules: function (matrices, visibleScheduleCount) {
                         return matrices.map(function (matrix) {
                             return matrix.map(function (row) {
                                 if (row.length > visibleScheduleCount) {
@@ -8640,13 +8640,13 @@
                  *
                  *             return '<span class="' + classNames.join(' ') + '">' + date + '</span>';
                  *         },
-                 *         monthGridHeaderExceed: function(hiddenSchedules) {
-                 *             return '<span class="weekday-grid-more-schedules">+' + hiddenSchedules + '</span>';
+                 *         monthGridHeaderExceed: function(hiddenschedules) {
+                 *             return '<span class="weekday-grid-more-schedules">+' + hiddenschedules + '</span>';
                  *         },
                  *         monthGridFooter: function() {
                  *             return '';
                  *         },
-                 *         monthGridFooterExceed: function(hiddenSchedules) {
+                 *         monthGridFooterExceed: function(hiddenschedules) {
                  *             return '';
                  *         },
                  *         monthDayname: function(model) {
@@ -8655,8 +8655,8 @@
                  *         weekDayname: function(model) {
                  *             return '<span class="tui-full-calendar-dayname-date">' + model.date + '</span>&nbsp;&nbsp;<span class="tui-full-calendar-dayname-name">' + model.dayName + '</span>';
                  *         },
-                 *         weekGridFooterExceed: function(hiddenSchedules) {
-                 *             return '+' + hiddenSchedules;
+                 *         weekGridFooterExceed: function(hiddenschedules) {
+                 *             return '+' + hiddenschedules;
                  *         },
                  *         dayGridTitle: function(viewName) {
                  *
@@ -9228,7 +9228,7 @@
                  * @param {Array.<Schedule>} schedules - {@link Schedule} data list
                  * @param {boolean} [silent=false] - no auto render after creation when set true
                  * @example
-                 * calendar.createSchedules([
+                 * calendar.createschedules([
                  *     {
                  *         id: '1',
                  *         calendarId: '1',
@@ -9249,12 +9249,12 @@
                  *     }
                  * ]);
                  */
-                Calendar.prototype.createSchedules = function (schedules, silent) {
+                Calendar.prototype.createschedules = function (schedules, silent) {
                     util.forEach(schedules, function (obj) {
                         this._setScheduleColor(obj.calendarId, obj);
                     }, this);
 
-                    this._controller.createSchedules(schedules, silent);
+                    this._controller.createschedules(schedules, silent);
 
                     if (!silent) {
                         this.render();
@@ -9292,8 +9292,8 @@
                  */
                 Calendar.prototype.updateSchedule = function (scheduleId, calendarId, changes, silent) {
                     var ctrl = this._controller,
-                        ownSchedules = ctrl.schedules,
-                        schedule = ownSchedules.single(function (model) {
+                        ownschedules = ctrl.schedules,
+                        schedule = ownschedules.single(function (model) {
                             return model.id === scheduleId && model.calendarId === calendarId;
                         });
                     var hasChangedCalendar = false;
@@ -9342,8 +9342,8 @@
                  */
                 Calendar.prototype.deleteSchedule = function (scheduleId, calendarId, silent) {
                     var ctrl = this._controller,
-                        ownSchedules = ctrl.schedules,
-                        schedule = ownSchedules.single(function (model) {
+                        ownschedules = ctrl.schedules,
+                        schedule = ownschedules.single(function (model) {
                             return model.id === scheduleId && model.calendarId === calendarId;
                         });
 
@@ -9415,13 +9415,13 @@
                  * @param {boolean} toHide - Set true to hide schedules
                  * @param {boolean} [render=true] - set true then render after change visible property each models
                  */
-                Calendar.prototype.toggleSchedules = function (calendarId, toHide, render) {
-                    var ownSchedules = this._controller.schedules;
+                Calendar.prototype.toggleschedules = function (calendarId, toHide, render) {
+                    var ownschedules = this._controller.schedules;
 
                     render = util.isExisty(render) ? render : true;
                     calendarId = util.isArray(calendarId) ? calendarId : [calendarId];
 
-                    ownSchedules.each(function (schedule) {
+                    ownschedules.each(function (schedule) {
                         if (~util.inArray(schedule.calendarId, calendarId)) {
                             schedule.set('isVisible', !toHide);
                         }
@@ -9443,7 +9443,7 @@
                  * @example
                  * var silent = true;
                  * calendar.clear();
-                 * calendar.createSchedules(schedules, silent);
+                 * calendar.createschedules(schedules, silent);
                  * calendar.render();
                  * @example
                  * // Render a calendar when resizing a window.
@@ -9488,19 +9488,19 @@
                  * @param {boolean} [immediately=false] - Render it immediately
                  * @example
                  * calendar.clear();
-                 * calendar.createSchedules(schedules, true);
+                 * calendar.createschedules(schedules, true);
                  * calendar.render();
                  */
                 Calendar.prototype.clear = function (immediately) {
-                    this._controller.clearSchedules();
+                    this._controller.clearschedules();
                     this.render(immediately);
                 };
 
                 /**
                  * Scroll to current time on today in case of daily, weekly view
                  * @example
-                 * function onNewSchedules(schedules) {
-                 *     calendar.createSchedules(schedules);
+                 * function onNewschedules(schedules) {
+                 *     calendar.createschedules(schedules);
                  *     if (calendar.getViewName() !== 'month') {
                  *         calendar.scrollToNow();
                  *     }
@@ -9719,7 +9719,7 @@
                  */
                 Calendar.prototype.setCalendarColor = function (calendarId, option, silent) {
                     var calColor = this._calendarColor,
-                        ownSchedules = this._controller.schedules,
+                        ownschedules = this._controller.schedules,
                         ownColor = calColor[calendarId];
 
                     if (!util.isObject(option)) {
@@ -9733,7 +9733,7 @@
                         dragBgColor: '#a1b56c'
                     }, option);
 
-                    ownSchedules.each(function (model) {
+                    ownschedules.each(function (model) {
                         if (model.calendarId !== calendarId) {
                             return;
                         }
@@ -9869,7 +9869,7 @@
                      *         schedule = {...};
                      *     }
                      *
-                     *     calendar.createSchedules([schedule]);
+                     *     calendar.createschedules([schedule]);
                      * });
                      */
                     this.fire('beforeCreateSchedule', createScheduleData);
@@ -10501,7 +10501,7 @@
                  */
                 function createMonthView(baseController, layoutContainer, dragHandler, options) {
                     var monthViewContainer, monthView, moreView, createView;
-                    var clickHandler, creationHandler, resizeHandler, moveHandler, clearSchedulesHandler, onUpdateSchedule;
+                    var clickHandler, creationHandler, resizeHandler, moveHandler, clearschedulesHandler, onUpdateSchedule;
                     var onShowCreationPopup, onSaveNewSchedule, onShowEditPopup;
                     var detailView, onShowDetailPopup, onDeleteSchedule, onEditSchedule;
 
@@ -10519,7 +10519,7 @@
                         moveHandler = new MonthMove(dragHandler, monthView, baseController);
                     }
 
-                    clearSchedulesHandler = function () {
+                    clearschedulesHandler = function () {
                         if (moreView) {
                             moreView.hide();
                         }
@@ -10616,7 +10616,7 @@
                     }
 
                     // binding clear schedules
-                    baseController.on('clearSchedules', clearSchedulesHandler);
+                    baseController.on('clearschedules', clearschedulesHandler);
 
                     // bind update schedule event
                     baseController.on('updateSchedule', onUpdateSchedule);
@@ -10649,7 +10649,7 @@
 
                     monthView._beforeDestroy = function () {
                         moreView.destroy();
-                        baseController.off('clearSchedules', clearSchedulesHandler);
+                        baseController.off('clearschedules', clearschedulesHandler);
                         baseController.off('updateSchedule', onUpdateSchedule);
 
                         util.forEach(monthView.handler, function (type) {
@@ -12400,11 +12400,11 @@
                             datesInRange = dragStartEventData.datesInRange,
                             range = dragStartEventData.range,
                             baseWidthPercent = (100 / datesInRange),
-                            originScheduleStarts = datetime.start(model.start),
+                            originschedulestarts = datetime.start(model.start),
                             originScheduleEnds = datetime.end(model.end),
                             renderStartDate = datetime.start(range[0]),
                             renderEndDate = datetime.end(range[range.length - 1]),
-                            fromLeft = Math.ceil((originScheduleStarts.getTime() -
+                            fromLeft = Math.ceil((originschedulestarts.getTime() -
                                 renderStartDate.getTime()) / datetime.MILLISECONDS_PER_DAY) || 0,
                             fromRight = Math.ceil((originScheduleEnds.getTime() -
                                 renderEndDate.getTime()) / datetime.MILLISECONDS_PER_DAY) || 0;
@@ -19568,7 +19568,7 @@
                     var opt = this.options;
                     var optMoreLayerSize = opt.moreLayerSize;
                     var styles = this._getStyles(this.theme);
-                    var maxVisibleSchedulesInLayer = 10;
+                    var maxVisibleschedulesInLayer = 10;
                     var height = '';
                     var containerSize = domutil.getSize(this.container);
                     var calWidth = 0;
@@ -19589,10 +19589,10 @@
                     width = Math.max(width, VIEW_MIN_WIDTH);
                     height = parseInt(styles.titleHeight, 10);
                     height += parseInt(styles.titleMarginBottom, 10);
-                    if (viewModel.schedules.length <= maxVisibleSchedulesInLayer) {
+                    if (viewModel.schedules.length <= maxVisibleschedulesInLayer) {
                         height += (opt.scheduleGutter + opt.scheduleHeight) * viewModel.schedules.length;
                     } else {
-                        height += (opt.scheduleGutter + opt.scheduleHeight) * maxVisibleSchedulesInLayer;
+                        height += (opt.scheduleGutter + opt.scheduleHeight) * maxVisibleschedulesInLayer;
                     }
                     height += parseInt(styles.paddingBottom, 10);
                     height += OUT_PADDING; // for border
@@ -21348,10 +21348,10 @@
                         return '<span class="' + classNames.join(' ') + '">' + date + '</span>';
                     },
 
-                    'monthGridHeaderExceed-tmpl': function (hiddenSchedules) {
+                    'monthGridHeaderExceed-tmpl': function (hiddenschedules) {
                         var className = config.classname('weekday-grid-more-schedules');
 
-                        return '<span class="' + className + '">' + hiddenSchedules + ' more</span>';
+                        return '<span class="' + className + '">' + hiddenschedules + ' more</span>';
                     },
 
                     'monthGridFooter-tmpl': function () {
@@ -21359,7 +21359,7 @@
                     },
 
                     /* eslint no-unused-vars: 0 */
-                    'monthGridFooterExceed-tmpl': function (hiddenSchedules) {
+                    'monthGridFooterExceed-tmpl': function (hiddenschedules) {
                         return '';
                     },
 
@@ -21374,8 +21374,8 @@
                         return '<span class="' + classDate + '">' + model.date + '</span>&nbsp;&nbsp;<span class="' + className + '">' + model.dayName + '</span>';
                     },
 
-                    'weekGridFooterExceed-tmpl': function (hiddenSchedules) {
-                        return '+' + hiddenSchedules;
+                    'weekGridFooterExceed-tmpl': function (hiddenschedules) {
+                        return '+' + hiddenschedules;
                     },
 
                     'dayGridTitle-tmpl': function (viewName) {
@@ -22000,7 +22000,7 @@
                             + ";\">"
                             + ((stack1 = (lookupProperty(helpers, "monthGridHeader-tmpl") || (depth0 && lookupProperty(depth0, "monthGridHeader-tmpl")) || alias2).call(alias1, depth0, { "name": "monthGridHeader-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 14, "column": 44 }, "end": { "line": 14, "column": 75 } } })) != null ? stack1 : "")
                             + "</span>\n"
-                            + ((stack1 = lookupProperty(helpers, "if").call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(10, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 15, "column": 12 }, "end": { "line": 17, "column": 19 } } })) != null ? stack1 : "")
+                            + ((stack1 = lookupProperty(helpers, "if").call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(10, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 15, "column": 12 }, "end": { "line": 17, "column": 19 } } })) != null ? stack1 : "")
                             + "        </div>\n        <div class=\""
                             + alias4(((helper = (helper = lookupProperty(helpers, "CSS_PREFIX") || (depth0 != null ? lookupProperty(depth0, "CSS_PREFIX") : depth0)) != null ? helper : alias2), (typeof helper === alias3 ? helper.call(alias1, { "name": "CSS_PREFIX", "hash": {}, "data": data, "loc": { "start": { "line": 19, "column": 20 }, "end": { "line": 19, "column": 34 } } }) : helper)))
                             + "weekday-grid-footer\">\n            <span style=\"color: "
@@ -22008,7 +22008,7 @@
                             + ";\">"
                             + ((stack1 = (lookupProperty(helpers, "monthGridFooter-tmpl") || (depth0 && lookupProperty(depth0, "monthGridFooter-tmpl")) || alias2).call(alias1, depth0, { "name": "monthGridFooter-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 20, "column": 44 }, "end": { "line": 20, "column": 75 } } })) != null ? stack1 : "")
                             + "</span>\n"
-                            + ((stack1 = lookupProperty(helpers, "if").call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(12, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 21, "column": 12 }, "end": { "line": 23, "column": 19 } } })) != null ? stack1 : "")
+                            + ((stack1 = lookupProperty(helpers, "if").call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(12, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 21, "column": 12 }, "end": { "line": 23, "column": 19 } } })) != null ? stack1 : "")
                             + "        </div>\n    </div>\n";
                     }, "2": function (container, depth0, helpers, partials, data) {
                         var helper, lookupProperty = container.lookupProperty || function (parent, propertyName) {
@@ -22067,7 +22067,7 @@
                             + "weekday-exceed-in-month\" data-ymd=\""
                             + alias4(((helper = (helper = lookupProperty(helpers, "ymd") || (depth0 != null ? lookupProperty(depth0, "ymd") : depth0)) != null ? helper : alias2), (typeof helper === alias3 ? helper.call(alias1, { "name": "ymd", "hash": {}, "data": data, "loc": { "start": { "line": 16, "column": 78 }, "end": { "line": 16, "column": 85 } } }) : helper)))
                             + "\">"
-                            + ((stack1 = (lookupProperty(helpers, "monthGridHeaderExceed-tmpl") || (depth0 && lookupProperty(depth0, "monthGridHeaderExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "monthGridHeaderExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 16, "column": 87 }, "end": { "line": 16, "column": 135 } } })) != null ? stack1 : "")
+                            + ((stack1 = (lookupProperty(helpers, "monthGridHeaderExceed-tmpl") || (depth0 && lookupProperty(depth0, "monthGridHeaderExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "monthGridHeaderExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 16, "column": 87 }, "end": { "line": 16, "column": 135 } } })) != null ? stack1 : "")
                             + "</span>\n";
                     }, "12": function (container, depth0, helpers, partials, data) {
                         var stack1, helper, alias1 = depth0 != null ? depth0 : (container.nullContext || {}), alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function (parent, propertyName) {
@@ -22082,7 +22082,7 @@
                             + "weekday-exceed-in-month\" data-ymd=\""
                             + alias4(((helper = (helper = lookupProperty(helpers, "ymd") || (depth0 != null ? lookupProperty(depth0, "ymd") : depth0)) != null ? helper : alias2), (typeof helper === alias3 ? helper.call(alias1, { "name": "ymd", "hash": {}, "data": data, "loc": { "start": { "line": 22, "column": 78 }, "end": { "line": 22, "column": 85 } } }) : helper)))
                             + "\">"
-                            + ((stack1 = (lookupProperty(helpers, "monthGridFooterExceed-tmpl") || (depth0 && lookupProperty(depth0, "monthGridFooterExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "monthGridFooterExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 22, "column": 87 }, "end": { "line": 22, "column": 135 } } })) != null ? stack1 : "")
+                            + ((stack1 = (lookupProperty(helpers, "monthGridFooterExceed-tmpl") || (depth0 && lookupProperty(depth0, "monthGridFooterExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "monthGridFooterExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 22, "column": 87 }, "end": { "line": 22, "column": 135 } } })) != null ? stack1 : "")
                             + "</span>\n";
                     }, "compiler": [8, ">= 4.3.0"], "main": function (container, depth0, helpers, partials, data) {
                         var stack1, helper, alias1 = depth0 != null ? depth0 : (container.nullContext || {}), alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function (parent, propertyName) {
@@ -23121,7 +23121,7 @@
                             return undefined
                         };
 
-                        return ((stack1 = lookupProperty(helpers, "if").call(depth0 != null ? depth0 : (container.nullContext || {}), (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(7, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 19, "column": 16 }, "end": { "line": 21, "column": 23 } } })) != null ? stack1 : "");
+                        return ((stack1 = lookupProperty(helpers, "if").call(depth0 != null ? depth0 : (container.nullContext || {}), (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "if", "hash": {}, "fn": container.program(7, data, 0), "inverse": container.noop, "data": data, "loc": { "start": { "line": 19, "column": 16 }, "end": { "line": 21, "column": 23 } } })) != null ? stack1 : "");
                     }, "7": function (container, depth0, helpers, partials, data) {
                         var stack1, helper, alias1 = depth0 != null ? depth0 : (container.nullContext || {}), alias2 = container.hooks.helperMissing, alias3 = "function", alias4 = container.escapeExpression, lookupProperty = container.lookupProperty || function (parent, propertyName) {
                             if (Object.prototype.hasOwnProperty.call(parent, propertyName)) {
@@ -23137,7 +23137,7 @@
                             + "%;\" data-index=\""
                             + alias4(((helper = (helper = lookupProperty(helpers, "key") || (data && lookupProperty(data, "key"))) != null ? helper : alias2), (typeof helper === alias3 ? helper.call(alias1, { "name": "key", "hash": {}, "data": data, "loc": { "start": { "line": 20, "column": 135 }, "end": { "line": 20, "column": 143 } } }) : helper)))
                             + "\">"
-                            + ((stack1 = (lookupProperty(helpers, "weekGridFooterExceed-tmpl") || (depth0 && lookupProperty(depth0, "weekGridFooterExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenSchedules") : depth0), { "name": "weekGridFooterExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 20, "column": 145 }, "end": { "line": 20, "column": 192 } } })) != null ? stack1 : "")
+                            + ((stack1 = (lookupProperty(helpers, "weekGridFooterExceed-tmpl") || (depth0 && lookupProperty(depth0, "weekGridFooterExceed-tmpl")) || alias2).call(alias1, (depth0 != null ? lookupProperty(depth0, "hiddenschedules") : depth0), { "name": "weekGridFooterExceed-tmpl", "hash": {}, "data": data, "loc": { "start": { "line": 20, "column": 145 }, "end": { "line": 20, "column": 192 } } })) != null ? stack1 : "")
                             + "</span>\n";
                     }, "9": function (container, depth0, helpers, partials, data) {
                         var stack1, lookupProperty = container.lookupProperty || function (parent, propertyName) {
@@ -24581,7 +24581,7 @@
                                 matrices,
                                 viewModel.range
                             );
-                            matrices = this.parent.controller.excludeExceedSchedules(matrices, visibleScheduleCount);
+                            matrices = this.parent.controller.excludeExceedschedules(matrices, visibleScheduleCount);
                             opt.setViewModelFunc(viewModel, matrices);
                         }
                     }
@@ -24601,7 +24601,7 @@
                                 isToday: isToday,
                                 date: d.getDate(),
                                 renderDate: datetime.format(d, 'YYYY-MM-DD'),
-                                hiddenSchedules: exceedDate[ymd] || 0,
+                                hiddenschedules: exceedDate[ymd] || 0,
                                 width: grids[index] ? grids[index].width : 0,
                                 left: grids[index] ? grids[index].left : 0,
                                 backgroundColor: viewModel.range.length > 1 ?
@@ -26466,7 +26466,7 @@
                                 day: day,
                                 isToday: isToday,
                                 ymd: ymd,
-                                hiddenSchedules: exceedDate[ymd] || 0,
+                                hiddenschedules: exceedDate[ymd] || 0,
                                 width: grids[index] ? grids[index].width : 0,
                                 left: grids[index] ? grids[index].left : 0,
                                 color: this._getDayNameColor(theme, day, isToday),

@@ -25,10 +25,10 @@
         linear,
         left top,
         right top,
-        from(#7366ff),
+        from(#07BD02),
         to(#a26cf8)
     );
-    background-image: linear-gradient(90deg, #7366ff 0%, #a26cf8 100%);
+    background-image: linear-gradient(90deg, #07BD02 0%, #a26cf8 100%);
     color: #fff;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;

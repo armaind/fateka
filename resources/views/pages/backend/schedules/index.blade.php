@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Jadwal Pelajaranmu — Collegetivity')
+@section('title', 'Data Alumni — Fateka')
 @section('content')
 
 @push('datatable-styles')
@@ -14,17 +14,13 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">📚 • Jadwal Pelajaranmu</h5>
+                <h5 class="text-white">Data Alumni</h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah jadwal pelajaran yang telah kamu tambahkan.
+                    Dibawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom.
                     <span class="d-none d-md-inline">
-                        Jadwal dibawah juga bisa kamu edit dengan
-                        menekan logo pencil berwarna ungu
-                        dan hapus dengan menekan logo sampah berwarna merah.
-                        Ingin menambahkan jadwal? tambah jadwalmu
-                        <a href="{{url('dashboard/jadwal-pelajaran/atur-jadwal')}}">disini ⇾</a>
+                        <a href="{{url('dashboard/jadwal-pelajaran/atur-jadwal')}}">Tambah Data Alumni ⇾</a>
                     </span>
                 </p>
             </div>
@@ -39,12 +35,12 @@
                         <table class="display" id="auto-fill">
                             <thead>
                                 <tr>
-                                    <th>Nama Mata Kuliah</th>
-                                    <th>Hari</th>
-                                    <th>Waktu</th>
-                                    <th>Kelas</th>
-                                    <th>SKS</th>
-                                    <th>Opsi</th>
+                                    <th>Nama Alumni</th>
+                                    <th>Angkatan</th>
+                                    <th>No Telepon</th>
+                                    <th>Alamat</th>
+                                    <th>Status Pekerjaan</th>
+                                    <th>Perusahaan</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,26 +48,14 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex py-1 align-items-center">
-                                            <div class="avatars mr-2">
-                                                <div class="avatar ratio">
-                                                    <img style="object-fit: cover;
-                                                        width: 40px;
-                                                        height: 40px;" class="b-r-8"
-                                                        src="https://ui-avatars.com/api/?background=4466f2&color=fff&name={{$item->nama_dosen}}">
-                                                </div>
-                                            </div>
                                             <div class="flex-fill">
-                                                <div class="font-weight-bold">{{$item->nama_matkul}}</div>
-                                                <div class="text-muted">
-                                                    <a href="#" class="text-reset">{{$item->nama_dosen}}</a>
-                                                </div>
+                                                <div class="font-weight-bold">{{$item->nama_alumni}}</div>
                                             </div>
                                         </div>
                                     </td>
-                                    <td>{{$item->hari}}</td>
-                                    <td>({{$item->waktu_mulai}} — {{$item->waktu_selesai}})</td>
-                                    <td>{{$item->kelas}}</td>
-                                    <td>{{$item->sks}}</td>
+                                    <td>{{$item->angkatan}}</td>
+                                    <td>{{$item->no_telp}}</td>
+                                    <td>{{$item->alamat}}</td>
                                     <td>
                                         <a href="{{route('schedules.edit', $item->id)}}" class="btn btn-info px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -108,16 +92,6 @@
                                 @empty
                                 @endforelse
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Nama Mata Kuliah</th>
-                                    <th>Hari</th>
-                                    <th>Waktu</th>
-                                    <th>Kelas</th>
-                                    <th>SKS</th>
-                                    <th>Opsi</th>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>

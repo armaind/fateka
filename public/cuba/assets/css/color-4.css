@@ -12,7 +12,7 @@
 
  */
 :root {
-  --theme-deafult: #7366ff;
+  --theme-deafult: #07BD02;
   --theme-secondary: #f73164; }
 
 /**=====================
@@ -16258,7 +16258,7 @@ footer {
   position: relative;
   background-position: right top;
   background-size: cover;
-  background: linear-gradient(90deg, #f1f0ff 21px, transparent 1%) center, linear-gradient(#eae7ff 21px, transparent 1%) center, #7366ff59;
+  background: linear-gradient(90deg, #f1f0ff 21px, transparent 1%) center, linear-gradient(#eae7ff 21px, transparent 1%) center, #07BD0259;
   background-size: 23px 23px; }
   .landing-home .content h1 {
     font-weight: 600;
@@ -16470,7 +16470,7 @@ footer {
       font-size: 16px;
       padding: 15px 12px; }
     .landing-page .sticky-header header.sticky .buy-btn {
-      background: linear-gradient(26deg, #7366ff 0%, #a26cf8 100%); }
+      background: linear-gradient(26deg, #07BD02 0%, #a26cf8 100%); }
       .landing-page .sticky-header header.sticky .buy-btn a {
         color: #fff !important; }
 
@@ -16932,7 +16932,7 @@ footer {
   .sticky-header header.sticky .nav-padding {
     padding: 15px 25px; }
   .buy-btn {
-    background: linear-gradient(26deg, #7366ff 0%, #a26cf8 100%); }
+    background: linear-gradient(26deg, #07BD02 0%, #a26cf8 100%); }
     .buy-btn a {
       color: #fff !important; }
   .btn-grp .mr-3 {
@@ -23159,7 +23159,7 @@ body[class*='dark-'] .for-light {
       border: 1px solid #b8b8b8;
       padding: 3px; }
       .customizer-contain .customizer-body .color-layout > div {
-        background-color: #7366ff;
+        background-color: #07BD02;
         height: 100%;
         width: 100%;
         border-radius: 5px; }
@@ -26717,7 +26717,7 @@ body[class*='dark-'] .for-light {
   padding-right: 0; }
 
 .rtl .product-box .ribbon-bookmark.ribbon-vertical-left.ribbon-info:before, .rtl .product-box .ribbon-bookmark.ribbon-vertical-right.ribbon-info:before {
-  border-left-color: #007bff; }
+  border-left-color: #07BD02; }
 
 .rtl .product-box .ribbon-bookmark.ribbon-vertical-left:before, .rtl .product-box .ribbon-bookmark.ribbon-vertical-right:before {
   right: 0;

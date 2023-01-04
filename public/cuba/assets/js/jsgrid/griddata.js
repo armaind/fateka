@@ -705,7 +705,7 @@
             "Married": false
         },
         {
-            "Name": "Charity Holcomb",
+            "Name": "CTanggal Lahirty Holcomb",
             "Age": 31,
             "Country": 6,
             "Address": "641-7892 Enim. Ave",

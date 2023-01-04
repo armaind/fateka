@@ -142,15 +142,15 @@
 }
 /*======= Common =======*/
 :root {
-	--color-primary: #473bf0;
-	--color-primary-2: #0040e5;
+	--color-primary: #07BD02;
+	--color-primary-2: #0C870A;
 	--color-primary-3: #e95e6c;
 	--color-primary-4: #3377ff;
 	--color-primary-5: #5580ff;
 	--color-primary-6: #42a66c;
 	--color-secondary: #f4732a;
 	--color-secondary-2: #f6b9a7;
-	--color-secondary-3: #8208fe;
+	--color-secondary-3: #0C870A;
 	--color-secondary-4: #2b354f;
 	--color-secondary-5: #343351;
 	--color-heading: #161c2d;
@@ -3414,7 +3414,7 @@ textarea {
 }
 
 .image-boxes-v1 .image-box:hover .box-link, .image-boxes-v1 .image-box.active .box-link {
-	border-color: #473bf0;
+	border-color: #07BD02;
 }
 
 .image-boxes-v1.image-thumbnail-boxed .image-box {
@@ -6254,7 +6254,7 @@ textarea {
 }
 
 .team-members .member-box .member-info .social-links li.facebook a {
-	background-color: #0040e5;
+	background-color: #0C870A;
 	color: #fff;
 }
 
@@ -6352,8 +6352,8 @@ textarea {
 	position: relative;
 	z-index: 2;
 	border-radius: 12px;
-	background: -o-linear-gradient(340deg, #0040e5 0%, #028ceb 59%, #04d7f1 100%);
-	background: linear-gradient(110deg, #0040e5 0%, #028ceb 59%, #04d7f1 100%);
+	background: -o-linear-gradient(340deg, #0C870A 0%, #028ceb 59%, #04d7f1 100%);
+	background: linear-gradient(110deg, #0C870A 0%, #028ceb 59%, #04d7f1 100%);
 	padding: 80px 0;
 	text-align: center;
 }

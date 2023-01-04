@@ -177,7 +177,7 @@
 
         setDropdownCalendarType();
         setRenderRangeText();
-        setSchedules();
+        setschedules();
     }
 
     function onClickNavi(e) {
@@ -198,7 +198,7 @@
         }
 
         setRenderRangeText();
-        setSchedules();
+        setschedules();
     }
 
     function onNewSchedule() {
@@ -213,7 +213,7 @@
             return;
         }
 
-        cal.createSchedules([{
+        cal.createschedules([{
             id: String(chance.guid()),
             calendarId: calendar.id,
             title: title,
@@ -292,7 +292,7 @@
             schedule.borderColor = calendar.borderColor;
         }
 
-        cal.createSchedules([schedule]);
+        cal.createschedules([schedule]);
 
         refreshScheduleVisibility();
     }
@@ -337,7 +337,7 @@
         var calendarElements = Array.prototype.slice.call(document.querySelectorAll('#calendarList input'));
 
         CalendarList.forEach(function(calendar) {
-            cal.toggleSchedules(calendar.id, !calendar.checked, false);
+            cal.toggleschedules(calendar.id, !calendar.checked, false);
         });
 
         cal.render(true);
@@ -401,10 +401,10 @@
         renderRange.innerHTML = html.join('');
     }
 
-    function setSchedules() {
+    function setschedules() {
         cal.clear();
         generateSchedule(cal.getViewName(), cal.getDateRangeStart(), cal.getDateRangeEnd());
-        cal.createSchedules(ScheduleList);
+        cal.createschedules(ScheduleList);
 
         refreshScheduleVisibility();
     }
@@ -434,7 +434,7 @@
 
     setDropdownCalendarType();
     setRenderRangeText();
-    setSchedules();
+    setschedules();
     setEventListener();
 })(window, tui.Calendar);
 

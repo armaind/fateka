@@ -1,22 +1,17 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Kumpulan Website Pencarian Journal — Collegetivity')
+@section('title', 'Berita— Fateka')
 @section('content')
 
 <div class="container-fluid product-wrapper">
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">📔 • Website E-Book </h5>
+                <h5 class="text-white">Berita Terbaru </h5>
             </div>
             <div class="card-body">
                 <p>
-                    Kumpulan website untuk kamu yang lagi cari e-book, terdapat banyak sekali resources yang kalian bisa
-                    kunjungi.
-                    <span class="d-none d-md-inline">
-                        Website yang ada dibawah telah di test dan dipastkan aman, juga dapat dipakai gratis sesuka
-                        kamu!
-                    </span>
+                    Di bawah ini merupakan berita terbaru seputar Teknik Komputer Universitas Telkom
                 </p>
             </div>
         </div>
@@ -64,55 +59,84 @@
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Gutenberg</h4>
-                            <p class="mb-0">https://www.gutenberg.org/</p>
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
+                        
                         <div class="card-footer py-3">
-                            <a href="https://www.gutenberg.org/" target="_blank">Kunjungi Website ⇾</a>
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>PDF Drive</h4>
-                            <p class="mb-0">https://www.pdfdrive.com/</p>
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
+                        
                         <div class="card-footer py-3">
-                            <a href="https://www.pdfdrive.com/" target="_blank">Kunjungi Website ⇾</a>
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Open Lbrary</h4>
-                            <p class="mb-0">https://openlibrary.org/</p>
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
+                        
                         <div class="card-footer py-3">
-                            <a href="https://openlibrary.org/" target="_blank">Kunjungi Website ⇾</a>
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Free Ebooks</h4>
-                            <p class="mb-0">https://www.free-ebooks.net/</p>
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
+                        
                         <div class="card-footer py-3">
-                            <a href="https://www.free-ebooks.net/" target="_blank">Kunjungi Website ⇾</a>
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <div class="card-body">
-                            <h4>Many Books</h4>
-                            <p class="mb-0">https://manybooks.net/</p>
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
+                        
                         <div class="card-footer py-3">
-                            <a href="https://manybooks.net/ " target="_blank">Kunjungi Website ⇾</a>
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                        
+                        <div class="card-footer py-3">
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 xl-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Lorem Ipsum</h4>
+                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        </div>
+                        
+                        <div class="card-footer py-3">
+                            <a href="#" target="_blank">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>

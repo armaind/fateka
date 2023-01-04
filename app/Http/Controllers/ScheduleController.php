@@ -41,13 +41,10 @@ class ScheduleController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nama_matkul' => 'required|max:42',
-            'nama_dosen' => 'required|max:56',
-            'hari' => 'required|max:14',
-            'kelas' => 'required|max:24',
-            'sks' => 'required|max:12',
-            'waktu_mulai' => 'required|max:56',
-            'waktu_selesai' => 'required|max:56',
+            'nama_alumni' => 'required|max:42',
+            'angkatan' => 'required|max:14',
+            'no_telp' => 'required|max:24',
+            'alamat' => 'required|max:12',
 
         ]);
 
@@ -95,13 +92,10 @@ class ScheduleController extends Controller
     {
 
         $validated = $request->validate([
-            'nama_matkul' => 'required|max:42',
-            'nama_dosen' => 'required|max:56',
-            'hari' => 'required|max:14',
-            'kelas' => 'required|max:24',
+            'nama_alumni' => 'required|max:42',
+            'angkatan' => 'required|max:14',
+            'no_telp' => 'required|max:24',
             'sks' => 'required|max:12',
-            'waktu_mulai' => 'required|max:56',
-            'waktu_selesai' => 'required|max:56',
 
         ]);
 

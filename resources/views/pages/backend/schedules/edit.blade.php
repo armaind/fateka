@@ -12,12 +12,12 @@
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
                 <h5 class="text-white">
-                    📅📚 • Edit Jadwal Pelajaran <span class="d-none d-md-inline"> — {{$item->nama_matkul}}</span>
+                    📅📚 • Edit Jadwal Pelajaran <span class="d-none d-md-inline"> — {{$item->nama_alumni}}</span>
                 </h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah form untuk edit jadwal pelajaran mata kuliah {{$item->nama_matkul}}. <span
+                    Dibawah ini adalah form untuk edit jadwal pelajaran mata kuliah {{$item->nama_alumni}}. <span
                         class="d-none d-md-inline">
                         Data dibawah pastikan kamu isi dengan benar dan lengkap ya, nanti datanya akan kami update
                         dan kami simpan
@@ -53,7 +53,7 @@
                         @endif
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
-                                <label for="nama_matkul">Nama Mata Kuliah <span class="text-danger">*</span></label>
+                                <label for="nama_alumni">Nama Alumni <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">
@@ -70,39 +70,18 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <input id="nama_matkul" type="text" class="form-control"
-                                        value="{{$item->nama_matkul}}" name="nama_matkul" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="nama_dosen">Nama Dosen Pengampu <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-users" width="20" height="20"
-                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <circle cx="9" cy="7" r="4"></circle>
-                                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <input id="nama_dosen" type="text" class="form-control"
-                                        value="{{$item->nama_dosen}}" name="nama_dosen" required>
+                                    <input id="nama_alumni" type="text" class="form-control"
+                                        value="{{$item->nama_alumni}}" name="nama_alumni" required>
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group col-md-4 mb-2">
-                                <label for="hari">Hari <span class="text-danger">*</span></label>
+                                <label for="angkatan">Angkatan <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" for="hari">
+                                        <span class="input-group-text" for="angkatan">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-calendar" width="20" height="20"
                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -117,21 +96,30 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <select class="custom-select" id="hari" name="hari">
-                                        <option value="{{$item->hari}}" selected>{{$item->hari}}</option>
-                                        <option value="Senin">Senin</option>
-                                        <option value="Selasa">Selasa</option>
-                                        <option value="Rabu">Rabu</option>
-                                        <option value="Kamis">Kamis</option>
-                                        <option value="Jumat">Jumat</option>
-                                        <option value="Sabtu">Sabtu</option>
-                                        <option value="Minggu">Minggu</option>
+                                    <select class="custom-select" id="angkatan" name="angkatan">
+                                        <option value="{{$item->angkatan}}" selected>{{$item->angkatan}}</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2008</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group col-md-4 mb-2">
-                                <label for="angkatan">Kelas <span class="text-danger">*</span></label>
+                                <label for="no_telp">No Telepon <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">
@@ -150,13 +138,13 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <input required id="kelas" type="text" value="{{$item->kelas}}" class="form-control"
-                                        name="kelas">
+                                    <input required id="no_telp" type="number" value="{{$item->no_telp}}" class="form-control"
+                                        name="no_telp">
                                 </div>
                             </div>
 
                             <div class="form-group col-md-4 mb-2">
-                                <label for="sks">SKS <span class="text-danger">*</span></label>
+                                <label for="alamat">Alamat <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">
@@ -173,55 +161,12 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <input required id="sks" type="number" value="{{$item->sks}}" class="form-control"
-                                        name="sks">
+                                    <input required id="alamat" type="text" value="{{$item->alamat}}" class="form-control"
+                                        name="alamat">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="waktu_mulai">Waktu Mulai <span class="text-danger">*</span></label>
-                                <div class="input-group clockpicker mb-3 pull-center" data-placement="top"
-                                    data-align="top" data-autoclose="true">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-clock" width="20" height="20"
-                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <circle cx="12" cy="12" r="9"></circle>
-                                                <polyline points="12 7 12 12 15 15"></polyline>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <input id="waktu_mulai" type="text" class="form-control"
-                                        value="{{$item->waktu_mulai}}" name="waktu_mulai" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="waktu_selesai">Waktu Selesai <span class="text-danger">*</span></label>
-                                <div class="input-group clockpicker mb-3 pull-center" data-placement="top"
-                                    data-align="top" data-autoclose="true">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-circle-check" width="20" height="20"
-                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <circle cx="12" cy="12" r="9"></circle>
-                                                <path d="M9 12l2 2l4 -4"></path>
-                                            </svg>
-                                        </span>
-                                    </div>
-                                    <input id="waktu_selesai" type="text" class="form-control"
-                                        value="{{$item->waktu_selesai}}" name="waktu_selesai" required>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="card-footer">

@@ -78,7 +78,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="matkul">Nama Mata Kuliah: (Optional)</label>
+                                        <label for="matkul">Nama : (Optional)</label>
                                         <div class="input-group mb-3">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text" id="basic-addon1">

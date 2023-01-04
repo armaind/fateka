@@ -11,7 +11,7 @@
             hoverColor: !1,
             regionStyle: {
                 initial: {
-                    fill: "#7366ff"
+                    fill: "#07BD02"
                 }
             },
             backgroundColor: "transparent",
@@ -28,7 +28,7 @@
             backgroundColor: "transparent",
             regionStyle: {
                 initial: {
-                    fill: "#007bff"
+                    fill: "#07BD02"
                 }
             }
         }), maps("#usa").vectorMap({
