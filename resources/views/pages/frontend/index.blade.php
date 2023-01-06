@@ -49,7 +49,7 @@
                         </div>
                         <h4 class="title"><a href="#">Simple</a></h4>
                         <p>
-                            Mudah digunakan cukup login menggunakan nomor, anda akan menikmati semua fiturnya
+                            Mudah digunakan cukup login menggunakan google, anda akan menikmati semua fiturnya
                         </p>
                     </div>
                 </div>
@@ -127,11 +127,11 @@
                 </div>
             </div>
 
-            <div class="row justify-content-center iconic-boxes-v1">
+            <div class="row justify-content-center common-heading heading-white iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10 ">
                     <div class="iconic-box m-t-30 box-version-white color-v1">
                         <div class="icon icon-gradient-3">
-                            <i class="far fa-calendar-alt"></i>
+                            <i class="far fas fa-users"></i>
                         </div>
                         <h4 class="title">3980</h4>
                         <p>
@@ -142,7 +142,7 @@
                 <div class="col-xl-3 col-md-6 col-sm-10">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-4">
-                            <i class="far fa-database"></i>
+                            <i class="far fas fa-building"></i>
                         </div>
                         <h4 class="title">200</h4>
                         <p>
@@ -153,7 +153,7 @@
                 <div class="col-xl-3 col-md-6 col-sm-10">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-5">
-                            <i class="far fa-file-word"></i>
+                            <i class="far fas fa-map-marker-alt"></i>
                         </div>
                         <h4 class="title">50</h4>
                         <p>

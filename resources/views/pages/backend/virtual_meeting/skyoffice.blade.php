@@ -7,15 +7,13 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">🏢 • Skyoffice</h5>
+                <h5 class="text-white">Virtual Meet</h5>
             </div>
             <div class="card-body">
                 <p>
-                    Presentasi dan bertemu temanmu dengan konsep game dimana saja dan kapan saja dengan SkyOffice
+                    Di sini anda dapat melakukan pertemuan dengan konsep game dimana saja dan kapan saja dengan SkyOffice.
                     <span class="d-none d-md-inline">
-                        Banyak hal yang bisa kamu lakukan disini, screenshare, meeting, rapat dan banyak hal lain yang
-                        menanti mu.
-                        —— <a href="https://skyoffice.netlify.app/">Website Source ⇾</a>
+                        Banyak hal yang bisa kamu lakukan disini.
                     </span>
                 </p>
             </div>

@@ -13,17 +13,12 @@
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
                 <h5 class="text-white">
-                    Data Alumni
+                    Tambah Data Alumni
                 </h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini merupakan Data Alumni Teknik Komputer Universitas Telkm dari tahun ...
-                    <span class="d-none d-md-inline">
-                        Data dibawah pastikan kamu isi dengan benar dan lengkap ya, nanti datanya akan kami simpan
-                        dan dapat kamu akses dimana saja dan kapan saja.
-                    </span>
-                </p>
+                    Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
             </div>
         </div>
     </div>
@@ -31,9 +26,6 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
-                    <h5>Atur Jadwal Pelajaran</h5>
-                </div>
                 <form method="POST" action="{{route('schedules.store')}}" enctype="multipart/form-data"
                     class="needs-validation">
                     @csrf

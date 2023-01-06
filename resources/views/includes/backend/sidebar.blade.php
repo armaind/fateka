@@ -50,12 +50,6 @@
                         <span>Berita</span>
                     </a>
                 </li>
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
-                        <i data-feather="feather"></i>
-                        <span>Artikel</span>
-                    </a>
-                </li>
 
                 <li class="sidebar-main-title">
                     <div>
@@ -64,7 +58,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/journal')}}">
                         <i data-feather="briefcase"></i>
                         <span>Lowongan Kerja</span>
                     </a>
@@ -77,19 +71,19 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
                         <i data-feather="mic"></i>
                         <span>Alumni Sharing Session</span>
                     </a>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
                         <i data-feather="gift"></i>
                         <span>Charity</span>
                     </a>
                 </li>
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/calendar')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="#">
                         <i data-feather="share-2"></i>
                         <span>Pengabdian</span>
                     </a>
@@ -123,9 +117,6 @@
                         <span>Kuisioner</span>
                     </a>
                 </li>
-
-
-
             </ul>
         </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

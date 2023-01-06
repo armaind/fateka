@@ -130,7 +130,7 @@
                 <ul>
                     <li>
                         <i class="far fa-map-marker-alt"></i>
-                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia
+                        Gedung TULT Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40267 Indonesia Phone: +62 22 7566456 info@telkomuniversity.ac.id
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>

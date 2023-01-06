@@ -27,7 +27,7 @@
                     <div class="login-main col-10 col-md-10">
                         <form class="theme-form" method="POST" action="{{route('login')}}">
                             @csrf
-                            <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="200">
+                            <img src="\landio\assets\img\logo-title.png" alt="logo" width="100">
                             <p>
                             <h4>Masuk menggunakan akun kamu</h4>
                             <p class="mb-2">Masukkan email & password kamu buat login</p>
@@ -86,14 +86,13 @@
                                 </div>
                                 <button class="btn btn-primary btn-block" type="submit">Masuk Sekarang</button>
                             </div>
+                            <p class="mt-1 mb-1">atau</p>
                             <div class="form-group mb-0">
                                 <div class="checkbox mt-2">
-                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Login with google</a>
+                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Masuk dengan Google</a>
                                 </div>
                             </div>
-
-                            <p class="mt-4 mb-0">Ga punya akun?<a class="ml-2" href="{{url('/register')}}">Buat akun
-                                    dulu yuk!</a></p>
+                            <p class="mt-4 mb-0">Belum punya akun?<a class="ml-2" href="{{url('/register')}}">Regsitrasi Sekarang!</a></p>
                         </form>
                     </div>
 

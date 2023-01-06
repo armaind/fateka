@@ -1,19 +1,17 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Lowongan Kerja — Fateka')
+@section('title', 'Artikel Fateka')
 @section('content')
 
 <div class="container-fluid product-wrapper">
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">Lowongan Kerja</h5>
+                <h5 class="text-white">Artikel Terbaru </h5>
             </div>
             <div class="card-body">
                 <p>
-                    <span class="d-none d-md-inline">
-                        Di bawah ini merupakan daftar lowongan kerja terbaru
-                    </span>
+                    Di bawah ini merupakan berita terbaru seputar Teknik Komputer Universitas Telkom
                 </p>
             </div>
         </div>

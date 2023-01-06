@@ -221,21 +221,21 @@
 
 <!-- ===== Service Section Start ===== -->
 <section class="service-area p-t-100 p-b-100 bg-secondary-color-5">
-        <div class="container">
+    <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-7 col-lg-9">
-                    <div class="common-heading tagline-boxed text-center m-b-30">
+                    <div class="common-heading heading-white tagline-boxed text-center m-b-30">
                         <span class="tagline">Mengapa Fateka Hadir?</span>
-                        <h2 class="title">Hal yang melatarbelakangi aplikasi Fateka ini dibuat</h2>
+                        <h2 class="title ">Hal yang melatarbelakangi aplikasi Fateka ini dibuat</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center iconic-boxes-v1">
+            <div class="row justify-content-center common-heading heading-white iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-3">
-                            <i class="far fa-calendar-alt"></i>
+                            <i class="far fa-database"></i>
                         </div>
                         <h4 class="title">Data Alumni</h4>
                         <p>
@@ -246,7 +246,7 @@
                 <div class="col-xl-3 col-md-6 col-sm-10">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-4">
-                            <i class="far fa-database"></i>
+                            <i class="far fas fa-briefcase"></i>
                         </div>
                         <h4 class="title">Lowongan karir</h4>
                         <p>
@@ -257,7 +257,7 @@
                 <div class="col-xl-3 col-md-6 col-sm-10">
                     <div class="iconic-box m-t-30">
                         <div class="icon icon-gradient-5">
-                            <i class="far fa-file-word"></i>
+                            <i class="fas fa-retweet"></i>
                         </div>
                         <h4 class="title">Media interaksi</h4>
                         <p>
@@ -267,18 +267,32 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ===== Service Section End ===== -->
+</section>
+<!-- ===== Service Section End ===== -->
 
+<!-- ===== Partner start ===== -->
+<section class="cta-section bg-cover-center p-t-90 p-b-90">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-7 col-md-10">
+                <div class="cta-content text-center">
+                    <div class="common-heading tagline-boxed text-center m-b-30">
+                        <span class="tagline">Partner Fateka</span>
+                        <h2 class="title">Di bawah ini pihak yang bekerja sama dengan kami</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center m-t-60">
+                    <img src="https://telkomuniversity.ac.id/wp-content/uploads/2022/02/logo3-e1511767184374.png" alt="client" width="200"/>
+                </div> 
+            </div>
+        </div>  
+    </div>         
+</section> 
 
-
-<br>
-<br>
-<br>
+<!-- ===== Partner end ===== -->
 
 <!--====== Start Call To Action ======-->
-<section class="cta-section bg-cover-center p-t-90 p-b-90"
-    style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
+<section class="cta-section bg-cover-center p-t-90 p-b-90" style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
@@ -287,16 +301,15 @@
                         <span class="tagline">Ingin mengakses semua fitur?</span>
                         <h2 class="title">Ayo segera masuk ke Aplikasi Fateka</h2>
                     </div>
-
-                    <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang <i
-                            class="far fa-arrow-right"></i></a>
+                    <a href="{{url('/login')}}" class="template-btn white-bg bordered-btn">Masuk Sekarang 
+                    <i class="far fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
         <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="">
-    </div>
-</section>
+    </div> 
+</section>        
 
 @endsection

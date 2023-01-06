@@ -978,8 +978,8 @@
     background-color: #07BD02 !important;
     border-color: #07BD02 !important; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    background-color: #4433ff !important;
-    border-color: #4433ff !important; }
+    background-color: #0C870A !important;
+    border-color: #0C870A !important; }
   .btn-primary:focus {
     -webkit-box-shadow: 0 0 0 0.2rem white;
             box-shadow: 0 0 0 0.2rem white; }
@@ -1098,8 +1098,8 @@
   background-color: transparent; }
   .btn-outline-primary-2x:hover, .btn-outline-primary-2x:focus, .btn-outline-primary-2x:active, .btn-outline-primary-2x.active {
     color: white;
-    background-color: #4433ff !important;
-    border-color: #4433ff !important;
+    background-color: #0C870A !important;
+    border-color: #0C870A !important;
     -webkit-box-shadow: none;
             box-shadow: none; }
 
@@ -1195,8 +1195,8 @@
     color: #07BD02; }
   .btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active {
     color: white;
-    background-color: #4433ff !important;
-    border-color: #4433ff !important; }
+    background-color: #0C870A !important;
+    border-color: #0C870A !important; }
 
 .btn-outline-secondary {
   border-color: #f73164;
@@ -1277,14 +1277,14 @@
     border-color: #e8c308 !important; }
 
 .btn-primary:not([disabled]):not(.disabled).active {
-  background-color: #4433ff;
-  border-color: #4433ff;
+  background-color: #0C870A;
+  border-color: #0C870A;
   -webkit-box-shadow: none !important;
           box-shadow: none !important; }
   .btn-primary:not([disabled]):not(.disabled).active:hover, .btn-primary:not([disabled]):not(.disabled).active:focus, .btn-primary:not([disabled]):not(.disabled).active:active, .btn-primary:not([disabled]):not(.disabled).active.active {
     color: white;
-    background-color: #4433ff;
-    border-color: #4433ff; }
+    background-color: #0C870A;
+    border-color: #0C870A; }
 
 .btn-secondary:not([disabled]):not(.disabled).active {
   background-color: #ec0944;
@@ -1366,8 +1366,8 @@
     color: white;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
-    background-color: #4433ff !important;
-    border-color: #4433ff !important; }
+    background-color: #0C870A !important;
+    border-color: #0C870A !important; }
 
 .btn-outline-secondary-2x:not([disabled]):not(.disabled).active {
   background-color: #f73164;
@@ -1510,8 +1510,8 @@ table tbody .border-bottom-warning td {
   border: 3px solid #07BD02; }
   .table-styling .table-primary thead,
   .table-styling.table-primary thead {
-    background-color: #4433ff;
-    border: 3px solid #4433ff; }
+    background-color: #0C870A;
+    border: 3px solid #0C870A; }
 
 .table-styling .table-secondary,
 .table-styling.table-secondary {
@@ -3161,8 +3161,8 @@ strong {
   -webkit-box-shadow: 0 5px 10px 2px rgba(88, 103, 221, 0.19) !important;
           box-shadow: 0 5px 10px 2px rgba(88, 103, 221, 0.19) !important; }
   .btn-air-primary:hover, .btn-air-primary:active, .btn-air-primary:not([disabled]):not(.disabled):active {
-    background-color: #4433ff;
-    border-color: #4433ff; }
+    background-color: #0C870A;
+    border-color: #0C870A; }
 
 .input-air-primary {
   -webkit-box-shadow: 0 3px 5px 1px rgba(115, 102, 255, 0.1) !important;
@@ -8661,24 +8661,24 @@ table.dataTable.display tbody tr.odd > .sorting_1 {
 
 .ribbon-primary.ribbon-clip:before {
   border-color: transparent;
-  border-top-color: #4433ff;
-  border-right-color: #4433ff; }
+  border-top-color: #0C870A;
+  border-right-color: #0C870A; }
 
 .ribbon-primary.ribbon-clip-right:before {
   border-right-color: transparent;
-  border-top-color: #4433ff;
-  border-left-color: #4433ff; }
+  border-top-color: #0C870A;
+  border-left-color: #0C870A; }
 
 .ribbon-primary.ribbon-clip-bottom:before {
   border-top-color: transparent;
-  border-bottom-color: #4433ff;
-  border-right-color: #4433ff; }
+  border-bottom-color: #0C870A;
+  border-right-color: #0C870A; }
 
 .ribbon-primary.ribbon-clip-bottom-right:before {
   border-top-color: transparent;
-  border-bottom-color: #4433ff;
+  border-bottom-color: #0C870A;
   border-right-color: transparent;
-  border-left-color: #4433ff; }
+  border-left-color: #0C870A; }
 
 .ribbon-secondary {
   background: #f73164; }
@@ -17411,13 +17411,14 @@ footer {
       vertical-align: bottom; }
   .login-card .login-main {
     width: 450px;
-    padding: 40px;
+    padding: 15px 40px;
     border-radius: 10px;
     -webkit-box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
             box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
     margin: 0 auto;
     background-color: #fff; }
     .login-card .login-main .theme-form h4 {
+      margin-top: 50px;
       margin-bottom: 5px; }
     .login-card .login-main .theme-form label {
       font-size: 15px;
@@ -17459,7 +17460,7 @@ footer {
       position: absolute;
       top: 10px;
       right: 0; }
-
+      
 .show-hide {
   position: absolute;
   top: 52px;
@@ -23870,7 +23871,7 @@ body[class*='dark-'] .for-light {
   padding: 2px 6px !important;
   margin-top: 0 !important;
   background-color: var(--theme-deafult) !important;
-  border-color: #4433ff !important;
+  border-color: #0C870A !important;
   color: #fff;
   margin-right: 8px !important; }
 
@@ -23895,7 +23896,7 @@ body[class*='dark-'] .for-light {
   padding: 2px 6px !important;
   margin-top: 0 !important;
   background-color: var(--theme-deafult) !important;
-  border-color: #4433ff !important;
+  border-color: #0C870A !important;
   color: #fff;
   margin-right: 8px !important; }
 
@@ -24698,7 +24699,7 @@ body[class*='dark-'] .for-light {
           .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper.close_icon:hover .sidebar-main .sidebar-links > li .sidebar-submenu a {
             display: block; }
           .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper.close_icon:hover .sidebar-main .sidebar-links > li > a {
-            padding: 12px 15px;
+            padding: 15px 15px;
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease; }
             .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper.close_icon:hover .sidebar-main .sidebar-links > li > a span {
@@ -24826,7 +24827,7 @@ body[class*='dark-'] .for-light {
           -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease; }
         .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper .sidebar-main .sidebar-links > li a {
-          padding: 12px 15px;
+          padding: 15px 15px;
           position: relative;
           color: #222222;
           -webkit-transition: all 0.3s ease;

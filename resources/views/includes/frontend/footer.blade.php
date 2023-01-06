@@ -20,6 +20,7 @@
                                 <li><a href="{{url('https://telkomuniversity.ac.id/')}}">Telkom University</a></li>
                                 <li><a href="{{url('https://bsk.telkomuniversity.ac.id/')}}">Teknik Komputer Tel-U</a></li>
                                 <li><a href="{{url('https://www.fast.or.id/')}}">FAST</a></li>
+                                <li><a href="{{url('#')}}">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
@@ -39,7 +40,7 @@
                     <div class="widget text-block-widget">
                         <h5 class="widget-title">Alamat</h5>
                         <p>
-                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia Phone: +62 22 7566456 info@telkomuniversity.ac.id
+                        Gedung TULT Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40267 Indonesia Phone: +62 22 7566456 info@telkomuniversity.ac.id
                         </p>
                     </div>
                 </div>

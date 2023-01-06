@@ -27,7 +27,7 @@
                     <div class="login-main col-10 col-md-10">
                         <form method="POST" action={{route('register')}} class="theme-form">
                             @csrf
-                            <img src="\landio\assets\img\Mobile-logo.png" alt="logo" width="200">
+                            <img src="\landio\assets\img\logo-title.png" alt="logo" width="100">
                             <p>
                             <h4>Daftarkan akun kamu sekarang</h4>
                             <p class="mb-2">Masukan data yang diperlukan untuk membuat akun</p>
@@ -42,7 +42,7 @@
                             </div>
                             @endif
 
-                            <label class="col-form-label pt-0">Nama kamu</label>
+                            <label class="col-form-label pt-0">Nama</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">
@@ -56,7 +56,7 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <input class="form-control" type="text" name="name" placeholder="Masukkan namamu disini"
+                                <input class="form-control" type="text" name="name" placeholder="Nama Lengkap"
                                     required autofocus>
                             </div>
 
@@ -119,13 +119,14 @@
                             <div class="form-group">
                                 <button class="btn btn-primary btn-block mt-4" type="submit">Buat Akun</button>
                             </div>
+                            <p class="mt-1 mb-1">atau</p>
                             <div class="form-group mb-0">
                                 <div class="checkbox mt-2">
-                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Login with google</a>
+                                    <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Masuk dengan google</a>
                                 </div>
                             </div>
 
-                            <p class="mt-4 mb-0">Udah punya akun?<a class="ml-2" href="{{('/login')}}">Yuk masuk
+                            <p class="mt-4 mb-0">Punya akun?<a class="ml-2" href="{{('/login')}}">Masuk
                                     sekarang </a></p>
                         </form>
                     </div>
