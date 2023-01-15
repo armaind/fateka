@@ -86,7 +86,7 @@
                                 </div>
                                 <button class="btn btn-primary btn-block" type="submit">Masuk Sekarang</button>
                             </div>
-                            <p class="mt-1 mb-1">atau</p>
+                            <span class="mt-1 mb-1">atau</span>
                             <div class="form-group mb-0">
                                 <div class="checkbox mt-2">
                                     <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Masuk dengan Google</a>

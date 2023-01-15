@@ -44,8 +44,7 @@ class ScheduleController extends Controller
             'nama_alumni' => 'required|max:42',
             'angkatan' => 'required|max:14',
             'no_telp' => 'required|max:24',
-            'alamat' => 'required|max:12',
-
+            'alamat' => 'required|max:12'
         ]);
 
         $input = $request->all();
@@ -95,8 +94,7 @@ class ScheduleController extends Controller
             'nama_alumni' => 'required|max:42',
             'angkatan' => 'required|max:14',
             'no_telp' => 'required|max:24',
-            'sks' => 'required|max:12',
-
+            'alamat' => 'required|max:12'
         ]);
 
         $schedules = Schedules::find($id)->update($request->all());

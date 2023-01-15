@@ -123,16 +123,7 @@
                                 @empty
                                 @endforelse
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Author/Penulis</th>
-                                    <th>Judul</th>
-                                    <th>Mata Kuliah</th>
-                                    <th>Tanggal</th>
-                                    <th>Konten</th>
-                                    <th>Opsi</th>
-                                </tr>
-                            </tfoot>
+                            
                         </table>
                     </div>
                 </div>
