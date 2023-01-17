@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', $berita->judul . ' — Catatanmu di Collegetivity')
+@section('title', $item->judul . ' — Catatanmu di Collegetivity')
 @section('content')
 
 <style>
@@ -19,14 +19,14 @@
         <div class="page-title">
             <div class="row">
                 <div class="col-6">
-                    <h3>{{$berita->judul}}</h3>
+                    <h3>{{$item->judul}}</h3>
                 </div>
                 <div class="col-6">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('dashboard')}}"> <i data-feather="home"></i></a>
                         </li>
                         <li class="breadcrumb-item">Catatan Pelajaran</li>
-                        <li class="breadcrumb-item active">{{$berita->judul}}</li>
+                        <li class="breadcrumb-item active">{{$item->judul}}</li>
                     </ol>
                 </div>
             </div>
@@ -38,18 +38,18 @@
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="blog-box blog-details">
-                        <img class="img-fluid" src="{{url('storage/images/' . $berita->thumbnail)}}">
+                        <img class="img-fluid" src="{{url('storage/images/' . $item->thumbnail)}}">
                         <div class="blog-details">
                             <ul class="blog-social">
-                                <li>{{$berita->tanggal}}</li>
-                                <li><i class="icofont icofont-user"></i>{{$berita->author}}</li>
-                                <li><i class="icofont icofont-list"></i>{{$berita->berita}}</li>
+                                <li>{{$item->tanggal}}</li>
+                                <li><i class="icofont icofont-user"></i>{{$item->author}}</li>
+                                <li><i class="icofont icofont-list"></i>{{$item->item}}</li>
                             </ul>
                             <h1 class="mt-3">
-                                {{$berita->judul}}
+                                {{$item->judul}}
                             </h1>
                             <div class="single-blog-content-top">
-                                <div class="mt-3">{!!htmlspecialchars_decode($berita->content)!!}</div>
+                                <div class="mt-3">{!!htmlspecialchars_decode($item->content)!!}</div>
                             </div>
                         </div>
                     </div>

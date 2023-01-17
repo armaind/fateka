@@ -9,13 +9,13 @@
 @endpush
 
 <!-- file wrapper for better tabs start-->
-<div>
+<div>   
     <!-- pages title header start-->
     <div class="container-fluid">
         <div class="page-title">
             <div class="card card-absolute mt-5 mt-md-4">
                 <div class="card-header bg-primary">
-                    <h5 class="text-white">Tambah Berita</h5>
+                    <h5 class="text-white">Tambah Berita</h5>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
                 </div>
                 <div class="card-body">
                     <p>
