@@ -90,8 +90,8 @@ Route::prefix('dashboard')
         Route::get('/journal', function () {
             return view('pages.backend.journal.index');
         });
-        Route::get('/e-book', function () {
-            return view('pages.backend.journal.e-book');
+        Route::get('/berita', function () {
+            return view('pages.backend.journal.berita');
         });
         Route::get('/artikel', function () {
             return view('pages.backend.journal.artikel');

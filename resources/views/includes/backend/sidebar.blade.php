@@ -37,12 +37,6 @@
                         <span>Data Alumni</span>
                     </a>
                 </li>
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/jadwal-pelajaran/atur-jadwal')}}">
-                        <i data-feather="users"></i>
-                        <span>Tambah Data Alumni</span>
-                    </a>
-                </li>
 
                 <li class="sidebar-main-title">
                     <div>
@@ -51,7 +45,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/artikel')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/e-book')}}">
                         <i data-feather="file-text"></i>
                         <span>Artikel</span>
                     </a>
