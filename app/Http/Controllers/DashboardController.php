@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use App\Models\Schedules;
 use App\Models\Todolist;
-use App\Models\Notes;
+use App\Models\DataAlumni;
+use Illuminate\Http\Request;
+use App\Models\LowonganKerja;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
