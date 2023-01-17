@@ -93,6 +93,9 @@ Route::prefix('dashboard')
         Route::get('/e-book', function () {
             return view('pages.backend.journal.e-book');
         });
+        Route::get('/artikel', function () {
+            return view('pages.backend.journal.artikel');
+        });
     });
 
 /* -------------------------------------------------------------------------- */

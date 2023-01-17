@@ -51,9 +51,9 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/e-book')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/artikel')}}">
                         <i data-feather="file-text"></i>
-                        <span>Berita</span>
+                        <span>Artikel</span>
                     </a>
                 </li>
 
@@ -64,7 +64,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/journal')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/notes')}}">
                         <i data-feather="briefcase"></i>
                         <span>Lowongan Kerja</span>
                     </a>

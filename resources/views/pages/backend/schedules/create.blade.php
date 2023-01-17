@@ -157,8 +157,55 @@
                                         name="alamat">
                                 </div>
                             </div>
+                            <div class="form-group col-md-4 mb-2">
+                                <label for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" for="status_pekerjaan">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-calendar" width="20" height="20"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                                                <line x1="16" y1="3" x2="16" y2="7"></line>
+                                                <line x1="8" y1="3" x2="8" y2="7"></line>
+                                                <line x1="4" y1="11" x2="20" y2="11"></line>
+                                                <line x1="11" y1="15" x2="12" y2="15"></line>
+                                                <line x1="12" y1="15" x2="12" y2="18"></line>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <select class="custom-select" id="status_pekerjaan" name="status_pekerjaan">
+                                        <option value="" disabled selected>Pilih ...</option>
+                                        <option value="Bekerja">Bekerja</option>
+                                        <option value="Belum Bekerja">Belum Bekerja</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4 mb-2">
+                                <label for="perusahaan">Perusahaan <span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="icon icon-tabler icon-tabler-list-numbers" width="20" height="20"
+                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M11 6h9"></path>
+                                                <path d="M11 12h9"></path>
+                                                <path d="M12 18h8"></path>
+                                                <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4"></path>
+                                                <path d="M6 10v-6l-2 2"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <input nullable id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
+                                        name="perusahaan">
+                                </div>
+                            </div>
                         </div>
-
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary m-r-15" type="submit">Tambah</button>
