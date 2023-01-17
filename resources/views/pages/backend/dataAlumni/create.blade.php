@@ -53,6 +53,9 @@
                                         value="{{old('nama_alumni')}}" name="nama_alumni" required>
                                 </div>
                             </div>
+                            <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+                        </div>
+                        <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
                                 <label for="email">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
@@ -61,7 +64,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
                                 <label for="angkatan">Angkatan<span class="text-danger">*</span></label>
