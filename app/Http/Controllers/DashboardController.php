@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
-use App\Models\Schedules;
 use App\Models\Todolist;
-use App\Models\Notes;
+use App\Models\DataAlumni;
+use Illuminate\Http\Request;
+use App\Models\LowonganKerja;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -17,13 +17,13 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $jadwal = Schedules::where('user_id', Auth::user()->email)->get();
-        $catatan = Notes::where('user_id', Auth::user()->email)->take(4)->get();
+        $dataalumni = DataAlumni::where('user_id', Auth::user()->email)->get();
+        $lowongankerja = LowonganKerja::where('user_id', Auth::user()->email)->take(4)->get();
         $todolist = Todolist::where('user_id', Auth::user()->email)->take(4)->get();
 
         return view('pages.backend.index', [
-            'jadwal' => $jadwal,
-            'catatan' => $catatan,
+            'dataalumni' => $dataalumni,
+            'lowongankerja' => $lowongankerja,
             'todolist' => $todolist
         ]);
     }

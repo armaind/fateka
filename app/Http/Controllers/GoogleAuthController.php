@@ -22,7 +22,7 @@ class GoogleAuthController extends Controller
         if($finduser)
         {
             Auth::login($finduser);
-            return redirect()->intended('dashboard');
+            return redirect('/dashboard');
         }
         else
         {
@@ -33,7 +33,7 @@ class GoogleAuthController extends Controller
                 'password' => bcrypt('1234242')
             ]);
             Auth::login($newuser);
-            return redirect()->intended('dashboard');
+            return redirect('/dashboard');
         }
     }
 }
