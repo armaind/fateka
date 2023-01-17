@@ -88,7 +88,7 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.backend.publikasi.berita.detail');
     }
     
     /**
