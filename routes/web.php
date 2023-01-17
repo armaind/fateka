@@ -37,6 +37,15 @@ Route::prefix('dashboard')
         Route::get('/data-alumni', 'App\Http\Controllers\DataAlumniController@index');
         Route::get('/data-alumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create');
         Route::resource('dataAlumni', 'App\Http\Controllers\DataAlumniController');
+        /* ------------------------- Publikasi pages ------------------------- */
+        /* ------------------------- Berita ------------------------- */
+        Route::get('/berita', 'App\Http\Controllers\BeritaController@index');
+        Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
+        Route::resource('dataAlumni', 'App\Http\Controllers\BeritaController');
+        /* ------------------------- Artikel ------------------------- */
+        Route::get('/berita', 'App\Http\Controllers\BeritaController@index');
+        Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
+        Route::resource('dataAlumni', 'App\Http\Controllers\BeritaController');
         /* ------------------------- Lowongan Kerja Pages ------------------------ */
         Route::get('/lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@index');
         Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
@@ -82,15 +91,6 @@ Route::prefix('dashboard')
         });
         Route::get('/audio/poolsuite', function () {
             return view('pages.backend.audio.poolsuite');
-        });
-        /* ------------------------- Publikasi Pages ------------------------ */
-        /* ------------------------- Berita Section ------------------------ */
-        Route::get('/berita', function () {
-            return view('pages.backend.publikasi.berita.index');
-        });
-        /* ------------------------- Artikel Section ------------------------ */
-        Route::get('/artikel', function () {
-            return view('pages.backend.publikasi.artikel.index');
         });
         /* ------------------------- Virtual Meeting Section ------------------------ */
         Route::get('/virtual-meeting/skyoffice', function () {

@@ -53,9 +53,6 @@
                                         value="{{old('nama_alumni')}}" name="nama_alumni" required>
                                 </div>
                             </div>
-                        </div>
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
-                        <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
                                 <label for="email">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
@@ -64,6 +61,7 @@
                                 </div>
                             </div>
                         </div>
+                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
@@ -117,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="perusahaan">Perusahaan <span class="text-danger">*</span></label>
+                                <label for="perusahaan">Perusahaan/Instansi <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
                                         name="perusahaan">

@@ -71,7 +71,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/')}}">
+                            <a href="{{url('/dashboard/berita/tambah-berita')}}">
                                 <i data-feather="file-plus"></i>
                                 Tambah Berita 
                             </a>

@@ -18,10 +18,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom.
-                    <span class="d-none d-md-inline">
-                        <a href="{{url('dashboard/data-alumni/tambah-data-alumni')}}">Tambah Data Alumni ⇾</a>
-                    </span>
+                    Di bawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom
                 </p>
             </div>
         </div>

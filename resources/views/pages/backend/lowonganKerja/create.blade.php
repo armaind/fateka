@@ -19,10 +19,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        Dibawah ini adalah halaman untuk tambah catatan pelajaranmu. <span class="d-none d-md-inline">
-                            Catatan yang telah kamu tulis nantinya bisa kamu akses kok dimana saja dan kapan saja.
-                            Selamat menulis dan berkreasi, ya!
-                        </span>
+                        Di bawah ini adalah halaman untuk tambah lowongan kerja
                     </p>
                 </div>
             </div>
@@ -56,49 +53,32 @@
                             <div class="col-sm-12">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="judul">Judul Catatan: <span class="text-danger">*</span></label>
+                                        <label for="posisi">Posisi Pekerjaan <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-notes" width="20"
-                                                        height="20" viewBox="0 0 24 24" stroke-width="2"
-                                                        stroke="currentColor" fill="none" stroke-linecap="round"
-                                                        stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                        <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-                                                        <line x1="9" y1="7" x2="15" y2="7"></line>
-                                                        <line x1="9" y1="11" x2="15" y2="11"></line>
-                                                        <line x1="9" y1="15" x2="13" y2="15"></line>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
+                                            <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}"
                                                 type="text" required>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-6 ">
-                                        <label for="matkul">Nama : (Optional)</label>
+                                        <label for="perusahaan">Perusahaan/Instansi <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" id="basic-addon1">
-                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                        class="icon icon-tabler icon-tabler-book" width="20" height="20"
-                                                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                        fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                        <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                                                        <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                                                        <line x1="3" y1="6" x2="3" y2="19"></line>
-                                                        <line x1="12" y1="6" x2="12" y2="19"></line>
-                                                        <line x1="21" y1="6" x2="21" y2="19"></line>
-                                                    </svg>
-                                                </span>
-                                            </div>
-                                            <input class="form-control" id="matkul" name="matkul"
-                                                value="{{old('matkul')}}" type="text" required="">
+                                            <input class="form-control" id="perusahaan" name="perusahaan"
+                                                value="{{old('perusahaan')}}" type="text" required>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6 ">
+                                        <label for="alamat">Alamat <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="alamat" name="alamat"
+                                                value="{{old('alamat')}}" type="text" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
                                 </div>
 
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>
@@ -119,7 +99,7 @@
                                 <div class="email-wrapper">
                                     <div class="theme-form">
                                         <div class="form-group">
-                                            <label>Catatan: <span class="text-danger">*</span></label>
+                                            <label>Deskripsi Kerja <span class="text-danger">*</span></label>
                                             <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
                                         </div>
                                     </div>
@@ -127,8 +107,8 @@
 
 
                             </div>
-                            <div class="col-sm-12">
-                                <div class="btn-showcase">
+                            <div class="col-sm-12 m-b-15">
+                                <div class="btn-showcase float-right">
                                     <button class="btn btn-primary" type="submit">Tambah</button>
                                     <input class="btn btn-light" type="reset" value="Reset">
                                 </div>
