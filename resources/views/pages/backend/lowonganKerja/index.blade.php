@@ -17,10 +17,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah beberapa Lowongan Kerja yang dapat anda lamar.<span
-                        class="d-none d-md-inline">
-                        <a href="{{url('/dashboard/lowongan-kerja/tambah-lowongan-kerja')}}">Tambah Lowongan Kerja ⇾</a>
-                    </span>
+                    Dibawah ini adalah beberapa Lowongan Kerja yang dapat anda lamar
                 </p>
             </div>
         </div>
@@ -33,12 +30,11 @@
                         <table class="display" id="auto-fill">
                             <thead>
                                 <tr>
-                                    <th>Author/Penulis</th>
-                                    <th>Judul</th>
-                                    <th>Mata Kuliah</th>
-                                    <th>Tanggal</th>
-                                    <th>Konten</th>
-                                    <th>Opsi</th>
+                                    <th>Posisi</th>
+                                    <th>Perusahaan/Instansi</th>
+                                    <th>Alamat</th>
+                                    <th>Thumbnail</th>
+                                    <th>Deskripsi Kerja</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,8 +58,8 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="font-weight-bold">{{$item->judul}}</td>
-                                    <td>{{$item->matkul}}</td>
+                                    <td class="font-weight-bold">{{$item->posisi}}</td>
+                                    <td>{{$item->perusahaan}}</td>
                                     <td>{{$item->tanggal}}</td>
                                     <td>{{substr(strip_tags(htmlspecialchars_decode($item->content)),0,20)}}<a
                                             href="{{route('lowonganKerja.show', $item->id)}}"> ...</a></td>
