@@ -50,13 +50,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 text-right"><span class="f-w-600 m-r-5">Menampilkan 15 hasil</span>
+                @foreach ($items as $berita)
+                <div class="col-md-6 text-right"><span class="f-w-600 m-r-5">Menampilkan {{$berita->id}} hasil</span>
                 </div>
             </div>
         </div>
         <div class="product-wrapper-grid">
             <div class="row">
-                @foreach ($items as $berita)
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
                         <img src="{{ 'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $berita->thumbnail }}" class="card-img-top" alt="...">
@@ -67,7 +67,7 @@
                         </div>
                         
                         <div class="card-footer py-3">
-                            <a href="{{route('berita.show', $berita)}}" target="_blank">Selengkapnya ⇾</a>
+                            <a href="{{route('berita.show', $berita)}}" target="">Selengkapnya ⇾</a>
                         </div>
                     </div>
                 </div>

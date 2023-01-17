@@ -88,7 +88,10 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        return view('pages.backend.publikasi.berita.detail');
+        $items = Berita::where('user_id', Auth::user()->email)->get();
+        return view('pages.backend.publikasi.berita.detail',[
+            'items' => $items
+        ]);
     }
     
     /**
