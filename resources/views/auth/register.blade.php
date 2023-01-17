@@ -29,7 +29,7 @@
                             @csrf
                             <img src="\landio\assets\img\logo-title.png" alt="logo" width="100">
                             <p>
-                            <h4>Daftarkan akun kamu sekarang</h4>
+                            <h4>Daftarkan akun anda sekarang</h4>
                             <p class="mb-2">Masukan data yang diperlukan untuk membuat akun</p>
 
                             @if ($errors->any())

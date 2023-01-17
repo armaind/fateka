@@ -13,7 +13,7 @@
                 <p>
                     Di sini anda dapat melakukan pertemuan dengan konsep game dimana saja dan kapan saja dengan SkyOffice.
                     <span class="d-none d-md-inline">
-                        Banyak hal yang bisa kamu lakukan disini.
+                        Banyak hal yang bisa anda lakukan disini.
                     </span>
                 </p>
             </div>

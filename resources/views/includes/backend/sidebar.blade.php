@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/notes')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/lowonganKerja')}}">
                         <i data-feather="briefcase"></i>
                         <span>Lowongan Kerja</span>
                     </a>

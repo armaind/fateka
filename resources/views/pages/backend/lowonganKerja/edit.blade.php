@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Edit Catatan Pelajaran — Collegetivity')
+@section('title', 'Edit Lowongan Kerja — Collegetivity')
 @section('content')
 
 @push('create-article-styles')
@@ -12,12 +12,12 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">📓📝 • Edit Catatan Pelajaran <span class="d-none d-md-inline"> —
+                <h5 class="text-white">Edit Lowongan Kerja <span class="d-none d-md-inline"> —
                         {{$item->judul}}</span></h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah form untuk edit catatan pelajaran berjudul {{$item->judul}}. <span
+                    Dibawah ini adalah form untuk edit Lowongan Kerja berjudul {{$item->judul}}. <span
                         class="d-none d-md-inline">
                         Catatan yang telah kamu tulis nantinya bisa kamu akses kok dimana saja dan kapan saja.
                         Selamat menulis dan berkreasi, ya!
@@ -31,7 +31,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">
-                    <h5>Edit Catatan Pelajaran</h5>
+                    <h5>Edit Lowongan Kerja</h5>
                 </div>
                 <div class="card-body add-post">
                     @if ($errors->any())
@@ -46,7 +46,7 @@
                         </ul>
                     </div>
                     @endif
-                    <form class="row needs-validation" method="POST" action="{{route('notes.update', $item->id)}}"
+                    <form class="row needs-validation" method="POST" action="{{route('lowonganKerja.update', $item->id)}}"
                         enctype="multipart/form-data" novalidate="">
                         @method('PUT')
                         @csrf

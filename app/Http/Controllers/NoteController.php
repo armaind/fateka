@@ -17,7 +17,7 @@ class NoteController extends Controller
     {
         $items = Notes::where('user_id', Auth::user()->email)->get();
 
-        return view('pages.backend.notes.index', [
+        return view('pages.backend.lowonganKerja.index', [
             'items' => $items
         ]);
     }
@@ -29,7 +29,7 @@ class NoteController extends Controller
      */
     public function create()
     {
-        return view('pages.backend.notes.create');
+        return view('pages.backend.lowonganKerja.create');
     }
 
     /**
@@ -77,7 +77,7 @@ class NoteController extends Controller
             ]);
         }
 
-        return redirect('/dashboard/catatan-pelajaran');
+        return redirect('/dashboard/lowongan-kerja');
     }
 
     /**
@@ -90,7 +90,7 @@ class NoteController extends Controller
     {
         $item = Notes::findOrFail($id);
 
-        return view('pages.backend.notes.detail', [
+        return view('pages.backend.lowonganKerja.detail', [
             'item' => $item
         ]);
     }
@@ -105,7 +105,7 @@ class NoteController extends Controller
     {
         $item = Notes::findOrFail($id);
 
-        return view('pages.backend.notes.edit', [
+        return view('pages.backend.lowonganKerja.edit', [
             'item' => $item
         ]);
     }
@@ -157,7 +157,7 @@ class NoteController extends Controller
             ]);
         }
 
-        return redirect('/dashboard/catatan-pelajaran');
+        return redirect('/dashboard/lowongan-kerja');
     }
 
     /**
@@ -171,6 +171,6 @@ class NoteController extends Controller
         $item = Notes::findOrFail($id);
         $item->delete();
 
-        return redirect('/dashboard/catatan-pelajaran');
+        return redirect('/dashboard/lowongan-kerja');
     }
 }

@@ -22,7 +22,7 @@
                 <p>
                     Dibawah ini adalah form untuk edit Data Alumni {{$item->nama_alumni}}. <span
                         class="d-none d-md-inline">
-                        Pastikan data di bawah kamu isi dengan benar dan lengkap ya, nanti datanya akan kami update
+                        Pastikan data di bawah anda isi dengan benar dan lengkap ya, nanti datanya akan kami update
                     </span>
                 </p>
             </div>

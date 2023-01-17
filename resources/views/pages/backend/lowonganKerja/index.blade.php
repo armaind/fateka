@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Catatan Pelajaran — Collegetivity')
+@section('title', 'Lowongan Kerja — Fateka')
 @section('content')
 
 @push('datatable-styles')
@@ -13,20 +13,13 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">📝 • Catatan Pelajaranmu</h5>
+                <h5 class="text-white">Lowongan Kerja</h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah catatan pelajaran yang telah kamu buat dan tulis. <span
+                    Dibawah ini adalah beberapa Lowongan Kerja yang dapat anda lamar.<span
                         class="d-none d-md-inline">
-                        Catatan dibawah juga bisa kamu
-                        kamu baca atau lihat dengan menekan logo mata berwarna hijau, edit dengan menekan logo
-                        pencil
-                        berwarna ungu dan hapus dengan menekan logo sampah berwarna merah. Ingin menambahkan
-                        catatan?
-                        tambah
-                        catatanmu
-                        <a href="{{url('/dashboard/catatan-pelajaran/tambah-catatan')}}">disini ⇾</a>
+                        <a href="{{url('/dashboard/lowongan-kerja/tambah-lowongan-kerja')}}">Tambah Lowongan Kerja ⇾</a>
                     </span>
                 </p>
             </div>
@@ -74,9 +67,9 @@
                                     <td>{{$item->matkul}}</td>
                                     <td>{{$item->tanggal}}</td>
                                     <td>{{substr(strip_tags(htmlspecialchars_decode($item->content)),0,20)}}<a
-                                            href="{{route('notes.show', $item->id)}}"> ...</a></td>
+                                            href="{{route('lowonganKerja.show', $item->id)}}"> ...</a></td>
                                     <td>
-                                        <a href="{{route('notes.show', $item->id)}}" class="btn btn-success px-2">
+                                        <a href="{{route('lowonganKerja.show', $item->id)}}" class="btn btn-success px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-eye" width="16" height="16"
                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -88,7 +81,7 @@
                                                 </path>
                                             </svg>
                                         </a>
-                                        <a href="{{route('notes.edit', $item->id)}}" class="btn btn-info px-2">
+                                        <a href="{{route('lowonganKerja.edit', $item->id)}}" class="btn btn-info px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-edit" width="16" height="16"
                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -100,7 +93,7 @@
                                                 <line x1="16" y1="5" x2="19" y2="8"></line>
                                             </svg>
                                         </a>
-                                        <form action="{{route('notes.destroy', $item->id)}}" method="POST"
+                                        <form action="{{route('lowonganKerja.destroy', $item->id)}}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('delete')
@@ -123,12 +116,12 @@
                                 @empty
                                 @endforelse
                             </tbody>
-                            
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     @push('datatable-scripts')

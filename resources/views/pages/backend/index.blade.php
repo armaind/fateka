@@ -56,7 +56,7 @@
                         </h4>
                         <p>
                             <span>
-                                Disini kamu dapat mencari data alumni, mengakses berita seputar jurusan maupun kampus, mengikuti kegiatan, memposting dan mencari lowongan kerja, dan juga kamu dapat melakukan pertemuan secara daring, dan ada fitur survei yang dibuat untuk melakukan kuisioner terhadap para alumni.
+                                Disini anda dapat mencari data alumni, mengakses berita seputar jurusan maupun kampus, mengikuti kegiatan, memposting dan mencari lowongan kerja, dan juga anda dapat melakukan pertemuan secara daring, dan ada fitur survei yang dibuat untuk melakukan kuisioner terhadap para alumni.
                             </span>
                         </p>
                         <div class="whatsnew-btn">

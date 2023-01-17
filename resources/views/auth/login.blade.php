@@ -29,8 +29,8 @@
                             @csrf
                             <img src="\landio\assets\img\logo-title.png" alt="logo" width="100">
                             <p>
-                            <h4>Masuk menggunakan akun kamu</h4>
-                            <p class="mb-2">Masukkan email & password kamu buat login</p>
+                            <h4>Masuk menggunakan akun anda</h4>
+                            <p class="mb-2">Masukkan email & password anda untuk login</p>
 
                             @if ($errors->any())
                             <div class="alert alert-danger py-1 mb-1">

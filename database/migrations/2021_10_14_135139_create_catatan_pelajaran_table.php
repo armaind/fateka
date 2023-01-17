@@ -33,6 +33,6 @@ class CreateCatatanPelajaranTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('lowonganKerja');
     }
 }

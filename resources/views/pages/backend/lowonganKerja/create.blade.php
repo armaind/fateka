@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Tulis Catatan Pembelajaran Baru — Collegetivity')
+@section('title', 'Tambah Lowongan Kerja — Fateka')
 @section('content')
 
 @push('create-article-styles')
@@ -15,7 +15,7 @@
         <div class="page-title">
             <div class="card card-absolute mt-5 mt-md-4">
                 <div class="card-header bg-primary">
-                    <h5 class="text-white">📓📝 • Tulis Catatan Pelajaran Baru</h5>
+                    <h5 class="text-white">Tambah Lowongan Kerja</h5>
                 </div>
                 <div class="card-body">
                     <p>
@@ -50,7 +50,7 @@
                             </ul>
                         </div>
                         @endif
-                        <form class="row needs-validation" method="POST" action="{{route('notes.store')}}"
+                        <form class="row needs-validation" method="POST" action="{{route('lowonganKerja.store')}}"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="col-sm-12">

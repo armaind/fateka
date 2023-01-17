@@ -38,9 +38,9 @@ Route::prefix('dashboard')
         Route::get('/data-alumni/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
         Route::resource('dataAlumni', 'App\Http\Controllers\ScheduleController');
         /* ------------------------- Catatan Pelajaran Pages ------------------------ */
-        Route::get('/catatan-pelajaran', 'App\Http\Controllers\NoteController@index');
-        Route::get('/catatan-pelajaran/tambah-catatan', 'App\Http\Controllers\NoteController@create');
-        Route::resource('notes', 'App\Http\Controllers\NoteController');
+        Route::get('/lowongan-kerja', 'App\Http\Controllers\NoteController@index');
+        Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\NoteController@create');
+        Route::resource('lowonganKerja', 'App\Http\Controllers\NoteController');
         /* ---------------------------- Galeri Foto Pages --------------------------- */
         Route::get('/galeri-foto', 'App\Http\Controllers\GalleryController@index');
         Route::get('/galeri-foto/tambah-foto', 'App\Http\Controllers\GalleryController@create');
