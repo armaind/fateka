@@ -45,9 +45,9 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/e-book')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/berita')}}">
                         <i data-feather="file-text"></i>
-                        <span>Artikel</span>
+                        <span>Berita</span>
                     </a>
                 </li>
 
