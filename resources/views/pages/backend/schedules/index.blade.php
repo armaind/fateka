@@ -60,6 +60,7 @@
                                     <td>{{$item->alamat}}</td>
                                     <td>{{$item->status_pekerjaan}}</td>
                                     <td>{{$item->perusahaan}}</td>
+                                    
                                     <td>
                                         <a href="{{route('schedules.edit', $item->id)}}" class="btn btn-info px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
