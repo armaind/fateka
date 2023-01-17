@@ -64,6 +64,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-2">
                                 <label for="angkatan">Angkatan<span class="text-danger">*</span></label>
@@ -118,7 +119,7 @@
                             <div class="form-group col-md-6 mb-2">
                                 <label for="perusahaan">Perusahaan <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input nullable id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
+                                    <input id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
                                         name="perusahaan">
                                 </div>
                             </div>

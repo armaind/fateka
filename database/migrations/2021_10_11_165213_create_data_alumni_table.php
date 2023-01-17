@@ -19,6 +19,7 @@ class CreateDataAlumniTable extends Migration
             $table->string('angkatan');
             $table->string('alamat');
             $table->string('no_telp');
+            $table->string('user_id');
             $table->string('email');
             $table->string('status_pekerjaan');
             $table->string('perusahaan');

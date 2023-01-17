@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataAlumni;
-use App\Models\LowonganKerja;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Schedules;
 use App\Models\Todolist;
-
+use App\Models\Notes;
 
 class DashboardController extends Controller
 {
@@ -23,8 +22,8 @@ class DashboardController extends Controller
         $todolist = Todolist::where('user_id', Auth::user()->email)->take(4)->get();
 
         return view('pages.backend.index', [
-            'jadwal' => $jadwal,
-            'catatan' => $catatan,
+            'dataalumni' => $dataalumni,
+            'lowongankerja' => $lowongankerja,
             'todolist' => $todolist
         ]);
     }
