@@ -22,7 +22,7 @@ class CreateDataAlumniTable extends Migration
             $table->string('user_id');
             $table->string('email');
             $table->string('status_pekerjaan');
-            $table->string('perusahaan');
+            $table->string('perusahaan')->nullable();
             $table->timestamps();
         });
     }
