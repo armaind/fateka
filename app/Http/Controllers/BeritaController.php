@@ -17,7 +17,7 @@ class BeritaController extends Controller
     {
         $items = Berita::where('user_id', Auth::user()->email)->get();
 
-        return view('pages.backend.berita.index', [
+        return view('pages.backend.publikasi.berita.index', [
             'items' => $items
         ]);
     }
@@ -29,7 +29,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        return view('pages.backend.berita.create');
+        return view('pages.backend.publikasi.berita.create');
     }
 
     /**
@@ -40,21 +40,42 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'nama_alumni' => 'required|max:42',
-            'angkatan' => 'required|max:14',
-            'no_telp' => 'required|max:24',
-            'user_id' => 'required',
-            'email'=>'required|max:42',
-            'alamat' => 'required',
-            'status_pekerjaan'=>'required',
-            'perusahaan'=>'nullable'
-            
+        $this->validate($request, [
+            'thumbnail' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        
-        $input = $request->all();
-        
-        $berita = Berita::create($input);
+
+        $validated = $request->validate([
+            'judul' => 'required|max:64',
+            'berita' => 'max:64',
+            'content' => 'required'
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $resource = $request->file('thumbnail');
+            $name = $resource->getClientOriginalName();
+            $finalName = date('His')  . $name;
+            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
+            Berita::create([
+                'judul' => $request->judul,
+                'thumbnail' => $finalName,
+                'tanggal' => $request->tanggal,
+                'author' => $request->author,
+                'user_id' => $request->user_id,
+                'berita' => $request->berita,
+                'content' => $request->content,
+
+            ]);
+        } else {
+            Berita::create([
+                'judul' => $request->judul,
+                'thumbnail' => 'thumbnail-default.jpg',
+                'tanggal' => $request->tanggal,
+                'author' => $request->author,
+                'user_id' => $request->user_id,
+                'berita' => $request->berita,
+                'content' => $request->content,
+            ]);
+        }
         
         return redirect('/dashboard/berita');
     }
@@ -80,7 +101,7 @@ class BeritaController extends Controller
     {
         $item = Berita::findOrFail($id);
         
-        return view('pages.backend.berita.edit', [
+        return view('pages.backend.publikasi.berita.edit', [
             'item' => $item
         ]);
     }
@@ -95,18 +116,43 @@ class BeritaController extends Controller
     public function update(Request $request, $id)
     {
         
-        $validated = $request->validate([
-            'nama_alumni' => 'required|max:42',
-            'angkatan' => 'required|max:14',
-            'no_telp' => 'required|max:24',
-            'user_id' => 'required',
-            'email'=>'required|max:42',
-            'alamat' => 'required',
-            'status_pekerjaan'=>'required',
-            'perusahaan'=>'nullable'
+        $this->validate($request, [
+            'thumbnail' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $berita = Berita::find($id)->update($request->all());
+        $validated = $request->validate([
+            'judul' => 'required|max:64',
+            'berita' => 'max:64',
+            'content' => 'required'
+        ]);
+
+        if ($request->hasFile('thumbnail')) {
+            $resource = $request->file('thumbnail');
+            $name = $resource->getClientOriginalName();
+            $finalName = date('His')  . $name;
+            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
+            $item = Berita::findOrFail($id);
+            $item->update([
+                'judul' => $request->judul,
+                'thumbnail' => $finalName,
+                'tanggal' => $request->tanggal,
+                'author' => $request->author,
+                'user_id' => $request->user_id,
+                'berita' => $request->berita,
+                'content' => $request->content,
+            ]);
+        } else {
+            $item = Berita::findOrFail($id);
+            $item->update([
+                'judul' => $request->judul,
+                'thumbnail' => 'thumbnail-default.jpg',
+                'tanggal' => $request->tanggal,
+                'author' => $request->author,
+                'user_id' => $request->user_id,
+                'berita' => $request->berita,
+                'content' => $request->content,
+            ]);
+        }
 
         return redirect('/dashboard/berita');
     }

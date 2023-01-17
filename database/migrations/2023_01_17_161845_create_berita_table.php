@@ -15,6 +15,13 @@ class CreateBeritaTable extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
+            $table->string('thumbnail')->nullable();
+            $table->string('author');
+            $table->string('berita')->nullable();
+            $table->mediumText('content');
+            $table->string('tanggal');
+            $table->string('user_id');
             $table->timestamps();
         });
     }

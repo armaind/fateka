@@ -60,10 +60,10 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="matkul">Nama : (Optional)</label>
+                                        <label for="berita">Nama : (Optional)</label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="matkul" name="matkul"
-                                                value="{{old('matkul')}}" type="text" required="">
+                                            <input class="form-control" id="berita" name="berita"
+                                                value="{{old('berita')}}" type="text" required="">
                                         </div>
                                     </div>
                                 </div>
