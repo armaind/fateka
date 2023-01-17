@@ -32,7 +32,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/schedules')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/dataAlumni')}}">
                         <i data-feather="users"></i>
                         <span>Data Alumni</span>
                     </a>
@@ -48,6 +48,13 @@
                     <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/berita')}}">
                         <i data-feather="file-text"></i>
                         <span>Berita</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-list">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/artikel')}}">
+                        <i data-feather="book-open"></i>
+                        <span>Artikel</span>
                     </a>
                 </li>
 

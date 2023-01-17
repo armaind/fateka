@@ -17,7 +17,7 @@ class ScheduleController extends Controller
     {
         $items = Schedules::where('user_id', Auth::user()->email)->get();
 
-        return view('pages.backend.schedules.index', [
+        return view('pages.backend.dataAlumni.index', [
             'items' => $items
         ]);
     }
@@ -29,7 +29,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('pages.backend.schedules.create');
+        return view('pages.backend.dataAlumni.create');
     }
 
     /**
@@ -55,7 +55,7 @@ class ScheduleController extends Controller
 
         $schedules = Schedules::create($input);
 
-        return redirect('/dashboard/jadwal-pelajaran');
+        return redirect('/dashboard/data-alumni');
     }
 
     /**
@@ -79,7 +79,7 @@ class ScheduleController extends Controller
     {
         $item = Schedules::findOrFail($id);
 
-        return view('pages.backend.schedules.edit', [
+        return view('pages.backend.dataAlumni.edit', [
             'item' => $item
         ]);
     }
@@ -105,7 +105,7 @@ class ScheduleController extends Controller
 
         $schedules = Schedules::find($id)->update($request->all());
 
-        return redirect('/dashboard/jadwal-pelajaran');
+        return redirect('/dashboard/data-alumni');
     }
 
     /**
@@ -119,6 +119,6 @@ class ScheduleController extends Controller
         $item = Schedules::findOrFail($id);
         $item->delete();
 
-        return redirect('/dashboard/jadwal-pelajaran');
+        return redirect('/dashboard/data-alumni');
     }
 }

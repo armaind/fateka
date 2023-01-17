@@ -20,7 +20,7 @@
                 <p>
                     Dibawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom.
                     <span class="d-none d-md-inline">
-                        <a href="{{url('dashboard/jadwal-pelajaran/atur-jadwal')}}">Tambah Data Alumni ⇾</a>
+                        <a href="{{url('dashboard/data-alumni/atur-jadwal')}}">Tambah Data Alumni ⇾</a>
                     </span>
                 </p>
             </div>
@@ -62,7 +62,7 @@
                                     <td>{{$item->perusahaan}}</td>
                                     
                                     <td>
-                                        <a href="{{route('schedules.edit', $item->id)}}" class="btn btn-info px-2">
+                                        <a href="{{route('dataAlumni.edit', $item->id)}}" class="btn btn-info px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-edit" width="16" height="16"
                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -74,7 +74,7 @@
                                                 <line x1="16" y1="5" x2="19" y2="8"></line>
                                             </svg>
                                         </a>
-                                        <form action="{{route('schedules.destroy', $item->id)}}" method="POST"
+                                        <form action="{{route('dataAlumni.destroy', $item->id)}}" method="POST"
                                             class="d-inline">
                                             @csrf
                                             @method('delete')

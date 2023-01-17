@@ -7,11 +7,11 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">Artikel Terbaru </h5>
+                <h5 class="text-white">Artikel</h5>
             </div>
             <div class="card-body">
                 <p>
-                    Di bawah ini merupakan berita terbaru seputar Teknik Komputer Universitas Telkom
+                    Di bawah ini merupakan artikel terbaru dari Fateka
                 </p>
             </div>
         </div>
@@ -58,9 +58,10 @@
             <div class="row">
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">
@@ -70,9 +71,10 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">
@@ -82,9 +84,10 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">
@@ -94,9 +97,10 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">
@@ -106,9 +110,10 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">
@@ -118,21 +123,10 @@
                 </div>
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
+                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
                         </div>
                         
                         <div class="card-footer py-3">

@@ -34,9 +34,9 @@ Route::prefix('dashboard')
         /* -------------------------- Dashboard Index Pages ------------------------- */
         Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
         /* ------------------------- Jadwal Pelajaran Pages ------------------------- */
-        Route::get('/jadwal-pelajaran', 'App\Http\Controllers\ScheduleController@index');
-        Route::get('/jadwal-pelajaran/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
-        Route::resource('schedules', 'App\Http\Controllers\ScheduleController');
+        Route::get('/data-alumni', 'App\Http\Controllers\ScheduleController@index');
+        Route::get('/data-alumni/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
+        Route::resource('dataAlumni', 'App\Http\Controllers\ScheduleController');
         /* ------------------------- Catatan Pelajaran Pages ------------------------ */
         Route::get('/catatan-pelajaran', 'App\Http\Controllers\NoteController@index');
         Route::get('/catatan-pelajaran/tambah-catatan', 'App\Http\Controllers\NoteController@create');
@@ -91,10 +91,10 @@ Route::prefix('dashboard')
             return view('pages.backend.journal.index');
         });
         Route::get('/berita', function () {
-            return view('pages.backend.journal.berita');
+            return view('pages.backend.publikasi.berita');
         });
         Route::get('/artikel', function () {
-            return view('pages.backend.journal.artikel');
+            return view('pages.backend.publikasi.artikel');
         });
     });
 

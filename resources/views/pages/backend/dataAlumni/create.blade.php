@@ -5,6 +5,9 @@
 
 @push('timepicker-styles')
 <link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/timepicker.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/scrollable.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/datatables.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/datatable-extension.css')}}">
 @endpush
 
 <div class="container-fluid">
@@ -26,7 +29,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <form method="POST" action="{{route('schedules.store')}}" enctype="multipart/form-data"
+                <form method="POST" action="{{route('dataAlumni.store')}}" enctype="multipart/form-data"
                     class="needs-validation">
                     @csrf
                     <div class="card-body">
