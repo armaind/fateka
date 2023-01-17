@@ -33,14 +33,14 @@ Route::prefix('dashboard')
     ->group(function () {
         /* -------------------------- Dashboard Index Pages ------------------------- */
         Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-        /* ------------------------- Jadwal Pelajaran Pages ------------------------- */
-        Route::get('/data-alumni', 'App\Http\Controllers\ScheduleController@index');
-        Route::get('/data-alumni/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
-        Route::resource('dataAlumni', 'App\Http\Controllers\ScheduleController');
-        /* ------------------------- Catatan Pelajaran Pages ------------------------ */
-        Route::get('/lowongan-kerja', 'App\Http\Controllers\NoteController@index');
-        Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\NoteController@create');
-        Route::resource('lowonganKerja', 'App\Http\Controllers\NoteController');
+        /* ------------------------- Data Alumni ------------------------- */
+        Route::get('/data-alumni', 'App\Http\Controllers\DataAlumniController@index');
+        Route::get('/data-alumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create');
+        Route::resource('dataAlumni', 'App\Http\Controllers\DataAlumniController');
+        /* ------------------------- Lowongan Kerja Pages ------------------------ */
+        Route::get('/lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@index');
+        Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
+        Route::resource('lowonganKerja', 'App\Http\Controllers\LowonganKerjaController');
         /* ---------------------------- Galeri Foto Pages --------------------------- */
         Route::get('/galeri-foto', 'App\Http\Controllers\GalleryController@index');
         Route::get('/galeri-foto/tambah-foto', 'App\Http\Controllers\GalleryController@create');
@@ -83,19 +83,20 @@ Route::prefix('dashboard')
         Route::get('/audio/poolsuite', function () {
             return view('pages.backend.audio.poolsuite');
         });
+        /* ------------------------- Publikasi Pages ------------------------ */
+        /* ------------------------- Berita Section ------------------------ */
+        Route::get('/berita', function () {
+            return view('pages.backend.publikasi.berita.index');
+        });
+        /* ------------------------- Artikel Section ------------------------ */
+        Route::get('/artikel', function () {
+            return view('pages.backend.publikasi.artikel.index');
+        });
         /* ------------------------- Virtual Meeting Section ------------------------ */
         Route::get('/virtual-meeting/skyoffice', function () {
             return view('pages.backend.virtual_meeting.skyoffice');
         });
-        Route::get('/journal', function () {
-            return view('pages.backend.journal.index');
-        });
-        Route::get('/berita', function () {
-            return view('pages.backend.publikasi.berita');
-        });
-        Route::get('/artikel', function () {
-            return view('pages.backend.publikasi.artikel');
-        });
+        
     });
 
 /* -------------------------------------------------------------------------- */

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\Schedules;
+use App\Models\DataAlumni;
 
-class ScheduleController extends Controller
+class DataAlumniController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class ScheduleController extends Controller
      */
     public function index()
     {
-        $items = Schedules::where('user_id', Auth::user()->email)->get();
+        $items = DataAlumni::where('user_id', Auth::user()->email)->get();
 
         return view('pages.backend.dataAlumni.index', [
             'items' => $items
@@ -44,17 +44,17 @@ class ScheduleController extends Controller
             'nama_alumni' => 'required|max:42',
             'angkatan' => 'required|max:14',
             'no_telp' => 'required|max:24',
-            'user_id'=>'required|max:42',
+            'email'=>'required|max:42',
             'alamat' => 'required',
             'status_pekerjaan'=>'required',
             'perusahaan'=>'nullable'
-
+            
         ]);
-
+        
         $input = $request->all();
-
-        $schedules = Schedules::create($input);
-
+        
+        $dataalumni = DataAlumni::create($input);
+        
         return redirect('/dashboard/data-alumni');
     }
 
@@ -68,7 +68,7 @@ class ScheduleController extends Controller
     {
         //
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,13 +77,13 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        $item = Schedules::findOrFail($id);
-
+        $item = DataAlumni::findOrFail($id);
+        
         return view('pages.backend.dataAlumni.edit', [
             'item' => $item
         ]);
     }
-
+    
     /**
      * Update the specified resource in storage.
      *
@@ -93,17 +93,18 @@ class ScheduleController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        
         $validated = $request->validate([
             'nama_alumni' => 'required|max:42',
             'angkatan' => 'required|max:14',
             'no_telp' => 'required|max:24',
+            'email'=>'required|max:42',
             'alamat' => 'required',
             'status_pekerjaan'=>'required',
             'perusahaan'=>'nullable'
         ]);
 
-        $schedules = Schedules::find($id)->update($request->all());
+        $dataalumni = DataAlumni::find($id)->update($request->all());
 
         return redirect('/dashboard/data-alumni');
     }
@@ -116,7 +117,7 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        $item = Schedules::findOrFail($id);
+        $item = DataAlumni::findOrFail($id);
         $item->delete();
 
         return redirect('/dashboard/data-alumni');

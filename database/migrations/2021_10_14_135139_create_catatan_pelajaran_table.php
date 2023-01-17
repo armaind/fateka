@@ -13,7 +13,7 @@ class CreateCatatanPelajaranTable extends Migration
      */
     public function up()
     {
-        Schema::create('catatan_pelajaran', function (Blueprint $table) {
+        Schema::create('lowongan_kerja', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
             $table->string('thumbnail')->nullable();

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\LowonganKerja;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
-use App\Models\Notes;
 
-class NoteController extends Controller
+class LowonganKerjaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $items = Notes::where('user_id', Auth::user()->email)->get();
+        $items = LowonganKerja::where('user_id', Auth::user()->email)->get();
 
         return view('pages.backend.lowonganKerja.index', [
             'items' => $items
@@ -55,7 +55,7 @@ class NoteController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Notes::create([
+            LowonganKerja::create([
                 'judul' => $request->judul,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
@@ -66,7 +66,7 @@ class NoteController extends Controller
 
             ]);
         } else {
-            Notes::create([
+            LowonganKerja::create([
                 'judul' => $request->judul,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
@@ -88,7 +88,7 @@ class NoteController extends Controller
      */
     public function show($id)
     {
-        $item = Notes::findOrFail($id);
+        $item = LowonganKerja::findOrFail($id);
 
         return view('pages.backend.lowonganKerja.detail', [
             'item' => $item
@@ -103,7 +103,7 @@ class NoteController extends Controller
      */
     public function edit($id)
     {
-        $item = Notes::findOrFail($id);
+        $item = LowonganKerja::findOrFail($id);
 
         return view('pages.backend.lowonganKerja.edit', [
             'item' => $item
@@ -134,7 +134,7 @@ class NoteController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Notes::findOrFail($id);
+            $item = LowonganKerja::findOrFail($id);
             $item->update([
                 'judul' => $request->judul,
                 'thumbnail' => $finalName,
@@ -145,7 +145,7 @@ class NoteController extends Controller
                 'content' => $request->content,
             ]);
         } else {
-            $item = Notes::findOrFail($id);
+            $item = LowonganKerja::findOrFail($id);
             $item->update([
                 'judul' => $request->judul,
                 'thumbnail' => 'thumbnail-default.jpg',
@@ -168,7 +168,7 @@ class NoteController extends Controller
      */
     public function destroy($id)
     {
-        $item = Notes::findOrFail($id);
+        $item = LowonganKerja::findOrFail($id);
         $item->delete();
 
         return redirect('/dashboard/lowongan-kerja');

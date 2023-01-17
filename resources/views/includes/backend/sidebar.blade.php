@@ -32,10 +32,24 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/dataAlumni')}}">
+                    <a class="sidebar-link sidebar-title" href="#">
                         <i data-feather="users"></i>
                         <span>Data Alumni</span>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/dataAlumni')}}">
+                                <i data-feather="server"></i>
+                                Tabel Data Alumni
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/dashboard/data-alumni/tambah-data-alumni')}}">
+                                <i data-feather="plus-circle"></i>
+                                Tambah Data 
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-main-title">
@@ -45,17 +59,45 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/berita')}}">
+                    <a class="sidebar-link sidebar-title" href="#">
                         <i data-feather="file-text"></i>
                         <span>Berita</span>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/berita')}}">
+                                <i data-feather="list"></i>
+                                List Berita
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="file-plus"></i>
+                                Tambah Berita 
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/artikel')}}">
+                    <a class="sidebar-link sidebar-title" href="#">
                         <i data-feather="book-open"></i>
                         <span>Artikel</span>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/artikel')}}">
+                                <i data-feather="list"></i>
+                                List Artikel
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="file-plus"></i>
+                                Tambah Artikel 
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-main-title">

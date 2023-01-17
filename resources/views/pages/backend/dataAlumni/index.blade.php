@@ -20,7 +20,7 @@
                 <p>
                     Dibawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom.
                     <span class="d-none d-md-inline">
-                        <a href="{{url('dashboard/data-alumni/atur-jadwal')}}">Tambah Data Alumni ⇾</a>
+                        <a href="{{url('dashboard/data-alumni/tambah-data-alumni')}}">Tambah Data Alumni ⇾</a>
                     </span>
                 </p>
             </div>
@@ -56,7 +56,7 @@
                                     </td>
                                     <td>{{$item->angkatan}}</td>
                                     <td>{{$item->no_telp}}</td>
-                                    <td>{{$item->user_id}}</td>
+                                    <td>{{$item->email}}</td>
                                     <td>{{$item->alamat}}</td>
                                     <td>{{$item->status_pekerjaan}}</td>
                                     <td>{{$item->perusahaan}}</td>

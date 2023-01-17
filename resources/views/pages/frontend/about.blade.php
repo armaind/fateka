@@ -281,9 +281,6 @@
                         <h2 class="title">Di bawah ini pihak yang bekerja sama dengan kami</h2>
                     </div>
                 </div>
-                <div class="row justify-content-center m-t-60">
-                    <img src="https://telkomuniversity.ac.id/wp-content/uploads/2022/02/logo3-e1511767184374.png" alt="client" width="200"/>
-                </div> 
             </div>
         </div>  
     </div>         
