@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Edit Catatan Pelajaran — Collegetivity')
+@section('title', 'Edit Berita — Fateks')
 @section('content')
 
 @push('create-article-styles')
@@ -12,12 +12,12 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">📓📝 • Edit Catatan Pelajaran <span class="d-none d-md-inline"> —
+                <h5 class="text-white">Edit Berita <span class="d-none d-md-inline"> —
                         {{$item->judul}}</span></h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah form untuk edit catatan pelajaran berjudul {{$item->judul}}. <span
+                    Dibawah ini adalah form untuk edit berita {{$item->judul}}. <span
                         class="d-none d-md-inline">
                         Catatan yang telah kamu tulis nantinya bisa kamu akses kok dimana saja dan kapan saja.
                         Selamat menulis dan berkreasi, ya!

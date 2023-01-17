@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 @foreach ($items as $items)
-@section('title', $items->judul . 'Berita — Fateka')
+@section('title', $berita->judul . ' — Catatanmu di Collegetivity')
 @section('content')
 
 <style>
@@ -43,7 +43,7 @@
                             <ul class="blog-social">
                                 <li>{{$items->tanggal}}</li>
                                 <li><i class="icofont icofont-user"></i>{{$items->author}}</li>
-                                <li><i class="icofont icofont-list"></i>{{$items->matkul}}</li>
+                                <li><i class="icofont icofont-list"></i>{{$items->berita}}</li>
                             </ul>
                             <h1 class="mt-3">
                                 {{$items->judul}}
