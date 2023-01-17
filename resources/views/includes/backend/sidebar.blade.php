@@ -107,35 +107,51 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/lowonganKerja')}}">
+                    <a class="sidebar-link sidebar-title" href="#">
                         <i data-feather="briefcase"></i>
                         <span>Lowongan Kerja</span>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/lowonganKerja')}}">
+                                <i data-feather="server"></i>
+                                Tabel Loker
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="plus-circle"></i>
+                                Tambah Loker
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Kegiatan</h6>
+                        <h6>Program</h6>
                     </div>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="#">
-                        <i data-feather="mic"></i>
-                        <span>Alumni Sharing Session</span>
+                    <a class="sidebar-link sidebar-title" href="#">
+                        <i data-feather="cast"></i>
+                        <span>Kegiatan</span>
                     </a>
-                </li>
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="#">
-                        <i data-feather="gift"></i>
-                        <span>Charity</span>
-                    </a>
-                </li>
-                <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="#">
-                        <i data-feather="share-2"></i>
-                        <span>Pengabdian</span>
-                    </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="server"></i>
+                                Daftar Kegiatan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="plus-circle"></i>
+                                Tambah Kegiatan
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="sidebar-main-title">
@@ -161,10 +177,18 @@
                 </li>
                 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="#">
+                    <a class="sidebar-link sidebar-title" href="#">
                         <i data-feather="edit"></i>
                         <span>Kuisioner</span>
                     </a>
+                    <ul class="sidebar-submenu">
+                        <li>
+                            <a href="{{url('/dashboard/')}}">
+                                <i data-feather="plus-circle"></i>
+                                Tambah Kuisioner
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>

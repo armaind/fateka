@@ -158,7 +158,7 @@
         autoplay : 'playing',
         rewind: true,
         arrows: false,
-        interval:1600,
+        interval:2600,
     } ).mount();
 </script>
 @endpush

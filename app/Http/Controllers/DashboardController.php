@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todolist;
 use App\Models\DataAlumni;
 use Illuminate\Http\Request;
 use App\Models\LowonganKerja;
@@ -19,12 +18,10 @@ class DashboardController extends Controller
     {
         $dataalumni = DataAlumni::where('user_id', Auth::user()->email)->get();
         $lowongankerja = LowonganKerja::where('user_id', Auth::user()->email)->take(4)->get();
-        $todolist = Todolist::where('user_id', Auth::user()->email)->take(4)->get();
 
         return view('pages.backend.index', [
             'dataalumni' => $dataalumni,
             'lowongankerja' => $lowongankerja,
-            'todolist' => $todolist
         ]);
     }
 

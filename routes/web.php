@@ -50,47 +50,9 @@ Route::prefix('dashboard')
         Route::get('/lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@index');
         Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
         Route::resource('lowonganKerja', 'App\Http\Controllers\LowonganKerjaController');
-        /* ---------------------------- Galeri Foto Pages --------------------------- */
-        Route::get('/galeri-foto', 'App\Http\Controllers\GalleryController@index');
-        Route::get('/galeri-foto/tambah-foto', 'App\Http\Controllers\GalleryController@create');
-        Route::resource('galleries', 'App\Http\Controllers\GalleryController');
-        /* ----------------------------- Bookmarks Pages ---------------------------- */
-        Route::get('/bookmarks', 'App\Http\Controllers\BookmarkController@index');
-        Route::get('/bookmarks/tambah-bookmarks', 'App\Http\Controllers\BookmarkController@create');
-        Route::resource('bookmarks', 'App\Http\Controllers\BookmarkController');
-        /* ---------------------------- File Tugas Pages ---------------------------- */
-        Route::get('/file-tugas', function () {
-            return view('pages.backend.files.index');
-        });
-        /* ----------------------------- Todolist Pages ----------------------------- */
-        Route::get('/todolist', 'App\Http\Controllers\TodolistController@index');
-        Route::resource('todolist', 'App\Http\Controllers\TodolistController');
-        Route::get('todolist/delete/{id}', 'App\Http\Controllers\TodolistController@doneviadashboard')
-            ->name('todolist.done');
-        /* ----------------------------- Calendar Pages ----------------------------- */
-        Route::get('/calendar', function () {
-            return view('pages.backend.calendar.index');
-        });
         /* ---------------------------- Whiteboard Pages ---------------------------- */
         Route::get('/whiteboard', function () {
             return view('pages.backend.whiteboard.index');
-        });
-        /* ---------------------------- Pomodoro section ---------------------------- */
-        Route::get('/pomodoro/pomofocus', function () {
-            return view('pages.backend.pomodoro.pomofocus');
-        });
-        Route::get('/pomodoro/lifeat', function () {
-            return view('pages.backend.pomodoro.lifeat');
-        });
-        /* ------------------------------ Audio Section ----------------------------- */
-        Route::get('/audio/moodly', function () {
-            return view('pages.backend.audio.moodly');
-        });
-        Route::get('/audio/shhhnoise', function () {
-            return view('pages.backend.audio.shhhnoise');
-        });
-        Route::get('/audio/poolsuite', function () {
-            return view('pages.backend.audio.poolsuite');
         });
         /* ------------------------- Virtual Meeting Section ------------------------ */
         Route::get('/virtual-meeting/skyoffice', function () {
