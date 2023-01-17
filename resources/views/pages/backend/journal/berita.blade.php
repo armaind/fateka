@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Berita— Fateka')
+@section('title', 'Berita — Fateka')
 @section('content')
 
 <div class="container-fluid product-wrapper">
