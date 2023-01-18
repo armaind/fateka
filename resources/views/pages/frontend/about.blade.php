@@ -290,22 +290,22 @@
                 <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" data-toggle="tab" href="#tabItem1" role="tab">
-                            <i class="far fa-edit"></i> Data Alumni 
+                            <i class="far fa-users"></i> Data Alumni 
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
-                            <i class="far fa-books"></i> Publikasi dan Kegiatan
+                            <i class="far fa-layer-group"></i> Publikasi dan Kegiatan
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                            <i class="far fa-edit"></i> Virtual Meet
+                            <i class="far fa-edit"></i> Kuisioner
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                            <i class="far fa-edit"></i> Kuisioner 
+                        <a class="nav-link" data-toggle="tab" href="#tabItem4" role="tab">
+                            <i class="far fa-video"></i> Virtual Meet 
                         </a>
                     </li>
                 </ul>
@@ -315,25 +315,25 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="tabItem1" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/data_alumni.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                             filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>
-                <div class="tab-pane fade" id="tabItem1" role="tabpanel">
+                <div class="tab-pane fade" id="tabItem2" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/data_alumni.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabItem3" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/catatan.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabItem4" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/virtual.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/virtual_meet.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>

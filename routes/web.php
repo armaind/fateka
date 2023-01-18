@@ -57,6 +57,11 @@ Route::prefix('dashboard')
         Route::get('/lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@index');
         Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
         Route::resource('lowonganKerja', 'App\Http\Controllers\LowonganKerjaController');
+
+        /* ------------------------- Kegiatan Pages ------------------------ */
+        Route::get('/kegiatan', 'App\Http\Controllers\KegiatanController@index');
+        Route::get('/kegiatan/tambah-kegiatan', 'App\Http\Controllers\KegiatanController@create');
+        Route::resource('kegiatan', 'App\Http\Controllers\KegiatanController');
         
         /* ------------------------- Virtual Meeting Section ------------------------ */
         Route::get('/virtual-meeting/skyoffice', function () {

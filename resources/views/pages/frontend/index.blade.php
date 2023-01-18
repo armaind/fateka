@@ -129,8 +129,8 @@
 
             <div class="row justify-content-center common-heading heading-white iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10 ">
-                    <div class="iconic-box m-t-30 box-version-white color-v1">
-                        <div class="icon icon-gradient-3">
+                    <div class="iconic-box m-t-30">
+                        <div class="icon icon-gradient-5">
                             <i class="far fas fa-users"></i>
                         </div>
                         <h4 class="title">3980</h4>

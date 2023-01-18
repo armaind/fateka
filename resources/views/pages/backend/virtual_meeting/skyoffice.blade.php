@@ -11,9 +11,9 @@
             </div>
             <div class="card-body">
                 <p>
-                    Di sini anda dapat melakukan pertemuan dengan konsep game dimana saja dan kapan saja dengan SkyOffice.
+                    Di sini anda dapat melakukan pertemuan secara online.
                     <span class="d-none d-md-inline">
-                        Banyak hal yang bisa anda lakukan disini.
+                        Dan banyak hal yang bisa anda lakukan disini.
                     </span>
                 </p>
             </div>
