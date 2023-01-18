@@ -17,7 +17,7 @@ class LowonganKerjaController extends Controller
     {
         $items = LowonganKerja::where('user_id', Auth::user()->email)->get();
 
-        return view('pages.backend.lowonganKerja.index', [
+        return view('pages.backend.lowongankerja.index', [
             'items' => $items
         ]);
     }

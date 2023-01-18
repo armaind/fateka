@@ -62,12 +62,17 @@ Route::prefix('dashboard')
         Route::get('/kegiatan', 'App\Http\Controllers\KegiatanController@index');
         Route::get('/kegiatan/tambah-kegiatan', 'App\Http\Controllers\KegiatanController@create');
         Route::resource('kegiatan', 'App\Http\Controllers\KegiatanController');
+
         
         /* ------------------------- Virtual Meeting Section ------------------------ */
         Route::get('/virtual-meeting/skyoffice', function () {
             return view('pages.backend.virtual_meeting.skyoffice');
         });
         
+        /* ------------------------- Kuisioner Pages ------------------------ */
+        Route::get('/kuisioner', 'App\Http\Controllers\KuisionerController@index');
+        Route::get('/kuisioner/tambah-kuisioner', 'App\Http\Controllers\KuisionerController@create');
+        Route::resource('kuisioner', 'App\Http\Controllers\KuisionerController');
     });
 
 /* -------------------------------------------------------------------------- */
