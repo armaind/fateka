@@ -2,7 +2,7 @@
 
 @foreach ($items as $item)
 
-@section('title', $item->judul . '| Berita - Fateka')
+@section('title', $item->judul . ' | Berita - Fateka')
 @section('content')
 
 <style>
@@ -61,4 +61,5 @@
 </div>
 <!-- file wrapper for better tabs start-->
 @endforeach
+@endsection
 @endsection

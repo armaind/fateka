@@ -62,3 +62,6 @@ Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store']
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
                 ->name('logout');
+
+Route::get('auth/google',[App\Http\Controllers\GoogleAuthController::class,'redirectToGoogle'])->name('google.login');
+Route::get('auth/google/callback',[App\Http\Controllers\GoogleAuthController::class,'handleGoogleCallback'])->name('google.callback');
