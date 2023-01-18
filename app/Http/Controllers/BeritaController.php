@@ -15,8 +15,9 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        $items = Berita::where('user_id', Auth::user()->email)->get();
-
+        
+        $items = Auth::user()->id;
+        $items = Berita::paginate(10);
         return view('pages.backend.publikasi.berita.index', [
             'items' => $items
         ]);
@@ -89,6 +90,7 @@ class BeritaController extends Controller
     public function show($id)
     {
         $items = Berita::where('user_id', Auth::user()->email)->get();
+        
         return view('pages.backend.publikasi.berita.detail',[
             'items' => $items
         ]);

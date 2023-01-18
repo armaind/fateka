@@ -15,8 +15,8 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        $items = Kegiatan::where('user_id', Auth::user()->email)->get();
-
+        $items = Auth::user()->id;
+        $items = Kegiatan::paginate(10);
         return view('pages.backend.kegiatan.index', [
             'items' => $items
         ]);
@@ -46,7 +46,7 @@ class KegiatanController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'matkul' => 'max:64',
+            'penyelenggara' => 'max:64',
             'content' => 'required'
         ]);
 
@@ -59,9 +59,8 @@ class KegiatanController extends Controller
                 'judul' => $request->judul,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
-                'author' => $request->author,
+                'penyelenggara' => $request->penyelenggara,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
                 'content' => $request->content,
 
             ]);
@@ -70,9 +69,8 @@ class KegiatanController extends Controller
                 'judul' => $request->judul,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
-                'author' => $request->author,
+                'penyelenggara' => $request->penyelenggara,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
                 'content' => $request->content,
             ]);
         }
@@ -88,10 +86,10 @@ class KegiatanController extends Controller
      */
     public function show($id)
     {
-        $item = Kegiatan::findOrFail($id);
+        $items = Kegiatan::where('user_id', Auth::user()->email)->get();
 
         return view('pages.backend.kegiatan.detail', [
-            'item' => $item
+            'items' => $items
         ]);
     }
 
@@ -125,7 +123,7 @@ class KegiatanController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'matkul' => 'max:64',
+            'penyelenggara' => 'required|max:64',
             'content' => 'required'
         ]);
 
@@ -134,25 +132,22 @@ class KegiatanController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Kegiatan::findOrFail($id);
-            $item->update([
+            Kegiatan::create([
                 'judul' => $request->judul,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
-                'author' => $request->author,
+                'penyelenggara' => $request->penyelenggara,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
                 'content' => $request->content,
+
             ]);
         } else {
-            $item = Kegiatan::findOrFail($id);
-            $item->update([
+            Kegiatan::create([
                 'judul' => $request->judul,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
-                'author' => $request->author,
+                'penyelenggara' => $request->penyelenggara,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
                 'content' => $request->content,
             ]);
         }
