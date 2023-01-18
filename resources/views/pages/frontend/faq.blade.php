@@ -181,7 +181,7 @@
 
 <!-- ===== FAQ Area Start ===== -->
 
-<div class="container p-b-150">
+<div class="container w-150 p-b-150">
     <div id="accordion">
         <div class="card border-0">
             <div class="card-header" id="q1"> 
@@ -250,6 +250,48 @@
             <div id="a5" class="collapse show" aria-labelledby="q5" data-parent="#accordion">
                 <div class="card-body">
                     Tabel data alumni, Berita dan Artikel, Virtual Meet, Lowongan Kerja, Kuisioner, dan Event.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q6"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a6">
+                        Bagaimana cara mengakses fitur Fateka?
+                    </a>
+                </h4>
+            </div>
+            <div id="a6" class="collapse show" aria-labelledby="q6" data-parent="#accordion">
+                <div class="card-body">
+                    Terlebih dahulu anda harus mendaftar melalui laman registrasi yang tersedia, selanjutnya masuk untuk mengakses fitur seluruh fitur melalui dashboard yang disediakan.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q7"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a7">
+                        Dapatkah daftar dengan menggunakan akun Google?
+                    </a>
+                </h4>
+            </div>
+            <div id="a7" class="collapse show" aria-labelledby="q7" data-parent="#accordion">
+                <div class="card-body">
+                    Betul, anda dapat daftar menggunakan akun Google.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q8"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a8">
+                        Bagaimana jika ada pertanyaan lain?
+                    </a>
+                </h4>
+            </div>
+            <div id="a8" class="collapse show" aria-labelledby="q8" data-parent="#accordion">
+                <div class="card-body">
+                    Anda dapat mengirimkan pertanyaannya melalui laman kontak yang tersedia.
                 </div>
             </div>
         </div>

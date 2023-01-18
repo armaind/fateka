@@ -270,23 +270,79 @@
 </section>
 <!-- ===== Service Section End ===== -->
 
-<!-- ===== Partner start ===== -->
-<section class="cta-section bg-cover-center p-t-90 p-b-90">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-6 col-lg-7 col-md-10">
-                <div class="cta-content text-center">
-                    <div class="common-heading tagline-boxed text-center m-b-30">
-                        <span class="tagline">Partner Fateka</span>
-                        <h2 class="title">Di bawah ini pihak yang bekerja sama dengan kami</h2>
+<!-- ==== Fitur start ==== -->
+<section class="service-details-area p-t-130 p-b-130">
+    <div class="service-tab">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="common-heading text-center m-b-65">
+                        <div class="common-heading tagline-boxed m-b-30">
+                            <span class="tagline">Fitur Fateka</span>
+                            <h2 class="title">Berikut fitur yang dapat anda gunakan</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>  
-    </div>         
-</section> 
+        </div>
+        <div class="container">
+            <div class="service-tab-nav">
+                <ul class="nav nav-tabs service-tab-nav" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" href="#tabItem1" role="tab">
+                            <i class="far fa-users"></i> Data Alumni 
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
+                            <i class="far fa-layer-group"></i> Publikasi dan Kegiatan
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
+                            <i class="far fa-edit"></i> Kuisioner
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" href="#tabItem4" role="tab">
+                            <i class="far fa-video"></i> Virtual Meet 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="service-tab-content container-fluid">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="tabItem1" role="tabpanel">
+                    <div class="service-tab-ime text-center">
+                        <img src="{{url('landio/assets/img/data_alumni.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                            filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabItem2" role="tabpanel">
+                    <div class="service-tab-ime text-center">
+                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabItem3" role="tabpanel">
+                    <div class="service-tab-ime text-center">
+                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tabItem4" role="tabpanel">
+                    <div class="service-tab-ime text-center">
+                        <img src="{{url('landio/assets/img/virtual_meet.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==== Fitur end ==== -->
 
-<!-- ===== Partner end ===== -->
 
 <!--====== Start Call To Action ======-->
 <section class="cta-section bg-cover-center p-t-90 p-b-90" style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">

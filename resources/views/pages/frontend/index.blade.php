@@ -129,8 +129,8 @@
 
             <div class="row justify-content-center common-heading heading-white iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10 ">
-                    <div class="iconic-box m-t-30 box-version-white color-v1">
-                        <div class="icon icon-gradient-3">
+                    <div class="iconic-box m-t-30">
+                        <div class="icon icon-gradient-5">
                             <i class="far fas fa-users"></i>
                         </div>
                         <h4 class="title">3980</h4>
@@ -170,13 +170,54 @@
     <section class="p-t-100 p-b-100" >
         <div class="blog" id="blog">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-lg-6">
+                <div class="row justify-content-center iconic-box">
+                    <div class="col-xl-5 p-b-25">
                         <div class="common-heading tagline-boxed text-center m-b-50">
                             <span class="tagline">Informasi Terkini</span>
                             <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fateka</h2>
                         </div>
-                    </div>
+                    </div> 
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/login">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/login">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="card h-100">
+                            <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                              <small class="text-muted">Last updated 3 mins ago</small>
+                            </div>
+                            <div class="card-footer">
+                                <a href="/login">Selengkapnya</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>   
                 </div>
             </div>
         </div>

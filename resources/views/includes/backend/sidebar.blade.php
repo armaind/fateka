@@ -140,13 +140,13 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/')}}">
+                            <a href="{{url('/dashboard/kegiatan')}}">
                                 <i data-feather="server"></i>
                                 Daftar Kegiatan
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/')}}">
+                            <a href="{{url('/dashboard/kegiatan')}}">
                                 <i data-feather="plus-circle"></i>
                                 Tambah Kegiatan
                             </a>
