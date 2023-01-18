@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Kontak Kami — Fateka')
+@section('title', 'FAQ — Fateka')
 @section('content')
 
 <header class="template-header navbar-left absolute-header nav-primary-5 submenu-primary-5 sticky-header">
@@ -23,9 +23,9 @@
                             <a href="{{url('/')}}">Beranda</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">Tentang Kami</a>
+                            <a href="{{url('tentang')}}">Tentang</a>
                         </li>
-                        <li class="active">
+                        <li>
                             <a href="{{url('kontak')}}">Kontak Kami</a>
                         </li>
                     </ul>
@@ -91,7 +91,7 @@
                         <a href="{{('/')}}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{('/tentang')}}">Tentang Kami</a>
+                        <a href="{{('/tentang')}}">Tentang</a>
                     </li>
                     <li>
                         <a href="{{('/kontak')}}">Kontak Kami</a>
@@ -123,7 +123,7 @@
                 <img src="\landio\assets\img\logotk.png" alt="logo" width="110">
             </div>
             <div class="about-us">
-                <h5 class="canvas-widget-title">Tentang Kami</h5>
+                <h5 class="canvas-widget-title">Tentang</h5>
                 <p>
                     Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Universitas Telkom.
                 </p>
@@ -133,17 +133,15 @@
                 <ul>
                     <li>
                         <i class="far fa-map-marker-alt"></i>
-                        Teknik Komputer, Universitas Telkom
+                        Gedung Panambulai Lt. 2 Jl. Telekomunikasi Terusan Buah Batu Bandung 40257 Indonesia
                     </li>
                     <li>
                         <i class="far fa-envelope-open"></i>
-                        <a href="mailto:Fateka@gmail.com">fateka@gmail.com</a>
-                        <a href="#" target="_blank">fateka.herokuapp.com</a>
+                        <a href="mailto:info@telkomuniversity.ac.id">info@telkomuniversity.ac.id</a>
                     </li>
                     <li>
                         <i class="far fa-phone"></i>
-                        <span><a href="tel:+6288888888888">+62 888-8888-8888</a></span>
-                        <span><a href="tel:+6282127350768">+62 888-8888-8888</a></span>
+                        <span><a href="tel:+62227566456">+62227566456</a></span>
                     </li>
                 </ul>
             </div>
@@ -159,10 +157,10 @@
 <section class="page-title-area">
     <div class="container">
         <div class="page-title-content text-center mt-5">
-            <h1 class="page-title">Kontak Kami</h1>
+            <h1 class="page-title">FAQ</h1>
             <ul class="breadcrumb-nav">
                 <li><a href="{{url('/')}}">Beranda</a></li>
-                <li class="active">Kontak Kami</li>
+                <li>FAQ</li>
             </ul>
         </div>
     </div>
@@ -181,99 +179,104 @@
 </section>
 <!--====== Page title area End ======-->
 
-<!--====== Start Contact Area ======-->
-<section class="blog-area p-t-130 p-b-130">
-    <div class="container">
-        <div class="row justify-content-lg-start justify-content-center">
-            <div class="col-xl-4 col-lg-5 col-md-7 col-sm-10">
-                <div class="contact-info-boxes-v2">
-                    <div class="contact-info-box m-b-30 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="icon icon-gradient-1">
-                            <i class="fal fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-body">
-                            <h5 class="title">Lokasi Kami</h5>
-                            <p>Gedung TULT Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40267 Indonesia
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-info-box m-b-30 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="icon icon-gradient-2">
-                            <i class="fal fa-envelope-open-text"></i>
-                        </div>
-                        <div class="info-body">
-                            <h5 class="title">Alamat Email</h5>
-                            <p><a href="mailto:info@telkomuniversity.ac.id">info@telkomuniversity.ac.id</a></p>
-                            <p><a href="gmail.com" target="_blank">gmail.com</a></p>
-                        </div>
-                    </div>
+<!-- ===== FAQ Area Start ===== -->
+
+<div class="container p-b-150">
+    <div id="accordion">
+        <div class="card border-0">
+            <div class="card-header" id="q1"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a1">
+                        Apa itu Fateka?
+                    </a>
+                </h4>
+            </div>
+            <div id="a1" class="collapse show" aria-labelledby="q1" data-parent="#accordion">
+                <div class="card-body">
+                    Fateka adalah platform yang berfungsi untuk menyediakan informasi dan media interaksi untuk menjembatani civitas akademika dengan seluruh alumni Teknik Komputer, Univeritas Telkom.
                 </div>
             </div>
-            <div class="col-lg-6 offset-xl-1 col-md-10">
-                <div class="contact-form-area m-t-md-100">
-                    <div class="common-heading tagline-boxed m-b-40">
-                        <span class="tagline">Kirim kami sebuah pesan</span>
-                        <h3 class="title">Ada pertanyaan atau pesan? <br> Kirim pesan dibawah ini 
-                        </h3>
-                    </div>
-                    <div class="contact-form-v2">
-                        <form>
-                            <div class="input-field m-b-30">
-                                <input type="text" id="fullName" placeholder="Nama Lengkap" name="name" required="">
-                                <label for="fullName">Nama</label>
-                            </div>
-                            <div class="input-field m-b-30">
-                                <input type="text" id="phoneNumber" placeholder="Nomor Telepon" name="phone"
-                                    required="">
-                                <label for="phoneNumber">Telepon</label>
-                            </div>
-                            <div class="input-field m-b-30">
-                                <input type="email" id="emailAddress" placeholder="Alamat Email" name="email"
-                                    required="">
-                                <label for="emailAddress">Email</label>
-                            </div>
-                            <div class="input-field m-b-30">
-                                <input type="text" id="subject" placeholder="Saya ingin bertanya tentang .. "
-                                    name="subject" required="">
-                                <label for="subject">Subjek</label>
-                            </div>
-                            <div class="input-field textarea-field m-b-30">
-                                <textarea id="message" placeholder="Pesan" name="message"></textarea>
-                            </div>
-                            <div class="input-field">
-                                <button type="submit" class="template-btn">Kirim Pesan <i
-                                        class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </form>
-                    </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q2"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a2">
+                        Siapa pengguna Fateka?
+                    </a>
+                </h4>
+            </div>
+            <div id="a2" class="collapse show" aria-labelledby="q2" data-parent="#accordion">
+                <div class="card-body">
+                    Pengguna dari aplikasi ini adalah hanya civitas akademika dari Teknik Komputer Universitas Telkom. Mulai dari dosen, mahasiswa, dan alumni.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q3"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a3">
+                        Dapatkah pengguna selain dari civitas akademika Teknik Komputer Universitas Telkom menggunakan Fateka?
+                    </a>
+                </h4>
+            </div>
+            <div id="a3" class="collapse show" aria-labelledby="q3" data-parent="#accordion">
+                <div class="card-body">
+                     Tidak diizinkan.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q4"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a4">
+                        Apakah aplikasi ini berbayar?
+                    </a>
+                </h4>
+            </div>
+            <div id="a4" class="collapse show" aria-labelledby="q4" data-parent="#accordion">
+                <div class="card-body">
+                    Tidak, aplikasi ini gratis.
+                </div>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-header" id="q5"> 
+                <h4 class="mb-2 mt-2">
+                    <a data-toggle="collapse" data-target="#a5">
+                        Apa saja fitur Fateka?
+                    </a>
+                </h4>
+            </div>
+            <div id="a5" class="collapse show" aria-labelledby="q5" data-parent="#accordion">
+                <div class="card-body">
+                    Tabel data alumni, Berita dan Artikel, Virtual Meet, Lowongan Kerja, Kuisioner, dan Event.
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!--====== End Contact Area ======-->
+</div>
+
+<!-- ===== FAQ Area End ===== -->
 
 <!--====== Start Call To Action ======-->
-<section class="cta-section bg-cover-center p-t-90 p-b-90 "
-    style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
+<section class="cta-section bg-cover-center p-t-150 p-b-90" style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
                 <div class="cta-content text-center">
                     <div class="common-heading heading-white m-b-65">
-                        <span class="tagline">Frequently Asked Questions</span>
-                        <h2 class="title"> Daftar kumpulan pertanyaan dan jawaban seputar Aplikasi Fateka</h2>
+                        <span class="tagline">Punya pertanyaan lain?</span>
+                        <h2 class="title">Ayo segera hubungi kami</h2>
                     </div>
-
-                    <a href="{{url('/faq')}}" class="template-btn white-bg bordered-btn">FAQ<i
-                            class="far fa-arrow-right"></i></a>
+                    <a href="{{url('/kontak')}}" class="template-btn white-bg bordered-btn">Hubungi Sekarang 
+                    <i class="far fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img2.png')}}" alt="">
-    </div>
-</section>
+        <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="">
+    </div> 
+</section>        
 
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Data Alumni — Collegetivity')
+@section('title', 'Data Alumni — Fateka')
 @section('content')
 
 @push('timepicker-styles')

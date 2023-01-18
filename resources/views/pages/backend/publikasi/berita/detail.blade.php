@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 @foreach ($items as $items)
-@section('title', $berita->judul . ' — Catatanmu di Collegetivity')
+@section('title', $items->judul . ' — Catatanmu di Collegetivity')
 @section('content')
 
 <style>
