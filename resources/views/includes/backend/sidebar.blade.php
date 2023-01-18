@@ -146,7 +146,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/kegiatan')}}">
+                            <a href="{{url('/dashboard/kegiatan/tambah-kegiatan')}}">
                                 <i data-feather="plus-circle"></i>
                                 Tambah Kegiatan
                             </a>
