@@ -17,10 +17,10 @@
                         <div class="widget nav-widget">
                             <h5 class="widget-title">Link Terkait</h5>
                             <ul>
-                                <li><a href="{{url('https://telkomuniversity.ac.id/')}}">Telkom University</a></li>
-                                <li><a href="{{url('https://bsk.telkomuniversity.ac.id/')}}">Teknik Komputer Tel-U</a></li>
+                                <li><a href="{{url('https://telkomuniversity.ac.id/')}}" target="_blank">Telkom University</a></li>
+                                <li><a href="{{url('https://bsk.telkomuniversity.ac.id/')}}" target="_blank">Teknik Komputer Tel-U</a></li>
                                 <li><a href="{{url('https://www.fast.or.id/')}}">FAST</a></li>
-                                <li><a href="{{url('#')}}">FAQ</a></li>
+                                <li><a href="{{url('faq')}}">FAQ</a></li>
                             </ul>
                         </div>
                     </div>
