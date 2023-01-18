@@ -47,7 +47,8 @@
                                     <td>
                                         <div class="d-flex py-1 align-items-center">
                                             <div class="flex-fill">
-                                                <div class="font-weight-bold">{{$item->nama_alumni}}</div>
+                                                <div class="font-weight-bold">{{$item->nama_alumni}}
+                                                </div>
                                             </div>
                                         </div>
                                     </td>

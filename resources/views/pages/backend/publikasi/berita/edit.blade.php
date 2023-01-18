@@ -46,7 +46,7 @@
                         </ul>
                     </div>
                     @endif
-                    <form class="row needs-validation" method="POST" action="{{route('notes.update', $item->id)}}"
+                    <form class="row needs-validation" method="POST" action="{{route('berita.update', $item->id)}}"
                         enctype="multipart/form-data" novalidate="">
                         @method('PUT')
                         @csrf
@@ -126,11 +126,15 @@
 
                         <div class="col-sm-12">
                             <div class="btn-showcase">
+                            <form action="{{route('berita.destroy', $item->id)}}" method="POST">
+                                            @csrf
+                                            @method('delete')
+                                <button class="btn btn-light" type="submit">Delete</button>
+                            </form>
                                 <button class="btn btn-primary" type="submit">Update</button>
-                                <input class="btn btn-light" type="reset" value="Reset">
                             </div>
                         </div>
-                    </form>
+                    </form> 
                 </div>
             </div>
         </div>

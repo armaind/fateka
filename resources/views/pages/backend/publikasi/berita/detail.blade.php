@@ -1,6 +1,8 @@
 @extends('layouts.backend.master')
-@foreach ($items as $items)
-@section('title', $items->judul . ' — Catatanmu di Collegetivity')
+
+@foreach ($items as $item)
+
+@section('title', $item->judul . ' | Berita - Fateka')
 @section('content')
 
 <style>
@@ -18,15 +20,12 @@
     <div class="container-fluid">
         <div class="page-title">
             <div class="row">
-                <div class="col-6">
-                    <h3>{{$items->judul}}</h3>
-                </div>
+                <div class="col-6"></div>
                 <div class="col-6">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{route('dashboard')}}"> <i data-feather="home"></i></a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="{{route('berita.index')}}">Berita </a></li>
-                        <li class="breadcrumb-item active">{{$items->judul}}</li>
+                        <li class="breadcrumb-item"></li>
+                        <li class="breadcrumb-item"><a href="{{route('berita.index')}}">Berita</a></li>
+                        <li class="breadcrumb-item active">{{$item->judul}}</li>
                     </ol>
                 </div>
             </div>
@@ -38,18 +37,19 @@
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="blog-box blog-details">
-                        <img class="img-fluid" src="{{url('storage/images/' . $items->thumbnail)}}">
+                        <img class="img-fluid" src="{{url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
                         <div class="blog-details">
                             <ul class="blog-social">
-                                <li>{{$items->tanggal}}</li>
-                                <li><i class="icofont icofont-user"></i>{{$items->author}}</li>
-                                <li><i class="icofont icofont-list"></i>{{$items->berita}}</li>
+                                <li>{{$item->tanggal}}</li>
+                                <li><i class="icofont icofont-user"></i>{{$item->author}}</li>
+                                <li><i class="icofont icofont-list"></i>{{$item->berita}}</li>
+                                <li><i class=""></i><a href="{{route('berita.edit', $item->id)}}"> Edit Berita</a></li>
                             </ul>
                             <h1 class="mt-3">
-                                {{$items->judul}}
+                                {{$item->judul}}
                             </h1>
                             <div class="single-blog-content-top">
-                                <div class="mt-3">{!!htmlspecialchars_decode($items->content)!!}</div>
+                                <div class="mt-3">{!!htmlspecialchars_decode($item->content)!!}</div>
                             </div>
                         </div>
                     </div>
@@ -61,4 +61,5 @@
 </div>
 <!-- file wrapper for better tabs start-->
 @endforeach
+@endsection
 @endsection

@@ -30,8 +30,6 @@ Route::get('/faq', function () {
 /* -------------------------------------------------------------------------- */
 /*                               Backend Routes                               */
 /* -------------------------------------------------------------------------- */
-Route::get('auth/google',[App\Http\Controllers\GoogleAuthController::class,'redirectToGoogle'])->name('google.login');
-Route::get('auth/google/callback',[App\Http\Controllers\GoogleAuthController::class,'handleGoogleCallback'])->name('google.callback');
 
 Route::prefix('dashboard')
     ->middleware(['auth'])
