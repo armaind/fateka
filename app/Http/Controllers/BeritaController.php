@@ -47,8 +47,9 @@ class BeritaController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'berita' => 'max:64',
-            'content' => 'required'
+            'kategori' => 'required|max:64',
+            'headline' => 'max:64',
+            'isi_berita' => 'required',
         ]);
 
         if ($request->hasFile('thumbnail')) {
@@ -58,23 +59,24 @@ class BeritaController extends Controller
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
             Berita::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
+                'headline' => $request->headline,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
-
+                'isi_berita' => $request->isi_berita
             ]);
         } else {
             Berita::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
+                'headline' => $request->headline,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_berita' => $request->isi_berita
             ]);
         }
         
@@ -127,8 +129,9 @@ class BeritaController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'berita' => 'max:64',
-            'content' => 'required'
+            'kategori' => 'required|max:64',
+            'headline' => 'max:64',
+            'isi_berita' => 'required',
         ]);
 
         if ($request->hasFile('thumbnail')) {
@@ -136,26 +139,26 @@ class BeritaController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Berita::findOrFail($id);
-            $item->update([
+            Berita::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
+                'headline' => $request->headline,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_berita' => $request->isi_berita
             ]);
         } else {
-            $item = Berita::findOrFail($id);
-            $item->update([
+            Berita::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
+                'headline' => $request->headline,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_berita' => $request->isi_berita
             ]);
         }
 

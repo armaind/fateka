@@ -31,9 +31,6 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h5>Tulis Berita</h5>
-                    </div>
                     <div class="card-body add-post">
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -52,18 +49,25 @@
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="judul">Judul Berita: <span class="text-danger">*</span></label>
+                                    <div class="form-group col-md-12">
+                                        <label for="judul">Judul Berita <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
                                                 type="text" required>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="berita">Nama: <span class="text-danger">*</span></label>
+                                        <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="berita" name="berita"
-                                                value="{{old('berita')}}" type="text" required="">
+                                            <input class="form-control" id="kategori" name="kategori"
+                                                value="{{old('kategori')}}" type="text" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6 ">
+                                        <label for="headline">Headline</label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="headline" name="headline"
+                                                value="{{old('headline')}}" type="text">
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +75,7 @@
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
                                 <div class="form-group">
-                                    <label for="customFile">Thumbnail: (Optional)</label>
+                                    <label for="customFile">Thumbnail (Optional)</label>
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
                                         <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
@@ -86,8 +90,8 @@
                                 <div class="email-wrapper">
                                     <div class="theme-form">
                                         <div class="form-group">
-                                            <label>Deskripsi: <span class="text-danger">*</span></label>
-                                            <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
+                                            <label>Isi Berita <span class="text-danger">*</span></label>
+                                            <textarea id="text-box" name="isi_berita" cols="10" rows="2"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -97,7 +101,7 @@
                             <div class="col-sm-12">
                                 <div class="btn-showcase">
                                     <button class="btn btn-primary" type="submit">Tambah</button>
-                                    <input class="btn btn-light" type="reset" value="Reset">
+                                    <input class="btn btn-danger" type="reset" value="Reset">
                                 </div>
                             </div>
                         </form>

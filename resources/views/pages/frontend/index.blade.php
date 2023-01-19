@@ -56,11 +56,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-10 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="iconic-box box-version-white color-v2 m-t-50">
                         <div class="icon">
-                            <i class="fas fa-door-open"></i>
+                            <i class="far fa-users"></i>
                         </div>
-                        <h4 class="title"><a href="#">All in-one</a></h4>
+                        <h4 class="title"><a href="#">Connectivity</a></h4>
                         <p>
-                            Satu web untuk mengakses berbagai fitur yang dapat anda manfaatkan
+                            Menjaga tali konektivitas antar alumni dan pihak civitas akademika
                         </p>
                     </div>
                 </div>

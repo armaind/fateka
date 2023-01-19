@@ -67,7 +67,7 @@
                         <li>
                             <a href="{{url('/dashboard/berita')}}">
                                 
-                                List Berita
+                                Daftar Berita
                             </a>
                         </li>
                         <li>
@@ -88,7 +88,7 @@
                         <li>
                             <a href="{{url('/dashboard/artikel')}}">
                                 
-                                List Artikel
+                                Daftar Artikel
                             </a>
                         </li>
                         <li>
@@ -115,13 +115,13 @@
                         <li>
                             <a href="{{url('/dashboard/lowonganKerja')}}">
                                 
-                                Tabel Loker
+                                Daftar Lowongan Kerja
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/')}}">
                                 
-                                Tambah Loker
+                                Tambah Lowongan Kerja
                             </a>
                         </li>
                     </ul>

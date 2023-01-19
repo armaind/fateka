@@ -62,7 +62,7 @@
                             width="40px">
                         <div class="media-body">
                             <span>Hai {{Auth::user()->name}}</span>
-                            <p class="mb-0 font-roboto">👨🏻‍🎓 Mahasiswa
+                            <p class="mb-0 font-roboto">Mahasiswa
                                 <i class="middle fa fa-angle-down"></i>
                             </p>
                         </div>

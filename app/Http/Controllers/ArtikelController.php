@@ -15,8 +15,8 @@ class ArtikelController extends Controller
      */
     public function index()
     {
-        $items = Artikel::where('user_id', Auth::user()->email)->get();
-
+        $items = Auth::user()->id;
+        $items = Artikel::paginate(10);
         return view('pages.backend.publikasi.artikel.index', [
             'items' => $items
         ]);
