@@ -30,9 +30,9 @@
                     <div class="widget social-widget pl-xl-5">
                         <h5 class="widget-title">Ikuti Kami</h5>
                         <ul class="social-links">
-                            <li><a href="https://www.youtube.com/HMSKTELU"><i class="fab fa-youtube"></i></a></li> 
-                            <li><a href="https://www.instagram.com/hmtk_telu/"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="https://line.me/R/ti/p/%40qsg4413q"><i class="fab fa-line"></i></a></li>
+                            <li><a href="https://www.youtube.com/HMSKTELU" target="_blank"><i class="fab fa-youtube"></i></a></li> 
+                            <li><a href="https://www.instagram.com/hmtk_telu/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://line.me/R/ti/p/%40qsg4413q" target="_blank"><i class="fab fa-line"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="widget text-block-widget">
                         <h5 class="widget-title">Alamat</h5>
                         <p>
-                        Gedung TULT Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40267 Indonesia Phone: +62 22 7566456 info@telkomuniversity.ac.id
+                        <a href="https://goo.gl/maps/WTC7XJmZvSe86K3w9" target="_blank">Gedung Telkom University Landmark Tower (TULT), Jl. Telekomunikasi No.1, Sukapura, Kec. Dayeuhkolot, Bandung, Jawa Barat 40267 Indonesia</a>
                         </p>
                     </div>
                 </div>

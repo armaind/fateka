@@ -44,37 +44,12 @@
 
                             <label class="col-form-label">Alamat Email</label>
                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-at"
-                                            width="16" height="16" viewBox="0 0 24 24" stroke-width="2"
-                                            stroke="currentColor" fill="none" stroke-linecap="round"
-                                            stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <circle cx="12" cy="12" r="4"></circle>
-                                            <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
-                                        </svg>
-                                    </span>
-                                </div>
                                 <input class="form-control" type="email" name="email" placeholder="contoh@gmail.com"
                                     autofocus required>
                             </div>
 
                             <label class="col-form-label">Password</label>
                             <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-lock" width="16" height="16"
-                                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                            <rect x="5" y="11" width="14" height="10" rx="2"></rect>
-                                            <circle cx="12" cy="16" r="1"></circle>
-                                            <path d="M8 11v-4a4 4 0 0 1 8 0v4"></path>
-                                        </svg>
-                                    </span>
-                                </div>
                                 <input class="form-control" type="password" name="password" required
                                     placeholder="*********">
                             </div>
@@ -84,9 +59,13 @@
                                     <input id="checkbox1" type="checkbox" name="remember">
                                     <label class="text-muted" for="checkbox1">Ingat Password</label>
                                 </div>
-                                <button class="btn btn-primary btn-block" type="submit">Masuk Sekarang</button>
+                                <button class="btn btn-primary btn-block" type="submit">Masuk sekarang</button>
                             </div>
-                            <span class="mt-1 mb-1">atau</span>
+                            <div class="form-group mb-0">
+                                <div>
+                                    <p class="mt-2 mb-0 text-center">atau</p>
+                                </div>
+                            </div>
                             <div class="form-group mb-0">
                                 <div class="checkbox mt-2">
                                     <a href="{{ route('google.login') }}" class="btn btn-primary btn-block">Masuk dengan Google</a>

@@ -27,7 +27,7 @@
 
                 <li class="sidebar-main-title">
                     <div>
-                        <h6>Informasi Alumni</h6>
+                        <h6>Data</h6>
                     </div>
                 </li>
 
@@ -39,13 +39,13 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/dataAlumni')}}">
-                                <i data-feather="server"></i>
+                                
                                 Tabel Data Alumni
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/data-alumni/tambah-data-alumni')}}">
-                                <i data-feather="plus-circle"></i>
+                                
                                 Tambah Data 
                             </a>
                         </li>
@@ -66,13 +66,13 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/berita')}}">
-                                <i data-feather="list"></i>
+                                
                                 List Berita
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/berita/tambah-berita')}}">
-                                <i data-feather="file-plus"></i>
+                                
                                 Tambah Berita 
                             </a>
                         </li>
@@ -87,13 +87,13 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/artikel')}}">
-                                <i data-feather="list"></i>
+                                
                                 List Artikel
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/')}}">
-                                <i data-feather="file-plus"></i>
+                                
                                 Tambah Artikel 
                             </a>
                         </li>
@@ -114,13 +114,13 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/lowonganKerja')}}">
-                                <i data-feather="server"></i>
+                                
                                 Tabel Loker
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/')}}">
-                                <i data-feather="plus-circle"></i>
+                                
                                 Tambah Loker
                             </a>
                         </li>
@@ -141,13 +141,13 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/kegiatan')}}">
-                                <i data-feather="server"></i>
+                                
                                 Daftar Kegiatan
                             </a>
                         </li>
                         <li>
                             <a href="{{url('/dashboard/kegiatan/tambah-kegiatan')}}">
-                                <i data-feather="plus-circle"></i>
+                                
                                 Tambah Kegiatan
                             </a>
                         </li>
@@ -184,7 +184,7 @@
                     <ul class="sidebar-submenu">
                         <li>
                             <a href="{{url('/dashboard/')}}">
-                                <i data-feather="plus-circle"></i>
+                                
                                 Tambah Kuisioner
                             </a>
                         </li>

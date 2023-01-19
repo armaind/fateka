@@ -181,7 +181,7 @@
 
 <!-- ===== FAQ Area Start ===== -->
 
-<div class="container w-150 p-b-150">
+<div class="container w-150 p-b-100 p-t-100 ">
     <div id="accordion">
         <div class="card border-0">
             <div class="card-header" id="q1"> 

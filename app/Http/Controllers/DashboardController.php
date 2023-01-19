@@ -16,13 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $dataalumni = DataAlumni::where('user_id', Auth::user()->email)->get();
-        $lowongankerja = LowonganKerja::where('user_id', Auth::user()->email)->take(4)->get();
-
-        return view('pages.backend.index', [
-            'dataalumni' => $dataalumni,
-            'lowongankerja' => $lowongankerja,
-        ]);
+        return view('pages.backend.index', [ ]);
     }
 
     /**
