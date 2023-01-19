@@ -32,7 +32,7 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Tulis Catatan</h5>
+                        <h5>Tulis Berita</h5>
                     </div>
                     <div class="card-body add-post">
                         @if ($errors->any())
@@ -53,14 +53,14 @@
                             <div class="col-sm-12">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="judul">Judul Catatan: <span class="text-danger">*</span></label>
+                                        <label for="judul">Judul Berita: <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
                                                 type="text" required>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="berita">Nama : (Optional)</label>
+                                        <label for="berita">Nama: <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="berita" name="berita"
                                                 value="{{old('berita')}}" type="text" required="">
@@ -86,7 +86,7 @@
                                 <div class="email-wrapper">
                                     <div class="theme-form">
                                         <div class="form-group">
-                                            <label>Catatan: <span class="text-danger">*</span></label>
+                                            <label>Deskripsi: <span class="text-danger">*</span></label>
                                             <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
                                         </div>
                                     </div>
