@@ -22,104 +22,51 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
+
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
                 <div class="card-body">
-                    <div class="dt-ext table-responsive">
-                        <table class="display" id="auto-fill">
-                            <thead>
-                                <tr>
-                                    <th>Posisi</th>
-                                    <th>Perusahaan/Instansi</th>
-                                    <th>Alamat</th>
-                                    <th>Thumbnail</th>
-                                    <th>Deskripsi Kerja</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse ($items as $item)
-                                <tr>
-                                    <td>
-                                        <div class="d-flex py-1 align-items-center">
-                                            <div class="avatars mr-2">
-                                                <div class="avatar ratio">
-                                                    <img style="object-fit: cover;
-                                                        width: 40px;
-                                                        height: 40px;" class="b-r-8"
-                                                        src="https://source.boringavatars.com/beam/120/{{$item->author}}?colors=FAD089,FF9C5B,F5634A,ED303C,3B8183">
-                                                </div>
-                                            </div>
-                                            <div class="flex-fill">
-                                                <div class="font-weight-bold">{{$item->author}}</div>
-                                                <div class="text-muted"><a href="#"
-                                                        class="text-reset">Author/Penulis</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="font-weight-bold">{{$item->posisi}}</td>
-                                    <td>{{$item->perusahaan}}</td>
-                                    <td>{{$item->tanggal}}</td>
-                                    <td>{{substr(strip_tags(htmlspecialchars_decode($item->content)),0,20)}}<a
-                                            href="{{route('lowonganKerja.show', $item->id)}}"> ...</a></td>
-                                    <td>
-                                        <a href="{{route('lowonganKerja.show', $item->id)}}" class="btn btn-success px-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-eye" width="16" height="16"
-                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <circle cx="12" cy="12" r="2"></circle>
-                                                <path
-                                                    d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                        <a href="{{route('lowonganKerja.edit', $item->id)}}" class="btn btn-info px-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                class="icon icon-tabler icon-tabler-edit" width="16" height="16"
-                                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                                stroke-linecap="round" stroke-linejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3">
-                                                </path>
-                                                <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3"></path>
-                                                <line x1="16" y1="5" x2="19" y2="8"></line>
-                                            </svg>
-                                        </a>
-                                        <form action="{{route('lowonganKerja.destroy', $item->id)}}" method="POST"
-                                            class="d-inline">
-                                            @csrf
-                                            @method('delete')
-                                            <button class="btn btn-danger px-2">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-trash" width="16" height="16"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <line x1="4" y1="7" x2="20" y2="7"></line>
-                                                    <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                    <line x1="14" y1="11" x2="14" y2="17"></line>
-                                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
-                                                </svg>
-                                            </button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                @empty
-                                @endforelse
-                            </tbody>
-                        </table>
-                    </div>
+                <a href=""><h5 class="card-title">Card title</h5></a>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
         </div>
-    </div>
-
-        
-    </div>
+    </div> 
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <a href=""><h5 class="card-title">Card title</h5></a>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                <a href=""><h5 class="card-title">Card title</h5></a>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div> 
+       
+</div>
 
     @push('datatable-scripts')
     <script src="{{url('cuba/assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
