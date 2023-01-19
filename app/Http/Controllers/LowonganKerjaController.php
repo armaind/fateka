@@ -47,7 +47,7 @@ class LowonganKerjaController extends Controller
         $validated = $request->validate([
             'judul' => 'required|max:64',
             'matkul' => 'max:64',
-            'content' => 'required'
+            'content' => 'required' 
         ]);
 
         if ($request->hasFile('thumbnail')) {
