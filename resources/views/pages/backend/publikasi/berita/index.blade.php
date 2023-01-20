@@ -56,21 +56,22 @@
         </div>
         <div class="product-wrapper-grid">
             <div class="row">
-                @foreach ($items as $berita)
+                @forelse ($items as $item)    
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
-                        <img src="{{'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $berita->thumbnail }}" class="card-img-top" alt="...">
+                        <img src="{{'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $item->thumbnail }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h4>{{ $berita->judul }}</h4>
-                            <p>{{ $berita->kategori }}</p>
+                            <h4>{{ $item->judul }}</h4>
+                            <p>{{ $item->kategori }}</p>
                         </div>
                         
                         <div class="card-footer py-3">
-                            <a href="{{route('berita.show', $berita)}}" target="">Selengkapnya</a>
+                            <a href="{{route('berita.show', $item->id)}}" target="">Selengkapnya</a>
                         </div>
                     </div>
                 </div>
-                @endforeach
+                @empty
+                @endforelse   
             </div>
         </div>
     </div>

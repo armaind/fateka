@@ -12,12 +12,11 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">Edit Berita <span class="d-none d-md-inline"> —
-                        {{$item->judul}}</span></h5>
+                <h5 class="text-white">Edit Berita</h5>
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah form untuk edit berita {{$item->judul}}
+                    Dibawah ini adalah form untuk edit berita berjudul "{{$item->judul}}"
                 </p>
             </div>
         </div>
@@ -26,13 +25,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-body add-post">
-                </div>
-                <form class="row needs-validation" method="POST" action="{{route('berita.update', $item->id)}}"
-                    enctype="multipart/form-data" novalidate="">
-                    @method('PUT')
-                    @csrf
-                    <div class="card-body">
+                    <div class="card-body add-post">
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -45,6 +38,10 @@
                             </ul>
                         </div>
                         @endif
+                        <form class="needs-validation" method="POST" action="{{route('berita.update', $item->id)}}"
+                            enctype="multipart/form-data">
+                            @method('PUT')
+                            @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="judul">Judul Berita <span class="text-danger">*</span></label>
@@ -57,13 +54,6 @@
                                     <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
                                         <input class="form-control" id="kategori" name="kategori" value="{{$item->kategori}}"
-                                            type="text" required="">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6 ">
-                                    <label for="headline">Headline <span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input class="form-control" id="headline" name="headline" value="{{$item->headline}}"
                                             type="text" required="">
                                     </div>
                                 </div>
@@ -97,12 +87,7 @@
 
                         <div class="col-sm-12">
                             <div class="btn-showcase">
-                                <form action="{{route('berita.destroy', $item->id)}}" method="POST" class="d-inline">
-                                                @csrf
-                                                @method('delete')
-                                    <button class="btn btn-danger" type="submit">Delete</button>
-                                </form>
-                            <button type="submit" class="btn btn-primary" type="submit">Update</button>
+                                <button type="submit" class="btn btn-primary" type="submit">Update</button>
                             </div>
                         </div>
                     </div>
