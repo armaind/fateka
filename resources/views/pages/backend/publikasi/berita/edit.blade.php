@@ -25,6 +25,9 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
+                <form method="POST" action="{{route('berita.update', $item->id)}}" enctype="multipart/form-data" class="needs-validation">
+                    @method('PUT')
+                    @csrf
                     <div class="card-body add-post">
                         @if ($errors->any())
                         <div class="alert alert-danger">
@@ -38,51 +41,46 @@
                             </ul>
                         </div>
                         @endif
-                        <form class="needs-validation" method="POST" action="{{route('berita.update', $item->id)}}"
-                            enctype="multipart/form-data">
-                            @method('PUT')
-                            @csrf
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="judul">Judul Berita <span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input class="form-control" id="judul" name="judul" value="{{$item->judul}}"
-                                            type="text" required="">
-                                    </div>
-                                </div>
-                                <div class="form-group col-md-6 ">
-                                    <label for="kategori">Kategori <span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input class="form-control" id="kategori" name="kategori" value="{{$item->kategori}}"
-                                            type="text" required="">
-                                    </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="judul">Judul Berita <span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input class="form-control" id="judul" name="judul" value="{{$item->judul}}"
+                                        type="text" required="">
                                 </div>
                             </div>
+                            <div class="form-group col-md-6 ">
+                                <label for="kategori">Kategori <span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input class="form-control" id="kategori" name="kategori" value="{{$item->kategori}}"
+                                        type="text" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customFile">Thumbnail (Optional)</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
+                                <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
+                            </div>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="customFile">Thumbnail (Optional)</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
+                        <div class="form-group">
+                            <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
+                            <input class="form-control" type="hidden" name="tanggal"
+                                value="{{{now()->toDateString()}}}">
+                        </div>
+                        <div class="email-wrapper">
+                            <div class="theme-form">
+                                <div class="form-group">
+                                    <label>Isi Berita <span class="text-danger">*</span></label>
+                                    <textarea id="text-box" name="isi_berita" cols="10" rows="2">
+                                        {!!htmlspecialchars_decode($item->isi_berita)!!}
+                                    </textarea>
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
-                                <input class="form-control" type="hidden" name="tanggal"
-                                    value="{{{now()->toDateString()}}}">
-                            </div>
-                            <div class="email-wrapper">
-                                <div class="theme-form">
-                                    <div class="form-group">
-                                        <label>Isi Berita <span class="text-danger">*</span></label>
-                                        <textarea id="text-box" name="isi_berita" cols="10" rows="2">
-                                                {!!htmlspecialchars_decode($item->isi_berita)!!}
-                                            </textarea>
-                                    </div>
-                                </div>
-                            </div>
-
+                        </div>
                         <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
                         <div class="col-sm-12">

@@ -15,8 +15,7 @@ class DataAlumniController extends Controller
      */
     public function index()
     {
-        $items = DataAlumni::where('user_id', Auth::user()->email)->get();
-
+        $items = DataAlumni::paginate(10);
         return view('pages.backend.dataAlumni.index', [
             'items' => $items
         ]);

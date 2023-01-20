@@ -15,7 +15,6 @@ class LowonganKerjaController extends Controller
      */
     public function index()
     {
-        $items = Auth::user()->id;
         $items = LowonganKerja::paginate(10);
         return view('pages.backend.lowongankerja.index', [
             'items' => $items

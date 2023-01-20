@@ -15,8 +15,6 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        
-        $items = Auth::user()->id;
         $items = Berita::paginate(10);
         return view('pages.backend.publikasi.berita.index', [
             'items' => $items
@@ -86,9 +84,9 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        $items = Berita::where('user_id', Auth::user()->email)->get();
+        $items = Berita::paginate(10);
         
         return view('pages.backend.publikasi.berita.detail',[
             'items' => $items
@@ -135,7 +133,8 @@ class BeritaController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Berita::create([
+            $item = Berita::findOrFail($id);
+            $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => $finalName,
@@ -145,7 +144,8 @@ class BeritaController extends Controller
                 'isi_berita' => $request->isi_berita
             ]);
         } else {
-            Berita::create([
+            $item = Berita::findOrFail($id);
+            $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
