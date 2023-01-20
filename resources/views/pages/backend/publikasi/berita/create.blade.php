@@ -63,13 +63,6 @@
                                                 value="{{old('kategori')}}" type="text" required="">
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-6 ">
-                                        <label for="headline">Headline</label>
-                                        <div class="input-group mb-3">
-                                            <input class="form-control" id="headline" name="headline"
-                                                value="{{old('headline')}}" type="text">
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>

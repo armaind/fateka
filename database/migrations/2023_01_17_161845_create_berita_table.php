@@ -17,7 +17,6 @@ class CreateBeritaTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('kategori');
-            $table->string('headline');
             $table->string('thumbnail')->nullable();
             $table->string('author');
             $table->mediumText('isi_berita');

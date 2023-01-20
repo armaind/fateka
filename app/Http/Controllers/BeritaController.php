@@ -48,7 +48,6 @@ class BeritaController extends Controller
         $validated = $request->validate([
             'judul' => 'required|max:64',
             'kategori' => 'required|max:64',
-            'headline' => 'max:64',
             'isi_berita' => 'required',
         ]);
 
@@ -60,7 +59,6 @@ class BeritaController extends Controller
             Berita::create([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'headline' => $request->headline,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
@@ -71,7 +69,6 @@ class BeritaController extends Controller
             Berita::create([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'headline' => $request->headline,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
@@ -130,7 +127,6 @@ class BeritaController extends Controller
         $validated = $request->validate([
             'judul' => 'required|max:64',
             'kategori' => 'required|max:64',
-            'headline' => 'max:64',
             'isi_berita' => 'required',
         ]);
 
@@ -142,7 +138,6 @@ class BeritaController extends Controller
             Berita::create([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'headline' => $request->headline,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
@@ -153,7 +148,6 @@ class BeritaController extends Controller
             Berita::create([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'headline' => $request->headline,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
