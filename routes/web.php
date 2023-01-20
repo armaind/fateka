@@ -32,7 +32,7 @@ Route::get('/faq', function () {
 /* -------------------------------------------------------------------------- */
 
 Route::prefix('dashboard')
-    ->middleware(['auth'])
+    ->middleware(['auth','verified'])
     ->group(function () {
         /* -------------------------- Dashboard Index Pages ------------------------- */
         Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
