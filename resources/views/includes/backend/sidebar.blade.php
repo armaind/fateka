@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/tambah-artikel')}}">
+                            <a href="{{url('/dashboard/artikel/tambah-artikel')}}">
                                 Tambah Artikel 
                             </a>
                         </li>
