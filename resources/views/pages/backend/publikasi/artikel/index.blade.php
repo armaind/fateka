@@ -50,90 +50,25 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-6 text-right"><span class="f-w-600 m-r-5">Menampilkan 15 hasil</span>
-                </div>
             </div>
         </div>
         <div class="product-wrapper-grid">
             <div class="row">
+                @forelse ($items as $item) 
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
+                         <div class="card-body">
+                            <img src="{{'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $item->thumbnail }}" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius:10px; box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
+                            <a class="" href="{{route('artikel.show', $item->id)}}" target="">
+                                <h4>{{ $item->judul }}</h4>
+                            </a>
+                            <p>{{ $item->kategori }}</p>
+                            <p>{{ $item->author }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h4>Lorem Ipsum</h4>
-                            <p class="mb-0">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
-                        </div>
-                        
-                        <div class="card-footer py-3">
-                            <a href="#" target="_blank">Selengkapnya ⇾</a>
-                        </div>
-                    </div>
-                </div>
+                @empty
+                @endforelse  
             </div>
         </div>
     </div>

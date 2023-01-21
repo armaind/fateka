@@ -46,8 +46,8 @@ class ArtikelController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'berita' => 'max:64',
-            'content' => 'required'
+            'kategori' => 'max:64',
+            'isi_artikel' => 'required'
         ]);
 
         if ($request->hasFile('thumbnail')) {
@@ -57,23 +57,23 @@ class ArtikelController extends Controller
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
             Artikel::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
-
+                'isi_artikel' => $request->isi_artikel,
+                
             ]);
         } else {
             Artikel::create([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_artikel' => $request->isi_artikel,
             ]);
         }
         
@@ -88,9 +88,9 @@ class ArtikelController extends Controller
      */
     public function show($id)
     {
-        $items = Artikel::where('user_id', Auth::user()->email)->get();
+        $item = Artikel::findOrFail($id);
         return view('pages.backend.publikasi.artikel.detail',[
-            'items' => $items
+            'item' => $item
         ]);
     }
     
@@ -125,8 +125,8 @@ class ArtikelController extends Controller
 
         $validated = $request->validate([
             'judul' => 'required|max:64',
-            'berita' => 'max:64',
-            'content' => 'required'
+            'artikel' => 'max:64',
+            'isi_artikel' => 'required'
         ]);
 
         if ($request->hasFile('thumbnail')) {
@@ -137,23 +137,23 @@ class ArtikelController extends Controller
             $item = Artikel::findOrFail($id);
             $item->update([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
                 'thumbnail' => $finalName,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_artikel' => $request->isi_artikel,
             ]);
         } else {
             $item = Artikel::findOrFail($id);
             $item->update([
                 'judul' => $request->judul,
+                'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'berita' => $request->berita,
-                'content' => $request->content,
+                'isi_artikel' => $request->isi_artikel,
             ]);
         }
 

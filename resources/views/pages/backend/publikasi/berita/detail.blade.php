@@ -36,10 +36,12 @@
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="blog-box blog-details">
-                        <div class="img-fluid">
-                            <img width="936px" src="{{url('https://plus.unsplash.com/premium_photo-1671076131210-5376fccb100b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
+                        <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
+                            <img width="100%" src="{{url('https://plus.unsplash.com/premium_photo-1671076131210-5376fccb100b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
                         </div>
-                        <div class="blog-details">
+                        <div class="img-fluid">
+                        </div>
+                        <div class="blog-details p-0">
                             <ul class="blog-social">
                                 <li>{{$item->tanggal}}</li>
                                 <li>{{$item->kategori}}</li>
