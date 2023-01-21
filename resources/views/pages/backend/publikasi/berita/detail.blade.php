@@ -1,7 +1,7 @@
 @extends('layouts.backend.master')
 
     
-@section('title', $item->id . ' — Fateka')
+@section('title', $item->judul . ' — Fateka')
 @section('content')
 
 <style>
