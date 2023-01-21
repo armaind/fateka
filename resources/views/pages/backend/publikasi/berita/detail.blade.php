@@ -21,10 +21,11 @@
             <div class="row">
                 <div class="col-12">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active">{{$item->judul}}</li>
                         <li class="breadcrumb-item">
                             <a href="{{route('berita.index')}}">Berita</a>
                         </li>
+                        <li class="breadcrumb-item active">{{$item->kategori}}</li>
+                        <li class="breadcrumb-item active">{{$item->judul}}</li>
                     </ol>
                 </div>
             </div>
