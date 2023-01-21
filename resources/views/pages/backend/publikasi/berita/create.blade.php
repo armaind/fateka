@@ -36,7 +36,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Ada error nih 😓</h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
