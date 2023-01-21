@@ -1,8 +1,7 @@
 @extends('layouts.backend.master')
 
-@foreach ($items as $item )
     
-@section('title', $item->judul . ' — Fateka')
+@section('title', $item->id . ' — Fateka')
 @section('content')
 
 <style>
@@ -74,5 +73,5 @@
     <!-- main content end-->
 </div>
 <!-- file wrapper for better tabs start-->
-@endforeach
+
 @endsection

@@ -66,7 +66,7 @@
                         </div>
                         
                         <div class="card-footer py-3">
-                            <a href="{{route('berita.show', $item->id)}}" target="">Selengkapnya</a>
+                            <a href="{{route('berita.show', $item->judul)}}" target="">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

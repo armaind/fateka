@@ -33,12 +33,18 @@
                             <thead>
                                 <tr>
                                     <th>Nama Alumni</th>
-                                    <th>Angkatan</th>
-                                    <th>No Telepon</th>
                                     <th>Email</th>
-                                    <th>Alamat</th>
+                                    <th>No Telepon</th>
+                                    <th>Provinsi</th>
+                                    <th>Kota</th>
+                                    <th>Kecamatan</th>
+                                    <th>Desa/jalan</th>
+                                    <th>Domisili</th>
+                                    <th>Angkatan</th>
                                     <th>Status Pekerjaan</th>
+                                    <th>Posisi Kerja</th>
                                     <th>Perusahaan</th>
+                                   
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,11 +58,16 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td>{{$item->angkatan}}</td>
-                                    <td>{{$item->no_telp}}</td>
                                     <td>{{$item->email}}</td>
-                                    <td>{{$item->alamat}}</td>
+                                    <td>{{$item->no_telp}}</td>
+                                    <td>{{$item->provinsi}}</td>
+                                    <td>{{$item->kota}}</td>
+                                    <td>{{$item->kecamatan}}</td>
+                                    <td>{{$item->desa_atau_jalan}}</td>
+                                    <td>{{$item->domisili}}</td>
+                                    <td>{{$item->angkatan}}</td>
                                     <td>{{$item->status_pekerjaan}}</td>
+                                    <td>{{$item->posisi}}</td>
                                     <td>{{$item->perusahaan}}</td>
                                     
                                     <td>
@@ -96,6 +107,7 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        
                     </div>
                 </div>
             </div>

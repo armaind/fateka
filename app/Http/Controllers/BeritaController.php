@@ -88,10 +88,9 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        $items = Berita::where('user_id', Auth::user()->email)->get();
-        
+        $item = Berita::findOrFail($id);
         return view('pages.backend.publikasi.berita.detail',[
-            'items' => $items
+            'item' => $item
         ]);
     }
     
@@ -135,7 +134,8 @@ class BeritaController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Berita::create([
+            $item = Berita::findOrfail($id);
+            $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => $finalName,
@@ -145,7 +145,8 @@ class BeritaController extends Controller
                 'isi_berita' => $request->isi_berita
             ]);
         } else {
-            Berita::create([
+            $item = Berita::findOrfail($id);
+            $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
@@ -155,7 +156,7 @@ class BeritaController extends Controller
                 'isi_berita' => $request->isi_berita
             ]);
         }
-
+        
         return redirect('/dashboard/berita');
     }
 

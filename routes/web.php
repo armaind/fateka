@@ -32,24 +32,30 @@ Route::get('/faq', function () {
 /* -------------------------------------------------------------------------- */
 
 Route::prefix('dashboard')
-    ->middleware(['auth','verified'])
-    ->group(function () {
-        /* -------------------------- Dashboard Index Pages ------------------------- */
-        Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-        
-        /* ------------------------- Data Alumni ------------------------- */
-        Route::get('/data-alumni', 'App\Http\Controllers\DataAlumniController@index');
-        Route::get('/data-alumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create');
-        Route::resource('dataAlumni', 'App\Http\Controllers\DataAlumniController');
-        
-        /* ------------------------- Publikasi pages ------------------------- */
-        /* ------------------------- Berita ------------------------- */
-        Route::get('/berita', 'App\Http\Controllers\BeritaController@index');
-        Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
-        Route::resource('berita', 'App\Http\Controllers\BeritaController');
-        
-        /* ------------------------- Artikel ------------------------- */
-        Route::get('/artikel', 'App\Http\Controllers\ArtikelController@index');
+
+->middleware(['auth','verified'])
+->group(function () {
+    /* -------------------------- Dashboard Index Pages ------------------------- */
+    Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    
+    /* ------------------------- Data Alumni ------------------------- */
+    Route::get('/data-alumni', 'App\Http\Controllers\DataAlumniController@index');
+    Route::get('/data-alumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create');
+    Route::resource('dataAlumni', 'App\Http\Controllers\DataAlumniController');
+    
+    Route::get('provinces', [DependentDropdownController::class,'provinces'])->name('provinces');
+    Route::get('cities', [DependentDropdownController::class,'cities'])->name('cities');
+    Route::get('districts', [DependentDropdownController::class,'districts'])->name('districts');
+    Route::get('villages', [DependentDropdownController::class,'villages'])->name('villages');
+    
+    /* ------------------------- Publikasi pages ------------------------- */
+    /* ------------------------- Berita ------------------------- */
+    Route::get('/berita', 'App\Http\Controllers\BeritaController@index');
+    Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
+    Route::resource('berita', 'App\Http\Controllers\BeritaController');
+    
+    /* ------------------------- Artikel ------------------------- */
+    Route::get('/artikel', 'App\Http\Controllers\ArtikelController@index');
         Route::get('/artikel/tambah-artikel', 'App\Http\Controllers\ArtikelController@create');
         Route::resource('artikel', 'App\Http\Controllers\ArtikelController');
         
