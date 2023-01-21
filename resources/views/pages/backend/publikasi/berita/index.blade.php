@@ -79,8 +79,8 @@
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <a class="" href="{{route('berita.show', $item->id)}}" target="">
                     <div class="card">
-                        <img src="{{ asset('images/' . $item->thumbnail) }}" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px"></div>
+                        <div class="card-body" style="height: 150px">
                             <h4>{{ $item->judul }}</h4>
                             <p>{{ $item->kategori }}</p>
                         </div>

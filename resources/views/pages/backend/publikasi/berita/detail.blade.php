@@ -38,9 +38,7 @@
                 <div class="blog-single">
                     <div class="blog-box blog-details">
                         <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
-                            <img src="{{ asset('images/' . $item->thumbnail) }}" class="card-img-top" alt="...">
-                        </div>
-                        <div class="img-fluid">
+                            <div style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:450px"></div>
                         </div>
                         <div class="blog-details p-0">
                             <ul class="blog-social">
