@@ -55,9 +55,8 @@
                             </div>
 
                             <div class="form-group mb-0">
-                                <div class="checkbox p-0">
-                                    <input id="checkbox1" type="checkbox" name="remember">
-                                    <label class="text-muted" for="checkbox1">Ingat Password</label>
+                                <div class="input mb-2">
+                                    <a href="{{ url('/forgot-password') }}">Lupa Password</a>
                                 </div>
                                 <button class="btn btn-primary btn-block" type="submit">Masuk sekarang</button>
                             </div>

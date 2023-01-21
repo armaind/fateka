@@ -70,8 +70,7 @@
                                 <div class="form-group">
                                     <label for="customFile">Thumbnail (Optional)</label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
+                                        <input type="file" class="form-input" name="thumbnail">
                                     </div>
                                 </div>
                                 <div class="form-group">

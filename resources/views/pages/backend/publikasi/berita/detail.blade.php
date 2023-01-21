@@ -37,7 +37,7 @@
                 <div class="blog-single">
                     <div class="blog-box blog-details">
                         <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
-                            <img width="100%" src="{{url('https://plus.unsplash.com/premium_photo-1671076131210-5376fccb100b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
+                            <img src="{{ asset('images/' . $item->thumbnail) }}" class="card-img-top" alt="...">
                         </div>
                         <div class="img-fluid">
                         </div>

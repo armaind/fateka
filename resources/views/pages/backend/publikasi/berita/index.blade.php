@@ -78,7 +78,7 @@
                 @forelse ($items as $item)    
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <div class="card">
-                        <img src="{{'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $item->thumbnail }}" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius:10px; box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
+                        <img src="{{ asset('images/' . $item->thumbnail) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <a class="" href="{{route('berita.show', $item->id)}}" target="">
                                 <h4>{{ $item->judul }}</h4>

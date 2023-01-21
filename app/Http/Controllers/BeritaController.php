@@ -50,23 +50,22 @@ class BeritaController extends Controller
             'kategori' => 'required|max:64',
             'isi_berita' => 'required',
         ]);
-
+        $data = Berita::create($request->all());
         if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Berita::create([
+            $request->file('thumbnail')->move('images/', $request->file('thumbnail')->getClientOriginalName());
+            $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
+            $data->save();
+            ([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'thumbnail' => $finalName,
+                'thumbnail' => $request->thumbnail,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
                 'isi_berita' => $request->isi_berita
             ]);
         } else {
-            Berita::create([
+            ([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
