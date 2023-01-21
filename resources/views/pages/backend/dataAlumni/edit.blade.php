@@ -44,7 +44,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Ada error nih 😓</h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -53,25 +53,73 @@
                         </div>
                         @endif
                         <div class="form-row">
+                            <div class="col-md-12 mb-2 mt-2">
+                                <h6 style="color: #07BD02">Data Diri</h6>
+                            </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="nama_alumni">Nama Alumni <span class="text-danger">*</span></label>
+                                <label for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="nama_alumni" type="text" class="form-control"
-                                        value="{{$item->nama_alumni}}" name="nama_alumni" required>
+                                    value="{{$item->nama_alumni}}" name="nama_alumni" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="email">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="email" type="email" class="form-control"
-                                        value="{{$item->email}}" name="email" required>
+                                    value="{{$item->email}}" name="email" required>
                                 </div>
                             </div>
-                        </div>
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
-
-
-                        <div class="form-row">
+                        
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="no_telp">No Telepon<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="no_telp" type="number" value="{{$item->no_telp}}" class="form-control"
+                                    name="no_telp">
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h6 style="color: #07BD02">Alamat Lengkap</h6>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="provinsi" type="text" value="{{$item->provinsi}}" class="form-control"
+                                    name="provinsi">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="kota" type="text" value="{{$item->kota}}" class="form-control"
+                                    name="kota">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="kecamatan" type="text" value="{{$item->kecamatan}}" class="form-control"
+                                    name="kecamatan">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="desa_atau_jalan">Desa / Jalan<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="desa_atau_jalan" type="text" value="{{$item->desa_atau_jalan}}" class="form-control"
+                                    name="desa_atau_jalan">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="domisili">Domisili<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input required id="domisili" type="text" value="{{$item->domisili}}" class="form-control"
+                                    name="domisili" placeholder="Kota">
+                                </div>
+                            </div>
+                                    
+                            <div class="col-md-12 mb-2 mt-2">
+                                <h6 style="color: #07BD02">Data Akademik</h6>
+                            </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="angkatan">Angkatan <span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
@@ -93,51 +141,48 @@
                                         <option value="2020">2020</option>
                                         <option value="2021">2021</option>
                                         <option value="2022">2022</option>
+                                        <option value="2022">2023</option>     
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="no_telp">No Telepon <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="no_telp" type="number" value="{{$item->no_telp}}" class="form-control"
-                                        name="no_telp">
-                                </div>
-                            </div>
-
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="alamat">Alamat <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="alamat" type="text" value="{{$item->alamat}}" class="form-control"
-                                        name="alamat">
-                                </div>
+                        </div>
+                    
+                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h6 style="color: #07BD02">Data Karir</h6>
                             </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <select class="custom-select" id="status_pekerjaan" name="status_pekerjaan">
-                                        <option value="" disabled selected>Pilih</option>
+                                    <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
+                                        <option value="{{$item->status_pekerjaan}}" selected>{{$item->status_pekerjaan}}</option>
                                         <option value="Bekerja">Bekerja</option>
                                         <option value="Belum Bekerja">Belum Bekerja</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="perusahaan">Perusahaan/Instansi <span class="text-danger">*</span></label>
+                                <label for="posisi">Posisi Pekerjaan</label>
                                 <div class="input-group mb-3">
-                                    <input nullable id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
-                                        name="perusahaan">
+                                    <input id="posisi" type="posisi" class="form-control"
+                                        value="{{$item->posisi}}" name="posisi" nullable>
                                 </div>
+                                <label for="posisi"> <span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="perusahaan">Perusahaan/Instansi</label>
+                                <div class="input-group mb-3">
+                                    <input id="perusahaan" type="perusahaan" class="form-control"
+                                        value="{{$item->perusahaan}}" name="perusahaan" nullable>
+                                </div>
+                                <label for="perusahaan"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
                             </div>
                         </div>
-                        </div>
-
-                    </div>
-
+                    </div> 
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary m-r-15" type="submit">Update</button>
                     </div>
-
                 </form>
             </div>
         </div>

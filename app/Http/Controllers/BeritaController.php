@@ -15,6 +15,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
+        
+        $items = Auth::user()->id;
         $items = Berita::paginate(10);
         return view('pages.backend.publikasi.berita.index', [
             'items' => $items
@@ -83,12 +85,11 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($id)
     {
-        $items = Berita::paginate(10);
-        
+        $item = Berita::findOrFail($id);
         return view('pages.backend.publikasi.berita.detail',[
-            'items' => $items
+            'item' => $item
         ]);
     }
     
@@ -132,7 +133,7 @@ class BeritaController extends Controller
             $name = $resource->getClientOriginalName();
             $finalName = date('His')  . $name;
             $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Berita::findOrFail($id);
+            $item = Berita::findOrfail($id);
             $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
@@ -143,7 +144,7 @@ class BeritaController extends Controller
                 'isi_berita' => $request->isi_berita
             ]);
         } else {
-            $item = Berita::findOrFail($id);
+            $item = Berita::findOrfail($id);
             $item->update([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
@@ -154,7 +155,7 @@ class BeritaController extends Controller
                 'isi_berita' => $request->isi_berita
             ]);
         }
-
+        
         return redirect('/dashboard/berita');
     }
 

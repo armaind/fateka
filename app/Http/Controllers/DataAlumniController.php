@@ -28,6 +28,7 @@ class DataAlumniController extends Controller
      */
     public function create()
     {
+
         return view('pages.backend.dataAlumni.create');
     }
 
@@ -41,12 +42,17 @@ class DataAlumniController extends Controller
     {
         $validated = $request->validate([
             'nama_alumni' => 'required|max:42',
-            'angkatan' => 'required|max:14',
+            'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
             'user_id' => 'required',
-            'email'=>'required|max:42',
-            'alamat' => 'required',
+            'provinsi' => 'required',
+            'kota' => 'required',
+            'kecamatan' => 'required',
+            'desa_atau_jalan' => 'required',
+            'domisili' => 'required',
+            'angkatan' => 'required|max:14',
             'status_pekerjaan'=>'required',
+            'posisi'=>'required',
             'perusahaan'=>'nullable'
             
         ]);
@@ -96,12 +102,17 @@ class DataAlumniController extends Controller
         
         $validated = $request->validate([
             'nama_alumni' => 'required|max:42',
-            'angkatan' => 'required|max:14',
+            'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
             'user_id' => 'required',
-            'email'=>'required|max:42',
-            'alamat' => 'required',
+            'provinsi' => 'required',
+            'kota' => 'required',
+            'kecamatan' => 'required',
+            'desa_atau_jalan' => 'required',
+            'domisili' => 'required',
+            'angkatan' => 'required|max:14',
             'status_pekerjaan'=>'required',
+            'posisi'=>'required',
             'perusahaan'=>'nullable'
         ]);
 

@@ -11,7 +11,6 @@
 @endpush
 
 <div class="container-fluid">
-
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
@@ -37,7 +36,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Ada error nih 😓</h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -46,32 +45,80 @@
                         </div>
                         @endif
                         <div class="form-row">
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="nama_alumni">Nama Alumni <span class="text-danger">*</span></label>
+                            <div class="col-md-12 mb-2 mt-2">
+                                <h6 style="color: #07BD02">Data Diri</h6>
+                            </div>
+                            <div class="form-group col-md-12 mb-2">
+                                <label for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input id="nama_alumni" type="text" class="form-control"
+                                    <input id="nama_alumni" type="text" class="form-control" placeholder="Nama Lengkap"
                                         value="{{old('nama_alumni')}}" name="nama_alumni" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="email">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input id="email" type="email" class="form-control"
+                                    <input id="email" type="email" class="form-control" placeholder="contoh@gmail.com"
                                         value="{{old('email')}}" name="email" required>
                                 </div>
                             </div>
-                        </div>
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="no_telp">No Telepon<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="no_telp" type="text" class="form-control"
+                                        value="{{old('no_telp')}}" name="no_telp" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h6 style="color: #07BD02">Alamat Lengkap</h6>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="provinsi" type="text" class="form-control"
+                                    value="{{old('provinsi')}}" name="provinsi" required>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="kota" type="text" class="form-control"
+                                    value="{{old('kota')}}" name="kota" required>   
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="kecamatan" type="text" class="form-control"
+                                    value="{{old('kecamatan')}}" name="kecamatan" required>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="desa_atau_jalan">Desa / Jalan <span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="desa_atau_jalan" type="text" class="form-control"
+                                        value="{{old('desa_atau_jalan')}}" name="desa_atau_jalan" required>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="domisili">Domisili<span class="text-danger">*</span></label>
+                                <div class="input-group mb-3">
+                                    <input id="domisili" type="text" class="form-control" placeholder="Kota"
+                                    value="{{old('domisili')}}" name="domisili" required>  
+                                </div>
+                            </div>
 
-                        <div class="form-row">
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h6 style="color: #07BD02">Data Akademik</h6>
+                            </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="angkatan">Angkatan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <select class="custom-select" id="angkatan" name="angkatan">
-                                        <option value="" disabled selected>Pilih</option>
+                                    <select class="form-control" id="angkatan" name="angkatan">
+                                        <option value="" disabled selected>Pilih Tahun</option>
                                         <option value="2007">2007</option>
                                         <option value="2008">2008</option>
-                                        <option value="2009">2008</option>
+                                        <option value="2009">2009</option>
                                         <option value="2010">2010</option>
                                         <option value="2011">2011</option>
                                         <option value="2012">2012</option>
@@ -83,31 +130,24 @@
                                         <option value="2018">2018</option>
                                         <option value="2019">2019</option>
                                         <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
+                                        <option value="2021">2022</option>
                                         <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
                                     </select>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="no_telp">No Telepon <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input id="no_telp" type="text" class="form-control"
-                                        value="{{old('no_telp')}}" name="no_telp" required>
-                                </div>
-                            </div>
+                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="alamat">Alamat <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="alamat" type="text" value="{{old('alamat')}}" class="form-control"
-                                        name="alamat">
-                                </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-2 mt-4">
+                                <h6 style="color: #07BD02">Data Karir</h6>
                             </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <select class="custom-select" id="status_pekerjaan" name="status_pekerjaan">
+                                    <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
                                         <option value="" disabled selected>Pilih</option>
                                         <option value="Bekerja">Bekerja</option>
                                         <option value="Belum Bekerja">Belum Bekerja</option>
@@ -115,23 +155,33 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="perusahaan">Perusahaan/Instansi <span class="text-danger">*</span></label>
+                                <label for="posisi">Posisi Pekerjaan</label>
                                 <div class="input-group mb-3">
-                                    <input id="perusahaan" type="text" value="{{old('perusahaan')}}" class="form-control"
-                                        name="perusahaan">
+                                    <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Ex: Software Engineer"
+                                    class="form-control" name="posisi">
                                 </div>
+                                <label for="posisi"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
+                            </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="perusahaan">Perusahaan/Instansi</label>
+                                <div class="input-group mb-3">
+                                    <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Ex: Google"
+                                    class="form-control" name="perusahaan">
+                                </div>
+                                <label for="perusahaan"> <span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary m-r-15" type="submit">Tambah</button>
-                        <button class="btn btn-light" type="reset">Reset</button>
+                        <button class="btn btn-danger" type="reset">Reset</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 
 @push('timepicker-scripts')
 <script src="{{url('cuba/assets/js/time-picker/jquery-clockpicker.min.js')}}"></script>

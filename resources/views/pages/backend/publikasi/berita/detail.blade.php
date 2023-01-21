@@ -1,9 +1,7 @@
 @extends('layouts.backend.master')
 
-@foreach ($items as $item )
     
 @section('title', $item->judul . ' — Fateka')
-@endforeach
 @section('content')
 
 <style>
@@ -17,16 +15,16 @@
 </style>
 
 <!-- file wrapper for better tabs start-->
-<div
+<div>
     <div class="container-fluid">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">{{$item->judul}}</li>
                         <li class="breadcrumb-item">
                             <a href="{{route('berita.index')}}">Berita</a>
                         </li>
-                        <li class="breadcrumb-item active">Detail Berita</li>
                     </ol>
                 </div>
             </div>
@@ -37,25 +35,18 @@
         <div class="row p-b-50">
             <div class="col-sm-12">
                 <div class="blog-single">
-                    @forelse ($items as $item )
                     <div class="blog-box blog-details">
-                        <div class="img-fluid">
-                            <img width="936px" src="{{url('https://plus.unsplash.com/premium_photo-1671076131210-5376fccb100b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
+                        <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
+                            <img width="100%" src="{{url('https://plus.unsplash.com/premium_photo-1671076131210-5376fccb100b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmFubmVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
                         </div>
-                        <div class="blog-details">
+                        <div class="img-fluid">
+                        </div>
+                        <div class="blog-details p-0">
                             <ul class="blog-social">
                                 <li>{{$item->tanggal}}</li>
                                 <li>{{$item->kategori}}</li>
                                 <li><i class="icofont icofont-user"></i>{{$item->author}}</li>
                                 <li ><a href="{{route('berita.edit', $item->id)}}">Edit Berita</a></li>
-                                <li><form action="{{route('berita.destroy', $item->id)}}" method="POST"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button class="btn btn-danger px-2">Delete
-                                    </button>
-                                </form>
-                                </li>
                             </ul>
                             <h1 class="mt-3">
                                 {{$item->judul}}
@@ -65,8 +56,6 @@
                             </div>
                         </div>
                     </div>
-                    @empty
-                    @endforelse
                 </div>
             </div>
         </div>
@@ -86,4 +75,5 @@
     <!-- main content end-->
 </div>
 <!-- file wrapper for better tabs start-->
+
 @endsection
