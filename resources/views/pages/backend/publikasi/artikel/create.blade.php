@@ -64,17 +64,16 @@
                                                 value="{{old('kategori')}}" type="text" required="">
                                         </div>
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height 450px</span></label>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-input" name="thumbnail">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
-                                <div class="form-group">
-                                    <label for="customFile">Thumbnail (Optional)</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <input class="form-control" type="hidden" name="author"
                                         value="{{Auth::user()->name}}">
@@ -95,7 +94,6 @@
                             <div class="col-sm-12">
                                 <div class="btn-showcase">
                                     <button class="btn btn-primary" type="submit">Tambah</button>
-                                    <input class="btn btn-danger" type="reset" value="Reset">
                                 </div>
                             </div>
                         </form>

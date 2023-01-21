@@ -56,16 +56,15 @@
             <div class="row">
                 @forelse ($items as $item) 
                 <div class="col-xl-3 col-sm-6 xl-4">
-                    <div class="card">
-                         <div class="card-body">
-                            <img src="{{'https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'. $item->thumbnail }}" class="card-img-top" alt="..." style="border-top-left-radius: 10px; border-top-right-radius:10px; box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
-                            <a class="" href="{{route('artikel.show', $item->id)}}" target="">
+                    <a class="" href="{{route('artikel.show', $item->judul)}}" target="">
+                        <div class="card">
+                            <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px"></div>
+                            <div class="card-body" style="height: 150px">
                                 <h4>{{ $item->judul }}</h4>
-                            </a>
-                            <p>{{ $item->kategori }}</p>
-                            <p>{{ $item->author }}</p>
+                                <p>{{ $item->kategori }}</p>
+                            </div>
                         </div>
-                    </div>
+                        </a>
                 </div>
                 @empty
                 @endforelse  

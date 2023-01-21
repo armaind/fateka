@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artikel;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ArtikelController extends Controller
 {
@@ -49,16 +50,15 @@ class ArtikelController extends Controller
             'kategori' => 'max:64',
             'isi_artikel' => 'required'
         ]);
-
+        $data = Artikel::create($request->all());
         if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Artikel::create([
+            $request->file('thumbnail')->move('images/', $request->file('thumbnail')->getClientOriginalName());
+            $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
+            $data->save();
+            ([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
-                'thumbnail' => $finalName,
+                'thumbnail' => $request->thumbnail,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
@@ -86,9 +86,9 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($judul)
     {
-        $item = Artikel::findOrFail($id);
+        $item = DB::table('artikel')->where('judul',$judul)->first();
         return view('pages.backend.publikasi.artikel.detail',[
             'item' => $item
         ]);
@@ -128,34 +128,7 @@ class ArtikelController extends Controller
             'artikel' => 'max:64',
             'isi_artikel' => 'required'
         ]);
-
-        if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Artikel::findOrFail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'kategori' => $request->kategori,
-                'thumbnail' => $finalName,
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'isi_artikel' => $request->isi_artikel,
-            ]);
-        } else {
-            $item = Artikel::findOrFail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'kategori' => $request->kategori,
-                'thumbnail' => 'thumbnail-default.jpg',
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'isi_artikel' => $request->isi_artikel,
-            ]);
-        }
+        $artikel = Artikel::find($id)->update($request->all());
 
         return redirect('/dashboard/artikel');
     }

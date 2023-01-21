@@ -26,9 +26,10 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60')}}" class="d-block w-100" alt="..." style="border-radius:15px;" height="420px">
+                                <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:450px; background-size:cover">
+                                </div>
                                 {{-- <div class="carousel-caption d-none d-md-block">
-                                    <a href=""><h1>Judul Berita</h1></a>
+                                    <a href=""><h1 style="text-emphasis-color: white">Judul Berita</h1></a>
                                     <h3>Kategori</h3>
                                 </div> --}}
                             </div>
