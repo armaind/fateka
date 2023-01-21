@@ -58,15 +58,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="form-group">
-                                <label for="customFile">Thumbnail (Optional)</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
-                                </div>
-                            </div>
-
                             <div class="form-group">
                                 <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
                                 <input class="form-control" type="hidden" name="tanggal"
