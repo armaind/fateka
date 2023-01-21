@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class BeritaController extends Controller
 {
@@ -85,9 +86,9 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($judul)
     {
-        $item = Berita::findOrFail($id);
+        $item = DB::table('berita')->where('judul', $judul)->first();
         return view('pages.backend.publikasi.berita.detail',[
             'item' => $item
         ]);
@@ -127,34 +128,7 @@ class BeritaController extends Controller
             'kategori' => 'required|max:64',
             'isi_berita' => 'required',
         ]);
-
-        if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = Berita::findOrfail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'kategori' => $request->kategori,
-                'thumbnail' => $finalName,
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'isi_berita' => $request->isi_berita
-            ]);
-        } else {
-            $item = Berita::findOrfail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'kategori' => $request->kategori,
-                'thumbnail' => 'thumbnail-default.jpg',
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'isi_berita' => $request->isi_berita
-            ]);
-        }
+        $berita = Berita::find($id)->update($request->all());
         
         return redirect('/dashboard/berita');
     }

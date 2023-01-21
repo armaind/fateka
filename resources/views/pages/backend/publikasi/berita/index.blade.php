@@ -77,7 +77,7 @@
             <div class="row">
                 @forelse ($items as $item)    
                 <div class="col-xl-3 col-sm-6 xl-4">
-                    <a class="" href="{{route('berita.show', $item->id)}}" target="">
+                    <a class="" href="{{route('berita.show', $item->judul)}}" target="">
                     <div class="card">
                         <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px"></div>
                         <div class="card-body" style="height: 150px">
