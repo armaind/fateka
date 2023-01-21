@@ -77,15 +77,15 @@
             <div class="row">
                 @forelse ($items as $item)    
                 <div class="col-xl-3 col-sm-6 xl-4">
+                    <a class="" href="{{route('berita.show', $item->id)}}" target="">
                     <div class="card">
                         <img src="{{ asset('images/' . $item->thumbnail) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a class="" href="{{route('berita.show', $item->id)}}" target="">
-                                <h4>{{ $item->judul }}</h4>
-                            </a>
+                            <h4>{{ $item->judul }}</h4>
                             <p>{{ $item->kategori }}</p>
                         </div>
                     </div>
+                    </a>
                 </div>
                 @empty
                 @endforelse   
