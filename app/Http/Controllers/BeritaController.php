@@ -47,7 +47,8 @@ class BeritaController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
+            'judul' => 'required|max:225',
+            'headline' => 'required|max:45',
             'kategori' => 'required|max:64',
             'isi_berita' => 'required',
         ]);
@@ -58,6 +59,7 @@ class BeritaController extends Controller
             $data->save();
             ([
                 'judul' => $request->judul,
+                'headline' => $request->headline,
                 'kategori' => $request->kategori,
                 'thumbnail' => $request->thumbnail,
                 'tanggal' => $request->tanggal,
@@ -68,6 +70,7 @@ class BeritaController extends Controller
         } else {
             ([
                 'judul' => $request->judul,
+                'headline' => $request->headline,
                 'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',
                 'tanggal' => $request->tanggal,
@@ -79,7 +82,7 @@ class BeritaController extends Controller
         
         return redirect('/dashboard/berita');
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -122,9 +125,10 @@ class BeritaController extends Controller
         $this->validate($request, [
             'thumbnail' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
+        
         $validated = $request->validate([
-            'judul' => 'required|max:64',
+            'judul' => 'required|max:225',
+            'headline' => 'required|max:45',
             'kategori' => 'required|max:64',
             'isi_berita' => 'required',
         ]);

@@ -46,7 +46,7 @@ class ArtikelController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
+            'judul' => 'required|max:225',
             'kategori' => 'max:64',
             'isi_artikel' => 'required'
         ]);
@@ -124,7 +124,7 @@ class ArtikelController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
+            'judul' => 'required|max:225',
             'artikel' => 'max:64',
             'isi_artikel' => 'required'
         ]);

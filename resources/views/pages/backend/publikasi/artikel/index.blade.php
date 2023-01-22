@@ -58,10 +58,11 @@
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <a class="" href="{{route('artikel.show', $item->judul)}}" target="">
                         <div class="card">
-                            <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px"></div>
-                            <div class="card-body" style="height: 150px">
-                                <h4>{{ $item->judul }}</h4>
-                                <p>{{ $item->kategori }}</p>
+                            <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
+                            <div class="card-body" style="height: 200px; border-radius:10px">
+                                <h5>{{ $item->judul }}</h5>
+                                <h7>{{ $item->kategori }} | <i class="icofont icofont-user"></i> {{ $item->author }}</h7>
+                                <p class="comment">{{ $item->tanggal }}</p>
                             </div>
                         </div>
                         </a>

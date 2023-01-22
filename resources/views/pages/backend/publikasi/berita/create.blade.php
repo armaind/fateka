@@ -57,9 +57,17 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
+                                        <label for="headline">Headline <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="headline" name="headline" 
+                                            value="{{old('headline')}}" type="text" required="">
+                                        </div>
+                                        <label for="headline"><span class="text-danger">*Max 45 karakter</span></label>
+                                    </div>
+                                    <div class="form-group col-md-6 ">
                                         <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="kategori" name="kategori"
+                                            <input class="form-control" id="kategori" name="kategori" placeholder="Ex: Teknologi, Ekonomi"
                                                 value="{{old('kategori')}}" type="text" required="">
                                         </div>
                                     </div>
@@ -93,6 +101,7 @@
                             <div class="col-sm-12">
                                 <div class="btn-showcase">
                                     <button class="btn btn-primary" type="submit">Tambah</button>
+                                    <a class="btn btn-light" href="{{route('berita.index')}}">Kembali</a>
                                 </div>
                             </div>
                         </form>

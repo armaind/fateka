@@ -16,13 +16,14 @@
 
 <!-- file wrapper for better tabs start-->
 <div>
-    <div class="container-fluid">
+    <!-- main news start-->
+    <div class="container-fluid my-3 p-t-30 p-r-50 p-b-30 p-l-50">
         <div class="page-title">
             <div class="row">
                 <div class="col-12">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
-                            <a href="{{route('artikel.index')}}">artikel</a>
+                            <a href="{{route('artikel.index')}}">Artikel</a>
                         </li>
                         <li class="breadcrumb-item active">{{$item->kategori}}</li>
                         <li class="breadcrumb-item active">{{$item->judul}}</li>
@@ -30,28 +31,35 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- main news start-->
-    <div class="container-fluid my-3 p-t-30 p-r-50 p-b-30 p-l-50">
         <div class="row p-b-50">
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="blog-box blog-details">
                         <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
-                            <div style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:450px"></div>
+                            <div style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:450px; border-radius:15px"></div>
                         </div>
-                        <div class="blog-details p-0">
+                        <p class="comment pull-right p-2">{{$item->judul}}</p>
+                        <div class="blog-details p-0 m-0">
                             <ul class="blog-social">
                                 <li>{{$item->tanggal}}</li>
                                 <li>{{$item->kategori}}</li>
                                 <li><i class="icofont icofont-user"></i>{{$item->author}}</li>
-                                <li ><a href="{{route('artikel.edit', $item->id)}}">Edit artikel</a></li>
                             </ul>
                             <h1 class="mt-3">
                                 {{$item->judul}}
                             </h1>
                             <div class="single-blog-content-top">
-                                <div class="mt-3">{!!htmlspecialchars_decode($item->isi_artikel)!!}</div>
+                                <div class="mt-5">{!!htmlspecialchars_decode($item->isi_artikel)!!}</div>
+                            </div>
+                            <div class="mt-5">
+                                <a class="btn btn-primary" href="{{route('artikel.index')}}">Kembali</a>
+                                <a class="btn btn-light" href="{{route('artikel.edit', $item->id)}}">Edit Artikel</a>
+                                <form action="{{route('artikel.destroy', $item->id)}}" method="POST"
+                                    class="d-inline">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger" type="submit">Hapus</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -59,6 +67,7 @@
             </div>
         </div>
         <div class="comment">
+            <h5>Tinggalkan komentar di sini</h5>
             <div id="disqus_thread"></div>
             <script>
                 (function() { // DON'T EDIT BELOW THIS LINE

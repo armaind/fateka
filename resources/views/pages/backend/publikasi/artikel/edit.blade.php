@@ -78,7 +78,8 @@
 
                         <div class="col-sm-12">
                             <div class="btn-showcase">
-                                <button type="submit" class="btn btn-primary" type="submit">Update</button>
+                                <button type="submit" class="btn btn-light" type="submit">Update</button>
+                                <a class="btn btn-primary" href="{{route('artikel.index')}}">Kembali</a>
                             </div>
                         </div>
                     </div>
@@ -87,6 +88,7 @@
         </div>
     </div>
 </div>
+
 
 @push('ckeditor-scripts')
 <script src="{{url('cuba/assets/js/editor/ckeditor/ckeditor.js')}}"></script>

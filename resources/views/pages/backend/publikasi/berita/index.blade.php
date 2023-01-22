@@ -11,7 +11,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Di bawah ini merupakan berita terbaru seputar Teknik Komputer Universitas Telkom
+                    Di bawah ini merupakan kumpulan berita eksklusif dari Fateka
                 </p>
             </div>
         </div>
@@ -26,7 +26,7 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:450px; background-size:cover">
+                                <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:350px; background-size:cover">
                                 </div>
                                 {{-- <div class="carousel-caption d-none d-md-block">
                                     <a href=""><h1 style="text-emphasis-color: white">Judul Berita</h1></a>
@@ -75,18 +75,40 @@
             </div>
         </div>
         <div class="product-wrapper-grid">
+            <h4 class="mb-4">Berita Terbaru</h4>
             <div class="row">
                 @forelse ($items as $item)    
                 <div class="col-xl-3 col-sm-6 xl-4">
                     <a class="" href="{{route('berita.show', $item->judul)}}" target="">
                     <div class="card">
-                        <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px"></div>
-                        <div class="card-body" style="height: 150px">
-                            <h4>{{ $item->judul }}</h4>
-                            <p>{{ $item->kategori }}</p>
+                        <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
+                    </a>
+                        <div class="p-20" style="height: 150px; border-radius:10px" >
+                            <h5>{{ $item->headline }}</h5>
+                            <h7>{{ $item->kategori }} | <i class="icofont icofont-user"></i> {{ $item->author }}</h7>
+                                <p class="comment" style="font-size: 10px">{{ $item->tanggal }}</p>
                         </div>
                     </div>
+                </div>
+                @empty
+                @endforelse   
+            </div>
+        </div>
+        <div class="product-wrapper-grid">
+            <h4 class="mb-4 mt-2">Berita Terpopuler</h4>
+            <div class="row">
+                @forelse ($items as $item)    
+                <div class="col-xl-3 col-sm-6 xl-4">
+                    <a class="" href="{{route('berita.show', $item->judul)}}" target="">
+                    <div class="card">
+                        <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
                     </a>
+                        <div class="p-20" style="height: 150px; border-radius:10px" >
+                            <h5>{{ $item->headline }}</h5>
+                            <h7>{{ $item->kategori }} | <i class="icofont icofont-user"></i> {{ $item->author }}</h7>
+                                <p class="comment" style="font-size: 10px">{{ $item->tanggal }}</p>
+                        </div>
+                    </div>
                 </div>
                 @empty
                 @endforelse   
