@@ -70,8 +70,8 @@
                 </div>
             </div>
         </div>
-        <div class="comment">
-            <h5>Tinggalkan komentar di sini</h5>
+        <div style="background-color:#07BD02; height:0.1em">.</div>
+        <div class="comment mt-5">
             <div id="disqus_thread"></div>
             <script>
                 (function() { // DON'T EDIT BELOW THIS LINE

@@ -17,23 +17,21 @@
 <!-- file wrapper for better tabs start-->
 <div>
     <!-- main news start-->
-    <div class="container-fluid my-3 p-t-30 p-r-50 p-b-30 p-l-50">
-        <div class="page-title">
-            <div class="row">
-                <div class="col-12">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="{{route('artikel.index')}}">Artikel</a>
-                        </li>
-                        <li class="breadcrumb-item active">{{$item->kategori}}</li>
-                        <li class="breadcrumb-item active">{{$item->judul}}</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid my-3 p-t-50 p-r-50 p-b-30 p-l-50">
         <div class="row p-b-50">
             <div class="col-sm-12">
                 <div class="blog-single">
+                    <div class="row">
+                        <div class="col-12">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="{{route('artikel.index')}}">Artikel</a>
+                                </li>
+                                <li class="breadcrumb-item active">{{$item->kategori}}</li>
+                                <li class="breadcrumb-item active">{{$item->judul}}</li>
+                            </ol>
+                        </div>
+                    </div>
                     <div class="blog-box blog-details">
                         <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
                             <div style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:450px; border-radius:15px"></div>
@@ -48,13 +46,19 @@
                             <h1 class="mt-3">
                                 {{$item->judul}}
                             </h1>
+                            <div style="background-color:#07BD02; height:0.1em">.</div>
                             <div class="single-blog-content-top">
-                                <div class="mt-5">{!!htmlspecialchars_decode($item->isi_artikel)!!}</div>
+                                <div class="mt-4 mb-4">{!!htmlspecialchars_decode($item->isi_artikel)!!}</div>
+                                <p>Penulis: {{ $item->author }}</p>
+                                <div class="mt-2"><strong>Tags:</strong></div>
+                                <div class="row col-6">
+                                    <button class="mt-2 btn btn-outline-dark">{{ $item->kategori }}</button>
+                                </div>
                             </div>
                             <div class="mt-5">
                                 <a class="btn btn-primary" href="{{route('artikel.index')}}">Kembali</a>
                                 <a class="btn btn-light" href="{{route('artikel.edit', $item->id)}}">Edit Artikel</a>
-                                <form action="{{route('artikel.destroy', $item->id)}}" method="POST"
+                                <form class="pull-right" action="{{route('artikel.destroy', $item->id)}}" method="POST"
                                     class="d-inline">
                                     @csrf
                                     @method('delete')
@@ -66,8 +70,8 @@
                 </div>
             </div>
         </div>
-        <div class="comment">
-            <h5>Tinggalkan komentar di sini</h5>
+        <div style="background-color:#07BD02; height:0.1em">.</div>
+        <div class="comment mt-5">
             <div id="disqus_thread"></div>
             <script>
                 (function() { // DON'T EDIT BELOW THIS LINE

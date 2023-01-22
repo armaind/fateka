@@ -17,7 +17,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Dibawah ini adalah beberapa Lowongan Kerja yang dapat anda lamar
+                    Di bawah ini adalah beberapa Lowongan Kerja terbaru dari Fateka
                 </p>
             </div>
         </div>

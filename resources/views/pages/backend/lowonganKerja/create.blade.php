@@ -9,7 +9,7 @@
 @endpush
 
 <!-- file wrapper for better tabs start-->
-<div>
+<div>   
     <!-- pages title header start-->
     <div class="container-fluid">
         <div class="page-title">
@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        Di bawah ini adalah halaman untuk tambah lowongan kerja
+                       Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
                     </p>
                 </div>
             </div>
@@ -31,15 +31,12 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <div class="card-header">
-                        <h5>Tulis Catatan</h5>
-                    </div>
                     <div class="card-body add-post">
                         @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Ada error nih 😓</h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -52,65 +49,135 @@
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-row">
+                                    <div class="col-md-12 mb-2 mt-2">
+                                        <h6 style="color: #07BD02">Data Pekerjaan</h6>
+                                    </div>
                                     <div class="form-group col-md-6">
-                                        <label for="posisi">Posisi Pekerjaan <span class="text-danger">*</span></label>
+                                        <label for="posisi">Nama Pekerjaan <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}"
+                                            <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}" placeholder="Ex: Systems Engineer | AI-HPC " 
                                                 type="text" required>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6 ">
-                                        <label for="perusahaan">Perusahaan/Instansi <span class="text-danger">*</span></label>
+                                    <div class="form-group col-md-6">
+                                        <label for="posisi">Posisi Kerja <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="perusahaan" name="perusahaan"
-                                                value="{{old('perusahaan')}}" type="text" required>
+                                            <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}" placeholder="Ex: Staff" 
+                                                type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="tipe_pekerjaan">Tipe Pekerjaan</label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="tipe_pekerjaan" name="tipe_pekerjaan">
+                                                <option value="" disabled selected>Pilih</option>
+                                                <option value="Full Time">Full Time</option>
+                                                <option value="Part Time">Part Time</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="tingkat_pekerjaan">Tingkat Pekerjaan</label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="tingkat_pekerjaan" name="tingkat_pekerjaan">
+                                                <option value="" disabled selected>Pilih</option>
+                                                <option value="Pemula">Pemula</option>
+                                                <option value="Menengah">Menengah</option>
+                                                <option value="Profesional">Profesional</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="gaji">Gaji</label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="gaji" name="gaji" value="{{old('gaji')}}" placeholder="Ex: Rp.12.000.000,-" 
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="date">Berlaku Sampai</label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="date" name="date" value="{{old('date')}}" 
+                                                type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height 450px</span></label>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-input" name="thumbnail">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6 ">
-                                        <label for="alamat">Alamat <span class="text-danger">*</span></label>
-                                        <div class="input-group mb-3">
-                                            <input class="form-control" id="alamat" name="alamat"
-                                                value="{{old('alamat')}}" type="text" required>
+                                <div class="email-wrapper">
+                                    <div class="theme-form">
+                                        <div class="form-group">
+                                            <label>Deskripsi Kerja <span class="text-danger">*</span></label>
+                                            <textarea id="text-box" name="deskripsi" cols="10" rows="2"></textarea>
                                         </div>
                                     </div>
-                                </div>
-                                    
                                 </div>
 
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
-                                <div class="form-group">
-                                    <label for="customFile">Thumbnail: (Optional)</label>
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <input class="form-control" type="hidden" name="author"
                                         value="{{Auth::user()->name}}">
                                     <input class="form-control" type="hidden" name="tanggal"
                                         value="{{{now()->toDateString()}}}">
                                 </div>
-                                <div class="email-wrapper">
-                                    <div class="theme-form">
-                                        <div class="form-group">
-                                            <label>Deskripsi Kerja <span class="text-danger">*</span></label>
-                                            <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
+
+                                <div class="form-row">
+                                    <div class="col-md-12 mb-2 mt-2">
+                                        <h6 style="color: #07BD02">Data Perusahaan</h6>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="perusahaan">Nama Perusahaan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="perusahaan" name="perusahaan" value="{{old('perusahaan')}}" placeholder="Ex: PT Presentelogics" 
+                                                type="text" required>
                                         </div>
                                     </div>
-                                </div>
-
-
+                                    <div class="form-group col-md-6">
+                                        <label for="kota">Kota<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="kota" name="kota" value="{{old('kota')}}" placeholder="Ex: Jakarta" 
+                                                type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="negara">Negara<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="negara" name="negara" value="{{old('negara')}}" placeholder="Ex: Indonesia" 
+                                                type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="jumlah">Jumlah Kebutuhan</label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="jumlah" name="jumlah" value="{{old('jumlah')}}" placeholder="Ex: 20" 
+                                                type="number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="no_telp">No Telepon</label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="no_telp" name="no_telp" value="{{old('no_telp')}}" 
+                                                type="number">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="example@gmail.com" 
+                                                type="email" required>
+                                        </div>
+                                    </div>
+                                </div>        
                             </div>
-                            <div class="col-sm-12 m-b-15">
-                                <div class="btn-showcase float-right">
+                            <div class="col-sm-12">
+                                <div class="btn-showcase">
                                     <button class="btn btn-primary" type="submit">Tambah</button>
-                                    <input class="btn btn-light" type="reset" value="Reset">
+                                    <a class="btn btn-light" href="{{route('lowonganKerja.index')}}">Kembali</a>
                                 </div>
                             </div>
                         </form>
@@ -122,6 +189,17 @@
     <!-- main content end-->
 </div>
 <!-- file wrapper for better tabs start-->
+
+<script>
+    $( function() {
+      $( "#date" ).datepicker({
+        autoclose:true,
+        todayHighlight:true,
+        format:'yyyy-mm-dd',
+        language: 'id'
+      });
+    } );
+</script>
 
 @push('ckeditor-scripts')
 <script src="{{url('cuba/assets/js/editor/ckeditor/ckeditor.js')}}"></script>

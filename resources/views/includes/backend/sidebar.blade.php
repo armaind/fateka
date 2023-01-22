@@ -118,7 +118,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/')}}">
+                            <a href="{{url('/dashboard/lowonganKerja/tambah-lowongan-kerja')}}">
                                 
                                 Tambah Lowongan Kerja
                             </a>

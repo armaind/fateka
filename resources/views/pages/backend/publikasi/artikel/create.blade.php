@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        Di bawah ini adalah halaman untuk tambah Artikel
+                        Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
                     </p>
                 </div>
             </div>
@@ -88,8 +88,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                             </div>
                             <div class="col-sm-12">
                                 <div class="btn-showcase">

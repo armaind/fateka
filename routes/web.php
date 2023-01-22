@@ -55,8 +55,8 @@ Route::prefix('dashboard')
         Route::resource('artikel', 'App\Http\Controllers\ArtikelController');
         
         /* ------------------------- Lowongan Kerja Pages ------------------------ */
-        Route::get('/lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@index');
-        Route::get('/lowongan-kerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
+        Route::get('/lowonganKerja', 'App\Http\Controllers\LowonganKerjaController@index');
+        Route::get('/lowonganKerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
         Route::resource('lowonganKerja', 'App\Http\Controllers\LowonganKerjaController');
 
         /* ------------------------- Kegiatan Pages ------------------------ */

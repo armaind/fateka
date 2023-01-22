@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        Di bawah ini adalah halaman untuk tambah berita
+                       Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
                     </p>
                 </div>
             </div>
