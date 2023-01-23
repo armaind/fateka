@@ -49,6 +49,8 @@ Route::prefix('dashboard')
         Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
         Route::resource('berita', 'App\Http\Controllers\BeritaController');
         
+        Route::patch('/berita/{id}/edit', 'App\Http\Controllers\BeritaController@update');
+
         /* ------------------------- Artikel ------------------------- */
         Route::get('/artikel', 'App\Http\Controllers\ArtikelController@index');
         Route::get('/artikel/tambah-artikel', 'App\Http\Controllers\ArtikelController@create');

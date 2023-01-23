@@ -42,4 +42,11 @@ class AuthenticationTest extends TestCase
 
         $this->assertGuest();
     }
+    public function test_redirect_if_users_not_authenticated()
+    {
+        $this->withoutExceptionHandling();
+        
+        $this->get(RouteServiceProvider::HOME)
+        ->assertRedirect(route('login'));
+    }
 }

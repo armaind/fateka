@@ -19,6 +19,7 @@ class UserRolePermissionSeeder extends Seeder
     public function run()
     {
         $default_user_value = [
+            'google_id'=> '123123123',
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
@@ -28,21 +29,25 @@ class UserRolePermissionSeeder extends Seeder
             $admin = User::create(array_merge([
                 'email' => 'admin@gmail.com',
                 'name' => 'admin',
+                'role' => '1'
             ], $default_user_value));
     
             $dosen = User::create(array_merge([
                 'email' => 'dosen@gmail.com',
                 'name' => 'dosen',
+                'role' => '2'
             ], $default_user_value));
     
             $alumni = User::create(array_merge([
                 'email' => 'alumni@gmail.com',
                 'name' => 'alumni',
+                'role' => '3'
             ], $default_user_value));
     
             $mahasiswa = User::create(array_merge([
                 'email' => 'mahasiswa@gmail.com',
                 'name' => 'mahasiswa',
+                'role' => '4'
             ], $default_user_value));
     
             $role_admin = Role::create(['name' => 'admin']);

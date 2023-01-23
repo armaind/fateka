@@ -30,7 +30,8 @@ class GoogleAuthController extends Controller
                 'name' => $user->getName(),
                 'email' => $user->getEmail(),
                 'google_id' => $user->getId(),
-                'password' => bcrypt('1234242')
+                'password' => bcrypt('1234242'),
+                'role' => ''
             ]);
             Auth::login($newuser);
             return redirect('/dashboard');

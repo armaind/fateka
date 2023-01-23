@@ -25,7 +25,7 @@ class CreateLowonganKerjaTable extends Migration
             $table->string('perusahaan');
             $table->string('kota');
             $table->string('negara');
-            $table->int('jumlah');
+            $table->integer('jumlah');
             $table->string('no_telp');
             $table->string('email');
             $table->string('thumbnail')->nullable();
