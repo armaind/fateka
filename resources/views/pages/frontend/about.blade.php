@@ -233,34 +233,34 @@
 
             <div class="row justify-content-center common-heading heading-white iconic-boxes-v1">
                 <div class="col-xl-3 col-md-6 col-sm-10">
-                    <div class="iconic-box m-t-30">
+                    <div class="iconic-box m-t-30" style="border-radius: 25px">
                         <div class="icon icon-gradient-3">
                             <i class="far fa-database"></i>
                         </div>
                         <h4 class="title">Data Alumni</h4>
-                        <p>
+                        <p style="color: white">
                         Belum ada platform khusus untuk pencarian data alumni
                         </p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-sm-10">
-                    <div class="iconic-box m-t-30">
+                    <div class="iconic-box m-t-30"  style="border-radius: 25px">
                         <div class="icon icon-gradient-4">
                             <i class="far fas fa-briefcase"></i>
                         </div>
                         <h4 class="title">Lowongan karir</h4>
-                        <p>
+                        <p style="color: white">
                         Pendistribusian lowongan karir yang masih konvensional
                         </p>
                     </div>
                 </div>
                 <div class="col-xl-3 col-md-6 col-sm-10">
-                    <div class="iconic-box m-t-30">
+                    <div class="iconic-box m-t-30"  style="border-radius: 25px">
                         <div class="icon icon-gradient-5">
                             <i class="fas fa-retweet"></i>
                         </div>
                         <h4 class="title">Media interaksi</h4>
-                        <p>
+                        <p style="color: white">
                         Belum ada media interaksi alumni dengan civitas akademika
                         </p>
                     </div>
@@ -359,10 +359,10 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-6 cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
+            <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="" width="400px">
+        </div> 
     </div>
-    <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="">
-    </div> 
 </section>        
 
 @endsection
