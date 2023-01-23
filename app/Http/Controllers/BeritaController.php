@@ -105,7 +105,7 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        $item = Berita::findOrFail($id);
+        $item = Berita::where('id', $id)->first();
         
         return view('pages.backend.publikasi.berita.edit', [
             'item' => $item
