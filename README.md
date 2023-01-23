@@ -11,17 +11,6 @@
 Website ini berperan sebagai platform yang berfungsi untuk menyediakan informasi dan media interaksi alumni.
 <p></p>
 
-<h2 id="fitur">✨ Fitur Tersedia</h2>
-
-- Landing Page dan Autentikasi
-  - Halaman [homepage, tentang, fitur, kontak]
-  - Autentikasi [daftar dan login]
-- Pengelolaan Data Alumni
-- Berita
-- Lowongan Pekerjaan
-- Virtual Meet
-- Kuisioner
-
 <p></p>
 
 <h2 id="lisensi">Lisensi</h2>
