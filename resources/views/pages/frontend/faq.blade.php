@@ -50,33 +50,35 @@
             </div>
             @else
             <div class="header-right">
-                <ul class="header-extra">
-                    <li class="d-none d-sm-block">
-                        <a href="{{url('/login')}}" class="user-login">
-                            <i class="far fa-user-circle"></i> Masuk Aplikasi
-                        </a>
-                    </li>
-                    <li class="d-none d-md-block">
-                        <a href="{{url('/register')}}" class="template-btn primary-bg-5">
-                            Daftar Sekarang <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
-                    @endauth
-                    <li class="d-none d-xl-block">
-                        <a href="#" class="off-canvas-btn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </li>
-                    <div class="d-xl-none">
-                        <a href="#" class="navbar-toggler">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                    </div>
-                </ul>
+                <div class="container">
+                    <ul class="header-extra">
+                        <li class="d-none d-sm-block">
+                            <a href="{{url('/login')}}" class="user-login">
+                                <i class="far fa-user-circle"></i> Masuk Aplikasi
+                            </a>
+                        </li>
+                        <li class="d-none d-md-block">
+                            <a href="{{url('/register')}}" class="template-btn primary-bg-5">
+                                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        @endauth
+                        <li class="d-none d-xl-block">
+                            <a href="#" class="off-canvas-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </li>
+                        <div class="d-xl-none p-l-25">
+                            <a href="#" class="navbar-toggler">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </a>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -302,7 +304,7 @@
 
 <!--====== Start Call To Action ======-->
 <section class="cta-section bg-cover-center p-t-150 p-b-90" style="background-image: url(./../landio/assets/img/cta/cta-bg-2.jpg);">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-7 col-md-10">
                 <div class="cta-content text-center">
@@ -315,10 +317,10 @@
                 </div>
             </div>
         </div>
+        <div class="col-xl-6 cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
+            <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="" width="400px">
+        </div> 
     </div>
-    <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img3.png')}}" alt="">
-    </div> 
 </section>        
 
 @endsection
