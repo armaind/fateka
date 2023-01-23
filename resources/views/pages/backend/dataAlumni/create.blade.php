@@ -138,7 +138,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+                        
 
                         <div class="form-row">
                             <div class="col-md-12 mb-2 mt-4">

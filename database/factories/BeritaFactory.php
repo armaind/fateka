@@ -14,15 +14,19 @@ class BeritaFactory extends Factory
      */
     public function definition()
     {
+
         return [
-            'judul' => $this->faker->text(5),
-            'headline' => $this->faker->unique()->text(5),
-            'kategori' => $this->faker->unique()->text(5),
+            
+            'judul' => $this->faker->sentence(3),
+            'headline' => $this->faker->word(),
+            'thumbnail'=> $this->faker->imageUrl(640, 480, 'animals', true),
+            'kategori' => $this->faker->unique()->word(),
             'author' => $this->faker->name(),
-            'isi_berita' => $this->faker->realText($maxNbChars = 100),
-            'tanggal' => now(),
+            'isi_berita' => $this->faker->paragraph(100),
+            'tanggal' => $this->faker->dateTime(),
             'user_id' => $this->faker->email()
             
         ];
+        
     }
 }

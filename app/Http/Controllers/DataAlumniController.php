@@ -44,7 +44,7 @@ class DataAlumniController extends Controller
             'nama_alumni' => 'required|max:42',
             'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
-            'user_id' => 'required',
+            
             'provinsi' => 'required',
             'kota' => 'required',
             'kecamatan' => 'required',
@@ -104,7 +104,7 @@ class DataAlumniController extends Controller
             'nama_alumni' => 'required|max:42',
             'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
-            'user_id' => 'required',
+            
             'provinsi' => 'required',
             'kota' => 'required',
             'kecamatan' => 'required',

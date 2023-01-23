@@ -25,7 +25,6 @@ class CreateDataAlumniTable extends Migration
             $table->string('posisi');
             $table->string('domisili');
             $table->string('no_telp');
-            $table->string('user_id');
             $table->string('status_pekerjaan');
             $table->string('perusahaan')->nullable();
             $table->timestamps();
