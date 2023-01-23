@@ -1,7 +1,5 @@
 <h1 align="center">Selamat datang di repository Fateka</h1>
 
-![collegetivity-preview](https://user-images.githubusercontent.com/46257169/171705042-12da6cff-6118-45f9-9349-04d9704ca12a.png)
-
 <p></p>
 
 <h4 align="center">Website yang menyediakan informasi dan media intraksi alumni yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
