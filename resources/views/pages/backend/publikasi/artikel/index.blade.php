@@ -15,7 +15,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:350px; background-size:cover">
+                        <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:350px; background-size:cover; ">
                         </div>
                         {{-- <div class="carousel-caption d-none d-md-block">
                             <a href=""><h1 style="text-emphasis-color: white">Judul Berita</h1></a>
@@ -68,8 +68,9 @@
         <div class="card-body">
             <div class="product-grid">
                 <div class="product-wrapper-grid">
-                    <h5 class="mb-2">Artikel Terbaru</h5>
-                    <div class="mb-4" style="background-color:#07BD02; height:0.1em">.</div>
+                    <div class="row col-6 mb-4">
+                        <button class="mt-2 btn btn-outline-primary">Artikel Terbaru</button>
+                    </div>
                     <div class="row">
                         @forelse ($items as $item) 
                         <div class="col-xl-3 col-sm-6 xl-4">
@@ -77,8 +78,8 @@
                                 <div class="card">
                                     <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
                             </a>
-                            <div class="p-20" style="height: 150px; border-radius:10px" >
-                                <h5>{{ $item->judul }}</h5>
+                            <div class="p-20 b-b-primary" style="height: 150px; border-radius:10px" >
+                                <a href="{{route('artikel.show', $item->judul)}}"><h5>{{ $item->judul }}</h5></a>
                                 <h7>{{ $item->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $item->author }}</h7>
                                 <p class="comment" style="font-size: 10px">{{ $item->tanggal }}</p>
                             </div>
@@ -89,8 +90,9 @@
                     </div>
                 </div>
                 <div class="product-wrapper-grid">
-                    <h5 class="mb-2">Artikel Terpopuler</h5>
-                    <div class="mb-4" style="background-color:#07BD02; height:0.1em">.</div>
+                    <div class="row col-6 mb-4">
+                        <button class="mt-2 btn btn-outline-primary">Artikel Terpopuler</button>
+                    </div>
                     <div class="row">
                         @forelse ($items as $item) 
                         <div class="col-xl-3 col-sm-6 xl-4">
@@ -98,8 +100,8 @@
                                 <div class="card">
                                     <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
                             </a>
-                            <div class="p-20" style="height: 150px; border-radius:10px" >
-                                <h5>{{ $item->judul }}</h5>
+                            <div class="p-20 b-b-primary" style="height: 150px; border-radius:10px" >
+                                <a href="{{route('artikel.show', $item->judul)}}"><h5>{{ $item->judul }}</h5></a>
                                 <h7>{{ $item->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $item->author }}</h7>
                                 <p class="comment" style="font-size: 10px">{{ $item->tanggal }}</p>
                             </div>

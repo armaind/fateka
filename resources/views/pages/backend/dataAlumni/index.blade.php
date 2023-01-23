@@ -13,19 +13,21 @@
 
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
+            <div class="d-block w-100 align-content-center" style="background-image: url('../images/splide/data.png'); border-radius:15px; height:150px; background-size:cover">
+                <div class="card-body">
+                    <h4 class="text-center text-white">
+                        <strong>Stay connected</strong>, discover a wider network
+                    </h4>
+                </div>
+            </div>
             <div class="card-header bg-primary">
                 <h5 class="text-white">Data Alumni</h5>
-            </div>
-            <div class="card-body">
-                <p>
-                    Di bawah ini adalah tabel Data Alumni Teknik Komputer Universitas Telkom
-                </p>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" >
             <div class="card">
                 <div class="card-body">
                     <div class="dt-ext table-responsive">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\LowonganKerja;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LowonganKerjaController extends Controller
 {
@@ -17,7 +18,7 @@ class LowonganKerjaController extends Controller
     {
         $items = Auth::user()->id;
         $items = LowonganKerja::paginate(10);
-        return view('pages.backend.lowongankerja.index', [
+        return view('pages.backend.lowonganKerja.index', [
             'items' => $items
         ]);
     }
@@ -45,39 +46,69 @@ class LowonganKerjaController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
-            'matkul' => 'max:64',
-            'content' => 'required' 
-        ]);
+            'nama' => 'required|max:100',
+            'posisi' => 'required|max:100',
+            'tipe_pekerjaan' => 'nullable',
+            'tingkat_pekerjaan' => 'nullable',
+            'gaji' => 'nullable',
+            'berlaku' => 'nullable',
+            'deskripsi' => 'required',
+            'perusahaan' => 'required|max:100',
+            'kota' => 'required|max:64',
+            'negara' => 'required|max:64',
+            'jumlah' => 'nullable',
+            'no_telp' => 'nullable',
+            'email' => 'required|max:64',
 
+        ]);
+        $data = LowonganKerja::create($request->all());
         if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            LowonganKerja::create([
-                'judul' => $request->judul,
-                'thumbnail' => $finalName,
+            $request->file('thumbnail')->move('images/', $request->file('thumbnail')->getClientOriginalName());
+            $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
+            $data->save();
+            ([
+                'nama' => $request->nama,
+                'posisi' => $request->posisi,
+                'tipe_pekerjaan' => $request->tipe_pekerjaan,
+                'tingkat_pekerjaan' => $request->tingkat_pekerjaan,
+                'gaji' => $request->gaji,
+                'berlaku' => $request->berlaku,
+                'thumbnail' => $request->thumbnail,
+                'deskripsi' => $request->deskripsi,
+                'perusahaan' =>  $request->perusahaan,
+                'kota' => $request->kota,
+                'negara' =>  $request->negara,
+                'jumlah' =>  $request->jumlah,
+                'no_telp' =>  $request->no_telp,
+                'email' => $request->email,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
-                'content' => $request->content,
 
             ]);
         } else {
-            LowonganKerja::create([
-                'judul' => $request->judul,
-                'thumbnail' => 'thumbnail-default.jpg',
+            ([
+                'nama' => $request->nama,
+                'posisi' => $request->posisi,
+                'tipe_pekerjaan' => $request->tipe_pekerjaan,
+                'tingkat_pekerjaan' => $request->tingkat_pekerjaan,
+                'gaji' => $request->gaji,
+                'berlaku' => $request->berlaku,
+                'thumbnail'=>'thumbnail-default.jpg',
+                'deskripsi' => $request->deskripsi,
+                'perusahaan' =>  $request->perusahaan,
+                'kota' => $request->kota,
+                'negara' =>  $request->negara,
+                'jumlah' =>  $request->jumlah,
+                'no_telp' =>  $request->no_telp,
+                'email' => $request->email,
                 'tanggal' => $request->tanggal,
                 'author' => $request->author,
                 'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
-                'content' => $request->content,
             ]);
         }
 
-        return redirect('/dashboard/lowongan-kerja');
+        return redirect('/dashboard/lowonganKerja');
     }
 
     /**
@@ -88,9 +119,8 @@ class LowonganKerjaController extends Controller
      */
     public function show($id)
     {
-        $item = LowonganKerja::findOrFail($id);
-
-        return view('pages.backend.lowonganKerja.detail', [
+        $item = DB::table('lowongan_kerja')->where('nama', $id)->first();
+        return view('pages.backend.lowonganKerja.detail',[
             'item' => $item
         ]);
     }
@@ -124,41 +154,27 @@ class LowonganKerjaController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
-            'matkul' => 'max:64',
-            'content' => 'required'
+            'nama' => 'required|max:100',
+            'posisi' => 'required|max:100',
+            'tipe_pekerjaan' => 'nullable',
+            'tingkat_pekerjaan' => 'nullable',
+            'gaji' => 'nullable',
+            'berlaku' => 'nullable',
+            'deskripsi' => 'required',
+            'perusahaan' => 'required|max:100',
+            'kota' => 'required|max:64',
+            'negara' => 'required|max:64',
+            'jumlah' => 'nullable',
+            'no_telp' => 'nullable',
+            'email' => 'required|max:64'
         ]);
+        $lowonganKerja = LowonganKerja::find($id)->update($request->all());
 
-        if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            $item = LowonganKerja::findOrFail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'thumbnail' => $finalName,
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
-                'content' => $request->content,
-            ]);
-        } else {
-            $item = LowonganKerja::findOrFail($id);
-            $item->update([
-                'judul' => $request->judul,
-                'thumbnail' => 'thumbnail-default.jpg',
-                'tanggal' => $request->tanggal,
-                'author' => $request->author,
-                'user_id' => $request->user_id,
-                'matkul' => $request->matkul,
-                'content' => $request->content,
-            ]);
-        }
+        return redirect('/dashboard/lowonganKerja');
 
-        return redirect('/dashboard/lowongan-kerja');
     }
+
+    
 
     /**
      * Remove the specified resource from storage.
@@ -171,6 +187,6 @@ class LowonganKerjaController extends Controller
         $item = LowonganKerja::findOrFail($id);
         $item->delete();
 
-        return redirect('/dashboard/lowongan-kerja');
+        return redirect('/dashboard/lowonganKerja');
     }
 }

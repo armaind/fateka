@@ -53,14 +53,14 @@
                                         <h6 style="color: #07BD02">Data Pekerjaan</h6>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="posisi">Nama Pekerjaan <span class="text-danger">*</span></label>
+                                        <label for="nama">Nama Pekerjaan<span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}" placeholder="Ex: Systems Engineer | AI-HPC " 
+                                            <input class="form-control" id="nama" name="nama" value="{{old('nama')}}" placeholder="Ex: Systems Engineer | AI-HPC " 
                                                 type="text" required>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="posisi">Posisi Kerja <span class="text-danger">*</span></label>
+                                        <label for="posisi">Posisi Kerja<span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="posisi" name="posisi" value="{{old('posisi')}}" placeholder="Ex: Staff" 
                                                 type="text" required>
@@ -95,14 +95,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="date">Berlaku Sampai</label>
+                                        <label for="berlaku">Berlaku Sampai</label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="date" name="date" value="{{old('date')}}" 
+                                            <input class="form-control" id="berlaku" name="berlaku" value="{{old('berlaku')}}" placeholder="yyyy/mm/dd"
                                                 type="text">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height 450px</span></label>
+                                        <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height</span></label>
                                         <div class="custom-file">
                                             <input type="file" class="form-input" name="thumbnail">
                                         </div>
@@ -111,7 +111,7 @@
                                 <div class="email-wrapper">
                                     <div class="theme-form">
                                         <div class="form-group">
-                                            <label>Deskripsi Kerja <span class="text-danger">*</span></label>
+                                            <label>Deskripsi Kerja<span class="text-danger">*</span></label>
                                             <textarea id="text-box" name="deskripsi" cols="10" rows="2"></textarea>
                                         </div>
                                     </div>
@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Email<span class="text-danger">*</span></label>
+                                        <label for="email">Email Perusahaan<span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="email" name="email" value="{{old('email')}}" placeholder="example@gmail.com" 
                                                 type="email" required>
@@ -190,16 +190,7 @@
 </div>
 <!-- file wrapper for better tabs start-->
 
-<script>
-    $( function() {
-      $( "#date" ).datepicker({
-        autoclose:true,
-        todayHighlight:true,
-        format:'yyyy-mm-dd',
-        language: 'id'
-      });
-    } );
-</script>
+
 
 @push('ckeditor-scripts')
 <script src="{{url('cuba/assets/js/editor/ckeditor/ckeditor.js')}}"></script>
