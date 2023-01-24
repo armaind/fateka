@@ -7,6 +7,7 @@
 
     @yield('content')
 
+
     <!--====== Start Footer ======-->
     @include('includes.frontend.footer')
     <!--====== End Footer ======-->

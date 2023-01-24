@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-bd-theme="dark">
 
 @include('includes.backend.head')
 

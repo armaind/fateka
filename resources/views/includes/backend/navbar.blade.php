@@ -49,6 +49,13 @@
                         </a>
                     </div>
                 </li>
+                <li>
+                    <div class="mode">
+                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Light Mode">
+                            <i data-feather="sun"></i>
+                        </a>
+                    </div>
+                </li>
                 <li class="maximize">
                     <a data-toggle="tooltip" data-placement="bottom" title="Full Screen" class="text-dark" href="#!"
                         onclick="javascript:toggleFullScreen()">
@@ -61,7 +68,7 @@
                             src="https://source.boringavatars.com/beam/120/{{Auth::user()->name}}?square&colors=FAD089,FF9C5B,F5634A,ED303C,3B8183"
                             width="40px">
                         <div class="media-body">
-                            <span>Hai {{Auth::user()->name}}</span>
+                            <span>{{Auth::user()->name}}</span>
                             <p class="mb-0 font-roboto">Mahasiswa
                                 <i class="middle fa fa-angle-down"></i>
                             </p>

@@ -21,30 +21,28 @@
                         <li>
                             <a href="{{url('tentang')}}">Tentang</a>
                         </li>
-                        <li class="p-r-100">
-                            <a href="{{url('kontak')}}">Kontak Kami</a>
+                        <li>
+                            <a href="{{url('kontak')}}">Kontak</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            
+    
             <div class="header-right">
                 <ul class="header-extra">
                     <li class="d-none d-sm-block">
                         @auth
-                        <div class="profile-dropdown onhover-show-div">
-                            <a class="template-btn primary-bg-5" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
-                            <div class="dropdown-menu" aria-labelledby="username">
-                                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </div>
+                        <div class="dropdown">
+                            <a href="{{ route('dashboard') }}" class="template-btn primary-bg-5 p-r-20 m-r-20" href="#" id="userName" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               @php
+                                   auth()->user()->name
+                               @endphp 
+                                Dashboard<i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                         @else
                         <a href="{{url('/login')}}" class="user-login">
-                            <i class="far fa-user-circle"></i> Masuk Aplikasi
+                            <i class="far fa-user-circle"></i>Masuk Aplikasi
                         </a>
                         <li class="d-none d-md-block">
                             <a href="{{url('/register')}}" class="template-btn primary-bg-5">

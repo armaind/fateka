@@ -1,6 +1,6 @@
 @extends('layouts.frontend.minor')
 
-@section('title', 'Kontak Kami — Fateka')
+@section('title', 'Kontak — Fateka')
 @section('content')
 
 <header class="template-header navbar-left absolute-header nav-primary-5 submenu-primary-5 sticky-header">
@@ -23,43 +23,35 @@
                             <a href="{{url('/')}}">Beranda</a>
                         </li>
                         <li>
-                            <a href="{{url('tentang')}}">Tentang Kami</a>
+                            <a href="{{url('tentang')}}">Tentang</a>
                         </li>
                         <li class="active">
-                            <a href="{{url('kontak')}}">Kontak Kami</a>
+                            <a href="{{url('kontak')}}">Kontak</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            @auth
-            <div class="nav-menu d-none d-xl-block">
-                <div class="media profile-media">
-                    <div class="media-body">
-                        <ul class="profile-dropdown onhover-show-div">
-                            <a class="dropdown-toggle" href="#"  id="userName" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
-                            <div class="dropdown-menu" aria-labelledby="username">
-                                <a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            @else
             <div class="header-right">
                 <ul class="header-extra">
                     <li class="d-none d-sm-block">
+                        @auth
+                        <div class="dropdown">
+                            <a href="{{ route('dashboard') }}" class="template-btn primary-bg-5 p-r-20 m-r-20" href="#" id="userName" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               @php
+                                   auth()->user()->name
+                               @endphp 
+                                Dashboard<i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        @else
                         <a href="{{url('/login')}}" class="user-login">
-                            <i class="far fa-user-circle"></i> Masuk Aplikasi
+                            <i class="far fa-user-circle"></i>Masuk Aplikasi
                         </a>
-                    </li>
-                    <li class="d-none d-md-block">
-                        <a href="{{url('/register')}}" class="template-btn primary-bg-5">
-                            Daftar Sekarang <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <li class="d-none d-md-block">
+                            <a href="{{url('/register')}}" class="template-btn primary-bg-5">
+                                Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </li>
                     </li>
                     @endauth
                     <li class="d-none d-xl-block">
@@ -91,10 +83,10 @@
                         <a href="{{('/')}}">Beranda</a>
                     </li>
                     <li>
-                        <a href="{{('/tentang')}}">Tentang Kami</a>
+                        <a href="{{('/tentang')}}">Tentang</a>
                     </li>
                     <li>
-                        <a href="{{('/kontak')}}">Kontak Kami</a>
+                        <a href="{{('/kontak')}}">Kontak</a>
                     </li>
                     @auth
                         <a class="btn" href="{{ '/dashboard' }}" role="button">{{ auth()->user()->name }}</a>
@@ -159,10 +151,10 @@
 <section class="page-title-area">
     <div class="container">
         <div class="page-title-content text-center mt-5">
-            <h1 class="page-title">Kontak Kami</h1>
+            <h1 class="page-title">Kontak</h1>
             <ul class="breadcrumb-nav">
                 <li><a href="{{url('/')}}">Beranda</a></li>
-                <li class="active">Kontak Kami</li>
+                <li class="active">Kontak</li>
             </ul>
         </div>
     </div>
@@ -212,8 +204,8 @@
             <div class="col-lg-6 offset-xl-1 col-md-10">
                 <div class="contact-form-area m-t-md-100">
                     <div class="common-heading tagline-boxed m-b-40">
-                        <span class="tagline">Kirim kami sebuah pesan</span>
-                        <h3 class="title">Ada pertanyaan atau pesan? <br> Kirim pesan dibawah ini 
+                        <span class="tagline">Layanan Pesan</span>
+                        <h3 class="title">Ada pertanyaan atau pesan? <br> Kirim melalui form berikut
                         </h3>
                     </div>
                     <div class="contact-form-v2">
@@ -270,9 +262,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
-        <img src="{{url('landio/assets/img/cta/cta-absolute-img2.png')}}" alt="">
+        <div class="col-xl-6 cta-absolute-image d-none d-lg-block wow fadeInUp" data-wow-delay="0.3s">
+            <img src="{{url('landio/assets/img/cta/cta-absolute-img2.png')}}" alt=""  width="400px">
+        </div>
     </div>
 </section>
 

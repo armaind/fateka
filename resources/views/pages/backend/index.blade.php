@@ -60,8 +60,8 @@
                             </span>
                         </p>
                         <div class="whatsnew-btn">
-                            <a href="{{url('dashboard/data-alumni')}}" class="btn btn-primary px-4 py-2">Cari Data Alumni
-                                Sekarang ⇾
+                            <a href="{{url('dashboard/data-alumni')}}" class="btn btn-primary px-4 py-2" style="border-radius: 25px">Cari Data Alumni
+                                Sekarang 
                             </a>
                         </div>
                     </div>
@@ -97,33 +97,6 @@
                             </span>
                         </span>
                     </span>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-4 xl-50 appointment-sec box-col-6">
-            <div class="row">
-
-                <div class="col-xl-12 alert-sec">
-                    <div class="card bg-img">
-                        <div class="card-header">
-                            <div class="header-top">
-                                <h5 class="m-0">Bagikan Aplikasi Ini</h5>
-                                <div class="dot-right-icon">
-                                    <i class="fa fa-share"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="body-bottom">
-                                <h6>Jangan lupa untuk share dan ajak temanmu!</h6>
-                                <span class="font-roboto">
-                                    Ajak teman menggunakan Fateka dan share ke sosial mediamu biar 
-                                    koneksi tetap terjaga
-                                </span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
