@@ -50,8 +50,7 @@
                                     
                                     <p class="card-text"><strong>{{ $item->kota }}, {{ $item->negara }}</strong></p>
                                     <p class="card-text"><small class="text-muted">Berlaku sampai: <span class="badge badge-warning mb-2">{{ $item->berlaku }}</span></small></p>
-                                    <a href="#"><div class="btn btn-primary" style="border-radius: 20px">Lamar Sekarang</div></a>
-                                    <a href="#"><div class="btn btn-danger pull-right" style="border-radius: 20px">Laporkan</div></a>
+                                    <a href="#"><div class="btn btn-primary" style="border-radius: 20px">Lamar</div></a> 
                                 </div>
                             </div>
                         </div>
@@ -150,15 +149,21 @@
                             </div>
                         </div>
                     </div> 
-                    <div class="mt-5">
-                        <a class="btn btn-outline-primary" href="{{route('lowonganKerja.index')}}" style="border-radius: 20px">Kembali</a>
-                        <a class="btn btn-outline-warning" href="{{route('lowonganKerja.edit', $item->id)}}" style="border-radius: 20px">Edit Lowongan</a>
-                        <form class="pull-right" action="{{route('lowonganKerja.destroy', $item->id)}}" method="POST"
-                            class="d-inline">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
-                        </form>
+                    <div class="row mt-5 justify-content-center">
+                        <div class="col-sm-2 mb-3">
+                            <a class="btn btn-outline-primary" href="{{route('lowonganKerja.index')}}" style="border-radius: 20px">Kembali</a>
+                        </div>
+                        <div class="col-sm-8  mb-3">
+                            <a class="btn btn-outline-warning" href="{{route('lowonganKerja.edit', $item->id)}}" style="border-radius: 20px">Edit Lowongan</a>
+                        </div>
+                        <div class="col-sm-2 flex-right">
+                            <form action="{{route('lowonganKerja.destroy', $item->id)}}" method="POST"
+                                class="d-inline">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                            </form>
+                        </div>
                     </div>     
                 </div>  
                 <!-- main content end-->

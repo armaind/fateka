@@ -8,7 +8,7 @@
     <section class="service-section p-t-200 p-b-100">
         <div class="container">
             <div class="row no-gutters justify-content-lg-between justify-content-md-start justify-content-center icon-boxes-v3">
-                <div class="col-lg-3 col-md-6 col-sm-10 col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
                     <h1 class="hero-title wow fadeInLeft mb-5" data-wow-delay="0.2s">
                         Forum Alumni Teknik Komputer, Universitas Telkom 
                     </h1>
@@ -21,11 +21,11 @@
                         Masuk Sekarang <i class="fas fa-arrow-right"></i>
                     </a>
                     @endauth
-                    <span class="notice wow fadeInUp" data-wow-delay="0.5s">
+                    <p class="notice wow fadeInUp" data-wow-delay="0.5s">
                         <img class="mr-3" src="{{url('landio/assets/img/hero/notice-icon.png')}}" alt="Image">Stay connected, discover a wider network
-                    </span>
+                    </p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-10 col-xl-5 wow fadeInUp align-self-center" data-wow-delay="0.3s">
+                <div class="col-lg-6 col-md-12 col-sm-6 wow fadeInUp align-self-center" data-wow-delay="0.3s">
                     <div class="hero-img d-none d-lg-block wow fadeInUp animate-float-bob-y" data-wow-delay="0.2s">
                         <img src="{{url('landio/assets/img/hero/home-software-4.png')}}" alt="Image">
                     </div>
@@ -44,8 +44,8 @@
                 </div>
             </div>
             <div class="row icon-boxes-v3">
-                <div class="col-md-4 col-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="iconic-box box-version-white color-v4 m-t-50 p-l-50">
+                <div class="col-xl-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="iconic-box box-version-white color-v4 m-t-50">
                         <div class="icon">
                             <i class="far fa-thumbs-up"></i>
                         </div>
@@ -57,8 +57,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="iconic-box box-version-white color-v2 m-t-50 p-l-50">
+                <div class="col-xl-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="iconic-box box-version-white color-v2 m-t-50">
                         <div class="icon">
                             <i class="far fa-users"></i>
                         </div>
@@ -70,8 +70,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="iconic-box box-version-white color-v1 m-t-50 p-l-50">
+                <div class="col-xl-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="iconic-box box-version-white color-v1 m-t-50">
                         <div class="icon">
                             <i class="fas fa-bullhorn"></i>
                         </div>
@@ -93,12 +93,12 @@
         <div class="container">
             <div class="row no-gutters justify-content-lg-between justify-content-md-start justify-content-center icon-boxes-v3">
                 <div class="col-md-6 col-sm-10  wow fadeInUp mt-5" data-wow-delay="0.3s">
-                    <div class="common-heading tagline-boxed text-right col-xl col-md-6 col-sm-10">
+                    <div class="common-heading tagline-boxed text-right col-lg-12 col-md-12 col-sm-12">
                         <span class="tagline m-b-60">Alumni Story</span>
                         <h2 class="title m-b-30">Apa kata alumni Teknik Komputer</h2>
                     </div>
                     <div class="iconic-boxes-v1">
-                        <div class="col-xl col-md-6 col-sm-10 ">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="iconic-box m-t-30 text-right" style="border-radius: 25px">
                                 <p>
                                     "Jangan pernah lupakan alumni kita, itu semua adalah keluarga kita dan yakinlah silaturahmi di dalam alumni itu bermanfaat, tidak hanya untuk kita, untuk keluarga kita tapi untuk perusahaan dimana kita bekerja"
@@ -106,7 +106,7 @@
                                 <h5 class="p-t-25">Faisal Candrasyah Hasibuan S.T M.T</h5>
                             </div>
                         </div>
-                        <div class="col-xl col-md-6 col-sm-10">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="iconic-box m-t-30 text-right" style="border-radius: 25px">
                                 <p>
                                     Manfaatkan format Universitas ini yang bisa membawa kita berpikir lebih universal artinya kita bisa mengembangkan keilmuan kita untuk saling terbuka sinergi, dengan saling keterbukaan akan membawa kita ke esensi keilmuannya
@@ -116,9 +116,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-10 col-xl-4  wow fadeInUp align-self-center" data-wow-delay="0.2s">
+                <div class="col-lg-4 col-md-6 col-sm-12 m-auto wow fadeInUp align-self-center" data-wow-delay="0.2s">
                     <div class="software-preview m-t-50 animate-float-bob-x">
-                        <img src="{{url('landio/assets/img/preview-gallery/design-layout.png')}}" alt="Image">
+                        <img src="{{url('landio/assets/img/preview-gallery/design-layout.png')}}" alt="Image" width="350px">
                     </div>
                 </div>
             </div>

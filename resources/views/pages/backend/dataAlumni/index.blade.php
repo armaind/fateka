@@ -16,7 +16,7 @@
             <div class="d-block w-100 align-content-center" style="background-image: url('../images/splide/data.png'); border-radius:15px; height:150px; background-size:cover">
                 <div class="card-body">
                     <h4 class="text-center text-white">
-                        <strong>Stay connected</strong>, discover a wider network
+                        
                     </h4>
                 </div>
             </div>
@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+    
 
     <div class="row">
         <div class="col-sm-12" >

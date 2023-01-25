@@ -15,7 +15,7 @@
             <div class="d-block w-100" style="background-image: url('../images/splide/kerja.png'); border-radius:15px; height:150px; background-size:cover">
                 <div class="card-body">
                     <h4 class="text-center text-white">
-                        <strong>Turn On</strong> The Future
+                        {{-- <strong>Turn On</strong> The Future --}}
                     </h4>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                             
                         </div>
                     </div>
-                    <div class="col-md-4 m-0 bg-dark"  style="border-top-right-radius:15px; border-bottom-right-radius:15px">
+                    <div class="col-md-4 m-0 bg-dark"  style="border-radius:15px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->nama }}</h5>
                             <h7 class="card-text">{{ $item->perusahaan }}</h7>

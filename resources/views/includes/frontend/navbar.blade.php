@@ -24,6 +24,9 @@
                         <li>
                             <a href="{{url('kontak')}}">Kontak</a>
                         </li>
+                        <li>
+                            <a href="{{url('faq')}}">FAQ</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -41,10 +44,10 @@
                             </a>
                         </div>
                         @else
-                        <a href="{{url('/login')}}" class="user-login">
+                        <a href="{{url('/login')}}" class="user-login mr-4">
                             <i class="far fa-user-circle"></i>Masuk Aplikasi
                         </a>
-                        <li class="d-none d-md-block">
+                        <li class="d-none d-md-block mr-4">
                             <a href="{{url('/register')}}" class="template-btn primary-bg-5">
                                 Daftar Sekarang <i class="fas fa-arrow-right"></i>
                             </a>
@@ -58,7 +61,7 @@
                             <span></span>
                         </a>
                     </li>
-                    <div class="d-xl-none">
+                    <div class="d-xl-none mr-4">
                         <a href="#" class="navbar-toggler">
                             <span></span>
                             <span></span>
@@ -75,6 +78,11 @@
         <div class="panel-overlay"></div>
         <div class="panel-inner">
             <nav class="mobile-menu">
+                <div class="container mb-4">
+                    <a class="navbar-brand" href="/">
+                      <img src="\landio\assets\img\logotk.png" alt="logo" width="60">
+                    </a>
+                </div>
                 <ul>
                     <li>
                         <a href="{{('/')}}">Beranda</a>
@@ -93,6 +101,9 @@
                     </li>
                     <li>
                         <a href="{{('/register')}}">Daftar Akun</a>
+                    </li>
+                    <li>
+                        <a href="{{('/faq')}}">FAQ</a>
                     </li>
                     @endauth
                 </ul>
