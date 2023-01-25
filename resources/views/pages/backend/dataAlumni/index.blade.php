@@ -20,7 +20,7 @@
                     </h4>
                 </div>
             </div>
-            <div class="card-header bg-primary">
+            <div class="card-header bg-primary" style="border-radius: 16px">
                 <h5 class="text-white">Data Alumni</h5>
             </div>
         </div>

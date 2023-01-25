@@ -6,29 +6,38 @@
 <div class="container-fluid product-wrapper">
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="3" ></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:350px; background-size:cover">
-                        </div>
-                        {{-- <div class="carousel-caption d-none d-md-block">
-                            <a href=""><h1 style="text-emphasis-color: white">Judul Berita</h1></a>
-                            <h3>Kategori</h3>
-                        </div> --}}
-                    </div>
+            <div class="d-block w-100 align-content-center" style="background-image: url('../images/splide/berita.png'); border-radius:15px; height:150px; background-size:cover">
+                <div class="card-body">
+                    <h4 class="text-center text-white">
+                        <strong></strong>
+                    </h4>
                 </div>
-            </div> 
-            <div class="card-header bg-primary">
+            </div>
+            <div class="card-header bg-primary" style="border-radius: 16px">
                 <h5 class="text-white">Berita</h5>
             </div>
         </div>
     </div>
+    {{-- <div class="card card-absolute mt-5 mt-md-4">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2" ></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="3" ></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-block w-100" style="background-image: url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'); border-radius:15px; height:350px; background-size:cover">
+                    </div>
+                    {{-- <div class="carousel-caption d-none d-md-block">
+                        <a href=""><h1 style="text-emphasis-color: white">Judul Berita</h1></a>
+                        <h3>Kategori</h3>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div> --}}
     <div class="feature-products">
         <div class="row mb-4">
             <div class="col-md-6 products-total">
@@ -64,13 +73,15 @@
             </div>
         </div>
     </div>
-    <div class="card card-absolute mt-5 mt-md-4">
+    <div class="blog-box blog-details">
+        <div class="card">
+            <div class="card-header bg-dark">
+                <h5>Berita Terbaru</h5>
+            </div>
+        </div>
         <div class="card-body">
             <div class="product-grid">
                 <div class="product-wrapper-grid">
-                    <div class="row col-6 mb-4">
-                        <button class="mt-2 btn btn-outline-primary">Berita Terbaru</button>
-                    </div>
                     <div class="row">
                         @forelse ($items as $item) 
                         <div class="col-xl-3 col-sm-6 xl-4">
@@ -89,10 +100,16 @@
                         @endforelse  
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header bg-dark">
+                <h5>Berita Terpopuler</h5>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="product-grid">
                 <div class="product-wrapper-grid">
-                    <div class="row col-6 mb-4">
-                        <button class="mt-2 btn btn-outline-primary">Berita Terbaru</button>
-                    </div>
                     <div class="row">
                         @forelse ($items as $item) 
                         <div class="col-xl-3 col-sm-6 xl-4">

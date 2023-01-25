@@ -41,14 +41,7 @@
                         </li>
                     </ul>
                 </li>
-    
-                <li>
-                    <div class="mode">
-                        <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dark Mode">
-                            <i data-feather="moon"></i>
-                        </a>
-                    </div>
-                </li>
+
                 <li>
                     <div class="mode">
                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Light Mode">
