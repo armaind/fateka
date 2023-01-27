@@ -69,6 +69,12 @@
                                         value="{{old('no_telp')}}" name="no_telp" required>
                                 </div>
                             </div>
+                            <div class="form-group col-md-6 mb-2">
+                                <label for="customFile">Foto (Optional) <span class="text-danger">*Max Height</span></label>
+                                <div class="custom-file">
+                                    <input type="file" class="form-input" name="foto">
+                                </div>
+                            </div>
                             <div class="col-md-12 mb-2 mt-4">
                                 <h6 style="color: #07BD02">Alamat Lengkap</h6>
                             </div>
