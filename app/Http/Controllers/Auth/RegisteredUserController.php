@@ -43,7 +43,8 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'google_id' => bcrypt('1234242')
+            'google_id' => '',
+            'role' => ''
         ]);
 
         event(new Registered($user));

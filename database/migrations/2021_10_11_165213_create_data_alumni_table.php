@@ -27,6 +27,7 @@ class CreateDataAlumniTable extends Migration
             $table->string('no_telp');
             $table->string('status_pekerjaan');
             $table->string('perusahaan')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

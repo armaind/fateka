@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\DataAlumni;
+use Illuminate\Support\Facades\DB;
 
 class DataAlumniController extends Controller
 {
@@ -40,11 +41,14 @@ class DataAlumniController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'foto' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
         $validated = $request->validate([
             'nama_alumni' => 'required|max:42',
             'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
-            
             'provinsi' => 'required',
             'kota' => 'required',
             'kecamatan' => 'required',
@@ -56,10 +60,44 @@ class DataAlumniController extends Controller
             'perusahaan'=>'nullable'
             
         ]);
-        
-        $input = $request->all();
-        
-        $dataalumni = DataAlumni::create($input);
+       
+        $dataalumni = DataAlumni::create($request->all());
+        if($request->hasFile('foto')){
+            $request->file('foto')->move('images/',$request->file('foto')->getClientOriginalName());
+            $dataalumni->foto=$request->file('foto')->getClientOriginalName();
+            $dataalumni->save();
+            ([
+                'nama_alumni' => $request->nama_alumni,
+                'email'=>$request->email,
+                'no_telp' => $request->no_telp,
+                'foto'=>$request->foto,
+                'provinsi' => $request->provinsi,
+                'kota' => $request->kota,
+                'kecamatan' => $request->kecamatan,
+                'desa_atau_jalan' => $request->desa_atau_jalan,
+                'domisili' => $request->domisili,
+                'angkatan' => $request->angkatan,
+                'status_pekerjaan'=>$request->status_pekerjaan,
+                'posisi'=>$request->posisi,
+                'perusahaan'=>$request->perusahaan
+            ]);
+        }else{
+            ([
+                'nama_alumni' => $request->nama_alumni,
+                'email'=>$request->email,
+                'no_telp' => $request->no_telp,
+                'foto'=>'foto.jpg',
+                'provinsi' => $request->provinsi,
+                'kota' => $request->kota,
+                'kecamatan' => $request->kecamatan,
+                'desa_atau_jalan' => $request->desa_atau_jalan,
+                'domisili' => $request->domisili,
+                'angkatan' => $request->angkatan,
+                'status_pekerjaan'=>$request->status_pekerjaan,
+                'posisi'=>$request->posisi,
+                'perusahaan'=>$request->perusahaan
+            ]);
+        }
         
         return redirect('/dashboard/data-alumni');
     }
@@ -72,7 +110,10 @@ class DataAlumniController extends Controller
      */
     public function show($id)
     {
-        //
+        $item = DataAlumni::where('id', $id)->first();
+        return view('pages.backend.dataAlumni.detail',[
+            'item' => $item
+        ]);
     }
     
     /**
@@ -99,23 +140,26 @@ class DataAlumniController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'foto' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
         
         $validated = $request->validate([
-            'nama_alumni' => 'required|max:42',
-            'email'=>'required|max:42',
-            'no_telp' => 'required|max:24',
-            
-            'provinsi' => 'required',
-            'kota' => 'required',
-            'kecamatan' => 'required',
-            'desa_atau_jalan' => 'required',
-            'domisili' => 'required',
-            'angkatan' => 'required|max:14',
-            'status_pekerjaan'=>'required',
-            'posisi'=>'required',
-            'perusahaan'=>'nullable'
+            'nama_alumni' => $request->nama_alumni,
+            'email'=>$request->email,
+            'no_telp' => $request->no_telp,
+            'foto'=>$request->foto,
+            'provinsi' => $request->provinsi,
+            'kota' => $request->kota,
+            'kecamatan' => $request->kecamatan,
+            'desa_atau_jalan' => $request->desa_atau_jalan,
+            'domisili' => $request->domisili,
+            'angkatan' => $request->angkatan,
+            'status_pekerjaan'=>$request->status_pekerjaan,
+            'posisi'=>$request->posisi,
+            'perusahaan'=>$request->perusahaan
         ]);
-
+    
         $dataalumni = DataAlumni::find($id)->update($request->all());
 
         return redirect('/dashboard/data-alumni');
