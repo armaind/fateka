@@ -16,7 +16,7 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        $items = Kegiatan::paginate(10);
+        $items = Kegiatan::paginate(15);
         return view('pages.backend.kegiatan.index', [
             'items' => $items
         ]);
