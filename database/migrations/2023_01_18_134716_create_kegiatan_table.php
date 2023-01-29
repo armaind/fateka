@@ -17,9 +17,13 @@ class CreateKegiatanTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('thumbnail')->nullable();
-            $table->string('penyelenggara');
-            $table->mediumText('content');
+            $table->string('kategori');
             $table->string('tanggal');
+            $table->string('penyelenggara');
+            $table->integer('kuota');
+            $table->string('lokasi');
+            $table->string('batas');
+            $table->mediumText('content');
             $table->string('user_id');
             $table->timestamps();
         });

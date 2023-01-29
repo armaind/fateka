@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kegiatan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KegiatanController extends Controller
 {
@@ -15,7 +16,6 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        $items = Auth::user()->id;
         $items = Kegiatan::paginate(10);
         return view('pages.backend.kegiatan.index', [
             'items' => $items
@@ -45,33 +45,46 @@ class KegiatanController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
-            'penyelenggara' => 'max:64',
-            'content' => 'required'
+            'judul' => 'required|max:100',
+            'kategori' => 'required|max:64',
+            'penyelenggara' => 'required|max:64',
+            'content' => 'required',
+            'kuota' => 'required',
+            'lokasi' => 'required',
+            'tanggal' => 'required',
+            'batas' => 'required',
         ]);
 
+        $data = Kegiatan::create($request->all());
         if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Kegiatan::create([
+            $request->file('thumbnail')->move('images/', $request-> file('thumbnail')->getClientOriginalName());
+            $data->thumbnail = $request->file('thumbnail')->getClientOriginalName();
+            $data->save();
+            ([
                 'judul' => $request->judul,
-                'thumbnail' => $finalName,
+                'thumbnail' => $request->thumbnail,
+                'kategori' => $request->kategori,
                 'tanggal' => $request->tanggal,
                 'penyelenggara' => $request->penyelenggara,
+                'kuota' => $request->kuota,
+                'lokasi'=> $request->lokasi,
+                'batas' => $request->batas,
                 'user_id' => $request->user_id,
-                'content' => $request->content,
+                'content' => $request->content
 
             ]);
         } else {
-            Kegiatan::create([
+            ([
                 'judul' => $request->judul,
-                'thumbnail' => 'thumbnail-default.jpg',
+                'thumbnail' => 'thumbnail.jpg',
+                'kategori' => $request->kategori,
                 'tanggal' => $request->tanggal,
                 'penyelenggara' => $request->penyelenggara,
+                'kuota' => $request->kuota,
+                'lokasi'=> $request->lokasi,
+                'batas' => $request->batas,
                 'user_id' => $request->user_id,
-                'content' => $request->content,
+                'content' => $request->content
             ]);
         }
 
@@ -86,10 +99,9 @@ class KegiatanController extends Controller
      */
     public function show($id)
     {
-        $items = Kegiatan::where('user_id', Auth::user()->email)->get();
-
+        $item = Kegiatan::where('id',$id)->first();
         return view('pages.backend.kegiatan.detail', [
-            'items' => $items
+            'item' => $item
         ]);
     }
 
@@ -122,36 +134,18 @@ class KegiatanController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:64',
-            'penyelenggara' => 'required|max:64',
-            'content' => 'required'
+            'judul' => $request->judul,
+            'kategori' => $request->kategori,
+            'penyelenggara' => $request->penyelenggara,
+            'thumbnail' => $request->thumbnail,
+            'content' => $request->content,
+            'kuota' => $request->kuota,
+            'lokasi' => $request->lokasi,
+            'tanggal' => $request->tanggal,
+            'batas' => $request->batas
         ]);
 
-        if ($request->hasFile('thumbnail')) {
-            $resource = $request->file('thumbnail');
-            $name = $resource->getClientOriginalName();
-            $finalName = date('His')  . $name;
-            $request->file('thumbnail')->storeAs('images/', $finalName, 'public');
-            Kegiatan::create([
-                'judul' => $request->judul,
-                'thumbnail' => $finalName,
-                'tanggal' => $request->tanggal,
-                'penyelenggara' => $request->penyelenggara,
-                'user_id' => $request->user_id,
-                'content' => $request->content,
-
-            ]);
-        } else {
-            Kegiatan::create([
-                'judul' => $request->judul,
-                'thumbnail' => 'thumbnail-default.jpg',
-                'tanggal' => $request->tanggal,
-                'penyelenggara' => $request->penyelenggara,
-                'user_id' => $request->user_id,
-                'content' => $request->content,
-            ]);
-        }
-
+        $kegiatan = Kegiatan::find($id)->update($request->all());
         return redirect('/dashboard/kegiatan');
     }
 

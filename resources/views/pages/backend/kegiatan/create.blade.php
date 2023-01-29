@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <p>
-                        Di bawah ini adalah halaman untuk tambah kegiatan
+                        Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
                     </p>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Ada error nih 😓</h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
@@ -52,46 +52,75 @@
                             @csrf
                             <div class="col-sm-12">
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="judul">Judul Kegiatan: <span class="text-danger">*</span></label>
+                                    <div class="form-group col-md-12">
+                                        <label for="judul">Judul Kegiatan <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
                                                 type="text" required>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6 ">
-                                        <label for="penyelenggara">Penyelenggara: <span class="text-danger">*</span></label>
+                                        <label for="kategori">Kategori <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="kategori" name="kategori"
+                                                value="{{old('kategori')}}" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6 ">
+                                        <label for="penyelenggara">Penyelenggara <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="penyelenggara" name="penyelenggara"
                                                 value="{{old('penyelenggara')}}" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="email-wrapper">
+                                        <div class="theme-form">
+                                            <div class="form-group">
+                                                <label>Deskripsi <span class="text-danger">*</span></label>
+                                                <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="kuota">Kuota <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="kuota" name="kuota"
+                                                value="{{old('kuota')}}" type="number" required>
+                                        </div>
+                                    </div> 
+                                    <div class="form-group col-md-4 ">
+                                        <label for="lokasi">Lokasi <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="lokasi" name="lokasi"
+                                                value="{{old('lokasi')}}" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="tanggal" name="tanggal"
+                                                value="{{old('tanggal')}}" type="text" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="batas">Batas Daftar <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="batas" name="batas"
+                                                value="{{old('batas')}}" type="text" required>
                                         </div>
                                     </div>
                                 </div>
 
                                 <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
-                                <div class="form-group">
-                                    <label for="customFile">Thumbnail: (Optional)</label>
+                                <div class="form-group col-md-6">
+                                    <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height</span></label>
                                     <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                        <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
+                                        <input type="file" class="form-input" name="thumbnail">
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <input class="form-control" type="hidden" name="tanggal"
-                                        value="{{{now()->toDateString()}}}">
-                                </div>
-                                <div class="email-wrapper">
-                                    <div class="theme-form">
-                                        <div class="form-group">
-                                            <label>Deskripsi: <span class="text-danger">*</span></label>
-                                            <textarea id="text-box" name="content" cols="10" rows="2"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-
                             </div>
+
                             <div class="col-sm-12">
                                 <div class="btn-showcase">
                                     <button class="btn btn-primary" type="submit">Tambah</button>

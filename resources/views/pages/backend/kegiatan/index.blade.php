@@ -69,8 +69,10 @@
                     </div>
                     <div class="col-md-8 m-0 bg-dark"  style="border-radius:15px">
                         <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5><p class="card-text"><small class="text-muted">Tanggal: {{ $item->tanggal }}</small></p>
-                            <a href="{{route('kegiatan.show', $item->judul) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
+                            <h5 class="card-title">{{ $item->judul }}</h5>
+                            <h6 class="card-text"><small class="text-muted">Oleh: {{ $item->penyelenggara }}</small></h6>
+                            <p class="card-text"><small class="text-muted">Tanggal: {{ $item->tanggal }}</small></p>
+                            <a href="{{route('kegiatan.show', $item->id) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
                         </div>
                     </div>
                 </div>
