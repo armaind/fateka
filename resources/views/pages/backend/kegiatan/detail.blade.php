@@ -44,7 +44,7 @@
                                 <li><i class=""></i><a href="{{route('berita.edit', $item->id)}}"> Edit Kegiatan</a></li>
                             </ul>
                             <h1 class="mt-3">
-                                {{$item->judul}}
+                                {{$item->oenyelenggara}}
                             </h1>
                             <div class="single-blog-content-top">
                                 <div class="mt-3">{!!htmlspecialchars_decode($item->content)!!}</div>
