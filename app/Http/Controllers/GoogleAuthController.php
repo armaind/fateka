@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Laravel\Socialite\Facades\Socialite;
-use App\Models\User;
 use Auth;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
 
 class GoogleAuthController extends Controller
 {
@@ -15,26 +16,40 @@ class GoogleAuthController extends Controller
     }
     public function handleGoogleCallback()
     {
+        // $user = Socialite::driver('google')->stateless()->user();
+
+        // $finduser = User::where('google_id',$user->getId())->first();
+
+        // if($finduser)
+        // {
+        //     Auth::login($finduser);
+        //     return redirect('/dashboard');
+        // }
+        // else
+        // {
+        //     $newuser = User::create([
+        //         'name' => $user->getName(),
+        //         'email' => $user->getEmail(),
+        //         'google_id' => $user->getId(),
+        //         'role' => ''
+        //     ]);
+        //     Auth::login($newuser);
+        //     return redirect('/dashboard');
+        // }
+
         $user = Socialite::driver('google')->stateless()->user();
-
-        $finduser = User::where('google_id',$user->getId())->first();
-
-        if($finduser)
-        {
-            Auth::login($finduser);
-            return redirect('/dashboard');
-        }
-        else
-        {
-            $newuser = User::create([
-                'name' => $user->getName(),
-                'email' => $user->getEmail(),
-                'google_id' => $user->getId(),
-                'password' => bcrypt('1234242'),
-                'role' => ''
-            ]);
-            Auth::login($newuser);
-            return redirect('/dashboard');
-        }
+        
+        
+        $user = User::updateOrCreate([
+            'google_id' => $user->id,
+        ], [
+            'name' => $user->name,
+            'email' => $user->email,
+            'password' => 0,
+        ]);
+    
+        Auth::login($user);
+    
+        return redirect('/dashboard');
     }
 }

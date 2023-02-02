@@ -35,7 +35,7 @@
                 <div class="card-header">
                     <h5>Edit Data Alumni</h5>
                 </div>
-                <form method="POST" action="{{route('dataAlumni.update', $item->id)}}" enctype="multipart/form-data"
+                <form method="POST" action="{{route('dataalumni.update', $item->id)}}" enctype="multipart/form-data"
                     class="needs-validation">
                     @method('PUT')
                     @csrf

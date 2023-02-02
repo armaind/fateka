@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Berita;
 use Illuminate\Database\Seeder;
+use Database\Seeders\UserRolePermissionSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,6 +18,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call([UserRolePermissionSeeder::class]);
 
-        Berita::factory(10)->create();
+        // Berita::factory(10)->create();
     }
 }

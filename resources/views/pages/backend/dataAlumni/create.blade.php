@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <form method="POST" action="{{route('dataAlumni.store')}}" enctype="multipart/form-data"
+                <form method="POST" action="{{route('dataalumni.store')}}" enctype="multipart/form-data"
                     class="needs-validation">
                     @csrf
                     <div class="card-body">
@@ -65,7 +65,7 @@
                             <div class="form-group col-md-6 mb-2">
                                 <label for="no_telp">No Telepon<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
-                                    <input id="no_telp" type="text" class="form-control"
+                                    <input id="no_telp" type="number" class="form-control"
                                         value="{{old('no_telp')}}" name="no_telp" required>
                                 </div>
                             </div>
@@ -120,6 +120,10 @@
                             <div class="form-group col-md-6 mb-2">
                                 <label for="angkatan">Angkatan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
+                                    <input id="angkatan" type="number" class="form-control" placeholder="2018"
+                                        value="{{old('angkatan')}}" name="angkatan" required>
+                                </div>
+                                {{-- <div class="input-group mb-3">
                                     <select class="form-control" id="angkatan" name="angkatan">
                                         <option value="" disabled selected>Pilih Tahun</option>
                                         <option value="2007">2007</option>
@@ -140,7 +144,7 @@
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
                                     </select>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
 
@@ -163,7 +167,7 @@
                             <div class="form-group col-md-6 mb-2">
                                 <label for="posisi">Posisi Pekerjaan</label>
                                 <div class="input-group mb-3">
-                                    <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Ex: Software Engineer"
+                                    <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
                                     class="form-control" name="posisi">
                                 </div>
                                 <label for="posisi"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
@@ -171,7 +175,7 @@
                             <div class="form-group col-md-6 mb-2">
                                 <label for="perusahaan">Perusahaan/Instansi</label>
                                 <div class="input-group mb-3">
-                                    <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Ex: Google"
+                                    <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
                                     class="form-control" name="perusahaan">
                                 </div>
                                 <label for="perusahaan"> <span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>

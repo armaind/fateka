@@ -18,7 +18,7 @@
 <div>
     <!-- main news start-->
     <div class="container-fluid my-3 p-t-50 p-r-50 p-b-30 p-l-50">
-        <div class="row p-b-50">
+        <div class="row">
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="row">
@@ -74,7 +74,7 @@
     </div>
     <!-- main content end-->
 </div>
-<div class="comment mt-5 my-3 p-t-50 p-r-50 p-b-30 p-l-50 bg-dark">
+<div class="comment mt-5 my-3 p-t-50 p-r-50 p-b-30 p-l-50">
     <div id="disqus_thread"></div>
     <script>
         (function() { // DON'T EDIT BELOW THIS LINE

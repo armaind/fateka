@@ -177,7 +177,7 @@
     <!--====== Section alumni End ======-->
 
     <!--====== Start News Update ======-->
-    <section class="p-t-100 p-b-100" >
+    {{-- <section class="p-t-100 p-b-100" >
         <div class="blog" id="blog">
             <div class="container">
                 <div class="row justify-content-center iconic-box">
@@ -187,17 +187,19 @@
                             <h2 class="title">Ikuti berita seputar Teknik Komputer hanya di Fateka</h2>
                         </div>
                     </div> 
+                    @forelse ($items as $item) 
                     <div class="row row-cols-1 row-cols-md-4 g-3">
                         <div class="col">
                           <div class="card h-100 mb-5 wow fadeInUp" data-wow-delay="0.2s" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                           filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219)); border-radius: 25px">
-                            <img src="https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="..." style="border-top-left-radius: 25px; border-top-right-radius: 25px">
+                            <a class="" href="{{route('berita.show', $item->judul)}}" target="">
+                                <div class="card">
+                                    <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
+                            </a>
                             <div class="card-body">
-                              <h5 class="card-title">Headline Berita</h5>
-                              <small class="text-muted">Last updated 3 mins ago</small>
-                              <div class="mt-3">
-                                <a href="/login">Selengkapnya</a>
-                            </div>
+                                <div class="mt-3">
+                                    <a href="/login">Selengkapnya</a>
+                                </div>
                             </div>
                           </div>
                         </div>
@@ -242,11 +244,13 @@
                           </div>
                           </div>
                         </div>
-                      </div>   
+                    </div>
+                    @empty
+                    @endforelse  
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--====== End News Update ======-->
 </div>
 @endsection

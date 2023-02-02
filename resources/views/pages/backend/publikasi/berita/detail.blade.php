@@ -18,7 +18,7 @@
 
     <!-- main news start-->
     <div class="container-fluid my-3 p-t-50 p-r-50 p-b-30 p-l-50">
-        <div class="row p-b-50">
+        <div class="row">
             <div class="col-sm-12">
                 <div class="blog-single">
                     <div class="row">
@@ -56,13 +56,19 @@
                             </div>
                             <div class="mt-5">
                                 <a class="btn btn-outline-primary" href="{{route('berita.index')}}" style="border-radius: 20px">Kembali</a>
+                                @can('update berita')
                                 <a class="btn btn-outline-warning" href="{{route('berita.edit', $item->id)}}" style="border-radius: 20px">Edit Berita</a>
+                                
+                                @endcan
+                                @can('delete berita')
                                 <form class="pull-right" action="{{route('berita.destroy', $item->id)}}" method="POST"
                                     class="d-inline">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
                                 </form>
+        
+                                @endcan
                             </div>
                         </div>
                     </div>
@@ -70,7 +76,7 @@
             </div>
         </div> 
     </div>
-    <div class="comment my-3 p-t-50 p-r-50 p-b-30 p-l-50 bg-dark">
+    <div class="comment my-3 p-t-50 p-r-50 p-b-30 p-l-50">
         <div id="disqus_thread"></div>
         <script>
             (function() { // DON'T EDIT BELOW THIS LINE

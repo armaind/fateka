@@ -38,17 +38,19 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/dataAlumni')}}">
+                            <a href="{{url('/dashboard/dataalumni')}}">
                                 
                                 Tabel Data Alumni
                             </a>
                         </li>
+                        @can('create data alumni')
                         <li>
-                            <a href="{{url('/dashboard/data-alumni/tambah-data-alumni')}}">
+                            <a href="{{url('/dashboard/dataalumni/tambah-data-alumni')}}">
                                 
                                 Tambah Data 
                             </a>
                         </li>
+                        @endcan
                     </ul>
                 </li>
 
@@ -70,12 +72,15 @@
                                 Daftar Berita
                             </a>
                         </li>
+                        @can('create berita')
                         <li>
                             <a href="{{url('/dashboard/berita/tambah-berita')}}">
                                 
                                 Tambah Berita 
                             </a>
                         </li>
+                            
+                        @endcan
                     </ul>
                 </li>
 
@@ -91,11 +96,14 @@
                                 Daftar Artikel
                             </a>
                         </li>
+                        @can('create artikel')
                         <li>
                             <a href="{{url('/dashboard/artikel/tambah-artikel')}}">
                                 Tambah Artikel 
                             </a>
                         </li>
+                            
+                        @endcan
                     </ul>
                 </li>
 
@@ -117,12 +125,15 @@
                                 Daftar Lowongan Kerja
                             </a>
                         </li>
+                        @can('create lowongan kerja')
                         <li>
                             <a href="{{url('/dashboard/lowonganKerja/tambah-lowongan-kerja')}}">
                                 
                                 Tambah Lowongan Kerja
                             </a>
                         </li>
+                            
+                        @endcan
                     </ul>
                 </li>
 
@@ -144,12 +155,15 @@
                                 Daftar Kegiatan
                             </a>
                         </li>
+                        @can('create kegiatan')
                         <li>
                             <a href="{{url('/dashboard/kegiatan/tambah-kegiatan')}}">
                                 
                                 Tambah Kegiatan
                             </a>
                         </li>
+                            
+                        @endcan
                     </ul>
                 </li>
 
@@ -182,15 +196,22 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/')}}">
+                            <a href="{{url('#')}}">
+                                
+                                Beranda
+                            </a>
+                        </li>
+                        @can('create kuisioner')
+                        <li>
+                            <a href="{{url('#')}}">
                                 
                                 Tambah Kuisioner
                             </a>
                         </li>
-                        <li>
-                            <div></div>
-                        </li>
+                        @endcan
                     </ul>
+                        
+                    
                 </li>
             </ul>
         </div>

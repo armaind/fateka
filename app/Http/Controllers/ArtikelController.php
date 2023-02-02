@@ -100,9 +100,9 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($judul)
     {
-        $item = Artikel::findOrFail($id);
+        $item = Artikel::findOrFail($judul);
         
         return view('pages.backend.publikasi.artikel.edit', [
             'item' => $item
@@ -116,7 +116,7 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $judul)
     {
         
         $this->validate($request, [
@@ -128,7 +128,7 @@ class ArtikelController extends Controller
             'artikel' => 'max:64',
             'isi_artikel' => 'required'
         ]);
-        $artikel = Artikel::find($id)->update($request->all());
+        $artikel = Artikel::find($judul)->update($request->all());
 
         return redirect('/dashboard/artikel');
     }

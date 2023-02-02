@@ -39,31 +39,31 @@ Route::prefix('dashboard')
         Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
         
         /* ------------------------- Data Alumni ------------------------- */
-        Route::get('/data-alumni', 'App\Http\Controllers\DataAlumniController@index');
-        Route::get('/data-alumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create');
-        Route::resource('dataAlumni', 'App\Http\Controllers\DataAlumniController');
+        Route::get('/dataalumni', 'App\Http\Controllers\DataAlumniController@index');
+        Route::get('/dataalumni/tambah-data-alumni', 'App\Http\Controllers\DataAlumniController@create')->middleware('can:create data alumni');
+        Route::resource('dataalumni', 'App\Http\Controllers\DataAlumniController');
         
         /* ------------------------- Publikasi pages ------------------------- */
         /* ------------------------- Berita ------------------------- */
         Route::get('/berita', 'App\Http\Controllers\BeritaController@index');
-        Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create');
+        Route::get('/berita/tambah-berita', 'App\Http\Controllers\BeritaController@create')->middleware('can:create berita');
         Route::resource('berita', 'App\Http\Controllers\BeritaController');
         
         Route::patch('/berita/{id}/edit', 'App\Http\Controllers\BeritaController@update');
 
         /* ------------------------- Artikel ------------------------- */
         Route::get('/artikel', 'App\Http\Controllers\ArtikelController@index');
-        Route::get('/artikel/tambah-artikel', 'App\Http\Controllers\ArtikelController@create');
+        Route::get('/artikel/tambah-artikel', 'App\Http\Controllers\ArtikelController@create')->middleware('can:create artikel');
         Route::resource('artikel', 'App\Http\Controllers\ArtikelController');
         
         /* ------------------------- Lowongan Kerja Pages ------------------------ */
         Route::get('/lowonganKerja', 'App\Http\Controllers\LowonganKerjaController@index');
-        Route::get('/lowonganKerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create');
+        Route::get('/lowonganKerja/tambah-lowongan-kerja', 'App\Http\Controllers\LowonganKerjaController@create')->middleware('can:create lowongan kerja');
         Route::resource('lowonganKerja', 'App\Http\Controllers\LowonganKerjaController');
 
         /* ------------------------- Kegiatan Pages ------------------------ */
         Route::get('/kegiatan', 'App\Http\Controllers\KegiatanController@index');
-        Route::get('/kegiatan/tambah-kegiatan', 'App\Http\Controllers\KegiatanController@create');
+        Route::get('/kegiatan/tambah-kegiatan', 'App\Http\Controllers\KegiatanController@create')->middleware('can:create kegiatan');
         Route::resource('kegiatan', 'App\Http\Controllers\KegiatanController');
 
         
@@ -74,7 +74,7 @@ Route::prefix('dashboard')
         
         /* ------------------------- Kuisioner Pages ------------------------ */
         Route::get('/kuisioner', 'App\Http\Controllers\KuisionerController@index');
-        Route::get('/kuisioner/tambah-kuisioner', 'App\Http\Controllers\KuisionerController@create');
+        Route::get('/kuisioner/tambah-kuisioner', 'App\Http\Controllers\KuisionerController@create')->middleware('can:create kuisioner');
         Route::resource('kuisioner', 'App\Http\Controllers\KuisionerController');
     });
 

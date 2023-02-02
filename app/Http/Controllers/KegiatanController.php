@@ -16,7 +16,8 @@ class KegiatanController extends Controller
      */
     public function index()
     {
-        $items = Kegiatan::paginate(15);
+        $items = Auth::user()->id;
+        $items = Kegiatan::paginate(10);
         return view('pages.backend.kegiatan.index', [
             'items' => $items
         ]);
@@ -99,7 +100,7 @@ class KegiatanController extends Controller
      */
     public function show($id)
     {
-        $item = Kegiatan::where('id',$id)->first();
+        $item = DB::table('kegiatan')->where('judul', $id)->first();
         return view('pages.backend.kegiatan.detail', [
             'item' => $item
         ]);

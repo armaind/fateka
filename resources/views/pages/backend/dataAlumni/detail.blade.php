@@ -1,5 +1,4 @@
 @extends('layouts.backend.master')
-
     
 @section('title', $item->nama_alumni . ' — Fateka')
 @section('content')
@@ -25,7 +24,7 @@
                     <div class="col-12">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="{{route('dataAlumni.index')}}">Data Alumni</a>
+                                <a href="{{route('dataalumni.index')}}">Data Alumni</a>
                             </li>
                             <li class="breadcrumb-item active">Detail Alumni</li>
                             <li class="breadcrumb-item active">{{$item->nama_alumni}}</li>
@@ -62,96 +61,98 @@
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Nama Lengkap</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->nama_alumni }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->nama_alumni }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Email</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-primary mb-2">{{ $item->email }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->email }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">No Telepon</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->no_telp }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->no_telp }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Provinsi</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->provinsi }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->provinsi }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Kota/Kabupaten</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-warning">{{ $item->kota }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->kota }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Kecamatan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">Rp.{{ $item->kecamatan }},-</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->kecamatan }}</span>
                                 </div>
                             </div>
-                            <div class="row mb-10">
+                            <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Desa/jalan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{$item->desa_atau_jalan}}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->desa_atau_jalan }}</span>
                                 </div>
                             </div>
-                            <div class="row mb-10">
+                            <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Domisili</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{$item->domisili}}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->domisili }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Angkatan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->angkatan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->angkatan }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Status Pekerjaan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->status_pekerjaan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->status_pekerjaan }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Posisi Kerja</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-warning">{{ $item->posisi }} orang</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->posisi }} orang</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Perusahaan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->perusahaan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->perusahaan }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    
+
                     <div class="card">
                     </div> 
-                    <div class="row mt-5 justify-content-center">
+                    <div class="row mt-5 ml-1 content-center">
                         <div class="col-sm-">
-                            <a class="btn btn-outline-primary" href="{{route('dataAlumni.index')}}" style="border-radius: 20px">Kembali</a>
+                            <a class="btn btn-outline-primary" href="{{route('dataalumni.index')}}" style="border-radius: 20px">Kembali</a>
                         </div>
+                        @can('update/delete data alumni')
                         <div class="col-sm-8">
-                            <a class="btn btn-outline-warning" href="{{route('dataAlumni.edit', $item->id)}}" style="border-radius: 20px">Edit Lowongan</a>
+                            <a class="btn btn-outline-warning" href="{{route('dataalumni.edit', $item->id)}}" style="border-radius: 20px">Edit Data Alumni</a>
                         </div>
                         <div class="col-sm-2 flex-right">
-                            <form action="{{route('dataAlumni.destroy', $item->id)}}" method="POST"
+                            <form action="{{route('dataalumni.destroy', $item->id)}}" method="POST"
                                 class="d-inline">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
                             </form>
                         </div>
+                            
+                        @endcan
                     </div>     
                 </div>  
                 <!-- main content end-->

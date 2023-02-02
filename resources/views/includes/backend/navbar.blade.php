@@ -60,11 +60,9 @@
                         <img class="b-r-10"
                             src="https://source.boringavatars.com/beam/120/{{Auth::user()->name}}?square&colors=FAD089,FF9C5B,F5634A,ED303C,3B8183"
                             width="40px">
-                        <div class="media-body">
+                        <div class="media-body mt-2">
                             <span>{{Auth::user()->name}}</span>
-                            <p class="mb-0 font-roboto">Mahasiswa
-                                <i class="middle fa fa-angle-down"></i>
-                            </p>
+                            <i class="middle fa fa-angle-down"></i>
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">

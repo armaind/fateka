@@ -99,7 +99,7 @@ class DataAlumniController extends Controller
             ]);
         }
         
-        return redirect('/dashboard/data-alumni');
+        return redirect('/dashboard/dataalumni');
     }
 
     /**
@@ -110,7 +110,7 @@ class DataAlumniController extends Controller
      */
     public function show($id)
     {
-        $item = DataAlumni::where('id', $id)->first();
+        $item = DB::table('data_alumni')->where('nama_alumni', $id)->first();
         return view('pages.backend.dataAlumni.detail',[
             'item' => $item
         ]);
@@ -162,7 +162,7 @@ class DataAlumniController extends Controller
     
         $dataalumni = DataAlumni::find($id)->update($request->all());
 
-        return redirect('/dashboard/data-alumni');
+        return redirect('/dashboard/dataalumni');
     }
 
     /**
@@ -176,6 +176,6 @@ class DataAlumniController extends Controller
         $item = DataAlumni::findOrFail($id);
         $item->delete();
 
-        return redirect('/dashboard/data-alumni');
+        return redirect('/dashboard/dataalumni');
     }
 }
