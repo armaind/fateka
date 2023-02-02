@@ -27,6 +27,8 @@
 <script src="{{url("cuba/assets/js/typeahead-search/typeahead-custom.js")}}"></script>
 <script src="{{url("cuba/assets/js/tooltip-init.js")}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+{{-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> --}}
+
 @stack('datatable-scripts')
 @stack('galleries-scripts')
 @stack('timepicker-scripts')

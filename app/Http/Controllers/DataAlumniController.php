@@ -16,7 +16,7 @@ class DataAlumniController extends Controller
      */
     public function index()
     {
-        $items = DataAlumni::paginate(10);
+        $items = DataAlumni::paginate(50);
         return view('pages.backend.dataAlumni.index', [
             'items' => $items
         ]);

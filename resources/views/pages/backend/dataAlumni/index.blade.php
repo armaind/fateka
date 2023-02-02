@@ -39,7 +39,8 @@
                                     <th>Email</th>
                                     <th>No Telepon</th>
                                     <th>Angkatan</th>
-                                    <th>Domisili</th>                                   
+                                    <th>Domisili</th>     
+                                    <th></th>                              
                                 </tr>
                             </thead>
                             <tbody>
@@ -134,6 +135,7 @@
 <script src="{{url('cuba/assets/js/datatable/datatable-extension/dataTables.scroller.min.js')}}"></script>
 <script src="{{url('cuba/assets/js/datatable/datatable-extension/custom.js')}}"></script>
 <script src="{{url('cuba/assets/js/tooltip-init.js')}}"></script>
+{{-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> --}}
 @endpush
 
 @endsection
