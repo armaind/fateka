@@ -100,11 +100,7 @@ class KegiatanController extends Controller
      */
     public function show($judul)
     {
-<<<<<<< HEAD
-        $item = DB::table('kegiatan')->where('judul', $id)->first();
-=======
         $item = DB::table('kegiatan')->where('judul', $judul)->first();
->>>>>>> a2587a2852818bb2d27c08993ef35c862877bf57
         return view('pages.backend.kegiatan.detail', [
             'item' => $item
         ]);
