@@ -14,11 +14,11 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="d-block w-100 align-content-center" style="background-image: url('../images/splide/data.png'); border-radius:15px; height:150px; background-size:cover">
-                <div class="card-body">
+                {{-- <div class="card-body">
                     <h4 class="text-center text-white">
                         
                     </h4>
-                </div>
+                </div> --}}
             </div>
             <div class="card-header bg-primary" style="border-radius: 16px">
                 <h5 class="text-white">Data Alumni</h5>
@@ -39,7 +39,8 @@
                                     <th>Email</th>
                                     <th>No Telepon</th>
                                     <th>Angkatan</th>
-                                    <th>Domisili</th>                                   
+                                    <th>Domisili</th>     
+                                    <th></th>                              
                                 </tr>
                             </thead>
                             <tbody>
@@ -105,7 +106,6 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        
                     </div>
                 </div>
             </div>
@@ -135,6 +135,7 @@
 <script src="{{url('cuba/assets/js/datatable/datatable-extension/dataTables.scroller.min.js')}}"></script>
 <script src="{{url('cuba/assets/js/datatable/datatable-extension/custom.js')}}"></script>
 <script src="{{url('cuba/assets/js/tooltip-init.js')}}"></script>
+{{-- <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script> --}}
 @endpush
 
 @endsection

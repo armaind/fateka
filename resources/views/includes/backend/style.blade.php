@@ -15,6 +15,10 @@
 <link rel="stylesheet" type="text/css" href="{{url("cuba/assets/css/vendors/animate.css")}}">
 <link rel="stylesheet" type="text/css" href="{{url("cuba/assets/css/vendors/chartist.css")}}">
 <link rel="stylesheet" type="text/css" href="{{url("cuba/assets/css/vendors/date-picker.css")}}">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+{{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"> --}}
+
 @stack('datatable-styles')
 @stack('galleries-styles')
 @stack('carousel-styles')
@@ -22,6 +26,7 @@
 @stack('todo-styles')
 @stack('calendar-styles')
 @stack('create-article-styles')
+@stack('datepicker-styles')
 <!-- Plugins css Ends-->
 <!-- Bootstrap css-->
 <link rel="stylesheet" type="text/css" href="{{url("cuba/assets/css/vendors/bootstrap.css")}}">

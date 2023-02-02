@@ -91,14 +91,14 @@
                                         <label for="gaji">Gaji</label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="gaji" name="gaji" value="{{old('gaji')}}" placeholder="Ex: Rp.12.000.000,-" 
-                                                type="text">
+                                                type="number">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="berlaku">Berlaku Sampai</label>
                                         <div class="input-group mb-3">
-                                            <input class="form-control" id="berlaku" name="berlaku" value="{{old('berlaku')}}" placeholder="yyyy/mm/dd"
-                                                type="text">
+                                            <input class="form-control" id="berlaku" name="berlaku" value="{{old('berlaku')}}"
+                                                type="datetime-local">
                                         </div>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -202,6 +202,14 @@
 <script src="{{url('cuba/assets/js/email-app.js')}}"></script>
 <script src="{{url('cuba/assets/js/form-validation-custom.js')}}"></script>
 <script src="{{url('cuba/assets/js/tooltip-init.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    config = {
+        enableTime: true,
+        dateFormat: 'Y-m-d H:i',
+    }
+    flatpickr("input[type=datetime-local]", config);
+</script>
 @endpush
 
 @endsection
