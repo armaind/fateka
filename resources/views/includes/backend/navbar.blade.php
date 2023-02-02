@@ -76,9 +76,9 @@
                         </li>
 
                         <li>
-                            <a href="{{url('/')}}">
-                                <i data-feather="settings"></i>
-                                <span>Edit Profile</span>
+                            <a href="{{url('/dashboard/profil')}}">
+                                <i data-feather="user"></i>
+                                <span>Profile Saya</span>
                             </a>
                         </li>
                         

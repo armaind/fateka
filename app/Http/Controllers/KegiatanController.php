@@ -45,14 +45,14 @@ class KegiatanController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => 'required|max:100',
+            'judul' => 'required|max:225',
             'kategori' => 'required|max:64',
             'penyelenggara' => 'required|max:64',
             'content' => 'required',
             'kuota' => 'required',
             'lokasi' => 'required',
             'tanggal' => 'required',
-            'batas' => 'required',
+            'batas' => 'required'
         ]);
 
         $data = Kegiatan::create($request->all());
@@ -97,9 +97,9 @@ class KegiatanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($judul)
     {
-        $item = Kegiatan::where('id',$id)->first();
+        $item = DB::table('kegiatan')->where('judul', $judul)->first();
         return view('pages.backend.kegiatan.detail', [
             'item' => $item
         ]);
@@ -113,7 +113,7 @@ class KegiatanController extends Controller
      */
     public function edit($id)
     {
-        $item = Kegiatan::findOrFail($id);
+        $item = Kegiatan::where('id', $id)->first();
 
         return view('pages.backend.kegiatan.edit', [
             'item' => $item
@@ -134,15 +134,14 @@ class KegiatanController extends Controller
         ]);
 
         $validated = $request->validate([
-            'judul' => $request->judul,
-            'kategori' => $request->kategori,
-            'penyelenggara' => $request->penyelenggara,
-            'thumbnail' => $request->thumbnail,
-            'content' => $request->content,
-            'kuota' => $request->kuota,
-            'lokasi' => $request->lokasi,
-            'tanggal' => $request->tanggal,
-            'batas' => $request->batas
+            'judul' => 'required|max:225',
+            'kategori' => 'required|max:64',
+            'penyelenggara' => 'required|max:64',
+            'content' => 'required',
+            'kuota' => 'required',
+            'lokasi' => 'required',
+            'tanggal' => 'required',
+            'batas' => 'required'
         ]);
 
         $kegiatan = Kegiatan::find($id)->update($request->all());

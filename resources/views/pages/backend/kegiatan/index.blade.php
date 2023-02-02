@@ -13,14 +13,14 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="d-block w-100" style="background-image: url('../images/splide/kegiatan.png'); border-radius:15px; height:150px; background-size:cover">
+                <div class="card-header bg-primary" style="border-radius: 16px">
+                    <h5 class="text-white">Kegiatan</h5>
+                </div>
                 <div class="card-body">
                     <h4 class="text-center text-white">
                         {{-- <strong>Turn On</strong> The Future --}}
                     </h4>
                 </div>
-            </div>
-            <div class="card-header bg-primary" style="border-radius: 16px">
-                <h5 class="text-white">Kegiatan</h5>
             </div>
         </div>
     </div>
@@ -61,24 +61,27 @@
     </div>
     <div class="card card-absolute mt-5 mt-md-4">
         <div class="card-body">
-            @forelse ($items as $item) 
-            <div class="card mb-4">
-                <div class="row g-0 m-0" style="background-image: url('')">
-                    <div class="col-md-4 m-auto">
-                        <img src="{{asset('images/' . $item->thumbnail)}}" class="img-fluid mx-auto d-block" alt="..." width="150px">
-                    </div>
-                    <div class="col-md-8 m-0 bg-dark"  style="border-radius:15px">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $item->judul }}</h5>
-                            <h6 class="card-text"><small class="text-muted">Oleh: {{ $item->penyelenggara }}</small></h6>
-                            <p class="card-text"><small class="text-muted">Tanggal: {{ $item->tanggal }}</small></p>
-                            <a href="{{route('kegiatan.show', $item->id) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
+            <div class="card">
+                <div class="row">
+                    @forelse ($items as $item) 
+                    <div class="col-md-6">
+                        <div class="form-row mb-3" style="height:250px">
+                            <div class="form-group col-md-4 m-auto">
+                               <img src="{{asset('images/' . $item->thumbnail)}}" class="img-fluid mx-auto d-block" alt="..." width="200px"> 
+                            </div>
+                            <div class="form-group col-md-8 bg-dark"  style="border-radius:15px; ">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $item->judul }}</h5>
+                                    <h6 class="card-text"><small class="text-muted">Oleh: {{ $item->penyelenggara }}</small></h6>
+                                    <a href="{{route('kegiatan.show', $item->judul) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    @empty
+                    @endforelse    
                 </div>
             </div> 
-            @empty
-            @endforelse  
         </div>
     </div>
 </div>

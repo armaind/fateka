@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Edit Berita — Fateks')
+@section('title', 'Edit Kegiatan — Fateks')
 @section('content')
 
 @push('create-article-styles')
@@ -12,17 +12,11 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="card-header bg-primary">
-                <h5 class="text-white">Edit Berita <span class="d-none d-md-inline"> —
+                <h5 class="text-white">Edit Kegiatan <span class="d-none d-md-inline"> —
                         {{$item->judul}}</span></h5>
             </div>
             <div class="card-body">
-                <p>
-                    Dibawah ini adalah form untuk edit berita {{$item->judul}}. <span
-                        class="d-none d-md-inline">
-                        Catatan yang telah kamu tulis nantinya bisa kamu akses kok dimana saja dan kapan saja.
-                        Selamat menulis dan berkreasi, ya!
-                    </span>
-                </p>
+                <p>Dibawah ini adalah form untuk edit Kegiatan</p>
             </div>
         </div>
     </div>
@@ -30,15 +24,12 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
-                    <h5>Edit Catatan Pelajaran</h5>
-                </div>
                 <div class="card-body add-post">
                     @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
                             <li>
-                                <h4>Ada error nih 😓</h4>
+                                <h4>Error</h4>
                             </li>
                             @foreach($errors->all() as $error)
                             <li>{{ $error }}</li>
@@ -46,92 +37,85 @@
                         </ul>
                     </div>
                     @endif
-                    <form class="row needs-validation" method="POST" action="{{route('berita.update', $item->id)}}"
+                    <form class="row needs-validation" method="POST" action="{{route('kegiatan.update', $item->id)}}"
                         enctype="multipart/form-data" novalidate="">
                         @method('PUT')
                         @csrf
                         <div class="col-sm-12">
                             <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="judul">Judul Catatan: <span class="text-danger">*</span></label>
+                                <div class="form-group col-md-12">
+                                    <label for="judul">Judul Kegiatan <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-notes" width="20" height="20"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <rect x="5" y="3" width="14" height="18" rx="2"></rect>
-                                                    <line x1="9" y1="7" x2="15" y2="7"></line>
-                                                    <line x1="9" y1="11" x2="15" y2="11"></line>
-                                                    <line x1="9" y1="15" x2="13" y2="15"></line>
-                                                </svg>
-                                            </span>
-                                        </div>
                                         <input class="form-control" id="judul" name="judul" value="{{$item->judul}}"
-                                            type="text" required="">
+                                            type="text" required>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6 ">
-                                    <label for="matkul">Nama Mata Kuliah: (Optional)</label>
+                                    <label for="kategori">Kategori <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-book" width="20" height="20"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                                                    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-                                                    <line x1="3" y1="6" x2="3" y2="19"></line>
-                                                    <line x1="12" y1="6" x2="12" y2="19"></line>
-                                                    <line x1="21" y1="6" x2="21" y2="19"></line>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <input class="form-control" id="matkul" name="matkul" value="{{$item->matkul}}"
-                                            type="text" required="">
+                                        <input class="form-control" id="kategori" name="kategori"
+                                            value="{{$item->kategori}}" type="text" required>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="customFile">Thumbnail: (Optional)</label>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="thumbnail" id="customFile">
-                                    <label class="custom-file-label" for="customFile">Pilih file thumbnail</label>
+                                <div class="form-group col-md-6 ">
+                                    <label for="penyelenggara">Penyelenggara <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control" id="penyelenggara" name="penyelenggara"
+                                            value="{{$item->penyelenggara}}" type="text" required>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
-                                <input class="form-control" type="hidden" name="tanggal"
-                                    value="{{{now()->toDateString()}}}">
-                            </div>
-                            <div class="email-wrapper">
-                                <div class="theme-form">
-                                    <div class="form-group">
-                                        <label>Catatan: <span class="text-danger">*</span></label>
-                                        <textarea id="text-box" name="content" cols="10" rows="2">
-                                                {!!htmlspecialchars_decode($item->content)!!}
-                                            </textarea>
+                                <div class="email-wrapper">
+                                    <div class="theme-form">
+                                        <div class="form-group">
+                                            <label>Deskripsi <span class="text-danger">*</span></label>
+                                            <textarea id="text-box" name="content" cols="10" rows="2">
+                                            {!!htmlspecialchars_decode($item->content)!!}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4 ">
+                                    <label for="kuota">Kuota <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control" id="kuota" name="kuota"
+                                            value="{{$item->kuota}}" type="number" required>
+                                    </div>
+                                </div> 
+                                <div class="form-group col-md-4 ">
+                                    <label for="lokasi">Lokasi <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control" id="lokasi" name="lokasi"
+                                            value="{{$item->lokasi}}" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4 ">
+                                    <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control" id="tanggal" name="tanggal"
+                                            value="{{$item->tanggal}}" type="text" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-4 ">
+                                    <label for="batas">Batas Daftar <span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input class="form-control" id="batas" name="batas"
+                                            value="{{$item->batas}}" type="text" required>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
+                    
+                        <div class="form-group">
+                            <input class="form-control" type="hidden" name="user_id" value="{{Auth::user()->email}}">
+                            <input class="form-control" type="hidden" name="tanggal"
+                                value="{{{now()->toDateString()}}}">
+                        </div>
+                        
                         <input type="hidden" name="user_id" value={{Auth::user()->email}}>
 
                         <div class="col-sm-12">
                             <div class="btn-showcase">
-                            <form action="{{route('berita.destroy', $item->id)}}" method="POST">
-                                            @csrf
-                                            @method('delete')
-                                <button class="btn btn-light" type="submit">Delete</button>
-                            </form>
-                                <button class="btn btn-primary" type="submit">Update</button>
+                                <button type="submit" class="btn btn-primary" type="submit">Update</button>
+                                <a class="btn btn-primary" href="{{route('kegiatan.index')}}">Kembali</a>
                             </div>
                         </div>
                     </form> 

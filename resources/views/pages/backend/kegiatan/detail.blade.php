@@ -1,7 +1,7 @@
 @extends('layouts.backend.master')
 
-
-@section('title', $item->judul . ' | Kegiatan - Fateka')
+    
+@section('title', $item->judul . ' — Fateka')
 @section('content')
 
 <style>
@@ -15,57 +15,88 @@
 </style>
 
 <!-- file wrapper for better tabs start-->
-<div>
-    <div class="container-fluid">
-        <div class="page-title">
-            <div class="row">
-                <div class="col-6"></div>
-                <div class="col-6">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"></li>
-                        <li class="breadcrumb-item"><a href="{{route('kegiatan.index')}}">Kegiatan</a></li>
-                        <li class="breadcrumb-item active">{{$item->judul}}</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- main content start-->
-    <div class="container-fluid my-3">
-        <div class="row">
+
+    <!-- main news start-->
+    <div class="container-fluid my-3 p-t-50 p-r-50 p-b-30 p-l-50">
+        <div class="row p-b-50">
             <div class="col-sm-12">
                 <div class="blog-single">
+                    <div class="row">
+                        <div class="col-12">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="{{route('kegiatan.index')}}">Kegiatan</a>
+                                </li>
+                                <li class="breadcrumb-item active">{{$item->judul}}</li>
+                            </ol>
+                        </div>
+                    </div>
                     <div class="blog-box blog-details">
-                        <img class="img-fluid" src="{{url('https://images.unsplash.com/photo-1661956602868-6ae368943878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60' . $item->thumbnail)}}">
-                        <div class="blog-details">
-                            <ul class="blog-social">
-                                <li>{{$item->tanggal}}</li>
-                                <li><i class="icofont icofont-user"></i>{{$item->penyelenggara}}</li>
-                                <li><i class=""></i><a href="{{route('berita.edit', $item->id)}}"> Edit Kegiatan</a></li>
-                            </ul>
-                            <h1 class="mt-3">
-                                {{$item->oenyelenggara}}
-                            </h1>
-                            <div class="single-blog-content-top">
-                                <div class="mt-3">{!!htmlspecialchars_decode($item->content)!!}</div>
+                        <div style="box-shadow:rgba(0, 0, 0, 0.05) 0px 0px 4px 0px, rgba(0, 0, 0, 0.1) 0px 4px 24px 0px;">
+                            <div style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:450px; border-radius:15px"></div>
+                        </div>
+                        <div class="blog-details p-0 mt-3">
+                            <div class="row col-md-12 p-0">
+                                <div class="col-md-9">
+                                    <span class="badge badge-warning">{{$item->kategori}}</span>
+                                    <h1 class="mt-3">
+                                        {{ $item->judul }}
+                                    </h1> 
+                                    <p class="text-muted mt-0">Diselenggarakan oleh: {{ $item->penyelenggara }}</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p class="mt-2 mb-2">Batas daftar: </p>
+                                    <h6 class="m-0">{{ $item->batas }}</h6>
+                                    <p class="text-muted mt-2">Kuota:</p>
+                                    <h6 class="m-0">{{ $item->kuota }}</h6>
+                                </div>
+                            </div>
+                            <div class="row col-md-12 p-0 mt-5">
+                                <div class="col-md-9">
+                                    <div class="mt-4 mb-4">{!!htmlspecialchars_decode($item->content)!!}</div>
+                                    <div class="mt-2">
+                                        <p><strong>Tags:</strong></p>
+                                        <span class="badge badge-light-primary">#{{ $item->kategori }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>Jadwal Pelaksanaan</h4>
+                                    <p class="mt-2 mb-2">Tanggal: {{ $item->tanggal }}</p>
+                                    <h4>Lokasi</h4>
+                                    <p class="mt-2 mb-2">{{ $item->lokasi }}</p>
+                                    <a href="#"><div style="border-radius: 20px" class="btn btn-primary mt-3">Daftar Sekarang</div></a>
+                                </div>
+                            </div>
+                            <div class="blog-footer mt-5">
+                                <a class="btn btn-outline-primary" href="{{route('kegiatan.index')}}" style="border-radius: 20px">Kembali</a>
+                                <a class="btn btn-outline-warning" href="{{route('kegiatan.edit', $item->id)}}" style="border-radius: 20px">Edit kegiatan</a>
+                                <form class="pull-right" action="{{route('kegiatan.destroy', $item->id)}}" method="POST"
+                                    class="d-inline">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
+    </div>
+    <div class="comment my-3 p-t-50 p-r-50 p-b-30 p-l-50 bg-dark">
+        <div id="disqus_thread"></div>
+        <script>
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://fateka.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank">comments powered by Disqus.</a></noscript>
     </div>
     <!-- main content end-->
-</div>
+
 <!-- file wrapper for better tabs start-->
 
-<div id="disqus_thread"></div>
-<script>
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://fateka.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+@endsection

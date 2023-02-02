@@ -19,9 +19,7 @@
                             {{$item->nama}}</span></h5>
                 </div>
                 <div class="card-body">
-                    <p>
-                        Dibawah ini adalah form untuk edit Lowongan Kerja berjudul {{$item->judul}}.
-                    </p>
+                    <p>Dibawah ini adalah form untuk edit Lowongan Kerja.</p>
                 </div>
             </div>
         </div>
@@ -37,7 +35,7 @@
                         <div class="alert alert-danger">
                             <ul>
                                 <li>
-                                    <h4>Error </h4>
+                                    <h4>Error</h4>
                                 </li>
                                 @foreach($errors->all() as $error)
                                 <li>{{ $error }}</li>
