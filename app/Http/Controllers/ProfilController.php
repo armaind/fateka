@@ -15,7 +15,7 @@ class ProfilController extends Controller
      */
     public function index()
     {
-        return view('pages.backend.index', [ ]);
+        return view('pages.backend.profil.index', [ ]);
     }
 
     /**

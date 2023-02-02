@@ -76,7 +76,7 @@
                         <li>
                             <a href="{{url('/dashboard/profil')}}">
                                 <i data-feather="user"></i>
-                                <span>Profile Saya</span>
+                                <span>Profile</span>
                             </a>
                         </li>
                         
