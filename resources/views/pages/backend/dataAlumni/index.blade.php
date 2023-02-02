@@ -14,11 +14,11 @@
     <div class="page-title">
         <div class="card card-absolute mt-5 mt-md-4">
             <div class="d-block w-100 align-content-center" style="background-image: url('../images/splide/data.png'); border-radius:15px; height:150px; background-size:cover">
-                <div class="card-body">
+                {{-- <div class="card-body">
                     <h4 class="text-center text-white">
                         
                     </h4>
-                </div>
+                </div> --}}
             </div>
             <div class="card-header bg-primary" style="border-radius: 16px">
                 <h5 class="text-white">Data Alumni</h5>
@@ -105,7 +105,6 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        
                     </div>
                 </div>
             </div>
