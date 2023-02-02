@@ -76,6 +76,11 @@ Route::prefix('dashboard')
         Route::get('/kuisioner', 'App\Http\Controllers\KuisionerController@index');
         Route::get('/kuisioner/tambah-kuisioner', 'App\Http\Controllers\KuisionerController@create')->middleware('can:create kuisioner');
         Route::resource('kuisioner', 'App\Http\Controllers\KuisionerController');
+        
+        /* ------------------------- profil Pages ------------------------ */
+        Route::get('/profil', 'App\Http\Controllers\ProfilController@index');
+        Route::get('/profil/edit-profil', 'App\Http\Controllers\ProfilController@create');
+        Route::resource('profil', 'App\Http\Controllers\ProfilController');
     });
 
 /* -------------------------------------------------------------------------- */
