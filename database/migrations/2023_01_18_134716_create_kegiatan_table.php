@@ -22,7 +22,7 @@ class CreateKegiatanTable extends Migration
             $table->string('penyelenggara');
             $table->integer('kuota');
             $table->string('lokasi');
-            $table->string('batas');
+            $table->dateTime('batas');
             $table->mediumText('content');
             $table->string('user_id');
             $table->timestamps();

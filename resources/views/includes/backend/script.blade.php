@@ -26,6 +26,7 @@
 <script src="{{url("cuba/assets/js/typeahead-search/handlebars.js")}}"></script>
 <script src="{{url("cuba/assets/js/typeahead-search/typeahead-custom.js")}}"></script>
 <script src="{{url("cuba/assets/js/tooltip-init.js")}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 @stack('datatable-scripts')
 @stack('galleries-scripts')
 @stack('timepicker-scripts')
@@ -34,6 +35,7 @@
 @stack('carousel-scripts')
 @stack('ckeditor-scripts')
 @stack('journal-scripts')
+@stack('datepicker-scripts')
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="{{url("cuba/assets/js/script.js")}}"></script>

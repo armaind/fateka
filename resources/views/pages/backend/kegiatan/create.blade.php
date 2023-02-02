@@ -99,14 +99,14 @@
                                         <label for="tanggal">Tanggal <span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
                                             <input class="form-control" id="tanggal" name="tanggal"
-                                                value="{{old('tanggal')}}" type="text" required>
+                                                value="{{old('tanggal')}}" type="datetime-local" required>
                                         </div>
                                     </div>
                                     <div class="form-group col-md-4 ">
                                         <label for="batas">Batas Daftar <span class="text-danger">*</span></label>
-                                        <div class="input-group mb-3">
+                                        <div class="input-group">
                                             <input class="form-control" id="batas" name="batas"
-                                                value="{{old('batas')}}" type="text" required>
+                                                value="{{old('batas')}}" type="datetime-local" required>
                                         </div>
                                     </div>
                                 </div>
@@ -147,6 +147,13 @@
 <script src="{{url('cuba/assets/js/email-app.js')}}"></script>
 <script src="{{url('cuba/assets/js/form-validation-custom.js')}}"></script>
 <script src="{{url('cuba/assets/js/tooltip-init.js')}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    config = {
+        enableTime: true,
+        dateFormat: 'Y-m-d H:i',
+    }
+    flatpickr("input[type=datetime-local]", config);
+</script>
 @endpush
-
 @endsection
