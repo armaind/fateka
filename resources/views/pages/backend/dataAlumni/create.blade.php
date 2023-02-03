@@ -49,28 +49,28 @@
                                 <h6 style="color: #07BD02">Data Diri</h6>
                             </div>
                             <div class="form-group col-md-12 mb-2">
-                                <label for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="nama_alumni" type="text" class="form-control" placeholder="Nama Lengkap"
                                         value="{{old('nama_alumni')}}" name="nama_alumni" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="email">Email<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="email">Email<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="email" type="email" class="form-control" placeholder="contoh@gmail.com"
                                         value="{{old('email')}}" name="email" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="no_telp">No Telepon<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="no_telp">No Telepon<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="no_telp" type="number" class="form-control"
                                         value="{{old('no_telp')}}" name="no_telp" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="customFile">Foto (Optional) <span class="text-danger">*Max Height</span></label>
+                                <label class="font-weight-bold" for="customFile">Foto (Optional) <span class="text-danger">*Max Height</span></label>
                                 <div class="custom-file">
                                     <input type="file" class="form-input" name="foto">
                                 </div>
@@ -79,21 +79,21 @@
                                 <h6 style="color: #07BD02">Alamat Lengkap</h6>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="provinsi" type="text" class="form-control"
                                     value="{{old('provinsi')}}" name="provinsi" required>
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="kota" type="text" class="form-control"
                                     value="{{old('kota')}}" name="kota" required>   
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="kecamatan" type="text" class="form-control"
                                     value="{{old('kecamatan')}}" name="kecamatan" required>
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="domisili">Domisili<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="domisili">Domisili<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="domisili" type="text" class="form-control" placeholder="Kota"
                                     value="{{old('domisili')}}" name="domisili" required>  
@@ -118,20 +118,20 @@
                                 <h6 style="color: #07BD02">Data Akademik</h6>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="angkatan">Angkatan<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <input id="angkatan" type="number" class="form-control" placeholder="2018"
                                         value="{{old('angkatan')}}" name="angkatan" required>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="col-md-12 mb-2 mt-4">
                                 <h6 style="color: #07BD02">Data Karir</h6>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
+                                <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
                                 <div class="input-group mb-3">
                                     <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
                                         <option value="" disabled selected>Pilih</option>
@@ -141,7 +141,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="posisi">Posisi Pekerjaan</label>
+                                <label class="font-weight-bold" for="posisi">Posisi Pekerjaan</label>
                                 <div class="input-group mb-3">
                                     <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
                                     class="form-control" name="posisi">
@@ -149,7 +149,7 @@
                                 <label for="posisi"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label for="perusahaan">Perusahaan/Instansi</label>
+                                <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
                                 <div class="input-group mb-3">
                                     <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
                                     class="form-control" name="perusahaan">

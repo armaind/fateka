@@ -54,239 +54,233 @@
                 </ul>
                 <div class="card-body">
                     <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="nav-profil" role="tabpanel" aria-labelledby="nav-home-tab">
-                        <div class="user-settings__wrapper">
-                            <h4 class="user-settings__title">Profil</h4>
-                            <div class="form-row">
-                                <div class="form-group col-md-8 mb-2">
-                                    <label for="nama_alumni">Nama Lengkap<span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input id="nama_alumni" type="text" class="form-control" placeholder="Nama Lengkap"
-                                            value="{{old('nama_alumni')}}" name="nama_alumni" required>
+                        <div class="tab-pane fade show active" id="nav-profil" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="user-settings__wrapper">
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Profil</h5>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="nama_alumni">Nama Lengkap<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="nama_alumni" type="text" class="form-control" placeholder="Nama Lengkap"
+                                                value="{{old('nama_alumni')}}" name="nama_alumni" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label for="email" class="font-weight-bold">Email</label>
+                                        <div class="input-group mb-3">
+                                            <input id="email" type="email" class="form-control" readonly
+                                                value="" name="email" required>
+                                        </div>
+                                        <div class="small form-text text-muted">Anda dapat mengubah alamat email melalui menu Akun.</div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label for="customFile" class="font-weight-bold">Foto Profil<span class="text-danger">*</span></label>
+                                        <div class="custom-file">
+                                            <input type="file" class="form-input" name="foto">
+                                        </div>
+                                        <div class="small form-text text-muted">Gambar Profile Anda sebaiknya memiliki rasio 1:1
+                                            dan berukuran tidak lebih dari 2MB.</div>
                                     </div>
                                 </div>
-                                <div class="form-group col-md-8 mb-2">
-                                    <label for="email">Email</label>
-                                    <div class="input-group mb-3">
-                                        <input id="email" type="email" class="form-control" readonly
-                                            value="" name="email" required>
-                                    </div>
-                                    <div class="small form-text text-muted">Anda dapat mengubah alamat email melalui menu Akun.</div>
+                                <div class="pt-5">
+                                    <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan perubahan</button>
                                 </div>
-                                <div class="form-group col-md-8 mb-2">
-                                    <label for="customFile">Foto (Optional) <span class="text-danger">*Max Height</span></label>
-                                    <div class="custom-file">
-                                        <input type="file" class="form-input" name="foto">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pt-5">
-                                <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan perubahan</button>
                             </div>
                         </div>
-                      </div>
-                      <div class="tab-pane fade" id="nav-akun" role="tabpanel" aria-labelledby="nav-profile-tab">
-                        <div class="user-settings__wrapper">
 
-                            <h4 class="user-settings__title">Ubah Email</h4>
-                                        <form method="POST" action="https://www.dicoding.com/settings/email/644710" accept-charset="UTF-8" role="form" autocomplete="off" id="settings-email-form"><input name="_token" type="hidden" value="tZuKbw0pDYtMvG150m1DIHwt9GiXMpI0VmV7YTRm">
-                                <div class="form-group">
-                                    <label class="control-label" for="new-email">Email Baru</label>
-                                    <input id="new-email" class="col-md-6 form-control font-weight-medium" placeholder="email@domain.com" autocomplete="off" required="" name="new_email" type="email" value="">
-                    
-                                    <div class="form-text small text-muted font-weight-medium">Email akan berubah ketika Anda sudah menekan
-                                        link verifikasi yang dikirimkan ke email baru Anda.
+                        <div class="tab-pane fade" id="nav-akun" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="user-settings__wrapper">
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Ubah Email</h5>
+                                </div>
+                                <form method="POST" action="" accept-charset="UTF-8" role="form" autocomplete="off" id="settings-email-form"><input name="_token" type="hidden" value="">
+                                    <div class="form-group">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-8 mb-2">
+                                                <label for="" class="font-weight-bold">Email Baru<span class="text-danger">*</span></label>
+                                                <div class="input-group mb-3">
+                                                    <input id="" type="text" class="form-control" placeholder="contoh@gmail.com"
+                                                        value="" name="" required>
+                                                </div>
+                                                <div class="form-text small text-muted font-weight-medium">Email akan berubah ketika Anda sudah menekan
+                                                    link verifikasi yang dikirimkan ke email baru Anda.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                    
-                                <div class="form-group">
-                                    <button type="submit" class="dcd-btn dcd-btn-primary px-3 font-weight-bold">
-                                        Ubah Email
-                                    </button>
-                                </div>
-                    
+                                    <div class="pt-2">
+                                        <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Ubah Email</button>
+                                    </div>
                                 </form>
-                                </div>
-                                <div class="card user-settings__wrapper mt-5">
+                            </div>
 
-                                    <form method="POST" action="https://www.dicoding.com/settings/password/644710" accept-charset="UTF-8" role="form" autocomplete="off" id="settings-password-form" data-controller="passwordUpdate" data-enable-button-after-submit="" novalidate=""><input name="_method" type="hidden" value="PUT"><input name="_token" type="hidden" value="tZuKbw0pDYtMvG150m1DIHwt9GiXMpI0VmV7YTRm">
-                            
-                                    <h4 class="user-settings__title">Ubah Password</h4>
-                            
-                                    <div class="alert alert-warning font-weight-medium small">
-                                        Isi jika Anda ingin mengubah password.
-                                    </div>
-                            
+                            <div class="user-settings__wrapper">
+                                <div class="col-md-12 mb-3 mt-5 p-0">
+                                    <h5 style="color: #07BD02">Ubah Password</h5>
+                                </div>
+                                <div class="alert alert-warning font-weight-medium small">
+                                    Isi jika Anda ingin mengubah password.
+                                </div>
+                                <form method="POST" action="" accept-charset="UTF-8" role="form" autocomplete="off" id=""><input name="_token" type="hidden" value="">
+                                    <input name="_method" type="hidden" value="PUT">
+                                    <input name="_token" type="hidden" value="">
                                     <div class="form-group">
-                                        <label class="control-label font-weight-bold" for="new-password">Password Baru <span class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <input id="new-password" class="col-md-6 form-control font-weight-medium" placeholder="Masukkan password baru" autocomplete="off" required="" minlength="8" data-parsley-required-message="Password tidak boleh kosong" data-parsley-minlength-message="Password minimal terdiri dari 8 karakter" data-target="passwordUpdate.newPassword" name="new_password" type="password" value="">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-secondary js-password-visibility-toggle" type="button">
-                                                    <i class="far fa-eye js-btn-password-toggle__icon"></i>
-                                                </button>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-8 mb-2">
+                                                <label for="" class="font-weight-bold">Password Baru<span class="text-danger">*</span></label>
+                                                <div class="input-group mb-3">
+                                                    <input id="" type="password" class="form-control" placeholder="Masukkan password baru" autocomplete="off" value="" name="" required minlength="8">
+                                                </div>
+                                                <div class="form-text small text-muted font-weight-medium">
+                                                    Gunakan minimal 8 karakter dengan kombinasi huruf danangka.
+                                                </div>
                                             </div>
                                         </div>
-                            
-                                        <small class="form-text text-muted font-weight-medium">Gunakan minimal 8 karakter dengan kombinasi huruf dan
-                                            angka.</small>
-                                    <div class="pass-wrapper" style="display: none;"><div class="pass-graybar"><div class="pass-colorbar"></div></div><span class="pass-text">Masukkan password</span></div></div>
-                            
-                                    <div class="form-group">
-                                        <label class="control-label" for="new-password-confirmation">Konfirmasi Password Baru <span class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <input id="new-password-confirmation" class="col-md-6 form-control font-weight-medium" placeholder="Konfirmasi password" autocomplete="off" required="" data-parsley-required-message="Konfirmasi password tidak boleh kosong" data-parsley-equalto="#new-password" data-parsley-equalto-message="Password harus sama dengan yang di atas" name="new_password_confirmation" type="password" value="">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-secondary js-password-visibility-toggle" type="button">
-                                                    <i class="far fa-eye js-btn-password-toggle__icon"></i>
-                                                </button>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-8 mb-2">
+                                                <label for="" class="font-weight-bold">Konfirmasi Password Baru<span class="text-danger">*</span></label>
+                                                <div class="input-group mb-3">
+                                                    <input id="" type="password" class="form-control" placeholder="Konfirmasi password" autocomplete="off" value="" name="" required minlength="8">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                            
-                                    <div class="mt-5">
-                                        <button type="submit" class="dcd-btn dcd-btn-primary px-3 font-weight-bold">
-                                            Simpan Password
-                                        </button>
+                                    <div class="pt-2">
+                                        <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan Password</button>
                                     </div>
-                            
-                                    </form>
-                                </div>
-                      </div>
-                      <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-contact-tab">
-                        <div class="user-settings__wrapper">
-
-                            <form method="POST" action="https://www.dicoding.com/settings/personal/644710" accept-charset="UTF-8" role="form" id="settings-personal-data-form" data-controller="userPersonalData"><input name="_method" type="hidden" value="PUT"><input name="_token" type="hidden" value="tZuKbw0pDYtMvG150m1DIHwt9GiXMpI0VmV7YTRm">
-                    
-                            <h4 class="user-settings__title">Data Pribadi</h4>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label class="control-label" for="phone">No. Telepon</label>
-                    
-                                    <div class="input-group mb-2">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">🇮🇩 +62</span>
-                                        </div>
-                                        <input name="phone" type="tel" class="form-control" id="phone" value="85352575367">
-                                    </div>
-                    
-                                    <div>
-                                        <input type="checkbox" class="dcd-custom-checkbox" id="optin-phone" name="optin_phone" value="1" checked="">
-                                        <label for="optin-phone">Saya tertarik untuk mendapatkan informasi
-                                            melalui no. telepon ini.</label>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label class="control-label" for="city-selectized">Kota Domisili <span class="text-danger">*</span></label>
-                                    <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" class="custom-control-input" id="custom-city-switch" data-target="userPersonalData.customCitySwitch" data-action="userPersonalData#switchCityField">
-                                        <label class="custom-control-label" for="custom-city-switch">Saya tinggal di luar negeri</label>
-                                    </div>
-                                    <div class="p-0">
-                                        <div data-target="userPersonalData.citySelect" class="">
-                                            <select name="city_id" class="js-cities selectized" id="city" tabindex="-1" style="display: none;"><option value="580" selected="selected">Kabupaten Tasikmalaya</option></select><div class="selectize-control js-cities single"><div class="selectize-input items full has-options has-items"><div data-value="580">
-                                            <strong>Kabupaten Tasikmalaya</strong> 
-                                        </div><input type="text" autocomplete="off" tabindex="" id="city-selectized" style="width: 4px;"></div><div class="selectize-dropdown single js-cities" style="display: none; width: 573px; top: 36px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
-                                        </div>
-                                        <input name="custom_city" type="text" class="form-control d-none" id="custom-city" value="" data-target="userPersonalData.customCityInput">
-                                    </div>
-                    
-                                    <div class="mt-2 text-muted small font-weight-medium">Isi dengan kota/kabupaten tempat Anda tinggal saat
-                                        ini.
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label class="control-label" for="birthplace-selectized">Tempat Lahir</label>
-                                    <div class="custom-control custom-switch mb-2">
-                                        <input type="checkbox" class="custom-control-input" id="custom-birthplace-switch" data-target="userPersonalData.customBirthplaceSwitch" data-action="userPersonalData#switchBirthplaceField">
-                                        <label class="custom-control-label" for="custom-birthplace-switch">Saya lahir di luar negeri</label>
-                                    </div>
-                                    <div class="p-0">
-                                        <div data-target="userPersonalData.birthplaceSelect" class="">
-                                            <select name="birthplace_id" class="js-cities selectized" id="birthplace" tabindex="-1" style="display: none;"><option value="580" selected="selected">Kabupaten Tasikmalaya</option></select><div class="selectize-control js-cities single"><div class="selectize-input items full has-options has-items"><div data-value="580">
-                                            <strong>Kabupaten Tasikmalaya</strong> 
-                                        </div><input type="text" autocomplete="off" tabindex="" id="birthplace-selectized" style="width: 4px;"></div><div class="selectize-dropdown single js-cities" style="display: none; width: 573px; top: 36px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
-                                        </div>
-                                        <input name="custom_birthplace" type="text" class="form-control d-none" id="custom-birthplace" value="" data-target="userPersonalData.customBirthplaceInput">
-                                    </div>
-                    
-                                    <div class="mt-2 text-muted small font-weight-medium">Isi dengan kota/kabupaten tempat Anda lahir.</div>
-                                </div>
-                            </div>
-                    
-                            <div class="row">
-                                <div class="form-group col-md-4">
-                                    <label class="control-label" for="birthday">Tanggal Lahir</label>
-                                    <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input name="birthday" type="text" class="js-date-widget form-control" id="birthday" value="28-09-2000" data-date-format="dd-mm-yyyy" autocomplete="off" data-type="datepicker" data-guid="276a0df3-c447-6f6b-2c9f-270a8c49b37d" data-datepicker="true" role="input" day="2000-8-28"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon">event</i></button></span></div>
-                                </div>
-                    
-                                <div class="form-group col-md-5">
-                                    <label class="control-label">Jenis Kelamin</label>
-                    
-                                    <div class="mb-2">
-                                        <input type="radio" class="dcd-custom-radio" id="gender-male" name="gender" value="1" checked="">
-                                        <label for="gender-male">Laki-laki</label>
-                                    </div>
-                    
-                                    <div class="mb-2">
-                                        <input type="radio" class="dcd-custom-radio" id="gender-female" name="gender" value="2">
-                                        <label for="gender-female">Perempuan</label>
-                                    </div>
-                    
-                                    <div class="mb-2">
-                                        <input type="radio" class="dcd-custom-radio" id="gender-nomention" name="gender" value="0">
-                                        <label for="gender-nomention">Memilih untuk tidak menyebutkan</label>
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label for="latest-education-selectized" class="control-label">Pendidikan Terakhir</label>
-                                    <select name="latest_education" id="latest-education" class="js-select selectized" tabindex="-1" style="display: none;"><option value="5" selected="selected">SMA</option></select><div class="selectize-control js-select single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="5">SMA</div><input type="text" autocomplete="off" tabindex="" id="latest-education-selectized" style="width: 4px;"></div><div class="selectize-dropdown single js-select" style="display: none;"><div class="selectize-dropdown-content"></div></div></div>
-                                </div>
-                            </div>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label for="occupation-selectized" class="control-label">Pekerjaan/profesi Saat Ini</label>
-                                    <div class="p-0">
-                                        <select name="occupation_id" id="occupation" class="js-occupations selectized" tabindex="-1" style="display: none;"><option value="3" selected="selected">Pelajar/Mahasiswa</option></select><div class="selectize-control js-occupations single"><div class="selectize-input items full has-options has-items"><div class="item" data-value="3">Pelajar/Mahasiswa</div><input type="text" autocomplete="off" tabindex="" id="occupation-selectized" style="width: 4px;"></div><div class="selectize-dropdown single js-occupations" style="display: none; width: 573px; top: 36px; left: 0px;"><div class="selectize-dropdown-content"></div></div></div>
-                                    </div>
-                    
-                                    <div class="mt-2 text-muted small font-weight-medium">Pilih mahasiswa atau pelajar jika Anda masih
-                                        menempuh pendidikan.
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label class="control-label" for="company">Perusahaan/institusi Saat Ini</label>
-                                    <input name="company" type="text" class="form-control" id="company" value="Universitas Telkom">
-                    
-                                    <div class="mt-2 text-muted small font-weight-medium">Anda bisa menuliskan nama perusahaan atau
-                                        kampus.
-                                    </div>
-                                </div>
-                            </div>
-                    
-                            <div class="mt-5">
-                                <button type="submit" class="dcd-btn dcd-btn-primary px-3">
-                                    Simpan Perubahan
-                                </button>
-                            </div>
-                    
-                            </form>
                         </div>
-                      </div>
+                        <div class="tab-pane fade show" id="nav-data" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="user-settings__wrapper">
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Data Pribadi</h5>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="nama_alumni">Nama Lengkap<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="nama_alumni" type="text" class="form-control" placeholder="Nama Lengkap"
+                                                value="{{old('nama_alumni')}}" name="nama_alumni" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="no_telp">No Telepon<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="no_telp" type="number" class="form-control"
+                                                value="{{old('no_telp')}}" name="no_telp" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="tempat">Tempat Lahir<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="tempat" type="text" class="form-control"
+                                            value="{{old('tempat')}}" name="tempat" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label class="control-label font-weight-bold" for="">Tanggal Lahir</label>
+                                            <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input name="" type="text" class="js-date-widget form-control" id="" value="" data-date-format="dd-mm-yyyy" autocomplete="off" data-type="datepicker" data-guid="" data-datepicker="true" role="input" day="">
+                                            </div>
+                                        </div>
+                            
+                                        <div class="form-group col-md-8">
+                                            <label class="control-label font-weight-bold">Jenis Kelamin</label>
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-male" name="gender" value="1" checked="">
+                                                <label for="gender-male">Laki-laki</label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-female" name="gender" value="2">
+                                                <label for="gender-female">Perempuan</label>
+                                            </div>
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-nomention" name="gender" value="0">
+                                                <label for="gender-nomention">Memilih untuk tidak menyebutkan</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="provinsi" type="text" class="form-control"
+                                            value="{{old('provinsi')}}" name="provinsi" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="kota" type="text" class="form-control"
+                                            value="{{old('kota')}}" name="kota" required>   
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="kecamatan" type="text" class="form-control"
+                                            value="{{old('kecamatan')}}" name="kecamatan" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="desa_atau_jalan">Desa / Jalan <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="desa_atau_jalan" type="text" class="form-control"
+                                                value="{{old('desa_atau_jalan')}}" name="desa_atau_jalan" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="domisili">Kota Domisili<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="domisili" type="text" class="form-control" placeholder="Kota"
+                                            value="{{old('domisili')}}" name="domisili" required>  
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="angkatan" type="number" class="form-control" placeholder="2018"
+                                                value="{{old('angkatan')}}" name="angkatan" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
+                                                <option value="" disabled selected>Pilih</option>
+                                                <option value="Bekerja">Bekerja</option>
+                                                <option value="Belum Bekerja">Belum Bekerja</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="posisi">Posisi Pekerjaan</label>
+                                        <div class="input-group mb-3">
+                                            <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
+                                            class="form-control" name="posisi">
+                                        </div>
+                                        <div class="form-text small text-muted font-weight-medium">
+                                            Jika belum bekerja isi dengan (-).
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
+                                        <div class="input-group mb-3">
+                                            <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
+                                            class="form-control" name="perusahaan">
+                                        </div>
+                                        <div class="form-text small text-muted font-weight-medium">
+                                            Jika belum bekerja isi dengan (-).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-5">
+                                    <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan perubahan</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
