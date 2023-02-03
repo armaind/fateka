@@ -108,9 +108,9 @@ class DataAlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($nama_alumni)
     {
-        $item = DB::table('data_alumni')->where('nama_alumni', $id)->first();
+        $item = DB::table('data_alumni')->where('nama_alumni', $nama_alumni)->first();
         return view('pages.backend.dataAlumni.detail',[
             'item' => $item
         ]);
@@ -122,9 +122,9 @@ class DataAlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($nama_alumni)
     {
-        $item = DataAlumni::findOrFail($id);
+        $item = DataAlumni::findOrFail($nama_alumni);
         
         return view('pages.backend.dataAlumni.edit', [
             'item' => $item
@@ -138,7 +138,7 @@ class DataAlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $nama_alumni)
     {
         $this->validate($request, [
             'foto' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -160,7 +160,7 @@ class DataAlumniController extends Controller
             'perusahaan'=>$request->perusahaan
         ]);
     
-        $dataalumni = DataAlumni::find($id)->update($request->all());
+        $dataalumni = DataAlumni::find($nama_alumni)->update($request->all());
 
         return redirect('/dashboard/dataalumni');
     }

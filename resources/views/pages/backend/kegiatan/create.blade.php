@@ -8,26 +8,8 @@
 <link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/dropzone.css')}}">
 @endpush
 
-<!-- file wrapper for better tabs start-->
-<div>   
-    <!-- pages title header start-->
-    <div class="container-fluid">
-        <div class="page-title">
-            <div class="card card-absolute mt-5 mt-md-4">
-                <div class="card-header bg-primary">
-                    <h5 class="text-white">Tambah Kegiatan</h5>
-                </div>
-                <div class="card-body">
-                    <p>
-                        Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- pages title header end-->
-    <!-- main content start-->
-    <div class="container-fluid">
+<div class="container-fluid">
+    <div class="page-title">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -133,9 +115,7 @@
             </div>
         </div>
     </div>
-    <!-- main content end-->
 </div>
-<!-- file wrapper for better tabs start-->
 
 @push('ckeditor-scripts')
 <script src="{{url('cuba/assets/js/editor/ckeditor/ckeditor.js')}}"></script>

@@ -40,13 +40,18 @@
                             <div class="col-md-4 m-auto">
                                 <img src="{{asset('images/' . $item->foto)}}" class="img-fluid mx-auto d-block" alt="..." width="150px">
                             </div>
-                            <div class="col-md-6 m-0 bg-dark"  style="border-radius:15px;">
+                            <div class="col-md-8 m-0 bg-dark"  style="border-radius:15px;">
                                 <div class="card-body">
                                     <h4 class="card-title mb-4">{{ $item->nama_alumni }}</h4>
-                                    <h5 class="card-text">{{ $item->angkatan }}</h5>
-                                    
-                                    <p class="card-text"><strong>{{ $item->provinsi }}, {{ $item->kota }}</strong></p>
-                                    <a href="#"><div class="btn btn-primary" style="border-radius: 20px">Hubungkan</div></a> 
+                                    <div class="d-flex flex-row">
+                                        <i data-feather="calendar" class="pr-2"></i>
+                                        <p class="pr-2" class="card-text">{{ $item->angkatan }}</p>
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <i data-feather="map-pin" class="pr-2"></i> 
+                                        <p class="card-text">{{ $item->provinsi }}, {{ $item->kota }}</p>
+                                    </div>
+                                    <a href="#"><div class="btn btn-primary mt-3" style="border-radius: 20px">Hubungkan</div></a> 
                                 </div>
                             </div>
                         </div>
@@ -67,7 +72,7 @@
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Email</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->email }}</span>
+                                    : <span class="badge badge-primary mb-2"> {{ $item->email }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
@@ -121,7 +126,7 @@
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Posisi Kerja</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->posisi }} orang</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->posisi }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
@@ -135,9 +140,9 @@
 
                     <div class="card">
                     </div> 
-                    <div class="row mt-5 ml-1 content-center">
-                        <div class="col-sm-">
-                            <a class="btn btn-outline-primary" href="{{route('dataalumni.index')}}" style="border-radius: 20px">Kembali</a>
+                    <div class="row mt-3 ml-1 content-center">
+                        <div class="col-sm-12">
+                            <a class="btn btn-primary" href="{{route('dataalumni.index')}}" style="border-radius: 20px">Kembali</a>
                         </div>
                         @can('update/delete data alumni')
                         <div class="col-sm-8">

@@ -12,178 +12,150 @@
 
 <div class="container-fluid">
     <div class="page-title">
-        <div class="card card-absolute mt-5 mt-md-4">
-            <div class="card-header bg-primary">
-                <h5 class="text-white">
-                    Edit Data Alumni <span class="d-none d-md-inline"> — {{$item->nama_alumni}}</span>
-                </h5>
-            </div>
-            <div class="card-body">
-                <p>
-                    Dibawah ini adalah form untuk edit Data Alumni {{$item->nama_alumni}}. <span
-                        class="d-none d-md-inline">
-                        Pastikan data di bawah anda isi dengan benar dan lengkap ya, nanti datanya akan kami update
-                    </span>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header">
-                    <h5>Edit Data Alumni</h5>
-                </div>
-                <form method="POST" action="{{route('dataalumni.update', $item->id)}}" enctype="multipart/form-data"
-                    class="needs-validation">
-                    @method('PUT')
-                    @csrf
-                    <div class="card-body">
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                <li>
-                                    <h4>Error</h4>
-                                </li>
-                                @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        <div class="form-row">
-                            <div class="col-md-12 mb-2 mt-2">
-                                <h6 style="color: #07BD02">Data Diri</h6>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-absolute">
+                    <div class="card-header bg-primary" style="border-radius: 16px">
+                        <h5 class="text-white">
+                            Edit Data Alumni
+                        </h5>
+                    </div>
+                    <form method="POST" action="{{route('dataalumni.update', $item->id)}}" enctype="multipart/form-data"
+                        class="needs-validation">
+                        @method('PUT')
+                        @csrf
+                        <div class="card-body">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li>
+                                        <h4>Error</h4>
+                                    </li>
+                                    @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input id="nama_alumni" type="text" class="form-control"
-                                    value="{{$item->nama_alumni}}" name="nama_alumni" required>
+                            @endif
+                            <div class="form-row">
+                                <div class="col-md-12 mb-2 mt-2">
+                                    <h5 style="color: #07BD02">Data Diri</h5>
                                 </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="email">Email<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input id="email" type="email" class="form-control"
-                                    value="{{$item->email}}" name="email" required>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="nama_alumni">Nama Alumni<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input id="nama_alumni" type="text" class="form-control"
+                                        value="{{$item->nama_alumni}}" name="nama_alumni" required>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="email">Email<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input id="email" type="email" class="form-control"
+                                        value="{{$item->email}}" name="email" required>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="no_telp">No Telepon<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="no_telp" type="number" value="{{$item->no_telp}}" class="form-control"
+                                        name="no_telp">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-2 mt-4">
+                                    <h5 style="color: #07BD02">Alamat Lengkap</h5>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="provinsi" type="text" value="{{$item->provinsi}}" class="form-control"
+                                        name="provinsi">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="kota" type="text" value="{{$item->kota}}" class="form-control"
+                                        name="kota">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="kecamatan" type="text" value="{{$item->kecamatan}}" class="form-control"
+                                        name="kecamatan">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="desa_atau_jalan">Desa / Jalan<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="desa_atau_jalan" type="text" value="{{$item->desa_atau_jalan}}" class="form-control"
+                                        name="desa_atau_jalan">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="domisili">Kota Domisili<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input required id="domisili" type="text" value="{{$item->domisili}}" class="form-control"
+                                        name="domisili" placeholder="Kota">
+                                    </div>
+                                </div>
+                                        
+                                <div class="col-md-12 mb-2 mt-2">
+                                    <h5 style="color: #07BD02">Data Akademik</h5>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <input id="angkatan" type="number" class="form-control" placeholder="2018"
+                                            value="{{$item->angkatan}}" name="angkatan" required>
+                                    </div>
                                 </div>
                             </div>
                         
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="no_telp">No Telepon<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="no_telp" type="number" value="{{$item->no_telp}}" class="form-control"
-                                    name="no_telp">
+                            <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+                            <div class="form-row">
+                                <div class="col-md-12 mb-2 mt-4">
+                                    <h5 style="color: #07BD02">Data Karir</h5>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
+                                    <div class="input-group mb-3">
+                                        <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
+                                            <option value="{{$item->status_pekerjaan}}" selected>{{$item->status_pekerjaan}}</option>
+                                            <option value="Bekerja">Bekerja</option>
+                                            <option value="Belum Bekerja">Belum Bekerja</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="posisi">Posisi Pekerjaan</label>
+                                    <div class="input-group mb-3">
+                                        <input id="posisi" type="posisi" class="form-control"
+                                            value="{{$item->posisi}}" name="posisi" nullable>
+                                    </div>
+                                    <div class="form-text small text-muted font-weight-medium">
+                                        Jika belum bekerja isi dengan (-).
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6 mb-2">
+                                    <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
+                                    <div class="input-group mb-3">
+                                        <input id="perusahaan" type="perusahaan" class="form-control"
+                                            value="{{$item->perusahaan}}" name="perusahaan" nullable>
+                                    </div>
+                                    <div class="form-text small text-muted font-weight-medium">
+                                        Jika belum bekerja isi dengan (-).
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 mb-2 mt-4">
-                                <h6 style="color: #07BD02">Alamat Lengkap</h6>
+                            <div class="pt-5">
+                                <button type="submit" class="btn btn-primary" style="border-radius:20px" type="submit">Simpan Perubahan</button>
                             </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="provinsi">Provinsi<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="provinsi" type="text" value="{{$item->provinsi}}" class="form-control"
-                                    name="provinsi">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="kota" type="text" value="{{$item->kota}}" class="form-control"
-                                    name="kota">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="kecamatan" type="text" value="{{$item->kecamatan}}" class="form-control"
-                                    name="kecamatan">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="desa_atau_jalan">Desa / Jalan<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="desa_atau_jalan" type="text" value="{{$item->desa_atau_jalan}}" class="form-control"
-                                    name="desa_atau_jalan">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="domisili">Domisili<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <input required id="domisili" type="text" value="{{$item->domisili}}" class="form-control"
-                                    name="domisili" placeholder="Kota">
-                                </div>
-                            </div>
-                                    
-                            <div class="col-md-12 mb-2 mt-2">
-                                <h6 style="color: #07BD02">Data Akademik</h6>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="angkatan">Angkatan <span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <select class="custom-select" id="angkatan" name="angkatan">
-                                        <option value="{{$item->angkatan}}" selected>{{$item->angkatan}}</option>
-                                        <option value="2007">2007</option>
-                                        <option value="2008">2008</option>
-                                        <option value="2009">2009</option>
-                                        <option value="2010">2010</option>
-                                        <option value="2011">2011</option>
-                                        <option value="2012">2012</option>
-                                        <option value="2013">2013</option>
-                                        <option value="2014">2014</option>
-                                        <option value="2015">2015</option>
-                                        <option value="2016">2016</option>
-                                        <option value="2017">2017</option>
-                                        <option value="2018">2018</option>
-                                        <option value="2019">2019</option>
-                                        <option value="2020">2020</option>
-                                        <option value="2021">2021</option>
-                                        <option value="2022">2022</option>
-                                        <option value="2022">2023</option>     
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
-                        <div class="form-row">
-                            <div class="col-md-12 mb-2 mt-4">
-                                <h6 style="color: #07BD02">Data Karir</h6>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
-                                <div class="input-group mb-3">
-                                    <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
-                                        <option value="{{$item->status_pekerjaan}}" selected>{{$item->status_pekerjaan}}</option>
-                                        <option value="Bekerja">Bekerja</option>
-                                        <option value="Belum Bekerja">Belum Bekerja</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="posisi">Posisi Pekerjaan</label>
-                                <div class="input-group mb-3">
-                                    <input id="posisi" type="posisi" class="form-control"
-                                        value="{{$item->posisi}}" name="posisi" nullable>
-                                </div>
-                                <label for="posisi"> <span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
-                            </div>
-                            <div class="form-group col-md-6 mb-2">
-                                <label for="perusahaan">Perusahaan/Instansi</label>
-                                <div class="input-group mb-3">
-                                    <input id="perusahaan" type="perusahaan" class="form-control"
-                                        value="{{$item->perusahaan}}" name="perusahaan" nullable>
-                                </div>
-                                <label for="perusahaan"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="card-footer">
-                        <button type="submit" class="btn btn-primary m-r-15" type="submit">Update</button>
-                    </div>
-                </form>
+                        </div> 
+                    </form>
+                </div>
             </div>
         </div>
     </div>

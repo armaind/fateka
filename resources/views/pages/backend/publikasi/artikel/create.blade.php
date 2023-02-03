@@ -8,102 +8,89 @@
 <link rel="stylesheet" type="text/css" href="{{url('cuba/assets/css/vendors/dropzone.css')}}">
 @endpush
 
-<!-- file wrapper for better tabs start-->
-<div>   
-    <!-- pages title header start-->
-    <div class="container-fluid">
-        <div class="page-title">
-            <div class="card card-absolute mt-5 mt-md-4">
-                <div class="card-header bg-primary">
-                    <h5 class="text-white">Tambah Artikel</h5>
-                </div>
-                <div class="card-body">
-                    <p>
-                        Isilah dengan lengkap dan pastikan data yang anda masukkan adalah valid
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- pages title header end-->
-
-    <!-- main content start-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body add-post">
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                <li>
-                                    <h4>Error</h4>
-                                </li>
-                                @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+<div class="container-fluid">
+    <div class="page-title">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-absolute">
+                        <div class="card-header bg-primary" style="border-radius: 16px">
+                            <h5 class="text-white">
+                                Tambah Artikel
+                            </h5>
                         </div>
-                        @endif
-                        <form class="row needs-validation" method="POST" action="{{route('artikel.store')}}"
-                            enctype="multipart/form-data">
-                            @csrf
-                            <div class="col-sm-12">
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="judul">Judul Artikel <span class="text-danger">*</span></label>
-                                        <div class="input-group mb-3">
-                                            <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
-                                                type="text" required>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6 ">
-                                        <label for="kategori">Kategori <span class="text-danger">*</span></label>
-                                        <div class="input-group mb-3">
-                                            <input class="form-control" id="kategori" name="kategori" placeholder="Ex: Teknologi, Ekonomi"
-                                                value="{{old('kategori')}}" type="text" required="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="customFile">Thumbnail (Optional) <span class="text-danger">*Max Height 450px</span></label>
-                                        <div class="custom-file">
-                                            <input type="file" class="form-input" name="thumbnail">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <input type="hidden" name="user_id" value={{Auth::user()->email}}>
-
-                                <div class="form-group">
-                                    <input class="form-control" type="hidden" name="author"
-                                        value="{{Auth::user()->name}}">
-                                    <input class="form-control" type="hidden" name="tanggal"
-                                        value="{{{now()->toDateString()}}}">
-                                </div>
-                                <div class="email-wrapper">
-                                    <div class="theme-form">
-                                        <div class="form-group">
-                                            <label>Isi Artikel <span class="text-danger">*</span></label>
-                                            <textarea id="text-box" name="isi_artikel" cols="10" rows="2"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card-body add-post">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li>
+                                        <h4>Error</h4>
+                                    </li>
+                                    @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
                             </div>
-                            <div class="col-sm-12">
-                                <div class="btn-showcase">
-                                    <button class="btn btn-primary" type="submit">Tambah</button>
-                                    <a class="btn btn-light" href="{{route('berita.index')}}">Kembali</a>
+                            @endif
+                            <form class="row needs-validation" method="POST" action="{{route('artikel.store')}}"
+                                enctype="multipart/form-data">
+                                @csrf
+                                <div class="col-sm-12">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label class="font-weight-bold" for="judul">Judul Artikel <span class="text-danger">*</span></label>
+                                            <div class="input-group mb-3">
+                                                <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
+                                                    type="text" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6 ">
+                                            <label class="font-weight-bold" for="kategori">Kategori <span class="text-danger">*</span></label>
+                                            <div class="input-group mb-3">
+                                                <input class="form-control" id="kategori" name="kategori" placeholder="Ex: Teknologi, Ekonomi"
+                                                    value="{{old('kategori')}}" type="text" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label class="font-weight-bold" for="customFile">Thumbnail (Optional)</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="form-input" name="thumbnail">
+                                            </div>
+                                            <div class="form-text small text-muted font-weight-medium">
+                                                Max Height 450px.
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+    
+                                    <div class="form-group">
+                                        <input class="form-control" type="hidden" name="author"
+                                            value="{{Auth::user()->name}}">
+                                        <input class="form-control" type="hidden" name="tanggal"
+                                            value="{{{now()->toDateString()}}}">
+                                    </div>
+                                    <div class="email-wrapper">
+                                        <div class="theme-form">
+                                            <div class="form-group">
+                                                <label class="font-weight-bold">Isi Artikel <span class="text-danger">*</span></label>
+                                                <textarea id="text-box" name="isi_artikel" cols="10" rows="2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-3">
+                                        <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Tambah</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- main content end-->
 </div>
-<!-- file wrapper for better tabs start-->
+    
 
 @push('ckeditor-scripts')
 <script src="{{url('cuba/assets/js/editor/ckeditor/ckeditor.js')}}"></script>

@@ -20,7 +20,7 @@
                             <h2 class="text-white mb-2">Andi Mohamad Ilyas</h2>
                             <div class="profile-headline-info d-flex mt-2 text-white flex-wrap">
                                 <div class="d-flex flex-row">
-                                    <i data-feather="users" class="pr-1"></i> 
+                                    <i data-feather="calendar" class="pr-1"></i> 
                                     <div class="pr-2">Angkatan</div>
                                     <i data-feather="map-pin" class="pr-1"></i> 
                                     <div class="pr-2"><span></span> Alamat</div>
@@ -158,7 +158,7 @@
                         <div class="tab-pane fade show" id="nav-data" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="user-settings__wrapper">
                                 <div class="col-md-12 mb-3 mt-4 p-0">
-                                    <h5 style="color: #07BD02">Data Pribadi</h5>
+                                    <h5 style="color: #07BD02">Data Diri</h5>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-8 mb-2">
@@ -183,13 +183,13 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="form-group col-md-4">
+                                        <div class="form-group col-md-6">
                                             <label class="control-label font-weight-bold" for="">Tanggal Lahir</label>
                                             <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input name="" type="text" class="js-date-widget form-control" id="" value="" data-date-format="dd-mm-yyyy" autocomplete="off" data-type="datepicker" data-guid="" data-datepicker="true" role="input" day="">
                                             </div>
                                         </div>
                             
-                                        <div class="form-group col-md-8">
+                                        <div class="form-group col-md-6">
                                             <label class="control-label font-weight-bold">Jenis Kelamin</label>
                                             <div class="mb-2">
                                                 <input type="radio" class="dcd-custom-radio" id="gender-male" name="gender" value="1" checked="">
@@ -199,12 +199,13 @@
                                                 <input type="radio" class="dcd-custom-radio" id="gender-female" name="gender" value="2">
                                                 <label for="gender-female">Perempuan</label>
                                             </div>
-                                            <div class="mb-2">
-                                                <input type="radio" class="dcd-custom-radio" id="gender-nomention" name="gender" value="0">
-                                                <label for="gender-nomention">Memilih untuk tidak menyebutkan</label>
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Alamat</h5>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-8 mb-2">
                                         <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
@@ -240,6 +241,11 @@
                                             value="{{old('domisili')}}" name="domisili" required>  
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Data Akademik</h5>
+                                </div>
+                                <div class="form-row">
                                     <div class="form-group col-md-8 mb-2">
                                         <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
                                         <div class="input-group mb-3">
@@ -247,6 +253,11 @@
                                                 value="{{old('angkatan')}}" name="angkatan" required>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-md-12 mb-3 mt-4 p-0">
+                                    <h5 style="color: #07BD02">Data Karir</h5>
+                                </div>
+                                <div class="form-row">
                                     <div class="col-md-8 mb-2 alert alert-warning font-weight-medium small">
                                         Khusus Alumni
                                     </div>
