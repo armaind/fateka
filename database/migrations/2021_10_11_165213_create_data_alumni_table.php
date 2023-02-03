@@ -28,6 +28,9 @@ class CreateDataAlumniTable extends Migration
             $table->string('status_pekerjaan');
             $table->string('perusahaan')->nullable();
             $table->string('foto')->nullable();
+            $table->string('tempat_lahir');
+            $table->string('tanggal_lahir');
+            $table->string('jenis_kelamin');
             $table->timestamps();
         });
     }
