@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profil;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class ProfilController extends Controller
@@ -47,7 +48,10 @@ class ProfilController extends Controller
      */
     public function show($id)
     {
-        //
+        // $item = DB::table('data_alumni')->where('nama_alumni', $id)->first();
+        // return view('pages.backend.dataAlumni.detail',[
+        //     'item' => $item
+        // ]);
     }
 
     /**

@@ -14,7 +14,7 @@
 <script src="{{url('landio/assets/js/wow.min.js')}}"></script>
 <!--====== Main JS ======-->
 <script src="{{url('landio/assets/js/main.js')}}"></script>
-<!--====== Blobity ======-->
+{{-- <!--====== Blobity ======-->
 <script src="https://cdn.blobity.dev/by.js"></script>
 <script>
     const blobity = new Blobity({
@@ -24,4 +24,4 @@
         dotColor: '#07BD02',
         magnetic: false,
     });
-</script>
+</script> --}}
