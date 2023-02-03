@@ -19,6 +19,7 @@ class BeritaController extends Controller
         
         $items = Auth::user()->id;
         $items = Berita::paginate(10);
+        $items = Berita::latest()->get();
         return view('pages.backend.publikasi.berita.index', [
             'items' => $items
         ]);

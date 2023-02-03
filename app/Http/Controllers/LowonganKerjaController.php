@@ -18,6 +18,7 @@ class LowonganKerjaController extends Controller
     {
         $items = Auth::user()->id;
         $items = LowonganKerja::paginate(10);
+        $items = LowonganKerja::latest()->get();
         return view('pages.backend.lowonganKerja.index', [
             'items' => $items
         ]);

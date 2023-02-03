@@ -18,6 +18,7 @@ class ArtikelController extends Controller
     {
         $items = Auth::user()->id;
         $items = Artikel::paginate(10);
+        $items = Artikel::latest()->get();
         return view('pages.backend.publikasi.artikel.index', [
             'items' => $items
         ]);
@@ -66,7 +67,7 @@ class ArtikelController extends Controller
                 
             ]);
         } else {
-            Artikel::create([
+            ([
                 'judul' => $request->judul,
                 'kategori' => $request->kategori,
                 'thumbnail' => 'thumbnail-default.jpg',

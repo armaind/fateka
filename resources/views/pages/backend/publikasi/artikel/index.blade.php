@@ -91,7 +91,7 @@
                                 </div>
                             </a>
                             <div class="p-20" style="height: 150px; border-radius:10px;" >
-                                <a href="{{route('artikel.show', $item->judul)}}"></a>
+                                <a href="{{route('artikel.show', $item->judul)}}"><h5>{{ $item->judul }}</h5></a>
                                 <h7>{{ $item->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $item->author }}</h7>
                                 <p class="comment" style="font-size: 10px;">{{ $item->tanggal }}</p>
                             </div>
@@ -119,7 +119,7 @@
                                     <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
                             </a>
                             <div class="p-20" style="height: 150px; border-radius:10px;" >
-                                <a href="{{route('artikel.show', $item->judul)}}"></a>
+                                <a href="{{route('artikel.show', $item->judul)}}"><h5>{{ $item->judul }}</h5></a>
                                 <h7>{{ $item->kategori }} | <i style="font-size: 12px" class="icofont icofont-user"></i> {{ $item->author }}</h7>
                                 <p class="comment" style="font-size: 10px;">{{ $item->tanggal }}</p>
                             </div>

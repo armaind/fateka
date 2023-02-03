@@ -38,14 +38,14 @@
                                 <div class="col-sm-12">
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
-                                            <label class="font-weight-bold" for="judul">Judul Berita <span class="text-danger">*</span></label>
+                                            <label class="font-weight-bold" for="judul">Judul Berita<span class="text-danger">*</span></label>
                                             <div class="input-group mb-3">
                                                 <input class="form-control" id="judul" name="judul" value="{{old('judul')}}"
                                                     type="text" required>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6 ">
-                                            <label class="font-weight-bold" for="headline">Headline <span class="text-danger">*</span></label>
+                                            <label class="font-weight-bold" for="headline">Headline<span class="text-danger">*</span></label>
                                             <div class="input-group mb-3">
                                                 <input class="form-control" id="headline" name="headline" 
                                                 value="{{old('headline')}}" type="text" required="">
@@ -55,7 +55,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6 ">
-                                            <label class="font-weight-bold" for="kategori">Kategori <span class="text-danger">*</span></label>
+                                            <label class="font-weight-bold" for="kategori">Kategori<span class="text-danger">*</span></label>
                                             <div class="input-group mb-3">
                                                 <input class="form-control" id="kategori" name="kategori" placeholder="Ex: Teknologi, Ekonomi"
                                                     value="{{old('kategori')}}" type="text" required="">

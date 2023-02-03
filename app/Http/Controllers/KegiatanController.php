@@ -18,6 +18,7 @@ class KegiatanController extends Controller
     {
         $items = Auth::user()->id;
         $items = Kegiatan::paginate(10);
+        $items = Kegiatan::latest()->get();
         return view('pages.backend.kegiatan.index', [
             'items' => $items
         ]);
