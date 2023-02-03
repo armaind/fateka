@@ -71,14 +71,16 @@
                         <div class="card-body">
                             <p class="card-text"><strong>Tipe Pekerjaan: </strong><br>{{ $item->tipe_pekerjaan }}</p>
                             <p class="card-text"><strong>Jumlah Kebutuhan: </strong><br>{{ $item->jumlah }}</p>
-                            <p class="card-text"><small class="text-muted">Berlaku sampai: {{ $item->berlaku }}</small></p>
+                            <p class="card-text"><small class="text-muted">Berlaku sampai: <span class="badge badge-warning mb-2">{{ $item->berlaku }}</span></small></p>
                             
                         </div>
                     </div>
                     <div class="col-md-4 m-0 bg-dark"  style="border-radius:15px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->nama }}</h5>
-                            <h7 class="card-text">{{ $item->perusahaan }}</h7>
+                            <h7 class="card-text">{{ $item->perusahaan }} <span style="color: #07BD02"><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+                                <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg></span></h7>
                             <p class="card-text"><strong>{{ $item->kota }}, {{ $item->negara }}</strong></p>
                             <a href="{{route('lowonganKerja.show', $item->nama) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
                         </div>

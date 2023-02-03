@@ -20,8 +20,8 @@
                             <h2 class="text-white mb-2">{{ Auth::user()->name }}</h2>
                             <div class="profile-headline-info d-flex mt-2 text-white flex-wrap">
                                 <div class="d-flex flex-row">
-                                    {{-- <i data-feather="users" class="pr-1"></i> 
-                                    <div class="pr-2">{{ $items->angkatan }}</div>
+                                    <i data-feather="users" class="pr-1"></i> 
+                                    <div class="pr-2">Angkatan</div>
                                     <i data-feather="map-pin" class="pr-1"></i> 
                                     <div class="pr-2"><span></span>{{ $itemdataalumni->domisili }}</div> --}}
                                 </div>
@@ -162,7 +162,7 @@
                         {{-- <div class="tab-pane fade show" id="nav-data" role="tabpanel" aria-labelledby="nav-home-tab">
                             <div class="user-settings__wrapper">
                                 <div class="col-md-12 mb-3 mt-4 p-0">
-                                    <h5 style="color: #07BD02">Data Pribadi</h5>
+                                    <h5 style="color: #07BD02">Data Diri</h5>
                                 </div>
                                 <form method="POST" action="{{route('dataalumni.store')}}" enctype="multipart/form-data"
                                     class="needs-validation">
@@ -199,106 +199,109 @@
                                                 value="{{old('tempat_lahir')}}" name="tempat_lahir" required>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="form-group col-md-4">
-                                                <label class="control-label font-weight-bold" for="tanggal_lahir">Tanggal Lahir</label>
-                                                <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input name="tanggal_lahir" type="text" class="js-date-widget form-control" id="tanggal_lahir" value="{{old('tanggal_lahir')}}" data-date-format="dd-mm-yyyy" autocomplete="off" data-type="datepicker" data-guid="" data-datepicker="true" role="input" day="">
-                                                </div>
-                                            </div>
-                                
-                                            <div class="form-group col-md-8">
-                                                <label class="control-label font-weight-bold">Jenis Kelamin</label>
-                                                <div class="mb-2">
-                                                    <input type="radio" class="dcd-custom-radio" id="jenis_kelamin" name="jenis_kelamin" value="{{old('jenis_kelamin')}}" checked="">
-                                                    <label for="jenis_kelamin">Laki-laki</label>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <input type="radio" class="dcd-custom-radio" id="jenis_kelamin" name="jenis_kelamin" value="{{old('jenis_kelamin')}}">
-                                                    <label for="jenis_kelamin">Perempuan</label>
-                                                </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4">
+                                            <label class="control-label font-weight-bold" for="">Tanggal Lahir</label>
+                                            <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input name="" type="text" class="js-date-widget form-control" id="" value="" data-date-format="dd-mm-yyyy" autocomplete="off" data-type="datepicker" data-guid="" data-datepicker="true" role="input" day="">
                                             </div>
                                         </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="provinsi" type="text" class="form-control"
-                                                value="{{old('provinsi')}}" name="provinsi" required>
+                            
+                                        <div class="form-group col-md-8">
+                                            <label class="control-label font-weight-bold">Jenis Kelamin</label>
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-male" name="gender" value="1" checked="">
+                                                <label for="gender-male">Laki-laki</label>
                                             </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="kota" type="text" class="form-control"
-                                                value="{{old('kota')}}" name="kota" required>   
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-female" name="gender" value="2">
+                                                <label for="gender-female">Perempuan</label>
                                             </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="kecamatan" type="text" class="form-control"
-                                                value="{{old('kecamatan')}}" name="kecamatan" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="desa_atau_jalan">Desa / Jalan <span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="desa_atau_jalan" type="text" class="form-control"
-                                                    value="{{old('desa_atau_jalan')}}" name="desa_atau_jalan" required>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="domisili">Kota Domisili<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="domisili" type="text" class="form-control" placeholder="Kota"
-                                                value="{{old('domisili')}}" name="domisili" required>  
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <input id="angkatan" type="number" class="form-control" placeholder="2018"
-                                                    value="{{old('angkatan')}}" name="angkatan" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-8 mb-2 alert alert-warning font-weight-medium small">
-                                            Khusus Alumni
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
-                                            <div class="input-group mb-3">
-                                                <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
-                                                    <option value="" disabled selected>Pilih</option>
-                                                    <option value="Bekerja">Bekerja</option>
-                                                    <option value="Belum Bekerja">Belum Bekerja</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="posisi">Posisi Pekerjaan</label>
-                                            <div class="input-group mb-3">
-                                                <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
-                                                class="form-control" name="posisi">
-                                            </div>
-                                            <div class="form-text small text-muted font-weight-medium">
-                                                Jika belum bekerja isi dengan (-).
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-8 mb-2">
-                                            <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
-                                            <div class="input-group mb-3">
-                                                <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
-                                                class="form-control" name="perusahaan">
-                                            </div>
-                                            <div class="form-text small text-muted font-weight-medium">
-                                                Jika belum bekerja isi dengan (-).
+                                            <div class="mb-2">
+                                                <input type="radio" class="dcd-custom-radio" id="gender-nomention" name="gender" value="0">
+                                                <label for="gender-nomention">Memilih untuk tidak menyebutkan</label>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                    <div class="pt-5">
-                                        <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan perubahan</button>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="provinsi">Provinsi<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="provinsi" type="text" class="form-control"
+                                            value="{{old('provinsi')}}" name="provinsi" required>
+                                        </div>
                                     </div>
-                                </form>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="kota">Kabupaten / Kota<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="kota" type="text" class="form-control"
+                                            value="{{old('kota')}}" name="kota" required>   
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="kecamatan">Kecamatan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="kecamatan" type="text" class="form-control"
+                                            value="{{old('kecamatan')}}" name="kecamatan" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="desa_atau_jalan">Desa / Jalan <span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="desa_atau_jalan" type="text" class="form-control"
+                                                value="{{old('desa_atau_jalan')}}" name="desa_atau_jalan" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="domisili">Kota Domisili<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="domisili" type="text" class="form-control" placeholder="Kota"
+                                            value="{{old('domisili')}}" name="domisili" required>  
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="angkatan">Angkatan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input id="angkatan" type="number" class="form-control" placeholder="2018"
+                                                value="{{old('angkatan')}}" name="angkatan" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mb-2 alert alert-warning font-weight-medium small">
+                                        Khusus Alumni
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <select class="form-control" id="status_pekerjaan" name="status_pekerjaan">
+                                                <option value="" disabled selected>Pilih</option>
+                                                <option value="Bekerja">Bekerja</option>
+                                                <option value="Belum Bekerja">Belum Bekerja</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="posisi">Posisi Pekerjaan</label>
+                                        <div class="input-group mb-3">
+                                            <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
+                                            class="form-control" name="posisi">
+                                        </div>
+                                        <div class="form-text small text-muted font-weight-medium">
+                                            Jika belum bekerja isi dengan (-).
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-8 mb-2">
+                                        <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
+                                        <div class="input-group mb-3">
+                                            <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
+                                            class="form-control" name="perusahaan">
+                                        </div>
+                                        <div class="form-text small text-muted font-weight-medium">
+                                            Jika belum bekerja isi dengan (-).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-5">
+                                    <button type="submit" class="btn btn-primary" style="border-radius:25px" type="submit">Simpan perubahan</button>
+                                </div>
                             </div>
                         </div> --}}
                     </div>
