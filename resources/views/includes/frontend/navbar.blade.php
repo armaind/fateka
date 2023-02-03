@@ -24,9 +24,6 @@
                         <li>
                             <a href="{{url('kontak')}}">Kontak</a>
                         </li>
-                        <li>
-                            <a href="{{url('faq')}}">FAQ</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
