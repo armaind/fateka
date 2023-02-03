@@ -79,7 +79,7 @@ Route::prefix('dashboard')
         
         /* ------------------------- profil Pages ------------------------ */
         Route::get('/profil', 'App\Http\Controllers\ProfilController@index');
-        Route::get('/profil/edit-profil', 'App\Http\Controllers\ProfilController@create');
+        Route::put('/profil/{profil}', 'App\Http\Controllers\ProfilController@update');
         Route::resource('profil', 'App\Http\Controllers\ProfilController');
     });
 

@@ -49,6 +49,9 @@ class DataAlumniController extends Controller
             'nama_alumni' => 'required|max:42',
             'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'jenis_kelamin' => 'required',
             'provinsi' => 'required',
             'kota' => 'required',
             'kecamatan' => 'required',
@@ -67,10 +70,12 @@ class DataAlumniController extends Controller
             $dataalumni->foto=$request->file('foto')->getClientOriginalName();
             $dataalumni->save();
             ([
-                'nama_alumni' => $request->nama_alumni,
-                'email'=>$request->email,
-                'no_telp' => $request->no_telp,
                 'foto'=>$request->foto,
+                'nama_alumni' => $request->nama_alumni,
+                'no_telp' => $request->no_telp,
+                'tempat_lahir' => $request->tempat_lahir,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'jenis_kelamin' => $request->jenis_kelamin,
                 'provinsi' => $request->provinsi,
                 'kota' => $request->kota,
                 'kecamatan' => $request->kecamatan,
@@ -84,9 +89,10 @@ class DataAlumniController extends Controller
         }else{
             ([
                 'nama_alumni' => $request->nama_alumni,
-                'email'=>$request->email,
                 'no_telp' => $request->no_telp,
-                'foto'=>'foto.jpg',
+                'tempat_lahir' => $request->tempat_lahir,
+                'tanggal_lahir' => $request->tanggal_lahir,
+                'jenis_kelamin' => $request->jenis_kelamin,
                 'provinsi' => $request->provinsi,
                 'kota' => $request->kota,
                 'kecamatan' => $request->kecamatan,
