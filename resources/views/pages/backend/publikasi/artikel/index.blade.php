@@ -87,7 +87,8 @@
                         <div class="col-xl-3 col-sm-6 xl-4">
                             <a class="" href="{{route('artikel.show', $item->judul)}}" target="">
                                 <div class="card">
-                                    <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px"></div>
+                                    <div class="card-img-top" style="background-image: url('{{ asset('images/' . $item->thumbnail) }}'); background-size:cover; height:150px; border-top-left-radius:10px; border-top-right-radius:10px">
+                                </div>
                             </a>
                             <div class="p-20" style="height: 150px; border-radius:10px;" >
                                 <a href="{{route('artikel.show', $item->judul)}}"></a>
