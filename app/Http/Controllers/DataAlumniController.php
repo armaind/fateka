@@ -49,9 +49,6 @@ class DataAlumniController extends Controller
             'nama_alumni' => 'required|max:42',
             'email'=>'required|max:42',
             'no_telp' => 'required|max:24',
-            'tempat_lahir' => 'required',
-            'tanggal_lahir' => 'required',
-            'jenis_kelamin' => 'required',
             'provinsi' => 'required',
             'kota' => 'required',
             'kecamatan' => 'required',
@@ -60,22 +57,19 @@ class DataAlumniController extends Controller
             'angkatan' => 'required|max:14',
             'status_pekerjaan'=>'required',
             'posisi'=>'required',
-            'perusahaan'=>'nullable'
-            
+            'perusahaan'=>'nullable',
         ]);
        
         $dataalumni = DataAlumni::create($request->all());
         if($request->hasFile('foto')){
             $request->file('foto')->move('images/',$request->file('foto')->getClientOriginalName());
-            $dataalumni->foto=$request->file('foto')->getClientOriginalName();
+            $dataalumni->foto = $request->file('foto')->getClientOriginalName();
             $dataalumni->save();
             ([
                 'foto'=>$request->foto,
                 'nama_alumni' => $request->nama_alumni,
+                'email' => $request->email,
                 'no_telp' => $request->no_telp,
-                'tempat_lahir' => $request->tempat_lahir,
-                'tanggal_lahir' => $request->tanggal_lahir,
-                'jenis_kelamin' => $request->jenis_kelamin,
                 'provinsi' => $request->provinsi,
                 'kota' => $request->kota,
                 'kecamatan' => $request->kecamatan,
@@ -88,11 +82,10 @@ class DataAlumniController extends Controller
             ]);
         }else{
             ([
+                'foto'=> 'images.jpg',
                 'nama_alumni' => $request->nama_alumni,
+                'email' => $request->email,
                 'no_telp' => $request->no_telp,
-                'tempat_lahir' => $request->tempat_lahir,
-                'tanggal_lahir' => $request->tanggal_lahir,
-                'jenis_kelamin' => $request->jenis_kelamin,
                 'provinsi' => $request->provinsi,
                 'kota' => $request->kota,
                 'kecamatan' => $request->kecamatan,
@@ -130,8 +123,8 @@ class DataAlumniController extends Controller
      */
     public function edit($nama_alumni)
     {
-        $item = DataAlumni::findOrFail($nama_alumni);
-        
+        // $item = DataAlumni::findOrFail($id);
+        $item = DataAlumni::where('nama_alumni', $nama_alumni)->first();
         return view('pages.backend.dataAlumni.edit', [
             'item' => $item
         ]);
@@ -144,29 +137,28 @@ class DataAlumniController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $nama_alumni)
+    public function update(Request $request, $id)
     {
         $this->validate($request, [
             'foto' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        
+
         $validated = $request->validate([
-            'nama_alumni' => $request->nama_alumni,
-            'email'=>$request->email,
-            'no_telp' => $request->no_telp,
-            'foto'=>$request->foto,
-            'provinsi' => $request->provinsi,
-            'kota' => $request->kota,
-            'kecamatan' => $request->kecamatan,
-            'desa_atau_jalan' => $request->desa_atau_jalan,
-            'domisili' => $request->domisili,
-            'angkatan' => $request->angkatan,
-            'status_pekerjaan'=>$request->status_pekerjaan,
-            'posisi'=>$request->posisi,
-            'perusahaan'=>$request->perusahaan
+            'nama_alumni' => 'required|max:42',
+            'email'=>'required|max:42',
+            'no_telp' => 'required|max:24',
+            'provinsi' => 'required',
+            'kota' => 'required',
+            'kecamatan' => 'required',
+            'desa_atau_jalan' => 'required',
+            'domisili' => 'required',
+            'angkatan' => 'required|max:14',
+            'status_pekerjaan'=>'required',
+            'posisi'=>'required',
+            'perusahaan'=>'nullable',
         ]);
     
-        $dataalumni = DataAlumni::find($nama_alumni)->update($request->all());
+        $dataalumni = DataAlumni::find($id)->update($request->all());
 
         return redirect('/dashboard/dataalumni');
     }

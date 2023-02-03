@@ -19,12 +19,12 @@
                         <div class="profile-headline col-md-8 col-sm-8 col-lg-9 mt-4 mt-md-0">
                             <h2 class="text-white mb-2">{{ Auth::user()->name }}</h2>
                             <div class="profile-headline-info d-flex mt-2 text-white flex-wrap">
-                                <div class="d-flex flex-row">
+                                {{-- <div class="d-flex flex-row">
                                     <i data-feather="users" class="pr-1"></i> 
                                     <div class="pr-2">Angkatan</div>
                                     <i data-feather="map-pin" class="pr-1"></i> 
-                                    <div class="pr-2"><span></span>{{ $itemdataalumni->domisili }}</div> --}}
-                                </div>
+                                    <div class="pr-2"><span></span>{{ $itemdataalumni->domisili }}</div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
