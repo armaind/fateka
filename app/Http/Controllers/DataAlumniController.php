@@ -158,7 +158,7 @@ class DataAlumniController extends Controller
             'perusahaan'=>'nullable',
         ]);
     
-        $dataalumni = DataAlumni::find($id)->update($request->all()); 
+        $dataalumni = DataAlumni::find($id)->update($request->all());
 
         return redirect('/dashboard/dataalumni');
     }
