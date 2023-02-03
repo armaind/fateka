@@ -66,7 +66,7 @@
                                               </svg>
                                         </a>
                                         @can('update data alumni')
-                                        <a href="{{route('dataalumni.edit', $item->id)}}" class="btn btn-warning px-2">
+                                        <a href="{{route('dataalumni.edit', $item->nama_alumni)}}" class="btn btn-warning px-2">
                                             <svg xmlns="http://www.w3.org/2000/svg"
                                                 class="icon icon-tabler icon-tabler-edit" width="16" height="16"
                                                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
