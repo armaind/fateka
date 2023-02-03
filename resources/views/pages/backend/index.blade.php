@@ -60,7 +60,7 @@
                             </span>
                         </p>
                         <div class="whatsnew-btn">
-                            <a href="{{url('dashboard/data-alumni')}}" class="btn btn-primary px-4 py-2" style="border-radius: 25px">Cari Data Alumni
+                            <a href="{{url('/dashboard/dataalumni')}}" class="btn btn-primary px-4 py-2" style="border-radius: 25px">Cari Data Alumni
                                 Sekarang 
                             </a>
                         </div>

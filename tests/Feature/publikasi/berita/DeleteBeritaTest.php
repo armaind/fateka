@@ -55,4 +55,40 @@ class DeleteBeritaTest extends TestCase
         $this->json('DELETE', $berita->delete());
         $this->assertDatabaseMissing('berita', $berita->toArray());
     }
+
+    public function test_a_berita_can_be_update()
+    {
+        $berita = Berita::factory()->create();
+        $this->json('UPDATE', $berita->update());
+        $this->assertDatabaseHas('berita', ['id' => $berita->id]);
+    }
+
+    public function test_a_berita_can_be_create()
+    {
+        $this->withoutExceptionHandling();
+
+        $berita = Berita::factory()->create();
+        $this->json('INSERT', $berita->insert(
+            'judul',
+            'headline',
+            'thumbnail',
+            'kategori',
+            'author',
+            'isi_berita',
+            'tanggal',
+            'user_id',
+            'update_at',
+            'created_at',
+            'id'
+        ->$berita));
+        $this->assertDatabaseHas('berita', $berita->toArray());
+        $this->assertCreated();
+    }
+    public function test_insert_unique_data()
+    {
+    $response = Berita::create([
+    ]);
+
+    $response->assertCreated();
+    }
 }
