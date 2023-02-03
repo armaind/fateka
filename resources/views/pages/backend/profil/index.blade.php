@@ -80,8 +80,10 @@
                                         <div class="custom-file">
                                             <input type="file" class="form-input" name="foto">
                                         </div>
-                                        <div class="small form-text text-muted">Gambar Profile Anda sebaiknya memiliki rasio 1:1
-                                            dan berukuran tidak lebih dari 2MB.</div>
+                                        <div class="small form-text text-muted">
+                                            Gambar Profile Anda sebaiknya memiliki rasio 1:1
+                                            dan berukuran tidak lebih dari 2MB.
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="pt-5">
@@ -244,6 +246,9 @@
                                             <input id="angkatan" type="number" class="form-control" placeholder="2018"
                                                 value="{{old('angkatan')}}" name="angkatan" required>
                                         </div>
+                                    </div>
+                                    <div class="col-md-8 mb-2 alert alert-warning font-weight-medium small">
+                                        Khusus Alumni
                                     </div>
                                     <div class="form-group col-md-8 mb-2">
                                         <label class="font-weight-bold" for="status_pekerjaan">Status Pekerjaan<span class="text-danger">*</span></label>

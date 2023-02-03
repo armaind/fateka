@@ -70,9 +70,13 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
-                                <label class="font-weight-bold" for="customFile">Foto (Optional) <span class="text-danger">*Max Height</span></label>
+                                <label class="font-weight-bold" for="customFile">Foto</label>
                                 <div class="custom-file">
                                     <input type="file" class="form-input" name="foto">
+                                </div>
+                                <div class="small form-text text-muted">
+                                    Gambar Profile Anda sebaiknya memiliki rasio 1:1
+                                    dan berukuran tidak lebih dari 2MB.
                                 </div>
                             </div>
                             <div class="col-md-12 mb-2 mt-4">
@@ -146,7 +150,9 @@
                                     <input id="posisi" type="text" value="{{old('posisi')}}" placeholder="Software Engineer"
                                     class="form-control" name="posisi">
                                 </div>
-                                <label for="posisi"><span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
+                                <div class="form-text small text-muted font-weight-medium">
+                                    Jika belum bekerja isi dengan (-).
+                                </div>
                             </div>
                             <div class="form-group col-md-6 mb-2">
                                 <label class="font-weight-bold" for="perusahaan">Perusahaan/Instansi</label>
@@ -154,7 +160,9 @@
                                     <input id="perusahaan" type="text" value="{{old('perusahaan')}}" placeholder="Telkom Indonesia"
                                     class="form-control" name="perusahaan">
                                 </div>
-                                <label for="perusahaan"> <span class="text-danger">*Jika belum bekerja isi dengan (-)</span></label>
+                                <div class="form-text small text-muted font-weight-medium">
+                                    Jika belum bekerja isi dengan (-).
+                                </div>
                             </div>
                         </div>
                     </div>
