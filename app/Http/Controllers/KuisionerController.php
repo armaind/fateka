@@ -8,5 +8,17 @@ use Illuminate\Http\Request;
 
 class KuisionerController extends Controller
 {
-    
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $items = Auth::user()->id;
+        
+        return view('pages.backend.kuisioner.index', [
+            'items' => $items
+        ]);
+    }
 }

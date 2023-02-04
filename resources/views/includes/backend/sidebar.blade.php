@@ -196,15 +196,13 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('#')}}">
-                                
+                            <a href="{{url('dashboard/kuisioner')}}">
                                 Beranda
                             </a>
                         </li>
                         @can('create kuisioner')
                         <li>
                             <a href="{{url('#')}}">
-                                
                                 Tambah Kuisioner
                             </a>
                         </li>
