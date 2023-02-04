@@ -3,29 +3,18 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use App\Models\User;
 use App\Models\Berita;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class DeleteBeritaTest extends TestCase
+class BeritaTest extends TestCase
 {
     use RefreshDatabase; use WithFaker;
-
-    public function test_a_berita_can_be_deleted()
-    {   
-        $berita = Berita::factory()->create();
-        $this->json('DELETE', $berita->delete());
-        $this->assertDatabaseMissing('berita', $berita->toArray());
-    }
-
-    public function test_a_berita_can_be_update()
-    {
-        $berita = Berita::factory()->create();
-        $this->json('UPDATE', $berita->update());
-        $this->assertDatabaseHas('berita', ['id' => $berita->id]);
-    }
-
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
     public function test_a_berita_can_be_create()
     {
         // $this->withoutExceptionHandling();
@@ -48,6 +37,20 @@ class DeleteBeritaTest extends TestCase
         //     'created_at',
         //     'updated_at'
         //     => $berita->toArray()]);
+        
+    }
 
+    public function test_a_berita_can_be_update()
+    {
+        $berita = Berita::factory()->create();
+        $this->json('UPDATE', $berita->update());
+        $this->assertDatabaseHas('berita', ['id' => $berita->id]);
+    }
+    
+    public function test_a_berita_can_be_deleted()
+    {   
+        $berita = Berita::factory()->create();
+        $this->json('DELETE', $berita->delete());
+        $this->assertDatabaseMissing('berita', $berita->toArray());
     }
 }
