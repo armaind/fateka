@@ -50,25 +50,28 @@
                             <div class="single-blog-content-top">
                                 <div class="mt-4 mb-4">{!!htmlspecialchars_decode($item->isi_berita)!!}</div>
                                 <p>Pewarta: {{ $item->author }}</p>
-                                <div class="mt-2"><strong>Tags:</strong>
-                                    <p>#{{ $item->headline }}</p>
+                                <div class="mt-2">
+                                    <p><strong>Tags:</strong></p>
+                                    <span class="badge badge-warning mt-2">#{{ $item->headline }}</span>
                                 </div>
                             </div>
-                            <div class="mt-5">
-                                <a class="btn btn-outline-primary" href="{{route('berita.index')}}" style="border-radius: 20px">Kembali</a>
-                                @can('update berita')
-                                <a class="btn btn-outline-warning" href="{{route('berita.edit', $item->id)}}" style="border-radius: 20px">Edit Berita</a>
-                                
-                                @endcan
-                                @can('delete berita')
-                                <form class="pull-right" action="{{route('berita.destroy', $item->id)}}" method="POST"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
-                                </form>
-        
-                                @endcan
+                            <div class="d-flex mt-5">
+                                <div class="d-flex flex-grow-1 align-items-center">
+                                    <a href="{{route('berita.index')}}" style="border-radius: 20px" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
+                                    @can('update berita')
+                                    <a href="{{route('berita.edit', $item->id)}}" style="border-radius: 20px" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a>
+                                    @endcan
+                                </div>
+                                <div class="p-2">
+                                    @can('delete berita')
+                                    <form class="pull-right" action="{{route('berita.destroy', $item->id)}}" method="POST"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                                    </form>
+                                    @endcan
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -63,22 +63,25 @@
         <div class="card-body">
             @forelse ($items as $item) 
             <div class="card mb-4">
-                <div class="row g-0 m-0" style="background-image: url('')">
-                    <div class="col-md-4 m-auto">
+                <div class="row g-0 m-0">
+                    <div class="col-md-4 m-auto p-20">
                         <img src="{{asset('images/' . $item->thumbnail)}}" class="img-fluid mx-auto d-block" alt="..." width="150px">
                     </div>
                     <div class="col-md-8 m-0 bg-dark"  style="border-radius:15px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
-                            <h6 class="card-text"><small class="text-muted">Oleh: {{ $item->penyelenggara }}</small></h6>
-                            <p class="card-text"><small class="text-muted">Tanggal: {{ $item->tanggal }}</small></p>
+                            <h6 class="card-text"><small class="text-muted">Penyelenggara: {{ $item->penyelenggara }}</small></h6>
+                            <div class="d-flex flex-row mb-2">
+                                <i data-feather="map-pin" class="pr-2"></i>
+                                <p class="card-text">{{ $item->lokasi }}</p>
+                            </div>
                             <a href="{{route('kegiatan.show', $item->judul) }}"><div style="border-radius: 20px" class="btn btn-primary mt-3">Lihat Detail</div></a>
                         </div>
                     </div>
-                    @empty
-                    @endforelse    
                 </div>
-            </div> 
+            </div>
+            @empty
+            @endforelse   
         </div>
     </div>
 </div>

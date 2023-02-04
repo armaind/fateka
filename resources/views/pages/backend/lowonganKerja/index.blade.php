@@ -81,7 +81,6 @@
                                 <i data-feather="clock" class="pr-2"></i>
                                 <p class="card-text"><strong>Berlaku sampai</strong><small><span class="badge badge-warning mb-2">{{ $item->berlaku }}</span></small></p>
                             </div>
-                            
                         </div>
                     </div>
                     <div class="col-md-4 m-0 bg-dark"  style="border-radius:15px">

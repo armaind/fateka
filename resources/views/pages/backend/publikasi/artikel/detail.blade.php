@@ -50,20 +50,26 @@
                             <div class="single-blog-content-top">
                                 <div class="mt-4 mb-4">{!!htmlspecialchars_decode($item->isi_artikel)!!}</div>
                                 <p>Penulis: {{ $item->author }}</p>
-                                <div class="mt-2"><strong>Tags:</strong></div>
-                                <div class="row col-6">
-                                    <button class="mt-2 btn btn-outline-dark">{{ $item->kategori }}</button>
+                                <div class="mt-2">
+                                    <p><strong>Tags:</strong></p>
+                                    <span class="badge badge-warning mt-2">#{{ $item->kategori }}</span>
                                 </div>
                             </div>
-                            <div class="mt-5">
-                                <a class="btn btn-outline-primary" href="{{route('artikel.index')}}" style="border-radius: 20px">Kembali</a>
-                                <a class="btn btn-outline-warning" href="{{route('artikel.edit', $item->id)}}" style="border-radius: 20px">Edit Artikel</a>
-                                <form class="pull-right" action="{{route('artikel.destroy', $item->id)}}" method="POST"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
-                                </form>
+                            <div class="d-flex mt-5">
+                                <div class="d-flex flex-grow-1 align-items-center">
+                                    <a href="{{route('artikel.index')}}" style="border-radius: 20px" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
+                                    @can('update artikel')
+                                    <a href="{{route('artikel.edit', $item->id)}}" style="border-radius: 20px" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a>
+                                    @endcan
+                                </div>
+                                <div class="p-2">
+                                    <form class="pull-right" action="{{route('artikel.destroy', $item->id)}}" method="POST"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

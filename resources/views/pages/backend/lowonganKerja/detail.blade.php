@@ -66,37 +66,37 @@
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Nama</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->nama }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->nama }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Posisi</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-primary mb-2">{{ $item->posisi }}</span>
+                                    : <span class="badge badge-primary mb-2">{{ $item->posisi }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Tipe Pekerjaan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->tipe_pekerjaan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->tipe_pekerjaan }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Level</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->tingkat_pekerjaan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->tingkat_pekerjaan }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Berlaku Sampai</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-warning">{{ $item->berlaku }}</span>
+                                    : <span class="badge badge-warning">{{ $item->berlaku }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Gaji</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">Rp.{{ $item->gaji }},-</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: Rp.{{ $item->gaji }},-</span>
                                 </div>
                             </div>
                             <div class="row mb-10">
@@ -115,58 +115,55 @@
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Nama Perusahaan</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->perusahaan }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->perusahaan }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Kota</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->kota }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->kota }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Negara</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->negara }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->negara }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Jumlah Kebutuhan</label>
                                 <div class="col-lg-8">
-                                    <span class="badge badge-warning">{{ $item->jumlah }} orang</span>
+                                    : <span class="badge badge-warning">{{ $item->jumlah }} orang</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">No Telepon</label>
                                 <div class="col-lg-8">
-                                    <span class="fw-bolder fs-6 text-gray-800">{{ $item->no_telp }}</span>
+                                    <span class="fw-bolder fs-6 text-gray-800">: {{ $item->no_telp }}</span>
                                 </div>
                             </div>
                             <div class="row m-b-10">
                                 <label class="col-lg-4 fw-bold text-muted">Email</label>
                                 <div class="col-lg-8">
-                                    <a class="badge badge-primary" href="https://mail.google.com/"><span class="fw-bolder fs-6 text-gray-800">{{ $item->email }}</span></a>
+                                    : <a class="badge badge-primary" href="https://mail.google.com/"><span class="fw-bolder fs-6 text-gray-800">{{ $item->email }}</span></a>
                                 </div>
                             </div>
                         </div>
                     </div> 
-                    <div class="row mt-5">
-                        <div class="col-sm-2 mb-3">
-                            <a class="btn btn-outline-primary" href="{{route('lowonganKerja.index')}}" style="border-radius: 20px">Kembali</a>
+                    <div class="d-flex mt-5">
+                        <div class="d-flex flex-grow-1 align-items-center">
+                            <a href="{{route('lowonganKerja.index')}}" style="border-radius: 20px" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
+                            @can('update lowongan kerja')
+                            <a href="{{route('lowonganKerja.edit', $item->id)}}" style="border-radius: 20px" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a>
+                            @endcan
                         </div>
-                        @can('update lowongan kerja')
-                        <div class="col-sm-8  mb-3">
-                            <a class="btn btn-outline-warning" href="{{route('lowonganKerja.edit', $item->id)}}" style="border-radius: 20px">Edit Lowongan</a>
-                        </div>
-                            
-                        @endcan
                         @can('delete lowongan kerja')
-                        <div class="col-sm-2 flex-right">
+                        <div class="p-2">
                             <form action="{{route('lowonganKerja.destroy', $item->id)}}" method="POST"
-                                class="d-inline">
+                                class="d-inline pull-right">
                                 @csrf
                                 @method('delete')
-                                <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                                <button type="submit" class="btn btn-danger" type="submit" style="border-radius: 20px">Hapus</button>
                             </form>
                         </div>
                             

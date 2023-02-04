@@ -45,43 +45,56 @@
                                     </h1> 
                                     <p class="text-muted mt-0">Diselenggarakan oleh: {{ $item->penyelenggara }}</p>
                                 </div>
-                                <div class="col-md-3">
-                                    <p class="mt-2 mb-2">Batas daftar: </p>
-                                    <h6 class="m-0">{{ $item->batas }}</h6>
-                                    <p class="text-muted mt-2">Kuota:</p>
-                                    <h6 class="m-0">{{ $item->kuota }}</h6>
-                                </div>
                             </div>
                             <div class="row col-md-12 p-0 mt-5">
-                                <div class="col-md-9">
-                                    <div class="mt-4 mb-4">{!!htmlspecialchars_decode($item->content)!!}</div>
-                                    <div class="mt-2">
-                                        <p><strong>Tags:</strong></p>
-                                        <span class="badge badge-light-primary">#{{ $item->kategori }}</span>
+                                <div class="card col-md-9">
+                                    <div class="card-body">
+                                        <div class="mt-4 mb-4">
+                                            <p>{!!htmlspecialchars_decode($item->content)!!}</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <h4>Jadwal Pelaksanaan</h4>
-                                    <p class="mt-2 mb-2">Tanggal: {{ $item->tanggal }}</p>
-                                    <h4>Lokasi</h4>
-                                    <p class="mt-2 mb-2">{{ $item->lokasi }}</p>
-                                    <a href="#"><div style="border-radius: 20px" class="btn btn-primary mt-3">Daftar Sekarang</div></a>
+                                <div class="col-md-3 pl-3">
+                                    <h4 class="font-weight-bold card-header mt-0 text-center" style="border-radius: 20px">Detail Kegiatan</h4>
+                                    <div class="card-body">
+                                        <div class="d-flex flex-row mb-3">
+                                            <i data-feather="clock" class="pr-2 text-secondary"></i>
+                                            <p class="card-text text-muted m-0"><strong>Batas daftar</strong><br>{{ $item->batas }}</p>
+                                        </div>
+                                        <div class="d-flex flex-row mb-3">
+                                            <i data-feather="user-check" class="pr-2 text-secondary"></i>
+                                            <p class="card-text text-muted m-0"><strong>Kuota</strong><br>{{ $item->kuota }}</p>
+                                        </div>
+                                        <div class="d-flex flex-row mb-3">
+                                            <i data-feather="calendar" class="pr-2 text-secondary"></i>
+                                            <p class="card-text text-muted m-0"><strong>Jadwal Pelaksanaan</strong><br>{{ $item->tanggal }}</p>
+                                        </div>
+                                        <div class="d-flex flex-row mb-3">
+                                            <i data-feather="map-pin" class="pr-2 text-secondary"></i>
+                                            <p class="card-text text-muted m-0"><strong>Lokasi</strong><br>{{ $item->lokasi }}</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <a href="#"><div style="border-radius: 20px" class="btn btn-primary mt-3 font-weight-bold pl-5 pr-5">Daftar</div></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="blog-footer mt-5">
-                                <a class="btn btn-outline-primary" href="{{route('kegiatan.index')}}" style="border-radius: 20px">Kembali</a>
-                                @can('update kegiatan')
-                                <a class="btn btn-outline-warning" href="{{route('kegiatan.edit', $item->id)}}" style="border-radius: 20px">Edit kegiatan</a>
-                                    
-                                @endcan
+                            <div class="d-flex mt-5">
+                                <div class="d-flex flex-grow-1 align-items-center">
+                                    <a href="{{route('kegiatan.index')}}" style="border-radius: 20px" class="btn btn-primary mr-2" aria-haspopup="true" aria-expanded="false">Kembali</a>
+                                    @can('update kegiatan')
+                                    <a href="{{route('kegiatan.edit', $item->id)}}" style="border-radius: 20px" class="btn btn-warning" aria-haspopup="true" aria-expanded="false">Edit</a>
+                                    @endcan
+                                </div> 
                                 @can('delete kegiatan')
-                                <form class="pull-right" action="{{route('kegiatan.destroy', $item->id)}}" method="POST"
-                                    class="d-inline">
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-outline-danger" type="submit" style="border-radius: 20px">Hapus</button>
-                                </form>
-                                    
+                                <div class="p-2">
+                                    <form class="pull-right" action="{{route('kegiatan.destroy', $item->id)}}" method="POST"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit" class="btn btn-danger" type="submit" style="border-radius: 20px">Hapus</button>
+                                    </form>
+                                </div>
                                 @endcan
                             </div>
                         </div>

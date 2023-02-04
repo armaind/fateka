@@ -10,80 +10,73 @@
 
 <div class="container-fluid">
     <div class="page-title">
-        <div class="card card-absolute mt-5 mt-md-4">
-            <div class="card-header bg-primary">
-                <h5 class="text-white">Edit artikel</h5>
-            </div>
-            <div class="card-body">
-                <p>
-                    Dibawah ini adalah form untuk edit artikel berjudul "{{$item->judul}}"
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                    <div class="card-body add-post">
-                        @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                <li>
-                                    <h4>Error</h4>
-                                </li>
-                                @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-absolute">
+                        <div class="card-header bg-primary" style="border-radius: 16px">
+                            <h5 class="text-white">
+                                Edit Artikel
+                            </h5>
                         </div>
-                        @endif
-                        <form class="needs-validation" method="POST" action="{{route('artikel.update', $item->id)}}"
-                            enctype="multipart/form-data">
-                            @method('PUT')
-                            @csrf
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="judul">Judul artikel <span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input class="form-control" id="judul" name="judul" value="{{$item->judul}}"
-                                            type="text" required="">
+                        <div class="card-body add-post">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li>
+                                        <h4>Error</h4>
+                                    </li>
+                                    @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                            <form class="needs-validation" method="POST" action="{{route('artikel.update', $item->id)}}"
+                                enctype="multipart/form-data">
+                                @method('PUT')
+                                @csrf
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label class="font-weight-bold" for="judul">Judul Artikel<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="judul" name="judul" value="{{$item->judul}}"
+                                                type="text" required="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-md-6 ">
+                                        <label class="font-weight-bold" for="kategori">Kategori<span class="text-danger">*</span></label>
+                                        <div class="input-group mb-3">
+                                            <input class="form-control" id="kategori" name="kategori" value="{{$item->kategori}}"
+                                                type="text" required="">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group col-md-6 ">
-                                    <label for="kategori">Kategori <span class="text-danger">*</span></label>
-                                    <div class="input-group mb-3">
-                                        <input class="form-control" id="kategori" name="kategori" value="{{$item->kategori}}"
-                                            type="text" required="">
-                                    </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
+                                    <input class="form-control" type="hidden" name="tanggal"
+                                        value="{{{now()->toDateString()}}}">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" type="hidden" name="author" value="{{Auth::user()->name}}">
-                                <input class="form-control" type="hidden" name="tanggal"
-                                    value="{{{now()->toDateString()}}}">
-                            </div>
-                            <div class="email-wrapper">
-                                <div class="theme-form">
-                                    <div class="form-group">
-                                        <label>Isi artikel <span class="text-danger">*</span></label>
-                                        <textarea id="text-box" name="isi_artikel" cols="10" rows="2">
+                                <div class="email-wrapper">
+                                    <div class="theme-form">
+                                        <div class="form-group">
+                                            <label class="font-weight-bold">Isi artikel<span class="text-danger">*</span></label>
+                                            <textarea id="text-box" name="isi_artikel" cols="10" rows="2">
                                                 {!!htmlspecialchars_decode($item->isi_artikel)!!}
                                             </textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                        <input type="hidden" name="user_id" value={{Auth::user()->email}}>
-
-                        <div class="col-sm-12">
-                            <div class="btn-showcase">
-                                <button type="submit" class="btn btn-light" type="submit">Update</button>
-                                <a class="btn btn-primary" href="{{route('artikel.index')}}">Kembali</a>
-                            </div>
+    
+                                <input type="hidden" name="user_id" value={{Auth::user()->email}}>
+    
+                                <div class="pt-5">
+                                    <button type="submit" class="btn btn-primary" style="border-radius:20px" type="submit">Simpan Perubahan</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
