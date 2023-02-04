@@ -62,12 +62,12 @@
     <div class="card card-absolute mt-5 mt-md-4">
         <div class="card-body">
             @forelse ($items as $item) 
-            <div class="card mb-4">
+            <div class="card mb-4 bg-dark">
                 <div class="row g-0 m-0">
-                    <div class="col-md-4 m-auto p-20">
-                        <img src="{{asset('images/' . $item->thumbnail)}}" class="img-fluid mx-auto d-block" alt="..." width="150px">
+                    <div class="col-md-5 m-auto p-20">
+                        <img src="{{asset('images/' . $item->thumbnail)}}" class="img-fluid mx-auto d-block" alt="..." style="border-radius: 20px">
                     </div>
-                    <div class="col-md-8 m-0 bg-dark"  style="border-radius:15px">
+                    <div class="col-md-7"  style="border-radius:15px">
                         <div class="card-body">
                             <h5 class="card-title">{{ $item->judul }}</h5>
                             <h6 class="card-text"><small class="text-muted">Penyelenggara: {{ $item->penyelenggara }}</small></h6>
