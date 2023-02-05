@@ -22,7 +22,7 @@
                 <img class="bg-img-cover bg-center" src="{{url('landio/assets/img/IMG_0661.PNG')}}"
                     alt="looginpage">
             </div>
-            <div class="col-xl-5 p-0">
+            <div class="col-xl-5 p-0" style="background-image: url();">
                 <div class="login-card">
                     <div class="login-main col-10 col-md-10">
                         <form class="theme-form" method="POST" action="{{route('login')}}">

@@ -45,7 +45,7 @@
                             </a>
                         </div>
                         @else
-                        <a href="{{url('/login')}}" class="user-login">
+                        <a href="{{url('/login')}}" class="user-login mr-4">
                             <i class="far fa-user-circle"></i>Masuk Aplikasi
                         </a>
                         <li class="d-none d-md-block">
@@ -293,7 +293,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
-                            <i class="far fa-edit"></i> Kuisioner
+                            <i class="far fa-briefcase"></i> Lowongan Kerja
                         </a>
                     </li>
                     <li class="nav-item" role="presentation">
@@ -314,13 +314,13 @@
                 </div>
                 <div class="tab-pane fade" id="tabItem2" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/info.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>
                 <div class="tab-pane fade" id="tabItem3" role="tabpanel">
                     <div class="service-tab-ime text-center">
-                        <img src="{{url('landio/assets/img/dashboard.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
+                        <img src="{{url('landio/assets/img/kerja.png')}}" style="-webkit-filter: drop-shadow(0px 3px 10px rgba(0,0,0,.8));
                         filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.219));" alt="Image">
                     </div>
                 </div>

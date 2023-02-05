@@ -25,7 +25,6 @@
         </div>
         <div class="nav-right col-8 pull-right right-header p-0">
             <ul class="nav-menus">
-        
                 <li class="onhover-dropdown">
                     <div>
                         <a href="#" data-toggle="tooltip" data-placement="bottom" title="Notifikasi"></a>
